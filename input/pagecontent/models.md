@@ -1,3 +1,3 @@
-以下為SFAA BASE IG所有的邏輯模型。
+以下為本IG所有的邏輯模型。
 
-{% include table-logicals.xhtml %}
+1. [TWSS Base 邏輯模型](StructureDefinition-TWSSBaseModel.html)

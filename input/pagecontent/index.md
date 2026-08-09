@@ -3,19 +3,10 @@
 
 
 ### 專案介紹
-<div  style="padding-left: 10px;"> 
-
-<p>TO DO</p>
-
-</div>
+TWSS Base IG 定義社會福利服務資料交換的共通基礎，包括個案、關係人、服務人員、機構、通報、評估、審核、服務、轉介、結案與補助流程。
 
 ### 專案背景
-
-<div  style="padding-left: 10px;"> 
-
-<p>TO DO</p>
-
-</div>
+本 IG 以 FHIR R4 與 TW Core IG 0.3.2 為基礎，將不同社福業務系統共通使用的資料欄位整理為可互通的 Profile、Extension、術語與範例。
 
 
 ### 如何閱讀這個實作指引(IG)
@@ -50,7 +41,7 @@
 	<li><strong><a href="examples.html">範例</a></strong>：本IG所定義Profiles之範例檔。</li>
 	<li><strong><a href="downloads.html">定義與範例檔下載</a></strong>：實作者若不偏好使用FHIR RESTful API驗證資料是否符合Profiles，可直接下載所需的格式驗證檔，包括XML、JSON及Turtle三種格式，亦可於此下載完整範例檔。</li>
 	<li><strong><a href="security.html">安全性</a></strong>：主要說明採用本IG網站進行實作時，有關資料存取授權的作法。</li>
-	<li><strong><a href="https://sfaa.gov.tw/base/history.html">版本異動</a></strong>：若本IG網站的版本有所異動，皆可透過<a href="https://sfaa.gov.tw/base/history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li>
+	<li><strong><a href="history.html">版本異動</a></strong>：若本IG網站的版本有所異動，皆可透過<a href="history.html">異動說明頁</a>得以瞭解版本間的異動差異。</li>
 </ul>
 </div>
 

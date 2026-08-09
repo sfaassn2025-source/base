@@ -3,11 +3,11 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: tw.gov.mohw.sfaa.base
+id: tw.gov.mohw.twss.base
 canonical: https://sfaa.gov.tw/base
-name: SFAABASE
-title: 臺灣社家署基礎實作指引
-description: 臺灣社家署基礎實作指引(SFAA BASE IG)
+name: TWSSBaseIG
+title: TWSS Base IG
+description: TWSS Base IG
 status: draft # draft | active | retired | unknown
 version: 0.0.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -17,7 +17,7 @@ releaseLabel: ci-build
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: 衛生福利部社會及家庭署
-  url: https://www.sfaa.gov.tw/
+  url: https://www.twss.gov.tw/
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -29,6 +29,26 @@ dependencies:
     id: TWCore
     uri: https://twcore.mohw.gov.tw/ig/twcore/ImplementationGuide/tw.gov.mohw.twcore
     version: 0.3.2
+   hl7.fhir.uv.extensions.r4:
+    id: fhir-extensions-r4
+    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
+    version: 5.3.0
+
+resources:
+  CarePlan/current-care-min:
+    description: 個案現正接受服務範例。
+  EpisodeOfCare/episode-closure-min:
+    description: 個案服務案件結案範例。
+  Observation/practitioner-education-min:
+    description: 個案服務人教育經歷範例。
+  Observation/practitioner-training-min:
+    description: 個案服務人受訓紀錄範例。
+  Observation/disability-certificate-status-min:
+    description: 個案身心障礙證明狀態範例。
+  Questionnaire/assessment-questionnaire-base-min:
+    description: 社福評估表單範例。
+  QuestionnaireResponse/adl-questionnaire-response-min:
+    description: 個案日常生活功能評估回覆範例。
 
 #
 #
@@ -45,7 +65,7 @@ dependencies:
 #
 pages:
   index.md:
-    title: 應用說明
+    title: 首頁
   capabilitystatements.md:
     title: 能力聲明
   searchparameters.md:
@@ -53,17 +73,19 @@ pages:
   models.md:
     title: 邏輯模型
   profiles-and-extensions.md:
-    title: FHIR Profiles及Extensions
+    title: FHIR Profiles與Extensions
   terminologies.md:
     title: 專門術語
   examples.md:
     title: 範例
   downloads.xml:
-    title: 結構定義與範例檔下載
+    title: 下載
   security.md:
     title: 安全性
-  ImplementationGuide-tw.gov.mohw.sfaa.base.md:
-    title: TW SFAA BASE ImplementationGuide Resource
+  history.md:
+    title: Publication (Version) History
+  ImplementationGuide-tw.gov.mohw.twss.base.md:
+    title: TWSS Base IG ImplementationGuide Resource
   vision.md:
     title: 視覺化邏輯模型
 #
@@ -77,6 +99,10 @@ pages:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
+parameters:
+  default-version: false
+  apply-version: false
+  pin-canonicals: pin-multiples
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]

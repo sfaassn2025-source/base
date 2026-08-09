@@ -6,6 +6,6 @@
 	"description": "gateKeeper FHIR Template",
 	"base": "fhir.base.template",
 	"dependencies": {
-		"fhir.base.template": "current"
+		"fhir.base.template": "1.0.0"
 	}
 }

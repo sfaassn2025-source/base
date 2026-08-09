@@ -79,6 +79,27 @@
   --ig-header-container-color: #ffffff;
 }
 
+table.history-grid {
+  margin-bottom: 10px;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+table.history-grid th,
+table.history-grid td {
+  padding: 3px 7px 2px;
+  border: 1px solid silver;
+  vertical-align: top;
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+
+table.history-grid th {
+  font-weight: bold;
+}
+
 
 @media only screen and (max-width: 992px) {
   table.colsi {
