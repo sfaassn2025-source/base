@@ -3,10 +3,13 @@
 
 
 ### 專案介紹
-TWSS Base IG 定義社會福利服務資料交換的共通基礎，包括個案、關係人、服務人員、機構、通報、評估、審核、服務、轉介、結案與補助流程。
+臺灣社政領域之服務實作指引(TW Social Service Base IG)採用HL7® FHIR® standard（Fast Healthcare Interoperability Resources）IG建置方法，在FHIR R4.0.1之標準基礎上，繼承TW Core IG V 0.3.2 (2024-12-12)，進一步定義適用於「臺灣社政領域之服務實作指引(以下簡稱本專案)」資料需求的Resources（類似資料表）、其中的資料項目（意即欄位）、基數（意即0..1、0..*、1..1或1..*）及資料類型（文字、日期時間、代碼等）等。
 
 ### 專案背景
-本 IG 以 FHIR R4 與 TW Core IG 0.3.2 為基礎，將不同社福業務系統共通使用的資料欄位整理為可互通的 Profile、Extension、術語與範例。
+
+衛生福利部自107年起推動強化社會安全網計畫，以全人觀點致力於為弱勢家庭和個人提供多元支持和福利服務，對象涵蓋兒少、婦女、老年人、身障者及脆弱家庭等。強化社會安全網計畫係「以家庭為中心，以社區為基礎」之核心精神，結合政府各部門的力量，期建構綿密的社會褔利服務輸送與社會安全網絡體系，發揮「一主責、多協力」的服務模式，強調網絡合作的重要性。
+社會安全網服務對象經常涵蓋多重議題，例如一個家庭中可能同時有家庭暴力、兒少保護、精神障礙或藥癮個案等問題，由不同領域及專長之服務提供者開案協助，然而實務面卻發現，跨單位的個案服務系統缺乏互通與串連，第一線人員無從得知案家於其他網絡單位的完整服務歷程，使得協力網絡之間如同資訊孤島，無法充分實踐「一主責、多協力」的加乘效益。
+為強化網絡單位共享服務資訊，落實資料治理，各系統之間需建立資料標準化格式，辦理社會安全網服務系統資料標準化作業，以提升整體社會安全網之服務品質與效能。
 
 
 ### 如何閱讀這個實作指引(IG)
@@ -46,3 +49,164 @@ TWSS Base IG 定義社會福利服務資料交換的共通基礎，包括個案�
 </div>
 
 ### 作者與貢獻者
+
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>機構</th>
+      <th>姓名</th>
+      <th>所屬單位</th>
+      <th>聯絡方式</th>
+      <th>原因</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>作者</td>
+      <td>詠鋐智能股份有限公司</td>
+      <td>林伃瑤（Yu-Yao Lin）</td>
+      <td>國立臺北護理健康大學－健康事業管理系<br />(Department of Health Care Management, National Taipei University of Nursing and Health Sciences)</td>
+      <td><a href="mailto:a28485251@gmail.com">a28485251@gmail.com</a></td>
+      <td>製作 IG 的主要人</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>衛生福利部社會家庭與福利署</td>
+      <td>王齡儀</td>
+      <td>社會安全網小組</td>
+      <td>—</td>
+      <td>本案主責單位</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>衛生福利部社會家庭與福利署</td>
+      <td>陳佩琪</td>
+      <td>社會安全網小組</td>
+      <td>—</td>
+      <td>本案主責單位</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>衛生福利部社會家庭與福利署</td>
+      <td>詹慶恩</td>
+      <td>社會安全網小組</td>
+      <td>—</td>
+      <td>本案主責單位</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>詠鋐智能股份有限公司</td>
+      <td>謝宗震</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>國立臺北護理健康大學</td>
+      <td>李麗惠（Li-Hui Lee）</td>
+      <td>健康事業管理系<br />(Department of Health Care Management, National Taipei University of Nursing and Health Sciences)</td>
+      <td><a href="mailto:cclhlee@gmail.com">cclhlee@gmail.com</a><br /><a href="mailto:cclhlee@ntunhs.edu.tw">cclhlee@ntunhs.edu.tw</a></td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>李承恩</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>謝佩穎</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>蘇怡嘉</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>郭超望</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>黃存宇</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>謝芝庭</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>陳藝方</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>鄭嘉儀</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>李嘉珉</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>楊宜蓁</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>黃凱暉</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+    <tr>
+      <td>貢獻者</td>
+      <td>—</td>
+      <td>陳潔寧</td>
+      <td>—</td>
+      <td>—</td>
+      <td>本案工作團隊</td>
+    </tr>
+  </tbody>
+</table>
+</div>
