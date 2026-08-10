@@ -26,24 +26,17 @@ Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達社�
 * payee MS
 * careTeam MS
 * careTeam.provider only Reference(PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase)
-* referral only Reference(ServiceRequestTWSSBase)
-* referral MS
+* referral 0..0
 * supportingInfo MS
-* supportingInfo.value[x] only boolean or string or Quantity or Attachment or Reference(PatientTWSSBase or RelatedPersonTWSSBase or OrganizationTWSSBase or ServiceRequestTWSSBase or EpisodeOfCareTWSSBase or ConditionTWSSBase or CoverageTWSSBase or QuestionnaireResponseTWSSBase or DocumentReferenceTWSSBase)
+* supportingInfo.value[x] only boolean or string or Quantity or Attachment or Reference(PatientTWSSBase or RelatedPersonTWSSBase or OrganizationTWSSBase or EpisodeOfCareTWSSBase or ConditionTWSSBase or CoverageTWSSBase or DocumentReferenceTWSSBase)
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo ^slicing.rules = #open
-* supportingInfo contains existingSubsidyInfo 0..* MS
-    and serviceCase 0..* MS
+* supportingInfo contains serviceCase 0..* MS
     and documentsComplete 0..1 MS
     and applicationChannel 0..1 MS
     and applicant 0..1 MS
     and bankAccount 0..1 MS
-* supportingInfo[existingSubsidyInfo].category.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-claim-supporting-info-type"
-* supportingInfo[existingSubsidyInfo].category.coding.code = #existing-subsidy-info
-* supportingInfo[existingSubsidyInfo].category.coding.display = "既有補助資訊"
-* supportingInfo[existingSubsidyInfo].value[x] only Reference(QuestionnaireResponseTWSSBase)
-* supportingInfo[existingSubsidyInfo] ^short = "既有補助情形 QuestionnaireResponse"
 * supportingInfo[serviceCase].category.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-claim-supporting-info-type"
 * supportingInfo[serviceCase].category.coding.code = #service-case
 * supportingInfo[serviceCase].category.coding.display = "服務案件"

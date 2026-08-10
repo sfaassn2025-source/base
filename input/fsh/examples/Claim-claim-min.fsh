@@ -13,7 +13,6 @@ Usage: #example
 * insurer = Reference(org-min)
 * provider = Reference(org-min)
 * priority.text = "一般"
-* referral = Reference(case-report-min)
 * supportingInfo[serviceCase].sequence = 1
 * supportingInfo[serviceCase].category.coding = TWSSClaimSupportingInfoType#service-case "服務案件"
 * supportingInfo[serviceCase].valueReference = Reference(episode-base)
@@ -52,7 +51,6 @@ Usage: #example
   <p><b>核付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
   <p><b>服務提供者</b>： <a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
   <p><b>優先順序</b>：一般</p>
-  <p><b>來源申請</b>： <a href="ServiceRequest-case-report-min.html">ServiceRequest/case-report-min</a> "個案通報範例"</p>
   <p><b>支持資料</b>： <a href="EpisodeOfCare-episode-base.html">EpisodeOfCare/episode-base</a> "個案服務案件基礎範例"</p>
   <p><b>補助資格</b>： <a href="Coverage-coverage-min.html">Coverage/coverage-min</a> "中低收入戶"</p>
   <p><b>補助項目</b>：生活補助</p>

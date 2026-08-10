@@ -291,7 +291,10 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-case-report-twss-base"
 
 * caseReport.reportTime -> "ServiceRequest.authoredOn"
+* caseReport.caseInfoTime -> "ServiceRequest.authoredOn"
+* caseReport.caseInfoType -> "ServiceRequest.orderDetail"
 * caseReport.caseServiceType -> "ServiceRequest.orderDetail"
+* caseAssessment.caseServiceType -> "ServiceRequest.orderDetail"
 * caseReport.isReferralCase -> "ServiceRequest.extension"
 
 Mapping: TWSSBaseToPatient
@@ -433,6 +436,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss
 
 * caseAssessment.insuranceStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status').item.where(linkId = '10.2').answer.valueCoding"
 * caseAssessment.welfareIdentityType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status').item.where(linkId = '10.3').answer.valueCoding"
+* subsidyApplication.receivedSubsidyType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status').item.where(linkId = '10.1').item.where(linkId = '10.1.1').answer.valueCoding"
+* subsidyApplication.receivedSubsidyAmount -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status').item.where(linkId = '10.1').item.where(linkId = '10.1.2').answer.valueDecimal"
 * caseAssessment.visitTarget -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/visit-record').item.where(linkId = '11.1').answer.valueCoding"
 * caseAssessment.visitServiceMethod -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/visit-record').item.where(linkId = '11.2').answer.valueCoding"
 * caseAssessment.visitStartTime -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/visit-record').item.where(linkId = '11.3').answer.valueDateTime"
@@ -444,6 +449,9 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss
 * caseAssessment.familyAssessment -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/family-assessment').item.where(linkId = '2')"
 * caseAssessment.familyEnvironment -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/family-assessment').item.where(linkId = '2').item.where(linkId = '2.1').answer.valueInteger"
 * caseAssessment.externalSupport -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/family-assessment').item.where(linkId = '2').item.where(linkId = '2.2').answer.valueInteger"
+* caseAssessment.disabilityLocation -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.2').answer.valueCoding"
+* caseService.assistiveDeviceName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/assistive-device-status').item.where(linkId = '8').item.where(linkId = '8.1').answer.valueString"
+* caseService.assistiveDeviceUsage -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/assistive-device-status').item.where(linkId = '8').item.where(linkId = '8.2').answer.valueBoolean"
 
 Mapping: TWSSBaseToADLQuestionnaireResponse
 Id: twss-base-to-adl-questionnaire-response
@@ -543,10 +551,14 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/EpisodeOfCare-twss-base"
 
 * caseService.caseServiceType -> "EpisodeOfCare.type"
+* caseClosure.caseServiceType -> "EpisodeOfCare.type"
 * caseService.serviceCaseStatus -> "EpisodeOfCare.extension[serviceCaseStatus].valueCodeableConcept"
 * caseService.caseOpeningDate -> "EpisodeOfCare.period.start"
 * caseReferral.isReferred -> "EpisodeOfCare.extension[isReferredAtClosure]"
 * caseService.ownerName -> "EpisodeOfCare.careManager"
+* organizationBasicInfo.responsibleUnitCode -> "EpisodeOfCare.managingOrganization"
+* organizationBasicInfo.responsibleUnit -> "EpisodeOfCare.managingOrganization"
+* organizationBasicInfo.responsibleUnitDistrict -> "EpisodeOfCare.managingOrganization"
 
 Mapping: TWSSBaseToOrganization
 Id: twss-base-to-organization
@@ -675,6 +687,9 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
 * subsidyProvision.subsidyMonth -> "ClaimResponse.extension[subsidyMonth]"
 * subsidyProvision.cancellationReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit-termination').reason.text"
 * subsidyProvision.paymentSuspensionReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit-suspension').reason.text"
+* subsidyProvision.subsidyServiceType -> "ClaimResponse.request"
+* subsidyProvision.applicant -> "ClaimResponse.request"
+* subsidyProvision.applicantBankAccount -> "ClaimResponse.request"
 
 Mapping: TWSSBaseToAssessmentReviewTask
 Id: twss-base-to-assessment-review-task
@@ -700,6 +715,10 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-referral-tw
 * caseReferral.referralReason -> "ServiceRequest.reasonCode"
 * caseReferral.caseServiceType -> "ServiceRequest.orderDetail"
 * caseReferral.subsidyServiceType -> "ServiceRequest.orderDetail"
+* organizationBasicInfo.referralUnitName -> "ServiceRequest.requester"
+* organizationBasicInfo.referralUnitDistrict -> "ServiceRequest.requester"
+* organizationBasicInfo.referredUnitName -> "ServiceRequest.performer"
+* organizationBasicInfo.referredUnitDistrict -> "ServiceRequest.performer"
 
 Mapping: TWSSBaseToReferralAcceptanceTask
 Id: twss-base-to-referral-acceptance-task
@@ -733,6 +752,7 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ActualServiceEncounter-twss-base"
 
 * caseService.serviceDate -> "Encounter.period.start"
+* caseService.followUpDate -> "Encounter.period.start"
 
 Mapping: TWSSBaseToInterviewEncounter
 Id: twss-base-to-interview-encounter

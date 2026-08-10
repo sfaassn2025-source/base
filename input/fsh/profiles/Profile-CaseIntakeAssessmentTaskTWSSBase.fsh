@@ -12,7 +12,8 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案受理與評估流程
 * businessStatus ^short = "服務案件狀態"
 * for only Reference(PatientTWSSBase)
 * for 1..1 MS
-* focus only Reference(ServiceRequestTWSSBase)
+* focus only Reference(ServiceRequestCaseReportTWSSBase)
 * focus 1..1 MS
+* focus ^short = "個案通報 ServiceRequest"
 * input.value[x] only Reference(QuestionnaireResponseTWSSBase)
 * input MS

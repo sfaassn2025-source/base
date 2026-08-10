@@ -53,6 +53,9 @@
 #### PractitionerRole
 - [人員角色-PractitionerRole TWSS Base](StructureDefinition-PractitionerRole-twss-base.html)
 
+#### Provenance
+- [資料建立與修改歷程 Provenance Profile](StructureDefinition-Provenance-twss-base.html)
+
 #### Questionnaire
 - [日常生活功能 ADL 評估 Questionnaire Profile](StructureDefinition-Questionnaire-adl-assessment-twss-base.html)
 - [輔具使用狀況 Questionnaire Profile](StructureDefinition-Questionnaire-assistive-device-status-twss-base.html)
@@ -77,9 +80,6 @@
 - [個案通報 ServiceRequest Profile](StructureDefinition-ServiceRequest-case-report-twss-base.html)
 - [個案轉介 ServiceRequest Profile](StructureDefinition-ServiceRequest-referral-twss-base.html)
 - [申請或服務請求 ServiceRequest Profile](StructureDefinition-ServiceRequest-twss-base.html)
-
-#### Provenance
-- [資料建立與修改歷程 Provenance Profile](StructureDefinition-Provenance-twss-base.html)
 
 #### Task
 - [個案受理與評估 Task Profile](StructureDefinition-CaseIntakeAssessmentTask-twss-base.html)

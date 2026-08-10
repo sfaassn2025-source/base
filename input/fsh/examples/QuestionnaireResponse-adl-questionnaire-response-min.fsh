@@ -24,3 +24,16 @@ Description: "依日常生活功能 ADL 評估 Questionnaire 填寫的 Questionn
 * item[0].item[3].linkId = "9.4"
 * item[0].item[3].text = "居家活動"
 * item[0].item[3].answer[0].valueCoding = TWSSADLLevel#D "3級（重度問題）"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <h3><b>日常生活功能（ADL）評估回覆</b></h3>
+  <p><b>個案</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
+  <p><b>依據通報</b>：<a href="ServiceRequest-case-report-min.html">ServiceRequest/case-report-min</a></p>
+  <p><b>評估接觸</b>：<a href="Encounter-assessment-service-min.html">Encounter/assessment-service-min</a></p>
+  <p><b>生活自理</b>：2級（中度問題）</p>
+  <p><b>肢體行動</b>：1級（輕度問題）</p>
+  <p><b>四處走動</b>：2級（中度問題）</p>
+  <p><b>居家活動</b>：3級（重度問題）</p>
+</div>
+"""
