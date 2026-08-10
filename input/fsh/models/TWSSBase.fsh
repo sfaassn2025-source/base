@@ -242,6 +242,7 @@ Description: """
 * caseService.assistiveDeviceName 0..1 string "輔具名稱" "輔具名稱"
 * caseService.assistiveDeviceUsage 0..1 boolean "輔具使用情形" "輔具使用情形"
 * caseService.disabilityAssessmentDate 0..1 date "身心障礙鑑定日期" "個案服務中的身心障礙鑑定日期。"
+* caseService.cancellationReason 0..1 string "註銷原因" "個案服務中身心障礙資格或證明被註銷的原因。"
 * caseService.crossSystemCaseNumber 0..1 Identifier "跨系統個案編號" "其他社福系統使用的個案編號。"
 * caseService.caseNumber 0..1 Identifier "個案編號" "本系統使用的個案編號。"
 * caseService.historicalCaseNumber 0..1 Identifier "歷史案號" "舊系統或舊時期使用的個案編號。"
@@ -561,6 +562,7 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/DisabilityCertificateObservation-twss-base"
 
 * caseService.disabilityAssessmentDate -> "Observation.component[assessmentDate].valueDateTime"
+* caseService.cancellationReason -> "Observation.component[cancellationReason].valueString"
 
 Mapping: TWSSBaseToEpisodeOfCare
 Id: twss-base-to-episodeofcare
