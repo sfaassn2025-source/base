@@ -1,6 +1,6 @@
 ValueSet: TWSSPractitionerTrainingComponentVS
 Id: twss-practitioner-training-component-vs
-Title: "TWSS 服務人受訓課程組成項目值集"
+Title: "TWSS-服務人受訓課程組成項目值集"
 Description: "服務人受訓課程 Observation 使用的組成項目值集。"
 * ^version = "0.0.1"
 * ^status = #draft

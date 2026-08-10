@@ -1,6 +1,6 @@
 CodeSystem: TWSSDisabilityCause
 Id: twss-disability-cause
-Title: "TWSS 致障原因代碼系統"
+Title: "TWSS-致障原因"
 Description: "TWSS Base 使用的常見致障原因分類代碼。"
 * ^version = "0.0.1"
 * ^status = #active

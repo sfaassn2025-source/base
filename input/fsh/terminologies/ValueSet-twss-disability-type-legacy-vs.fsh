@@ -1,6 +1,6 @@
 ValueSet: TWSSDisabilityTypeLegacyVS
 Id: twss-disability-type-legacy-vs
-Title: "身心障礙-舊制障礙類別 ValueSet"
+Title: "TWSS-身心障礙舊制障礙類別值集"
 Description: "身心障礙舊制障礙類別代碼。"
 * ^version = "0.0.1"
 * ^experimental = false

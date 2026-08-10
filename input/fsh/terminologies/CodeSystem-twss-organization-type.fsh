@@ -1,6 +1,6 @@
 CodeSystem: TWSSOrganizationType
 Id: twss-organization-type
-Title: "機構類型"
+Title: "TWSS-機構類型"
 Description: "社家署業務中 Organization Resource 可使用之機構本身類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active

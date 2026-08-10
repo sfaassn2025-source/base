@@ -1,6 +1,6 @@
 CodeSystem: TWSSServiceCaseStatus
 Id: twss-service-case-status
-Title: "TWSS 服務案件狀態"
+Title: "TWSS-服務案件狀態"
 Description: "個案受理與評估 Task 使用的詳細服務案件狀態代碼。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -24,7 +24,7 @@ Description: "個案受理與評估 Task 使用的詳細服務案件狀態代碼
 
 ValueSet: TWSSServiceCaseStatusVS
 Id: twss-service-case-status-vs
-Title: "TWSS 服務案件狀態值集"
+Title: "TWSS-服務案件狀態值集"
 Description: "個案受理與評估 Task 使用的詳細服務案件狀態代碼。"
 * ^version = "0.0.1"
 * ^status = #active

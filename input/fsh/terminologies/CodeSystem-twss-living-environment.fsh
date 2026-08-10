@@ -1,6 +1,6 @@
 CodeSystem: TWSSLivingEnvironment
 Id: twss-living-environment
-Title: "TWSS 居住環境代碼"
+Title: "TWSS-居住環境"
 Description: "TWSS 居住環境代碼。"
 * ^version = "0.1.0"
 * ^status = #active

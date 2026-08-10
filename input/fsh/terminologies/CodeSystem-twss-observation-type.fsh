@@ -1,6 +1,6 @@
 CodeSystem: TWSSObservationType
 Id: twss-observation-type
-Title: "TWSS 評估觀察類型代碼系統"
+Title: "TWSS-評估觀察類型"
 Description: "TWSS Base 評估觀察類型代碼系統。"
 * ^version = "0.0.1"
 * ^status = #active

@@ -1,7 +1,7 @@
 Profile: PractitionerEducationObservationTWSSBase
 Parent: Observation
 Id: PractitionerEducationObservation-twss-base
-Title: "服務人教育經歷 Observation TWSS Base"
+Title: "服務人教育經歷-Observation TWSS Base"
 Description: "因 TW Core IG 0.3.2 尚無針對服務人教育經歷的 Profile，故繼承原生 Observation，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
 * ^version = "0.0.1"
 * status 1..1 MS

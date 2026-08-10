@@ -1,6 +1,6 @@
 CodeSystem: TWSSReportingUnitType
 Id: twss-reporting-unit-type
-Title: "TWSS 通報單位類別"
+Title: "TWSS-通報單位類別"
 Description: "提出個案通報之人員、單位或系統類別。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -26,7 +26,7 @@ Description: "提出個案通報之人員、單位或系統類別。"
 
 CodeSystem: TWSSReferralHandlingStatus
 Id: twss-referral-handling-status
-Title: "TWSS 轉介處理狀態"
+Title: "TWSS-轉介處理狀態"
 Description: "轉介接收與處理流程使用的業務狀態代碼。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -44,7 +44,7 @@ Description: "轉介接收與處理流程使用的業務狀態代碼。"
 
 CodeSystem: TWSSVisitServiceMethod
 Id: twss-visit-service-method
-Title: "TWSS 訪視服務方式"
+Title: "TWSS-訪視服務方式"
 Description: "個案服務評估或服務接觸的方式。"
 * ^version = "0.0.1"
 * ^status = #active

@@ -1,6 +1,6 @@
 CodeSystem: TWSSADLLevel
 Id: twss-adl-level
-Title: "TWSS 日常生活功能等級代碼系統"
+Title: "TWSS-日常生活功能等級"
 Description: "TWSS Base 使用的日常生活功能評估等級代碼。"
 * ^version = "0.0.1"
 * ^status = #active

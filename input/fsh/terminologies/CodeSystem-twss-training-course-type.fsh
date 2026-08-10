@@ -1,6 +1,6 @@
 CodeSystem: TWSSTrainingCourseType
 Id: twss-training-course-type
-Title: "受訓課程類型"
+Title: "TWSS-受訓課程類型"
 Description: "社家署受訓課程類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active

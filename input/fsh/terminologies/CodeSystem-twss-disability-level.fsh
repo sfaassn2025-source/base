@@ -1,6 +1,6 @@
 CodeSystem: TWSSDisabilityLevel
 Id: twss-disability-level
-Title: "身心障礙-障礙等級"
+Title: "TWSS-身心障礙障礙等級"
 Description: "身心障礙障礙等級代碼。"
 * ^version = "0.0.1"
 * ^status = #active

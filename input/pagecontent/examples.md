@@ -2,10 +2,10 @@
 以下為本IG使用到的所有Profiles的範例。
 
 #### Claim
-- [補助申請範例](Claim-claim-min.html)：依據補助申請或核付明細-Claim TWSS Base Profile呈現補助申請之範例
+- [補助申請範例](Claim-claim-min.html)
 
 #### ClaimResponse
-- [補助審核結果範例](ClaimResponse-claimresponse-min.html)：依據補助審核或核付結果-ClaimResponse TWSS Base Profile呈現補助審核結果之範例
+- [補助審核結果範例](ClaimResponse-claimresponse-min.html)
 
 #### Condition
 - [健康與障礙狀況範例](Condition-condition-min.html)

@@ -1,6 +1,6 @@
 CodeSystem: TWSSPractitionerEducationComponent
 Id: twss-practitioner-education-component
-Title: "TWSS 服務人教育經歷組成項目代碼系統"
+Title: "TWSS-服務人教育經歷組成項目"
 Description: "服務人教育經歷 Observation 使用的組成項目代碼系統。"
 * ^version = "0.0.1"
 * ^status = #active

@@ -1,6 +1,6 @@
 CodeSystem: TWSSEpisodeOfCareType
 Id: twss-episode-of-care-type
-Title: "TWSS 個案服務或補助案件類型"
+Title: "TWSS-個案服務或補助案件類型"
 Description: "社家署業務中用以表示個案服務、補助或申請項目類型之代碼。"
 * ^version = "0.0.1"
 * ^status = #active

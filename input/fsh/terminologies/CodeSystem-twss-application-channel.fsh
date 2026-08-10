@@ -1,6 +1,6 @@
 CodeSystem: TWSSApplicationChannel
 Id: twss-application-channel
-Title: "TWSS 補助申請管道"
+Title: "TWSS-補助申請管道"
 Description: "補助申請使用的申請管道代碼。"
 * ^version = "0.0.1"
 * ^status = #active

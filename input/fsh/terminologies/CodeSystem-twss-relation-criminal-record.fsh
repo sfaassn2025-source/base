@@ -1,6 +1,6 @@
 CodeSystem: TWSSRelationCriminalRecord
 Id: twss-relation-criminal-record
-Title: "TWSS 關係人不良犯罪紀錄代碼系統"
+Title: "TWSS-關係人不良犯罪紀錄"
 Description: "TWSS Base 使用的關係人不良犯罪紀錄代碼。"
 * ^version = "0.0.1"
 * ^status = #active

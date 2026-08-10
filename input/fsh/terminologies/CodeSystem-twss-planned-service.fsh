@@ -1,6 +1,6 @@
 CodeSystem: TWSSProvidedFinancialSubsidy
 Id: twss-provided-financial-subsidy
-Title: "TWSS 提供經濟補助"
+Title: "TWSS-提供經濟補助"
 Description: "個案服務計畫中預計提供的經濟補助項目。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -48,7 +48,7 @@ Description: "個案服務計畫中預計提供的經濟補助項目。"
 
 ValueSet: TWSSProvidedFinancialSubsidyVS
 Id: twss-provided-financial-subsidy-vs
-Title: "TWSS 提供經濟補助值集"
+Title: "TWSS-提供經濟補助值集"
 Description: "個案服務計畫中預計提供的經濟補助項目。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -57,7 +57,7 @@ Description: "個案服務計畫中預計提供的經濟補助項目。"
 
 CodeSystem: TWSSProvidedWelfareService
 Id: twss-provided-welfare-service
-Title: "TWSS 提供福利服務"
+Title: "TWSS-提供福利服務"
 Description: "個案服務計畫中預計提供的福利服務項目。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -94,7 +94,7 @@ Description: "個案服務計畫中預計提供的福利服務項目。"
 
 ValueSet: TWSSProvidedWelfareServiceVS
 Id: twss-provided-welfare-service-vs
-Title: "TWSS 提供福利服務值集"
+Title: "TWSS-提供福利服務值集"
 Description: "個案服務計畫中預計提供的福利服務項目。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -103,7 +103,7 @@ Description: "個案服務計畫中預計提供的福利服務項目。"
 
 CodeSystem: TWSSProvidedEmploymentService
 Id: twss-provided-employment-service
-Title: "TWSS 提供就業服務"
+Title: "TWSS-提供就業服務"
 Description: "個案服務計畫中預計提供的就業服務項目。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -129,7 +129,7 @@ Description: "個案服務計畫中預計提供的就業服務項目。"
 
 ValueSet: TWSSProvidedEmploymentServiceVS
 Id: twss-provided-employment-service-vs
-Title: "TWSS 提供就業服務值集"
+Title: "TWSS-提供就業服務值集"
 Description: "個案服務計畫中預計提供的就業服務項目。"
 * ^version = "0.0.1"
 * ^status = #active

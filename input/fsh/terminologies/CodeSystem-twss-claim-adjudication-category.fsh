@@ -1,6 +1,6 @@
 CodeSystem: TWSSClaimAdjudicationCategory
 Id: twss-claim-adjudication-category
-Title: "TWSS 補助裁決類別代碼系統"
+Title: "TWSS-補助裁決類別"
 Description: "記錄補助申請審核結果中各類裁決資料的用途。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -14,7 +14,7 @@ Description: "記錄補助申請審核結果中各類裁決資料的用途。"
 
 CodeSystem: TWSSPaymentStatus
 Id: twss-payment-status
-Title: "TWSS 補助撥款狀況代碼系統"
+Title: "TWSS-補助撥款狀況"
 Description: "記錄補助款項的撥款處理狀況。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -27,7 +27,7 @@ Description: "記錄補助款項的撥款處理狀況。"
 
 ValueSet: TWSSPaymentStatusVS
 Id: twss-payment-status-vs
-Title: "TWSS 補助撥款狀況值集"
+Title: "TWSS-補助撥款狀況值集"
 Description: "TWSS 補助撥款狀況使用的代碼。"
 * ^version = "0.0.1"
 * ^status = #active

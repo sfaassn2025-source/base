@@ -1,6 +1,6 @@
 ValueSet: TWSSLivingTypeVS
 Id: twss-living-type-vs
-Title: "TWSS 住所類型 ValueSet"
+Title: "TWSS-住所類型值集"
 Description: "TWSS 住所類型代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
@@ -8,7 +8,7 @@ Description: "TWSS 住所類型代碼之值集。"
 
 ValueSet: TWSSHousingTypeVS
 Id: twss-housing-type-vs
-Title: "TWSS 房屋類型 ValueSet"
+Title: "TWSS-房屋類型值集"
 Description: "TWSS 房屋類型代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
@@ -16,7 +16,7 @@ Description: "TWSS 房屋類型代碼之值集。"
 
 ValueSet: TWSSLivingEnvironmentVS
 Id: twss-living-environment-vs
-Title: "TWSS 居住環境 ValueSet"
+Title: "TWSS-居住環境值集"
 Description: "TWSS 居住環境代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
@@ -24,7 +24,7 @@ Description: "TWSS 居住環境代碼之值集。"
 
 ValueSet: TWSSPrivateBedroomVS
 Id: twss-private-bedroom-vs
-Title: "TWSS 睡眠空間安排 ValueSet"
+Title: "TWSS-睡眠空間安排值集"
 Description: "TWSS 睡眠空間安排代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
@@ -32,7 +32,7 @@ Description: "TWSS 睡眠空間安排代碼之值集。"
 
 ValueSet: TWSSCurrentLivingStatusVS
 Id: twss-current-living-status-vs
-Title: "TWSS 目前生活情形 ValueSet"
+Title: "TWSS-目前生活情形值集"
 Description: "TWSS 目前生活情形代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
@@ -40,7 +40,7 @@ Description: "TWSS 目前生活情形代碼之值集。"
 
 ValueSet: TWSSCohabitationStatusVS
 Id: twss-cohabitation-status-vs
-Title: "TWSS 同住狀況 ValueSet"
+Title: "TWSS-同住狀況值集"
 Description: "TWSS 同住狀況代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false

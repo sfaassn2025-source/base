@@ -1,6 +1,6 @@
 CodeSystem: TWSSLivingType
 Id: twss-living-type
-Title: "TWSS 住所類型代碼"
+Title: "TWSS-住所類型"
 Description: "TWSS 住所類型代碼。"
 * ^version = "0.1.0"
 * ^status = #active

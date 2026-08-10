@@ -1,6 +1,6 @@
 CodeSystem: TWSSCountyCityCode
 Id: twss-county-city-code
-Title: "臺灣內政部戶政司-縣市區域代碼"
+Title: "TWSS-臺灣內政部戶政司縣市區域代碼"
 Description: "臺灣內政部戶政司縣市區域代碼。"
 * ^version = "0.0.1"
 * ^status = #active

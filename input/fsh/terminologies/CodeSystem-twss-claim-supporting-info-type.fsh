@@ -1,6 +1,6 @@
 CodeSystem: TWSSClaimSupportingInfoType
 Id: twss-claim-supporting-info-type
-Title: "TWSS 補助申請補充資訊類型"
+Title: "TWSS-補助申請補充資訊類型"
 Description: "TWSS 補助申請 Claim.supportingInfo 使用的補充資訊類型。"
 * ^version = "0.1.0"
 * ^status = #active

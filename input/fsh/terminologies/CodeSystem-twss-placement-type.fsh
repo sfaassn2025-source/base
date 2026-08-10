@@ -1,6 +1,6 @@
 CodeSystem: TWSSPlacementType
 Id: twss-placement-type
-Title: "TWSS 安置類型"
+Title: "TWSS-安置類型"
 Description: "個案安置 Encounter 使用的安置類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -24,7 +24,7 @@ Description: "個案安置 Encounter 使用的安置類型代碼。"
 
 ValueSet: TWSSPlacementTypeVS
 Id: twss-placement-type-vs
-Title: "TWSS 安置類型值集"
+Title: "TWSS-安置類型值集"
 Description: "個案安置 Encounter 使用的安置類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active

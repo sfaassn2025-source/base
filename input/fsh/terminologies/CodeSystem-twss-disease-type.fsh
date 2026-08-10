@@ -1,6 +1,6 @@
 CodeSystem: TWSSDiseaseType
 Id: twss-disease-type
-Title: "TWSS 疾病類型代碼系統"
+Title: "TWSS-疾病類型"
 Description: "TWSS Base 使用的疾病類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active

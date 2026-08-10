@@ -1,6 +1,6 @@
 CodeSystem: TWSSHousingType
 Id: twss-housing-type
-Title: "TWSS 房屋類型代碼"
+Title: "TWSS-房屋類型"
 Description: "TWSS 房屋類型代碼。"
 * ^version = "0.1.0"
 * ^status = #active

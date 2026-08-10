@@ -1,6 +1,6 @@
 CodeSystem: TWSSPractitionerTrainingComponent
 Id: twss-practitioner-training-component
-Title: "TWSS 服務人受訓課程組成項目代碼系統"
+Title: "TWSS-服務人受訓課程組成項目"
 Description: "服務人受訓課程 Observation 使用的組成項目代碼系統。"
 * ^version = "0.0.1"
 * ^status = #active

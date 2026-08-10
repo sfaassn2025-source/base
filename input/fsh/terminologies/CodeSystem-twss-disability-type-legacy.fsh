@@ -1,6 +1,6 @@
 CodeSystem: TWSSDisabilityTypeLegacy
 Id: twss-disability-type-legacy
-Title: "身心障礙-舊制障礙類別"
+Title: "TWSS-身心障礙舊制障礙類別"
 Description: "身心障礙舊制障礙類別代碼。"
 * ^version = "0.0.1"
 * ^status = #active

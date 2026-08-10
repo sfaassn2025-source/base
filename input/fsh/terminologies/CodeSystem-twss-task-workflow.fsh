@@ -1,6 +1,6 @@
 CodeSystem: TWSSTaskInputType
 Id: twss-task-input-type
-Title: "社福審核 Task 輸入類型"
+Title: "TWSS-社福審核Task輸入類型"
 Description: "社福個案評估審核 Task 的具名輸入類型。"
 * ^version = "0.0.1"
 * ^status = #active
@@ -11,7 +11,7 @@ Description: "社福個案評估審核 Task 的具名輸入類型。"
 
 CodeSystem: TWSSTaskOutputType
 Id: twss-task-output-type
-Title: "社福審核 Task 輸出類型"
+Title: "TWSS-社福審核Task輸出類型"
 Description: "社福個案評估審核 Task 的具名輸出類型。"
 * ^version = "0.0.1"
 * ^status = #active

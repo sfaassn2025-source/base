@@ -1,6 +1,6 @@
 ValueSet: TWSSDisabilityLevelVS
 Id: twss-disability-level-vs
-Title: "FHIR Condition Severity + TWSS 障礙等級 ValueSet"
+Title: "TWSS-FHIR Condition Severity與障礙等級值集"
 Description: "身心障礙障礙等級代碼值集；輕度、中度、重度優先使用 FHIR Condition severity 原值集之 SNOMED CT 代碼，其餘 TWSS 業務值以本 IG 補充。"
 * ^version = "0.0.1"
 * ^experimental = false

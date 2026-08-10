@@ -1,7 +1,7 @@
 Profile: QuestionnaireWelfareEconomicStatusTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-welfare-economic-status-twss-base
-Title: "福利與經濟現況 Questionnaire TWSS Base"
+Title: "福利與經濟現況-Questionnaire TWSS Base"
 Description: "定義既有補助、保險與福利身分評估表單的題目結構。"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
@@ -31,7 +31,7 @@ Description: "定義既有補助、保險與福利身分評估表單的題目結
 Profile: QuestionnaireVisitRecordTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-visit-record-twss-base
-Title: "訪視紀錄 Questionnaire TWSS Base"
+Title: "訪視紀錄-Questionnaire TWSS Base"
 Description: "定義訪視紀錄表單的題目結構。"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value

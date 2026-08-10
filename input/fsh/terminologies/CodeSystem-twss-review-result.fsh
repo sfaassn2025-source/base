@@ -1,6 +1,6 @@
 CodeSystem: TWSSReviewResult
 Id: twss-review-result
-Title: "TWSS 審核結果代碼系統"
+Title: "TWSS-審核結果"
 Description: "TWSS 補助申請與個案服務評估使用的審核結果代碼系統。"
 * ^version = "0.0.1"
 * ^status = #active

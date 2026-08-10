@@ -1,6 +1,6 @@
 CodeSystem: TWSSCohabitationStatus
 Id: twss-cohabitation-status
-Title: "TWSS 同住狀況代碼"
+Title: "TWSS-同住狀況"
 Description: "TWSS 同住狀況代碼。"
 * ^version = "0.1.0"
 * ^status = #active

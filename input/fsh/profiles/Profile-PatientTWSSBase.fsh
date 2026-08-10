@@ -165,7 +165,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
     usual 0..1 MS and
     temp 0..1 MS and
     anonymous 0..1 MS
-* name[official] obeys tw-core-1
+* name obeys tw-core-1
 * name[official].use MS
 * name[official].use = #official
 * name[official].text MS
@@ -180,7 +180,6 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * name[official].given ^example.label = "General"
 * name[official].given ^example.valueString = "Chia-Lin"
 * name[official].given ^condition = "tw-core-1"
-* name[usual] obeys tw-core-1
 * name[usual].use MS
 * name[usual].use = #usual
 * name[usual].text MS

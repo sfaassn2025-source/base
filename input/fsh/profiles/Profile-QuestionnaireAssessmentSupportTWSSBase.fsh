@@ -1,7 +1,7 @@
 Profile: QuestionnaireDisabilityStatusTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-disability-status-twss-base
-Title: "身心障礙狀況 Questionnaire TWSS Base"
+Title: "身心障礙狀況-Questionnaire TWSS Base"
 Description: "定義身心障礙狀況評估表單的題目結構。"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
@@ -77,7 +77,7 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 Profile: QuestionnaireAssistiveDeviceStatusTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-assistive-device-status-twss-base
-Title: "輔具使用狀況 Questionnaire TWSS Base"
+Title: "輔具使用狀況-Questionnaire TWSS Base"
 Description: "定義輔具使用狀況評估表單的題目結構。"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
@@ -98,7 +98,7 @@ Description: "定義輔具使用狀況評估表單的題目結構。"
 Profile: QuestionnaireADLAssessmentTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-adl-assessment-twss-base
-Title: "日常生活功能 ADL 評估 Questionnaire TWSS Base"
+Title: "日常生活功能 ADL 評估-Questionnaire TWSS Base"
 Description: "定義日常生活功能評估表單的題目結構。"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value

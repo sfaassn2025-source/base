@@ -1,6 +1,6 @@
 ValueSet: TWSSServiceRequestCodeVS
 Id: twss-service-request-code-vs
-Title: "TWSS 申請或服務請求項目 ValueSet"
+Title: "TWSS-申請或服務請求項目值集"
 Description: "TWSS 申請、服務或補助項目的主要代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
@@ -8,7 +8,7 @@ Description: "TWSS 申請、服務或補助項目的主要代碼。"
 
 ValueSet: TWSSServiceRequestCategoryVS
 Id: twss-service-request-category-vs
-Title: "TWSS 通報與轉介 ServiceRequest 類型值集"
+Title: "TWSS-通報與轉介ServiceRequest類型值集"
 Description: "TWSS 個案通報與個案轉介 ServiceRequest 的類型代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
@@ -17,7 +17,7 @@ Description: "TWSS 個案通報與個案轉介 ServiceRequest 的類型代碼。
 
 ValueSet: TWSSCaseReportServiceRequestCodeVS
 Id: twss-case-report-service-request-code-vs
-Title: "TWSS 個案通報 ServiceRequest 項目值集"
+Title: "TWSS-個案通報ServiceRequest項目值集"
 Description: "TWSS 個案通報 ServiceRequest 的請求項目代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
@@ -25,7 +25,7 @@ Description: "TWSS 個案通報 ServiceRequest 的請求項目代碼。"
 
 ValueSet: TWSSReferralServiceRequestCodeVS
 Id: twss-referral-service-request-code-vs
-Title: "TWSS 個案轉介 ServiceRequest 項目值集"
+Title: "TWSS-個案轉介ServiceRequest項目值集"
 Description: "TWSS 個案轉介 ServiceRequest 的請求項目代碼。"
 * ^version = "0.0.1"
 * ^experimental = false

@@ -1,6 +1,6 @@
 CodeSystem: TWSSOrganizationEstablishmentType
 Id: twss-organization-establishment-type
-Title: "機構設立別"
+Title: "TWSS-機構設立別"
 Description: "社家署業務中機構設立別代碼。"
 * ^version = "0.0.1"
 * ^status = #active
