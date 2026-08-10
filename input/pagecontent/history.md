@@ -15,7 +15,7 @@ The following versions of the TWSS Base IG have been published:
       <td colspan="5"><b>Current Versions</b></td>
     </tr>
     <tr>
-      <td><a href="index.html">2026-08-08</a></td>
+      <td><a href="index.html">2026-08-10</a></td>
       <td>0.0.1</td>
       <td><a href="https://hl7.org/fhir/R4/">4.0.1</a></td>
       <td>Initial draft of the TWSS Base IG.</td>
