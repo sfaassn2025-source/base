@@ -6,8 +6,8 @@
 id: tw.gov.mohw.twss.base
 canonical: https://sfaa.gov.tw/base
 name: TWSSBaseIG
-title: TWSS Base IG
-description: TWSS Base IG
+title: 臺灣社政領域基礎實作指引
+description: 臺灣社政領域基礎實作指引(TWSS Base IG)
 status: draft # draft | active | retired | unknown
 version: 0.0.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
