@@ -59,7 +59,6 @@
       <th>姓名</th>
       <th>所屬單位</th>
       <th>聯絡方式</th>
-      <th>原因</th>
     </tr>
   </thead>
   <tbody>
@@ -69,7 +68,6 @@
       <td>林伃瑤（Yu-Yao Lin）</td>
       <td>國立臺北護理健康大學－健康事業管理系<br />(Department of Health Care Management, National Taipei University of Nursing and Health Sciences)</td>
       <td><a href="mailto:a28485251@gmail.com">a28485251@gmail.com</a></td>
-      <td>製作 IG 的主要人</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -77,7 +75,6 @@
       <td>王齡儀</td>
       <td>社會安全網小組</td>
       <td>—</td>
-      <td>本案主責單位</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -85,7 +82,6 @@
       <td>陳佩琪</td>
       <td>社會安全網小組</td>
       <td>—</td>
-      <td>本案主責單位</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -93,7 +89,6 @@
       <td>詹慶恩</td>
       <td>社會安全網小組</td>
       <td>—</td>
-      <td>本案主責單位</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -101,7 +96,6 @@
       <td>謝宗震</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -109,7 +103,6 @@
       <td>李麗惠（Li-Hui Lee）</td>
       <td>健康事業管理系<br />(Department of Health Care Management, National Taipei University of Nursing and Health Sciences)</td>
       <td><a href="mailto:cclhlee@gmail.com">cclhlee@gmail.com</a><br /><a href="mailto:cclhlee@ntunhs.edu.tw">cclhlee@ntunhs.edu.tw</a></td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -117,7 +110,6 @@
       <td>李承恩</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -125,7 +117,6 @@
       <td>謝佩穎</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -133,7 +124,6 @@
       <td>蘇怡嘉</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -141,7 +131,6 @@
       <td>郭超望</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -149,7 +138,6 @@
       <td>黃存宇</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -157,7 +145,6 @@
       <td>謝芝庭</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -165,7 +152,6 @@
       <td>陳藝方</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -173,7 +159,6 @@
       <td>鄭嘉儀</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -181,7 +166,6 @@
       <td>李嘉珉</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -189,7 +173,6 @@
       <td>楊宜蓁</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -197,7 +180,6 @@
       <td>黃凱暉</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
     <tr>
       <td>貢獻者</td>
@@ -205,7 +187,6 @@
       <td>陳潔寧</td>
       <td>—</td>
       <td>—</td>
-      <td>本案工作團隊</td>
     </tr>
   </tbody>
 </table>
