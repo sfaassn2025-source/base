@@ -281,7 +281,7 @@ Usage: #definition
 </div></div></div>
 <h3 id="resourcesCap1">Resources或Profiles的RESTful功能</h3>
 <h4 id="resourcesSummary1">Summary</h4>
-<p>下列列出本能力聲明所涵蓋的Resources、支援的Profiles、RESTful互動，以及建議應支援的FHIR R4原生查詢參數。</p>
+<p>下列列出本能力聲明所涵蓋的Resources、支援的Profiles、RESTful互動，以及建議應支援的FHIR R4查詢參數。</p>
 <div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource名稱</b></th><th><b>Profile</b></th><th>Create</th><th>Read</th><th>VRead</th><th>Delete</th><th>Update</th><th><b>建議應支援的查詢參數</b></th></tr></thead><tbody>
 <tr><td><a href="#CarePlan-RESTful">CarePlan</a></td><td>支援的Profiles<br/>&#160;&#160;<a href="StructureDefinition-CarePlan-twss-base.html">個案服務計畫-CarePlan TWSS Base</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center"></td><td class="text-center">y</td><td><a href="https://hl7.org/fhir/R4/careplan.html#search">查看 CarePlan 查詢參數</a></td></tr>
 <tr><td><a href="#Claim-RESTful">Claim</a></td><td>支援的Profiles<br/>&#160;&#160;<a href="StructureDefinition-Claim-twss-base.html">補助申請或核付明細-Claim TWSS Base</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"></td><td class="text-center">y</td><td><a href="https://hl7.org/fhir/R4/claim.html#search">查看 Claim 查詢參數</a></td></tr>
@@ -308,121 +308,121 @@ Usage: #definition
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/careplan.html">CarePlan</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-CarePlan-twss-base.html">個案服務計畫-CarePlan TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/careplan.html#search">查看 CarePlan 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/careplan.html#search">查看 CarePlan 查詢參數</a></div>
 </div></div></div>
 <h4 id="Claim-RESTful">Claim</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/claim.html">Claim</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Claim-twss-base.html">補助申請或核付明細-Claim TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/claim.html#search">查看 Claim 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/claim.html#search">查看 Claim 查詢參數</a></div>
 </div></div></div>
 <h4 id="ClaimResponse-RESTful">ClaimResponse</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/claimresponse.html">ClaimResponse</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-ClaimResponse-twss-base.html">補助審核或核付結果-ClaimResponse TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/claimresponse.html#search">查看 ClaimResponse 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/claimresponse.html#search">查看 ClaimResponse 查詢參數</a></div>
 </div></div></div>
 <h4 id="Condition-RESTful">Condition</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/condition.html">Condition</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Condition-twss-base.html">健康與障礙狀況-Condition TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/condition.html#search">查看 Condition 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/condition.html#search">查看 Condition 查詢參數</a></div>
 </div></div></div>
 <h4 id="Coverage-RESTful">Coverage</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/coverage.html">Coverage</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Coverage-twss-base.html">補助資格或補助案件-Coverage TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/coverage.html#search">查看 Coverage 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/coverage.html#search">查看 Coverage 查詢參數</a></div>
 </div></div></div>
 <h4 id="DocumentReference-RESTful">DocumentReference</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-DocumentReference-twss-base.html">共用公文-DocumentReference TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/documentreference.html#search">查看 DocumentReference 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/documentreference.html#search">查看 DocumentReference 查詢參數</a></div>
 </div></div></div>
 <h4 id="Encounter-RESTful">Encounter</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/encounter.html">Encounter</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-PlacementEncounter-twss-base.html">安置服務-Encounter TWSS Base</a><br/><a href="StructureDefinition-Encounter-assessment-service-twss-base.html">個案評估或服務接觸-Encounter TWSS Base</a><br/><a href="StructureDefinition-InterviewEncounter-twss-base.html">個案會談-Encounter TWSS Base</a><br/><a href="StructureDefinition-MeetingEncounter-twss-base.html">個案會議-Encounter TWSS Base</a><br/><a href="StructureDefinition-ActualServiceEncounter-twss-base.html">個案實際服務-Encounter TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/encounter.html#search">查看 Encounter 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/encounter.html#search">查看 Encounter 查詢參數</a></div>
 </div></div></div>
 <h4 id="EpisodeOfCare-RESTful">EpisodeOfCare</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/episodeofcare.html">EpisodeOfCare</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-EpisodeOfCare-twss-base.html">個案服務案件-EpisodeOfCare TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/episodeofcare.html#search">查看 EpisodeOfCare 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/episodeofcare.html#search">查看 EpisodeOfCare 查詢參數</a></div>
 </div></div></div>
 <h4 id="Location-RESTful">Location</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/location.html">Location</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Location-twss-base.html">服務地點及托育地址-Location TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/location.html#search">查看 Location 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/location.html#search">查看 Location 查詢參數</a></div>
 </div></div></div>
 <h4 id="Observation-RESTful">Observation</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/observation.html">Observation</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-DisabilityCertificateObservation-twss-base.html">身心障礙證明狀態-Observation TWSS Base</a><br/><a href="StructureDefinition-PractitionerTrainingObservation-twss-base.html">服務人受訓課程-Observation TWSS Base</a><br/><a href="StructureDefinition-PractitionerEducationObservation-twss-base.html">服務人教育經歷-Observation TWSS Base</a><br/><a href="StructureDefinition-RulingDateObservation-twss-base.html">裁定日期-Observation TWSS Base</a><br/><a href="StructureDefinition-PenaltyLegalBasisObservation-twss-base.html">裁罰法規依據-Observation TWSS Base</a><br/><a href="StructureDefinition-OrganizationAuditObservation-twss-base.html">機構查核結果-Observation TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/observation.html#search">查看 Observation 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/observation.html#search">查看 Observation 查詢參數</a></div>
 </div></div></div>
 <h4 id="Organization-RESTful">Organization</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/organization.html">Organization</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Organization-twss-base.html">機構資料-Organization TWSS Base</a><br/><a href="StructureDefinition-MedicalInstitutionOrganization-twss-base.html">醫療院所-Organization TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/organization.html#search">查看 Organization 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/organization.html#search">查看 Organization 查詢參數</a></div>
 </div></div></div>
 <h4 id="Patient-RESTful">Patient</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/patient.html">Patient</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Patient-twss-base.html">個案資料-Patient TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/patient.html#search">查看 Patient 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/patient.html#search">查看 Patient 查詢參數</a></div>
 </div></div></div>
 <h4 id="Practitioner-RESTful">Practitioner</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/practitioner.html">Practitioner</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Practitioner-twss-base.html">人員資料-Practitioner TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/practitioner.html#search">查看 Practitioner 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/practitioner.html#search">查看 Practitioner 查詢參數</a></div>
 </div></div></div>
 <h4 id="PractitionerRole-RESTful">PractitionerRole</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-PractitionerRole-twss-base.html">人員角色-PractitionerRole TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/practitionerrole.html#search">查看 PractitionerRole 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/practitionerrole.html#search">查看 PractitionerRole 查詢參數</a></div>
 </div></div></div>
 <h4 id="Provenance-RESTful">Provenance</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/provenance.html">Provenance</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Provenance-twss-base.html">資料建立與修改歷程-Provenance TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/provenance.html#search">查看 Provenance 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/provenance.html#search">查看 Provenance 查詢參數</a></div>
 </div></div></div>
 <h4 id="Questionnaire-RESTful">Questionnaire</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-Questionnaire-adl-assessment-twss-base.html">日常生活功能 ADL 評估-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-crisis-event-location-twss-base.html">危機事件地點-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-disability-status-twss-base.html">身心障礙狀況-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-living-condition-twss-base.html">居住狀況評估-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-twss-base.html">社福評估表單-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-household-disability-count-twss-base.html">家庭身障人口狀況-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-family-assessment-twss-base.html">家庭評估-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-health-disease-status-twss-base.html">健康與疾病狀況-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-visit-record-twss-base.html">訪視紀錄-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-welfare-economic-status-twss-base.html">福利與經濟現況-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-assistive-device-status-twss-base.html">輔具使用狀況-Questionnaire TWSS Base</a><br/><a href="StructureDefinition-Questionnaire-related-person-risk-twss-base.html">關係人風險狀況-Questionnaire TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/questionnaire.html#search">查看 Questionnaire 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/questionnaire.html#search">查看 Questionnaire 查詢參數</a></div>
 </div></div></div>
 <h4 id="QuestionnaireResponse-RESTful">QuestionnaireResponse</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-QuestionnaireResponse-twss-base.html">社福評估回覆-QuestionnaireResponse TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/questionnaireresponse.html#search">查看 QuestionnaireResponse 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/questionnaireresponse.html#search">查看 QuestionnaireResponse 查詢參數</a></div>
 </div></div></div>
 <h4 id="RelatedPerson-RESTful">RelatedPerson</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-RelatedPerson-twss-base.html">關係人資料-RelatedPerson TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/relatedperson.html#search">查看 RelatedPerson 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/relatedperson.html#search">查看 RelatedPerson 查詢參數</a></div>
 </div></div></div>
 <h4 id="ServiceRequest-RESTful">ServiceRequest</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-ServiceRequest-twss-base.html">申請或服務請求-ServiceRequest TWSS Base</a><br/><a href="StructureDefinition-ServiceRequest-case-report-twss-base.html">個案通報-ServiceRequest TWSS Base</a><br/><a href="StructureDefinition-ServiceRequest-referral-twss-base.html">個案轉介-ServiceRequest TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/servicerequest.html#search">查看 ServiceRequest 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/servicerequest.html#search">查看 ServiceRequest 查詢參數</a></div>
 </div></div></div>
 <h4 id="Task-RESTful">Task</h4>
 <div class="panel panel-default"><div class="panel-heading"><h5 class="panel-title">Resource或Profiles的RESTful功能</h5></div><div class="panel-body"><div class="row">
 <div class="col-lg-4"><span class="lead">Core FHIR Resource</span><br/><a href="https://hl7.org/fhir/R4/task.html">Task</a></div>
 <div class="col-lg-4"><span class="lead">支援的Profiles</span><br/><a href="StructureDefinition-CaseIntakeAssessmentTask-twss-base.html">個案受理與評估-Task TWSS Base</a><br/><a href="StructureDefinition-AssessmentReviewTask-twss-base.html">個案服務評估審核-Task TWSS Base</a><br/><a href="StructureDefinition-ReferralAcceptanceTask-twss-base.html">個案轉介受理-Task TWSS Base</a><br/><a href="StructureDefinition-ReferralHandlingTask-twss-base.html">個案轉介處理-Task TWSS Base</a></div>
-<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4原生查詢參數。<br/><a href="https://hl7.org/fhir/R4/task.html#search">查看 Task 查詢參數</a></div>
+<div class="col-lg-4"><span class="lead">Search Parameters</span><br/>建議應該（SHOULD）支援全部FHIR R4查詢參數。<br/><a href="https://hl7.org/fhir/R4/task.html#search">查看 Task 查詢參數</a></div>
 </div></div></div>
 </div>
 """
