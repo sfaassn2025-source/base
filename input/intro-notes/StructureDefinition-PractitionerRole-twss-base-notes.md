@@ -2,20 +2,31 @@
 
 #### 建議應該支援以下查詢參數：
 
-1. **建議（SHOULD）** 支援透過查詢參數 **[`_id`](SearchParameter-PractitionerRole-id.html)** 查詢所有 PractitionerRole：
-    ([如何透過 token 查詢](http://hl7.org/fhir/R4/search.html#token))  
-    `GET [base]/PractitionerRole?_id=[id]`  
-    `GET [base]/PractitionerRole/[id]`
+此 Profile 使用 FHIR R4 PractitionerRole Resource；伺服端建議（SHOULD）支援以下 FHIR 原生查詢參數：
+完整定義請參考 [FHIR R4 PractitionerRole 原生查詢參數](https://hl7.org/fhir/R4/practitionerrole.html#search)。
 
-2. **建議（SHOULD）** 支援透過查詢參數 **[`practitioner`](SearchParameter-PractitionerRole-practitioner.html)** 查詢所有 PractitionerRole：
-    ([如何透過 reference 查詢](http://hl7.org/fhir/R4/search.html#reference))  
-    `GET [base]/PractitionerRole?practitioner={Type/}[id]`
-
-3. **建議（SHOULD）** 支援透過查詢參數 **[`organization`](SearchParameter-PractitionerRole-organization.html)** 查詢所有 PractitionerRole：
-    ([如何透過 reference 查詢](http://hl7.org/fhir/R4/search.html#reference))  
-    `GET [base]/PractitionerRole?organization={Type/}[id]`
-
-4. **建議（SHOULD）** 支援透過查詢參數 **[`role`](SearchParameter-PractitionerRole-role.html)** 查詢所有 PractitionerRole：
-    ([如何透過 token 查詢](http://hl7.org/fhir/R4/search.html#token))  
-    `GET [base]/PractitionerRole?role=[system]|[code]`
-
+| 查詢參數 | 類型 | 查詢範例 |
+|---|---|---|
+| `_content` | string | `GET [base]/_content=[value]` |
+| `_filter` | special | `GET [base]/_filter=[value]` |
+| `_id` | token | `GET [base]/PractitionerRole/[id]` |
+| `_lastUpdated` | date | `GET [base]/_lastUpdated=[value]` |
+| `_profile` | uri | `GET [base]/_profile=[value]` |
+| `_query` | token | `GET [base]/_query=[value]` |
+| `_security` | token | `GET [base]/_security=[value]` |
+| `_source` | uri | `GET [base]/_source=[value]` |
+| `_tag` | token | `GET [base]/_tag=[value]` |
+| `_text` | string | `GET [base]/_text=[value]` |
+| `active` | token | `GET [base]/active=[value]` |
+| `date` | date | `GET [base]/date=[value]` |
+| `email` | token | `GET [base]/email=[value]` |
+| `endpoint` | reference | `GET [base]/endpoint=[value]` |
+| `identifier` | token | `GET [base]/identifier=[value]` |
+| `location` | reference | `GET [base]/location=[value]` |
+| `organization` | reference | `GET [base]/organization=[value]` |
+| `phone` | token | `GET [base]/phone=[value]` |
+| `practitioner` | reference | `GET [base]/practitioner=[value]` |
+| `role` | token | `GET [base]/role=[value]` |
+| `service` | reference | `GET [base]/service=[value]` |
+| `specialty` | token | `GET [base]/specialty=[value]` |
+| `telecom` | token | `GET [base]/telecom=[value]` |

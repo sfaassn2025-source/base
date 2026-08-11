@@ -28,6 +28,7 @@ The slice definition for Patient.identifier has a maximum of 2 but the slices ad
 
 # 邏輯模型的mapping，不影響驗證。
 % The html source has duplicate anchor Ids%
+% StructureDefinition-TWSSBaseModel-mappings.html%
 
 # HL7 Publisher 中的程式語法錯誤，造成所有ConceptMaps產生了版本不同的多筆Warnings，此警告訊息不影響實作與實際代碼驗證。（WARNING後方的藍色字樣(1 uses) 是指WARNING在此ConceptMap中有被使用到）
 % Target Code System%
@@ -55,3 +56,4 @@ The slice definition for Patient.identifier has a maximum of 2 but the slices ad
 
 # 本階段以 CI Build 提供歷程頁面；正式發布時，Publisher 會以發布版本目錄取代 history.html。
 % This IG generates a page named 'history.html'. That file name is reserved by the publication process%
+

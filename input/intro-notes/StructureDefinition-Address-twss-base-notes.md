@@ -1,9 +1,5 @@
-#### 查詢參數：
+{% include quickstart-note.md %}
 
-Address 為資料型別（DataType），沒有獨立的 REST 查詢端點。實作者可透過使用 AddressTWSSBase 的 Resource 查詢地址資料，例如：
+#### 查詢參數
 
-```http
-GET [base]/Patient?address=[string]
-GET [base]/Organization?address=[string]
-GET [base]/RelatedPerson?address=[string]
-```
+Address 為 datatype，非 FHIR RESTful API 的獨立 Resource，因此不適用原生查詢參數。
