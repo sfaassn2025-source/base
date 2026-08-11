@@ -1,4 +1,4 @@
-以下列出本 IG 各 Resource 建議應該（SHOULD）支援的 FHIR R4 查詢參數。已由本 IG 定義的查詢參數連至本 IG 頁面；其餘連至 FHIR R4 正式定義。
+以下列出本 IG 各 Resource 建議應該（SHOULD）支援的 FHIR R4 原生查詢參數。已由本 IG 定義的查詢參數連至本 IG 頁面；其餘連至 FHIR R4 正式定義。
 
 ### 對外服務之 API
 
@@ -6,7 +6,7 @@
 
 ##### CarePlan
 
-詳細定義請參考 [FHIR R4 CarePlan 查詢參數](https://hl7.org/fhir/R4/careplan.html#search)。
+詳細定義請參考 [FHIR R4 CarePlan 原生查詢參數](https://hl7.org/fhir/R4/careplan.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -40,7 +40,7 @@
 
 ##### Claim
 
-詳細定義請參考 [FHIR R4 Claim 查詢參數](https://hl7.org/fhir/R4/claim.html#search)。
+詳細定義請參考 [FHIR R4 Claim 原生查詢參數](https://hl7.org/fhir/R4/claim.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -71,7 +71,7 @@
 
 ##### ClaimResponse
 
-詳細定義請參考 [FHIR R4 ClaimResponse 查詢參數](https://hl7.org/fhir/R4/claimresponse.html#search)。
+詳細定義請參考 [FHIR R4 ClaimResponse 原生查詢參數](https://hl7.org/fhir/R4/claimresponse.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -96,7 +96,7 @@
 
 ##### Condition
 
-詳細定義請參考 [FHIR R4 Condition 查詢參數](https://hl7.org/fhir/R4/condition.html#search)。
+詳細定義請參考 [FHIR R4 Condition 原生查詢參數](https://hl7.org/fhir/R4/condition.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -131,7 +131,7 @@
 
 ##### Coverage
 
-詳細定義請參考 [FHIR R4 Coverage 查詢參數](https://hl7.org/fhir/R4/coverage.html#search)。
+詳細定義請參考 [FHIR R4 Coverage 原生查詢參數](https://hl7.org/fhir/R4/coverage.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -156,7 +156,7 @@
 
 ##### DocumentReference
 
-詳細定義請參考 [FHIR R4 DocumentReference 查詢參數](https://hl7.org/fhir/R4/documentreference.html#search)。
+詳細定義請參考 [FHIR R4 DocumentReference 原生查詢參數](https://hl7.org/fhir/R4/documentreference.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -195,7 +195,7 @@
 
 ##### Encounter
 
-詳細定義請參考 [FHIR R4 Encounter 查詢參數](https://hl7.org/fhir/R4/encounter.html#search)。
+詳細定義請參考 [FHIR R4 Encounter 原生查詢參數](https://hl7.org/fhir/R4/encounter.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -232,7 +232,7 @@
 
 ##### EpisodeOfCare
 
-詳細定義請參考 [FHIR R4 EpisodeOfCare 查詢參數](https://hl7.org/fhir/R4/episodeofcare.html#search)。
+詳細定義請參考 [FHIR R4 EpisodeOfCare 原生查詢參數](https://hl7.org/fhir/R4/episodeofcare.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -255,7 +255,7 @@
 
 ##### Location
 
-詳細定義請參考 [FHIR R4 Location 查詢參數](https://hl7.org/fhir/R4/location.html#search)。
+詳細定義請參考 [FHIR R4 Location 原生查詢參數](https://hl7.org/fhir/R4/location.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -284,7 +284,7 @@
 
 ##### Observation
 
-詳細定義請參考 [FHIR R4 Observation 查詢參數](https://hl7.org/fhir/R4/observation.html#search)。
+詳細定義請參考 [FHIR R4 Observation 原生查詢參數](https://hl7.org/fhir/R4/observation.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -341,7 +341,7 @@
 
 ##### Organization
 
-詳細定義請參考 [FHIR R4 Organization 查詢參數](https://hl7.org/fhir/R4/organization.html#search)。
+詳細定義請參考 [FHIR R4 Organization 原生查詢參數](https://hl7.org/fhir/R4/organization.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -368,7 +368,7 @@
 
 ##### Patient
 
-詳細定義請參考 [FHIR R4 Patient 查詢參數](https://hl7.org/fhir/R4/patient.html#search)。
+詳細定義請參考 [FHIR R4 Patient 原生查詢參數](https://hl7.org/fhir/R4/patient.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -409,7 +409,7 @@
 
 ##### Practitioner
 
-詳細定義請參考 [FHIR R4 Practitioner 查詢參數](https://hl7.org/fhir/R4/practitioner.html#search)。
+詳細定義請參考 [FHIR R4 Practitioner 原生查詢參數](https://hl7.org/fhir/R4/practitioner.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -440,7 +440,7 @@
 
 ##### PractitionerRole
 
-詳細定義請參考 [FHIR R4 PractitionerRole 查詢參數](https://hl7.org/fhir/R4/practitionerrole.html#search)。
+詳細定義請參考 [FHIR R4 PractitionerRole 原生查詢參數](https://hl7.org/fhir/R4/practitionerrole.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -467,7 +467,7 @@
 
 ##### Provenance
 
-詳細定義請參考 [FHIR R4 Provenance 查詢參數](https://hl7.org/fhir/R4/provenance.html#search)。
+詳細定義請參考 [FHIR R4 Provenance 原生查詢參數](https://hl7.org/fhir/R4/provenance.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -491,7 +491,7 @@
 
 ##### Questionnaire
 
-詳細定義請參考 [FHIR R4 Questionnaire 查詢參數](https://hl7.org/fhir/R4/questionnaire.html#search)。
+詳細定義請參考 [FHIR R4 Questionnaire 原生查詢參數](https://hl7.org/fhir/R4/questionnaire.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -524,7 +524,7 @@
 
 ##### QuestionnaireResponse
 
-詳細定義請參考 [FHIR R4 QuestionnaireResponse 查詢參數](https://hl7.org/fhir/R4/questionnaireresponse.html#search)。
+詳細定義請參考 [FHIR R4 QuestionnaireResponse 原生查詢參數](https://hl7.org/fhir/R4/questionnaireresponse.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -550,7 +550,7 @@
 
 ##### RelatedPerson
 
-詳細定義請參考 [FHIR R4 RelatedPerson 查詢參數](https://hl7.org/fhir/R4/relatedperson.html#search)。
+詳細定義請參考 [FHIR R4 RelatedPerson 原生查詢參數](https://hl7.org/fhir/R4/relatedperson.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -581,7 +581,7 @@
 
 ##### ServiceRequest
 
-詳細定義請參考 [FHIR R4 ServiceRequest 查詢參數](https://hl7.org/fhir/R4/servicerequest.html#search)。
+詳細定義請參考 [FHIR R4 ServiceRequest 原生查詢參數](https://hl7.org/fhir/R4/servicerequest.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
@@ -616,7 +616,7 @@
 
 ##### Task
 
-詳細定義請參考 [FHIR R4 Task 查詢參數](https://hl7.org/fhir/R4/task.html#search)。
+詳細定義請參考 [FHIR R4 Task 原生查詢參數](https://hl7.org/fhir/R4/task.html#search)。
 - `_content` (string)
 - `_filter` (special)
 - `_id` (token)
