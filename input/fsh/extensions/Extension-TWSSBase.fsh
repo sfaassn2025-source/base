@@ -205,15 +205,16 @@ Context: Organization
 * valueCodeableConcept MS
 * valueCodeableConcept from TWSSOrganizationEstablishmentTypeVS (required)
 
-Extension: TWSSReportingUnitTypeExtension
-Id: twss-reporting-unit-type
-Title: "通報單位類別"
-Description: "記錄提出個案通報之人員、單位或系統類別。"
-Context: ServiceRequest
-* ^version = "0.0.1"
-* value[x] only CodeableConceptTW
-* valueCodeableConcept MS
-* valueCodeableConcept from TWSSReportingUnitTypeVS (extensible)
+// 待確認欄位：通報單位類別目前未納入最終欄位對應，暫不發布。
+// Extension: TWSSReportingUnitTypeExtension
+// Id: twss-reporting-unit-type
+// Title: "通報單位類別"
+// Description: "記錄提出個案通報之人員、單位或系統類別。"
+// Context: ServiceRequest
+// * ^version = "0.0.1"
+// * value[x] only CodeableConceptTW
+// * valueCodeableConcept MS
+// * valueCodeableConcept from TWSSReportingUnitTypeVS (extensible)
 
 Extension: TWSSOrganizationRegistrationDateExtension
 Id: twss-organization-registration-date

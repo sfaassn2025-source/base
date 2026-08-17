@@ -1,10 +1,11 @@
-ValueSet: TWSSReportingUnitTypeVS
-Id: twss-reporting-unit-type-vs
-Title: "TWSS-通報單位類別值集"
-Description: "個案通報 ServiceRequest 使用的通報單位類別代碼。"
-* ^version = "0.0.1"
-* ^experimental = false
-* include codes from system TWSSReportingUnitType
+// 待確認欄位：通報單位類別目前未納入最終欄位對應，暫不發布。
+// ValueSet: TWSSReportingUnitTypeVS
+// Id: twss-reporting-unit-type-vs
+// Title: "TWSS-通報單位類別值集"
+// Description: "個案通報 ServiceRequest 使用的通報單位類別代碼。"
+// * ^version = "0.0.1"
+// * ^experimental = false
+// * include codes from system TWSSReportingUnitType
 
 ValueSet: TWSSReferralAcceptanceStatusVS
 Id: twss-referral-acceptance-status-vs

@@ -173,7 +173,6 @@ Description: """
 
 
 * caseReport.caseInfoType 0..1 CodeableConcept "通報類型" "通報類型"
-* caseReport.caseInfoTime 1..1 dateTime "通報時間" "通報時間"
 * caseReport.reportTime 0..1 dateTime "通報時間" "個案通報建立的時間。"
 * caseReport.isReferralCase 0..1 boolean "是否為轉介案件" "個案通報是否屬於轉介案件。"
 
@@ -268,7 +267,6 @@ Description: """
 * caseReferral.isReferred 0..1 boolean "是否轉介" "結案或處遇時是否決定向外轉介。"
 * caseReferral.referralProcessingStatus 0..1 CodeableConcept "轉介處理情形" "受轉介單位後續處理的狀態"
 * caseReferral.caseReferTime 0..1 dateTime "轉介時間" "轉介時間"
-* caseReferral.caseReferDate 0..1 date "轉介日期" "轉介日期"
 * caseReferral.subsidyServiceType 0..1 code "申請補助別" "轉介申請所涉補助類別。"
 * caseReferral.caseServiceType 0..1 code "個案服務別" "轉介申請所涉服務領域。"
 
@@ -279,9 +277,7 @@ Description: """
 
 * officialDocument 0..* BackboneElement "共用公文" "共用公文"
 * officialDocument.officialDocumentNumber 0..1 Identifier "公文文號" "公文文號"
-* officialDocument.officialDocumentDate 0..1 date "核准文號日期／公文日期" "核准文號日期或公文日期"
-* officialDocument.approvalDocumentDate 0..1 date "核准文號日期／公文日期" "核准文號日期或公文日期。"
-* officialDocument.approvalDocumentDate ^definition = """approvalDocumentDate
+* officialDocument.officialDocumentDate 0..1 date "公文日期" "公文日期"
 * officialDocument.officialDocumentType 0..1 CodeableConcept "公文類型" "公文類型"
 
 
@@ -292,7 +288,6 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-case-report-twss-base"
 
 * caseReport.reportTime -> "ServiceRequest.authoredOn"
-* caseReport.caseInfoTime -> "ServiceRequest.authoredOn"
 * caseReport.caseInfoType -> "ServiceRequest.orderDetail"
 * caseReport.caseServiceType -> "ServiceRequest.orderDetail"
 * caseAssessment.caseServiceType -> "ServiceRequest.orderDetail"
@@ -729,7 +724,6 @@ Title: "Mapping to TWSSBase Referral ServiceRequest"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-referral-twss-base"
 
-* caseReferral.caseReferDate -> "ServiceRequest.authoredOn"
 * caseReferral.referralDate -> "ServiceRequest.authoredOn"
 * caseReferral.caseReferTime -> "ServiceRequest.occurrenceDateTime"
 * caseReferral.referralReason -> "ServiceRequest.reasonCode"
@@ -879,10 +873,3 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/EpisodeOfCare-twss-base"
 * caseClosure.caseClosingDate -> "EpisodeOfCare.where(status = 'finished').period.end"
 * caseClosure.caseClosingReason -> "EpisodeOfCare.extension[caseCloseReason]"
 
-Mapping: TWSSBaseToFinalDocumentReferenceField
-Id: twss-base-to-final-document-reference-field
-Title: "Mapping to TWSS Base DocumentReference"
-Source: TWSSBaseModel
-Target: "https://sfaa.gov.tw/base/StructureDefinition/DocumentReference-twss-base"
-
-* officialDocument.approvalDocumentDate -> "DocumentReference.content.attachment.creation"

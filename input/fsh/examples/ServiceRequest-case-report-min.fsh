@@ -14,7 +14,8 @@ Usage: #example
 * requester = Reference(related-min)
 * performer = Reference(org-min)
 * extension[isReferralCase].valueBoolean = false
-* extension[reportingUnitType].valueCodeableConcept.coding[0] = TWSSReportingUnitType#1 "家長或監護者"
+// 待確認欄位：通報單位類別目前未納入最終欄位對應。
+// * extension[reportingUnitType].valueCodeableConcept.coding[0] = TWSSReportingUnitType#1 "家長或監護者"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -26,6 +27,7 @@ Usage: #example
   <p><b>個案通報請求項目</b>：Assessment of health and social care needs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://snomed.info/id/710824005">SNOMED CT</a>#710824005）</span></p>
   <p><b>通報者</b>：<a href="RelatedPerson-related-min.html">RelatedPerson/related-min</a></p>
   <p><b>受理機構</b>：<a href="Organization-org-min.html">Organization/org-min</a></p>
-  <p><b>通報單位類別</b>：家長或監護者 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-reporting-unit-type.html">TWSS 通報單位類別</a>#1）</span></p>
+  <!-- 待確認欄位：通報單位類別目前未納入最終欄位對應。 -->
+  <!-- <p><b>通報單位類別</b>：家長或監護者 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-reporting-unit-type.html">TWSS 通報單位類別</a>#1）</span></p> -->
 </div>
 """

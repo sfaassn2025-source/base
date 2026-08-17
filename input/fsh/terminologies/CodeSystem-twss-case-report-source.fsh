@@ -1,35 +1,34 @@
-CodeSystem: TWSSReportingUnitType
-Id: twss-reporting-unit-type
-Title: "TWSS-通報單位類別"
-Description: "提出個案通報之人員、單位或系統類別。"
-* ^version = "0.0.1"
-* ^status = #active
-* ^experimental = false
-* ^caseSensitive = true
-* ^content = #complete
-* #1 "家長或監護者"
-* #2 "社會福利機構-托嬰中心"
-* #3 "社會福利機構-早期療育中心"
-* #4 "社會福利機構-社福機構"
-* #5 "幼教機構-幼兒園"
-* #6 "幼教機構-學前特教班"
-* #7 "醫療機構-醫療院所"
-* #8 "醫療機構-衛生所"
-* #9 "國健署-兒童健康管理系統"
-* #10 "國健署-聽損兒童"
-* #11 "國健署-聯合評估中心"
-* #12 "前台通報"
-* #13 "其他"
-* #14 "居家托育人員"
-* #15 "寄養家庭照顧者"
-* #16 "教育機構（幼兒園、學前特教班）"
+// 待確認欄位：通報單位類別目前未納入最終欄位對應，暫不發布。
+// CodeSystem: TWSSReportingUnitType
+// Id: twss-reporting-unit-type
+// Title: "TWSS-通報單位類別"
+// Description: "提出個案通報之人員、單位或系統類別。"
+// * ^version = "0.0.1"
+// * ^experimental = false
+// * ^caseSensitive = true
+// * ^content = #complete
+// * #1 "家長或監護者"
+// * #2 "社會福利機構-托嬰中心"
+// * #3 "社會福利機構-早期療育中心"
+// * #4 "社會福利機構-社福機構"
+// * #5 "幼教機構-幼兒園"
+// * #6 "幼教機構-學前特教班"
+// * #7 "醫療機構-醫療院所"
+// * #8 "醫療機構-衛生所"
+// * #9 "國健署-兒童健康管理系統"
+// * #10 "國健署-聽損兒童"
+// * #11 "國健署-聯合評估中心"
+// * #12 "前台通報"
+// * #13 "其他"
+// * #14 "居家托育人員"
+// * #15 "寄養家庭照顧者"
+// * #16 "教育機構（幼兒園、學前特教班）"
 
 CodeSystem: TWSSReferralHandlingStatus
 Id: twss-referral-handling-status
-Title: "TWSS-轉介處理狀態"
+Title: "TWSS 轉介處理狀態"
 Description: "轉介接收與處理流程使用的業務狀態代碼。"
 * ^version = "0.0.1"
-* ^status = #active
 * ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
@@ -44,10 +43,9 @@ Description: "轉介接收與處理流程使用的業務狀態代碼。"
 
 CodeSystem: TWSSVisitServiceMethod
 Id: twss-visit-service-method
-Title: "TWSS-訪視服務方式"
+Title: "TWSS 訪視服務方式"
 Description: "個案服務評估或服務接觸的方式。"
 * ^version = "0.0.1"
-* ^status = #active
 * ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete

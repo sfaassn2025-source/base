@@ -108,7 +108,6 @@
 - [補助撥款狀況](StructureDefinition-twss-claim-payment-status.html)
 - [補助月分](StructureDefinition-twss-claim-subsidy-month.html)
 - [補助年度](StructureDefinition-twss-coverage-aid-year.html)
-- [通報單位類別](StructureDefinition-twss-reporting-unit-type.html)
 - [關係人年齡](StructureDefinition-twss-related-person-age.html)
 - [關係人身分識別碼不明註記](StructureDefinition-twss-related-person-identifier-unknown.html)
 - [關係人國籍](StructureDefinition-twss-related-person-nationality.html)
