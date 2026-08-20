@@ -38,7 +38,7 @@ Description:    "個案服務案件-EpisodeOfCare TWSS Base Profile 表達社家
 * patient only Reference(PatientTWSSBase)
 * patient MS
 * managingOrganization only Reference(OrganizationTWSSBase)
-* managingOrganization MS
+* managingOrganization 1..1 MS
 * period MS
 * period ^short = "主責單位承擔個案服務案件責任的期間。"
 * period ^definition = "個案開案至結案期間；轉介請求及其處理不以 EpisodeOfCare 表達。"

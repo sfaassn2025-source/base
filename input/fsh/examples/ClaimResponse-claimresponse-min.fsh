@@ -14,7 +14,11 @@ Usage: #example
 * request = Reference(claim-min)
 * outcome = #complete
 * disposition = "核定通過"
-* extension[reviewStatus].valueCodeableConcept = TWSSReviewResult#Y "通過"
+* extension[reviewResult].valueBoolean = true
+* preAuthPeriod.start = "2026-07-01"
+* preAuthPeriod.end = "2026-12-31"
+* extension[subsidyPeriod].extension[start].valueDate = "2026-07-15"
+* extension[subsidyPeriod].extension[end].valueDate = "2026-12-31"
 * extension[paymentStatus].valueCodeableConcept = TWSSPaymentStatus#1 "已出帳"
 * extension[subsidyMonth].valueInteger = 6
 * item[0].itemSequence = 1

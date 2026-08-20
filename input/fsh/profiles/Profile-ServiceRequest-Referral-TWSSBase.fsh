@@ -19,6 +19,8 @@ Description: "個案轉介 ServiceRequest Profile 表達將個案轉請其他單
 * identifier.value MS
 * authoredOn 1..1 MS
 * authoredOn ^short = "轉介日期"
+* basedOn only Reference(ServiceRequestTransitionTWSSBase)
+* basedOn ^short = "轉銜請求；由轉銜流程產生的轉介須參照前一筆個案轉銜 ServiceRequest，單純轉介可不填。"
 * requester 1..1 MS
 * requester ^short = "轉介單位或人員"
 * performer 1..1 MS

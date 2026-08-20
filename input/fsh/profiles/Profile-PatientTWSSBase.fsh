@@ -5,7 +5,7 @@ Title:          "個案資料-Patient TWSS Base"
 Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中的個案資料。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core Patient 0.3.2 限制不同，故繼承原生 Patient，並沿用相容的 TW Core 0.3.2 規則。"
 * ^version = "0.0.1"
 
-* identifier 0..* MS
+* identifier 1..* MS
 * identifier.use MS
 * identifier.type MS
 * identifier.type only CodeableConceptTW
@@ -128,12 +128,17 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * extension contains
     http://hl7.org/fhir/StructureDefinition/patient-nationality named nationality 0..1 MS and
     TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
+    TWSSPatientAborigineTribe named AborigineTribe 0..1 MS and
+    http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..1 MS and
     PersonAge named age 0..1 MS and
     TWSSBirthDateBeforeROC named birthDateBeforeROC 0..1 MS and
     TWSSBirthDateUnknown named birthDateUnknown 0..1 MS
 * extension[nationality] ^short = "國籍；病人所屬國籍"
 * extension[nationality].extension[code].valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-2 (extensible)
 * extension[ethnicGroup] ^short = "族群身分"
+* extension[AborigineTribe] ^short = "原住民族別。"
+* extension[religion] ^short = "宗教信仰。"
+* extension[religion].valueCodeableConcept from TWSSReligionVS (required)
 * extension[age] ^short = "個案年齡。"
 * extension[birthDateBeforeROC] ^short = "是否出生於民國年前。"
 * extension[birthDateUnknown] ^short = "出生日期不明註記。"
@@ -141,6 +146,18 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * communication MS
 * communication.language MS
 * communication.language ^short = "原住民語言；個案可使用的語言。"
+
+* communication ^slicing.discriminator.type = #value
+* communication ^slicing.discriminator.path = "preferred"
+* communication ^slicing.rules = #open
+* communication contains primaryLanguage 0..1 MS and aborigineLanguage 0..1 MS
+* communication[primaryLanguage].preferred = true
+* communication[primaryLanguage].language 1..1 MS
+* communication[primaryLanguage].language from TWSSPrimaryLanguageVS (required)
+* communication[primaryLanguage].language ^short = "主要語言。"
+* communication[aborigineLanguage].preferred = false
+* communication[aborigineLanguage].language 1..1 MS
+* communication[aborigineLanguage].language ^short = "原住民語言。"
 
 * active MS
 * active ^short = "病人的紀錄是否「使用中（true）」"

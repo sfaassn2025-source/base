@@ -6,6 +6,8 @@ Description: "符合服務人受訓課程 Observation Profile 的範例。"
 * status = #final
 * code = TWSSObservationType#practitioner-training "服務人受訓課程"
 * focus = Reference(prac-min)
+* effectivePeriod.start = "2026-06-01"
+* effectivePeriod.end = "2026-06-02"
 * component[courseName].code = TWSSPractitionerTrainingComponent#training-course-name "受訓課程名稱"
 * component[courseName].valueString = "兒少保護基礎訓練"
 * component[courseHours].code = TWSSPractitionerTrainingComponent#training-course-hours "受訓課程時數"

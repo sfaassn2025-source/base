@@ -8,6 +8,7 @@ Usage: #example
 * status = #finished
 * type[0].coding[0] = TWSSEpisodeOfCareType#early-intervention "兒童發展通報轉介及個案管理服務"
 * patient = Reference(pat-min)
+* managingOrganization = Reference(org-min)
 * period.start = "2026-01-01"
 * period.end = "2026-07-31"
 * extension[caseCloseReason].valueCodeableConcept.text = "服務目標已達成"

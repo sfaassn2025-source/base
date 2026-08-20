@@ -5,5 +5,8 @@ Description: "Condition 嚴重程度值集；優先使用 FHIR Condition severit
 * ^version = "0.0.1"
 * ^experimental = false
 * include codes from valueset http://hl7.org/fhir/ValueSet/condition-severity
-* include codes from system TWSSDisabilityLevel
+* TWSSDisabilityLevel#0 "無"
+* TWSSDisabilityLevel#4 "極重度"
+* TWSSDisabilityLevel#5 "重大傷病卡"
+* TWSSDisabilityLevel#9 "無資料"
 * include codes from system TWSSHealthStatusLevel

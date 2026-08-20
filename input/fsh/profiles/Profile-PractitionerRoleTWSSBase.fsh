@@ -18,6 +18,8 @@ Description:    "人員角色-PractitionerRole TWSS Base Profile 表達社家署
 * period.start MS
 * period.end MS
 * period ^short = "人員到職日、離職日、派任起訖日或角色有效期間。"
+* period.start ^short = "服務人到職日期。"
+* period.end ^short = "服務人離職日期。"
 
 * practitioner only Reference(PractitionerTWSSBase)
 * practitioner MS

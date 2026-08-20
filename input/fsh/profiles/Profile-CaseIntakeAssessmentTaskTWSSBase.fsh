@@ -15,5 +15,17 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案受理與評估流程
 * focus only Reference(ServiceRequestCaseReportTWSSBase)
 * focus 1..1 MS
 * focus ^short = "個案通報 ServiceRequest"
-* input.value[x] only Reference(QuestionnaireResponseTWSSBase)
-* input MS
+* input ^slicing.discriminator.type = #value
+* input ^slicing.discriminator.path = "type.coding.code"
+* input ^slicing.rules = #open
+* input contains assessmentResponse 0..* MS and caseType 0..1 MS
+* input[assessmentResponse].type.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-task-input-type"
+* input[assessmentResponse].type.coding.code = #assessment-response
+* input[assessmentResponse].type.coding.display = "評估回覆"
+* input[assessmentResponse].value[x] only Reference(QuestionnaireResponseTWSSBase)
+* input[caseType].type.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-task-input-type"
+* input[caseType].type.coding.code = #case-type
+* input[caseType].type.coding.display = "評估案件類型"
+* input[caseType].value[x] only CodeableConceptTW
+* input[caseType].valueCodeableConcept from TWSSEpisodeOfCareTypeVS (extensible)
+* input[caseType] ^short = "評估的案件類型"

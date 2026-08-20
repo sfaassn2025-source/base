@@ -16,7 +16,7 @@ Description:    "人員資料-Practitioner TWSS Base Profile 表達社家署業�
 * ^version = "0.0.1"
 * obeys twss-practitioner-tribe-requires-indigenous and twss-practitioner-indigenous-requires-tribe
 
-* identifier MS
+* identifier 1..* MS
 * identifier.use MS
 * identifier.type MS
 * identifier.system MS

@@ -13,11 +13,14 @@ Description: "個案通報 ServiceRequest Profile 表達外部人員或單位提
 * orderDetail MS
 * orderDetail ^short = "通報所涉服務類別。"
 * extension contains
-    TWSSIsReferralCaseExtension named isReferralCase 0..1 MS
+    TWSSIsReferralCaseExtension named isReferralCase 0..1 MS and
+    TWSSCaseReportTypeExtension named reportType 0..1 MS and
+    TWSSReportingUnitExtension named reportingUnit 0..1 MS and
+    TWSSCaseSourceExtension named caseSource 0..1 MS
 * extension[isReferralCase] ^short = "是否為轉介案件"
-// 待確認欄位：通報單位類別目前未納入最終欄位對應，暫不啟用此 extension slice。
-// * extension contains TWSSReportingUnitTypeExtension named reportingUnitType 0..1 MS
-// * extension[reportingUnitType] ^short = "通報單位類別"
+* extension[reportType] ^short = "通報類型"
+* extension[reportingUnit] ^short = "通報單位"
+* extension[caseSource] ^short = "個案來源"
 * identifier MS
 * identifier.use MS
 * identifier.type MS

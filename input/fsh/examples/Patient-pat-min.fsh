@@ -41,6 +41,12 @@ Usage: #example
 * extension[ethnicGroup].valueCodeableConcept.coding[0].system = "https://sfaa.gov.tw/base/CodeSystem/twss-ethnic-group"
 * extension[ethnicGroup].valueCodeableConcept.coding[0].code = #B
 * extension[ethnicGroup].valueCodeableConcept.coding[0].display = "原住民"
+* extension[AborigineTribe].valueCodeableConcept.coding[0] = TWSSAborigineTribe#1 "阿美族"
+* extension[religion].valueCodeableConcept = TWSSReligion#H "民間信仰"
+* communication[primaryLanguage].language = TWSSPrimaryLanguage#1 "國語"
+* communication[primaryLanguage].preferred = true
+* communication[aborigineLanguage].language.text = "阿美語"
+* communication[aborigineLanguage].preferred = false
 * contact[0].relationship[0].text = "母親"
 * contact[0].name.text = "王媽媽"
 * contact[0].telecom[0].system = #phone

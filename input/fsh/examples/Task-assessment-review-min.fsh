@@ -8,7 +8,8 @@ Usage: #example
 * identifier[0].value = "ASSESSMENT-REVIEW-001"
 * status = #completed
 * intent = #order
-* businessStatus = TWSSReviewResult#Y "通過"
+* authoredOn = "2026-07-29T09:00:00+08:00"
+* businessStatus.text = "審核完成"
 * description = "個案服務評估審核"
 * for = Reference(Patient/pat-min)
 * focus = Reference(ServiceRequest/case-report-min)
@@ -17,6 +18,10 @@ Usage: #example
 * input[assessmentResponse].type.coding.display = "評估回覆"
 * input[assessmentResponse].valueReference = Reference(QuestionnaireResponse/adl-questionnaire-response-min)
 * note[0].text = "審核意見：資料符合核定條件。"
+* output[reviewResult].type.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-task-output-type"
+* output[reviewResult].type.coding.code = #review-result
+* output[reviewResult].type.coding.display = "審核結果"
+* output[reviewResult].valueBoolean = true
 * output[caseDisposition].type.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-task-output-type"
 * output[caseDisposition].type.coding.code = #open-case-decision
 * output[caseDisposition].type.coding.display = "是否開案"
@@ -31,7 +36,7 @@ Usage: #example
   <h3><b>個案服務評估審核</b></h3>
   <p><b>個案</b>：<a href="Patient-pat-min.html">Patient/pat-min</a></p>
   <p><b>任務狀態</b>：completed</p>
-  <p><b>業務審核結果</b>：核定</p>
+  <p><b>審核結果</b>：是</p>
   <p><b>是否開案</b>：<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"><a href="CodeSystem-twss-open-case-status.html">TWSS 是否開案代碼系統</a>#Y</span> 開案</p>
   <p><b>建立案件</b>：<a href="EpisodeOfCare-episode-base.html">EpisodeOfCare/episode-base</a></p>
   <p><b>審核意見</b>：資料符合核定條件。</p>

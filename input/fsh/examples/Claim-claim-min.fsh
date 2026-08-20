@@ -13,6 +13,7 @@ Usage: #example
 * insurer = Reference(org-min)
 * provider = Reference(org-min)
 * priority.text = "一般"
+* extension[applicationReviewStatus].valueCodeableConcept = TWSSApplicationReviewStatus#13 "待核定"
 * supportingInfo[serviceCase].sequence = 1
 * supportingInfo[serviceCase].category.coding = TWSSClaimSupportingInfoType#service-case "服務案件"
 * supportingInfo[serviceCase].valueReference = Reference(episode-base)

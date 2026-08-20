@@ -44,6 +44,7 @@ Usage: #example
 * extension[age].valueAge.system = "http://unitsofmeasure.org"
 * extension[age].valueAge.code = #a
 * extension[maritalStatus].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M "Married"
+* extension[religion].valueCodeableConcept = TWSSReligion#H "民間信仰"
 * extension[isPrimaryCaregiver].valueBoolean = true
 * text.status = #generated
 * text.div = """
@@ -62,6 +63,7 @@ Usage: #example
   <p><b>是否為主要照顧者[extension: <a href="StructureDefinition-twss-is-primary-caregiver.html">twss-is-primary-caregiver</a>]</b>：是</p>
   <p><b>身分識別碼不明註記[extension: <a href="StructureDefinition-twss-related-person-identifier-unknown.html">twss-related-person-identifier-unknown</a>]</b>：否</p>
   <p><b>國籍[extension: <a href="StructureDefinition-twss-related-person-nationality.html">twss-related-person-nationality</a>]</b>：<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> （ <a href="https://terminology.hl7.org/CodeSystem-ISO3166Part1.html">ISO3166Part1</a>#TW）</span></p>
+  <p><b>宗教信仰[extension: <a href="StructureDefinition-twss-related-person-religion.html">twss-related-person-religion</a>]</b>：民間信仰 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="CodeSystem-twss-religion.html">TWSS 宗教信仰</a>#H）</span></p>
   <p><b>聯絡方式</b>：Phone <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a>#phone）</span><br/><b>聯絡電話</b>：0912345678</p>
   <p><b>聯絡地址</b>：11558臺北市南港區新光里忠孝東路六段488號</p>
 </div>

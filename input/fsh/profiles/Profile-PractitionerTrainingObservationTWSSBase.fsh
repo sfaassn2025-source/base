@@ -9,7 +9,12 @@ Description: "因 TW Core IG 0.3.2 尚無針對服務人受訓課程的 Profile�
 * code from TWSSObservationTypeVS (required)
 * focus only Reference(PractitionerTWSSBase)
 * focus 1..1 MS
-* effective[x] MS
+* effective[x] only Period
+* effectivePeriod MS
+* effectivePeriod.start 0..1 MS
+* effectivePeriod.start ^short = "受訓起始日期。"
+* effectivePeriod.end 0..1 MS
+* effectivePeriod.end ^short = "受訓結束日期。"
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed

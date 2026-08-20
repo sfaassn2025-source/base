@@ -32,6 +32,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
     TWSSRelatedPersonNationality named nationality 0..1 MS and
     TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
     TWSSRelatedPersonMaritalStatus named maritalStatus 0..1 MS and
+    TWSSRelatedPersonReligion named religion 0..1 MS and
     TWSSIsPrimaryCaregiverExtension named isPrimaryCaregiver 0..1 MS and
     TWSSIsGuardianExtension named isGuardian 0..1 MS and
     TWSSIsPrimaryContactExtension named isPrimaryContact 0..1 MS and
@@ -41,6 +42,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 * extension[nationality] ^short = "關係人國籍。"
 * extension[ethnicGroup] ^short = "關係人族群身分。"
 * extension[maritalStatus] ^short = "關係人婚姻狀態。"
+* extension[religion] ^short = "關係人宗教信仰。"
 * extension[isPrimaryCaregiver] ^short = "是否為主要照顧者。"
 * extension[isGuardian] ^short = "是否為監護人。"
 * extension[isPrimaryContact] ^short = "是否為主要聯絡者。"

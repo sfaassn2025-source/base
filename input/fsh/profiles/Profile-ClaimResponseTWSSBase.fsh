@@ -24,12 +24,19 @@ Description:    "補助審核或核付結果-ClaimResponse TWSS Base Profile 表
 * outcome MS
 * disposition MS
 * extension contains
-    TWSSClaimReviewStatus named reviewStatus 0..1 MS and
+    TWSSClaimReviewResult named reviewResult 0..1 MS and
     TWSSClaimPaymentStatus named paymentStatus 0..1 MS and
-    TWSSClaimSubsidyMonth named subsidyMonth 0..1 MS
-* extension[reviewStatus] ^short = "審核結果"
+    TWSSClaimSubsidyMonth named subsidyMonth 0..1 MS and
+    TWSSClaimSubsidyPeriod named subsidyPeriod 0..1 MS
+* extension[reviewResult] ^short = "審核結果"
 * extension[paymentStatus] ^short = "補助撥款狀況"
 * extension[subsidyMonth] ^short = "補助月分"
+* extension[subsidyPeriod] ^short = "實際補助期間"
+* preAuthPeriod MS
+* preAuthPeriod.start MS
+* preAuthPeriod.start ^short = "核定起領日"
+* preAuthPeriod.end MS
+* preAuthPeriod.end ^short = "核定結束日"
 * preAuthRef MS
 * payeeType MS
 * item MS

@@ -14,7 +14,7 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案服務計畫的 Profi
 * activity ^slicing.discriminator.type = #value
 * activity ^slicing.discriminator.path = "detail.code.coding.system"
 * activity ^slicing.rules = #open
-* activity contains financialSubsidy 0..* MS and welfareService 0..* MS and employmentService 0..* MS
+* activity contains financialSubsidy 0..* MS and welfareService 0..* MS and employmentService 0..* MS and medicalRehabilitationService 0..* MS and medicalAssistance 0..* MS
 * activity[financialSubsidy].detail.status 1..1 MS
 * activity[financialSubsidy].detail.code only CodeableConceptTW
 * activity[financialSubsidy].detail.code MS
@@ -33,5 +33,17 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案服務計畫的 Profi
 * activity[employmentService].detail.code.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-provided-employment-service"
 * activity[employmentService].detail.code from TWSSProvidedEmploymentServiceVS (required)
 * activity[employmentService].detail.code ^short = "預計提供就業服務"
+* activity[medicalRehabilitationService].detail.status 1..1 MS
+* activity[medicalRehabilitationService].detail.code only CodeableConceptTW
+* activity[medicalRehabilitationService].detail.code MS
+* activity[medicalRehabilitationService].detail.code.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-medical-rehabilitation-service"
+* activity[medicalRehabilitationService].detail.code from TWSSMedicalRehabilitationServiceVS (required)
+* activity[medicalRehabilitationService].detail.code ^short = "預計提供醫療復健服務"
+* activity[medicalAssistance].detail.status 1..1 MS
+* activity[medicalAssistance].detail.code only CodeableConceptTW
+* activity[medicalAssistance].detail.code MS
+* activity[medicalAssistance].detail.code.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-medical-assistance"
+* activity[medicalAssistance].detail.code from TWSSMedicalAssistanceVS (required)
+* activity[medicalAssistance].detail.code ^short = "預計提供醫療協助"
 * activity.outcomeReference only Reference(AssessmentServiceEncounterTWSSBase or ClaimTWSSBase or ClaimResponseTWSSBase)
 * activity.outcomeReference MS

@@ -9,6 +9,10 @@ Description: "符合 CarePlan TWSS Base Profile 的個案服務規劃範例。"
 * extension[workflowEpisodeOfCare].valueReference = Reference(episode-base)
 * activity[financialSubsidy].detail.status = #scheduled
 * activity[financialSubsidy].detail.code = TWSSProvidedFinancialSubsidy#5 "身心障礙者生活補助"
+* activity[medicalRehabilitationService].detail.status = #scheduled
+* activity[medicalRehabilitationService].detail.code = TWSSMedicalRehabilitationService#A "語言治療"
+* activity[medicalAssistance].detail.status = #scheduled
+* activity[medicalAssistance].detail.code = TWSSMedicalAssistance#A "鼻胃管"
 * activity[welfareService].detail.status = #scheduled
 * activity[welfareService].detail.code = TWSSProvidedWelfareService#3 "身體照顧及家務服務"
 * activity[employmentService].detail.status = #scheduled

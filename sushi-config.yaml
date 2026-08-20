@@ -34,24 +34,6 @@ dependencies:
     uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
     version: 5.3.0
 
-resources:
-  CarePlan/current-care-min:
-    description: 個案現正接受服務範例。
-  EpisodeOfCare/episode-closure-min:
-    description: 個案服務案件結案範例。
-  Observation/practitioner-education-min:
-    description: 個案服務人教育經歷範例。
-  Observation/practitioner-training-min:
-    description: 個案服務人受訓紀錄範例。
-  Observation/disability-certificate-status-min:
-    description: 個案身心障礙證明狀態範例。
-  Questionnaire/assessment-questionnaire-base-min:
-    description: 社福評估表單範例。
-  QuestionnaireResponse/adl-questionnaire-response-min:
-    description: 個案日常生活功能評估回覆範例。
-
-#
-#
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
 # this file, it is assumed that the author will fully manage the

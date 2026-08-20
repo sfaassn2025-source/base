@@ -9,6 +9,8 @@ Usage: #example
 * type[0].coding[0] = TWSSEpisodeOfCareType#early-intervention "兒童發展通報轉介及個案管理服務"
 * type[0].text = "兒童發展通報轉介及個案管理服務案件"
 * patient = Reference(pat-min)
+* managingOrganization = Reference(org-min)
+* referralRequest = Reference(referral-request-min)
 * period.start = "2026-01-01"
 * text.status = #generated
 * text.div = """
@@ -20,6 +22,7 @@ Usage: #example
   <p><b>案件狀態</b>：Active</p>
   <p><b>案件類型</b>：兒童發展通報轉介及個案管理服務 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-episode-of-care-type.html">TWSS 個案服務或補助案件類型</a>#early-intervention）</span></p>
   <p><b>個案</b>： <a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
+  <p><b>轉介請求</b>：<a href="ServiceRequest-referral-request-min.html">ServiceRequest/referral-request-min</a></p>
   <p><b>服務期間</b>：自 2026-01-01 起</p>
 </div>
 """

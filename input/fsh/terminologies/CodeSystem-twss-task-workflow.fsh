@@ -8,6 +8,7 @@ Description: "社福個案評估審核 Task 的具名輸入類型。"
 * ^experimental = false
 * ^content = #complete
 * #assessment-response "評估回覆"
+* #case-type "評估案件類型"
 
 CodeSystem: TWSSTaskOutputType
 Id: twss-task-output-type
@@ -18,6 +19,7 @@ Description: "社福個案評估審核 Task 的具名輸出類型。"
 * ^caseSensitive = true
 * ^experimental = false
 * ^content = #complete
+* #review-result "審核結果"
 * #opened-episode-of-care "開案案件"
 * #open-case-decision "是否開案"
 * #referral-request "轉介請求"

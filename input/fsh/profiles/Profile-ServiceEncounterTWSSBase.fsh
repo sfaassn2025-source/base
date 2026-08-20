@@ -10,7 +10,7 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案實際服務的 Profi
 * subject only Reference(PatientTWSSBase)
 * subject 1..1 MS
 * episodeOfCare only Reference(EpisodeOfCareTWSSBase)
-* episodeOfCare MS
+* episodeOfCare 1..1 MS
 * serviceProvider only Reference(OrganizationTWSSBase)
 * serviceProvider MS
 * location.location only Reference(LocationTWSSBase)

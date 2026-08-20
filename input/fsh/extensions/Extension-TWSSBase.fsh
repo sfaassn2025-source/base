@@ -57,6 +57,26 @@ Context: Practitioner
 * valueCodeableConcept MS
 * valueCodeableConcept from TWSSAborigineTribeVS (required)
 
+Extension: TWSSPatientAborigineTribe
+Id: twss-patient-aborigine-tribe
+Title: "個案原住民族別"
+Description: "記錄個案的原住民族別。"
+Context: Patient
+* ^version = "0.0.1"
+* value[x] only CodeableConceptTW
+* valueCodeableConcept MS
+* valueCodeableConcept from TWSSAborigineTribeVS (required)
+
+Extension: TWSSRelatedPersonReligion
+Id: twss-related-person-religion
+Title: "關係人宗教信仰"
+Description: "記錄關係人的宗教信仰。"
+Context: RelatedPerson
+* ^version = "0.0.1"
+* value[x] only CodeableConceptTW
+* valueCodeableConcept MS
+* valueCodeableConcept from TWSSReligionVS (required)
+
 Extension: TWSSBirthDateBeforeROC
 Id: twss-birth-date-before-roc
 Title: "是否出生於民國年前"
@@ -163,18 +183,27 @@ Title: "補助年度"
 Description: "記錄補助資格或補助案件所屬年度。"
 Context: Coverage
 * ^version = "0.0.1"
-* value[x] only string
-* valueString MS
+* value[x] only decimal
+* valueDecimal MS
 
-Extension: TWSSClaimReviewStatus
-Id: twss-claim-review-status
+Extension: TWSSClaimReviewResult
+Id: twss-claim-review-result
 Title: "補助審核結果"
 Description: "記錄補助申請的業務審核結果。"
 Context: ClaimResponse
 * ^version = "0.0.1"
+* value[x] only boolean
+* valueBoolean MS
+
+Extension: TWSSClaimApplicationReviewStatus
+Id: twss-claim-application-review-status
+Title: "補助申請審查狀態"
+Description: "記錄補助申請處理中的業務狀態。"
+Context: Claim
+* ^version = "0.0.1"
 * value[x] only CodeableConceptTW
 * valueCodeableConcept MS
-* valueCodeableConcept from TWSSReviewResultVS (required)
+* valueCodeableConcept from TWSSApplicationReviewStatusVS (required)
 
 Extension: TWSSClaimPaymentStatus
 Id: twss-claim-payment-status
@@ -194,6 +223,19 @@ Context: ClaimResponse
 * ^version = "0.0.1"
 * value[x] only integer
 * valueInteger MS
+
+Extension: TWSSClaimSubsidyPeriod
+Id: twss-claim-subsidy-period
+Title: "補助期間"
+Description: "記錄實際開始與停止領取補助的期間。"
+Context: ClaimResponse
+* ^version = "0.0.1"
+* extension contains start 0..1 MS and end 0..1 MS
+* extension[start].value[x] only date
+* extension[start].valueDate MS
+* extension[end].value[x] only date
+* extension[end].valueDate MS
+* value[x] 0..0
 
 Extension: TWSSOrganizationEstablishmentTypeExtension
 Id: twss-organization-establishment-type
@@ -272,3 +314,13 @@ Context: Organization
 * extension[role].value[x] only CodeableConcept
 * extension[requiredCount].value[x] only integer
 * value[x] 0..0
+
+Extension: TWSSCaseReportTypeExtension
+Id: twss-case-report-type
+Title: "通報類型"
+Description: "記錄個案通報的業務類型。"
+Context: ServiceRequest
+* ^version = "0.0.1"
+* value[x] only CodeableConcept
+* valueCodeableConcept from TWSSCaseReportTypeVS (required)
+* valueCodeableConcept MS

@@ -13,7 +13,7 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案評估或服務接觸
 * subject only Reference(PatientTWSSBase)
 * subject 1..1 MS
 * basedOn only Reference(ServiceRequestCaseReportTWSSBase)
-* basedOn MS
+* basedOn 1..1 MS
 * basedOn ^short = "個案通報"
 * episodeOfCare only Reference(EpisodeOfCareTWSSBase)
 * episodeOfCare MS

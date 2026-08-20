@@ -161,6 +161,7 @@ Description: "記錄既有補助、保險與福利身分的評估表單。"
 * item[existingSubsidy].item[receivedSubsidyAmount].text = "已取得補助金額"
 * item[insuranceStatus].text = "保險狀況"
 * item[welfareIdentityType].text = "福利身分別"
+* item[monthlyRent].text = "每月租金"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml"><h3><b>福利與經濟現況問卷</b></h3><p>本問卷定義既有補助、保險與福利身分之評估題目。</p></div>

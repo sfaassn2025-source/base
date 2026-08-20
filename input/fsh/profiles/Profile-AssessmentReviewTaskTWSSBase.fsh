@@ -8,13 +8,13 @@ Description: "因 TW Core IG 0.3.2 尚無針對個案服務評估審核的 Task 
 * identifier MS
 * identifier ^short = "核定文號"
 * status 1..1 MS
+* authoredOn 0..1 MS
+* authoredOn ^short = "送審日期"
 * lastModified MS
 * lastModified ^short = "審核日期"
 * statusReason MS
-* businessStatus only CodeableConceptTW
 * businessStatus MS
-* businessStatus from TWSSReviewResultVS (required)
-* businessStatus ^short = "審核結果"
+* businessStatus ^short = "審核工作狀態"
 * description 1..1 MS
 * for only Reference(PatientTWSSBase)
 * for 1..1 MS
@@ -36,9 +36,15 @@ Description: "因 TW Core IG 0.3.2 尚無針對個案服務評估審核的 Task 
 * output ^slicing.discriminator.path = "type.coding.code"
 * output ^slicing.rules = #open
 * output contains
+    reviewResult 0..1 MS and
     caseDisposition 1..1 MS and
     openedEpisodeOfCare 0..1 MS and
     referralRequest 0..1 MS
+* output[reviewResult].type.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-task-output-type"
+* output[reviewResult].type.coding.code = #review-result
+* output[reviewResult].type.coding.display = "審核結果"
+* output[reviewResult].value[x] only boolean
+* output[reviewResult] ^short = "審核結果"
 * output[caseDisposition].type.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-task-output-type"
 * output[caseDisposition].type.coding.code = #open-case-decision
 * output[caseDisposition].type.coding.display = "是否開案"

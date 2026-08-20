@@ -10,6 +10,7 @@ Usage: #example
 * category = http://snomed.info/sct#306206005 "Referral to service"
 * code = http://snomed.info/sct#3457005 "Patient referral"
 * subject = Reference(pat-min)
+* basedOn = Reference(transition-min)
 * authoredOn = "2026-07-29T09:00:00+08:00"
 * requester = Reference(org-min)
 * performer = Reference(org-childcare)
@@ -21,6 +22,7 @@ Usage: #example
   <p><b>轉介識別碼</b>：REFERRAL-2026-0001</p>
   <p><b>個案</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
   <p><b>轉介日期</b>：2026-07-29T09:00:00+08:00</p>
+  <p><b>前一筆轉銜請求</b>：<a href="ServiceRequest-transition-min.html">ServiceRequest/transition-min</a></p>
   <p><b>個案轉介類型</b>：Referral to service <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://snomed.info/id/306206005">SNOMED CT</a>#306206005）</span></p>
   <p><b>個案轉介請求項目</b>：Patient referral <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://snomed.info/id/3457005">SNOMED CT</a>#3457005）</span></p>
   <p><b>轉介單位</b>：<a href="Organization-org-min.html">Organization/org-min</a></p>

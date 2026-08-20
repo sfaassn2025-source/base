@@ -57,3 +57,11 @@ The slice definition for Patient.identifier has a maximum of 2 but the slices ad
 # 本階段以 CI Build 提供歷程頁面；正式發布時，Publisher 會以發布版本目錄取代 history.html。
 % This IG generates a page named 'history.html'. That file name is reserved by the publication process%
 
+# 個案宗教信仰依業務代碼表記錄；FHIR 原生宗教值集為建議性 binding，無法完整表達本地代碼。
+% Patient.extension[5].value.ofType(CodeableConcept): None of the codings provided are in the value set 'ReligiousAffiliation'%
+
+# 個案主要語言依業務代碼表記錄；FHIR 原生 Common Languages 值集為建議性 binding，無法完整表達本地語言分類。
+% Patient.communication[0].language: None of the codings provided are in the value set 'Common Languages'%
+
+# 原生 Observation.code 為重複 Coding；本 Profile 固定職業觀察碼，Publisher 對 repeating pattern 的靜態提示不影響實例驗證。
+% StructureDefinition.snapshot.element[13].pattern.ofType(CodeableConcept): The repeating element has a pattern%

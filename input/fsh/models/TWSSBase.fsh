@@ -11,27 +11,42 @@ Description: """
 * caseBasicInfo 0..* BackboneElement "個案基本資訊" "個案基本資訊"
 * caseBasicInfo.address 0..* Address "地址" "地址"
 * caseBasicInfo.country 0..1 code "國家" "個案地址所屬國家。"
-* caseBasicInfo.district 0..* string "縣市" "縣市"
-* caseBasicInfo.city 0..* string "鄉鎮市區" "鄉鎮市區"
-* caseBasicInfo.village 0..* string "村里" "村里"
-* caseBasicInfo.neighborhood 0..* string "鄰" "鄰"
+* caseBasicInfo.district 0..1 string "縣市" "縣市"
+* caseBasicInfo.city 0..1 string "鄉鎮市區" "鄉鎮市區"
+* caseBasicInfo.village 0..1 string "村里" "村里"
+* caseBasicInfo.neighborhood 0..1 string "鄰" "鄰"
 * caseBasicInfo.neighborhood ^definition = "個案地址所屬之鄰別。"
-* caseBasicInfo.postalCode 0..* string "郵遞區號" "郵遞區號"
+* caseBasicInfo.postalCode 0..1 string "郵遞區號" "郵遞區號"
 * caseBasicInfo.birthDate 0..1 date "出生日期" "出生日期"
 * caseBasicInfo.isBornBeforeROC 0..1 boolean "是否出生於民國年前" "是否出生於民國年前"
 * caseBasicInfo.age 0..1 Age "年齡" "年齡"
 * caseBasicInfo.nationality 0..1 CodeableConcept "國籍" "國籍"
 * caseBasicInfo.isBirthDateUnknown 0..1 boolean "出生日期不明註記" "出生日期不明註記"
 * caseBasicInfo.ethnicGroup 0..1 CodeableConcept "族群身分" "族群身分"
-* caseBasicInfo.aborigineLanguage 0..* CodeableConcept "原住民語言" "原住民語言"
+* caseBasicInfo.aborigineTribe 0..1 CodeableConcept "原住民族別" "原住民族別"
+* caseBasicInfo.aborigineLanguage 0..1 string "原住民語言" "原住民語言"
+* caseBasicInfo.primaryLanguage 0..1 code "主要語言" "個案主要使用的語言。"
+* caseBasicInfo.religion 0..1 CodeableConcept "宗教信仰" "宗教信仰"
 * caseBasicInfo.gender 0..1 code "性別" "性別"
-* caseBasicInfo.identifier 0..* Identifier "個案身分識別碼" "個案身分識別碼"
+* caseBasicInfo.identifier 1..1 Identifier "個案身分識別碼" "個案身分識別碼"
 * caseBasicInfo.maritalStatus 0..1 CodeableConcept "婚姻狀態" "婚姻狀態"
 * caseBasicInfo.name 0..1 HumanName "姓名" "姓名"
 * caseBasicInfo.telecom 0..* ContactPoint "聯絡方式" "聯絡方式"
+* caseBasicInfo.familyStructure 0..1 CodeableConcept "家庭結構" "家庭結構"
+* caseBasicInfo.childrenStatus 0..1 CodeableConcept "子女狀態" "子女狀態"
+* caseBasicInfo.childrenCount 0..1 decimal "子女數量" "子女數量"
+* caseBasicInfo.familyMonthlyIncome 0..1 decimal "家庭月收入" "家庭月收入"
+* caseBasicInfo.specialEducationType 0..1 CodeableConcept "特殊教育類型" "特殊教育類型"
+* caseBasicInfo.bodyMeasurement 0..1 BackboneElement "身體量測" "個案身體量測的群組。"
+* caseBasicInfo.bodyMeasurement.correctedVisionLeft 0..1 Quantity "矯正左" "左眼矯正視力。"
+* caseBasicInfo.bodyMeasurement.visionLeft 0..1 decimal "視力左" "左眼未矯正視力。"
+* caseBasicInfo.bodyMeasurement.correctedVisionRight 0..1 Quantity "矯正右" "右眼矯正視力。"
+* caseBasicInfo.bodyMeasurement.visionRight 0..1 decimal "視力右" "右眼未矯正視力。"
+* caseBasicInfo.bodyMeasurement.weight 0..1 decimal "體重" "體重。"
+* caseBasicInfo.bodyMeasurement.height 0..1 decimal "身高" "身高。"
 
 * relatedPersonBasicInfo 0..* BackboneElement "個案關係人基本資訊" "個案關係人基本資訊"
-* relatedPersonBasicInfo.relationAddress 0..1 Address "關係人地址" "關係人地址"
+* relatedPersonBasicInfo.relationAddress 0..* Address "關係人地址" "關係人地址"
 * relatedPersonBasicInfo.relationDistrict 0..1 string "關係人縣市" "關係人地址所屬縣市。"
 * relatedPersonBasicInfo.relationCity 0..1 string "關係人鄉鎮市區" "關係人地址所屬鄉鎮市區。"
 * relatedPersonBasicInfo.relationVillage 0..1 string "關係人村里" "關係人地址所屬村里。"
@@ -44,15 +59,20 @@ Description: """
 * relatedPersonBasicInfo.relationGender 0..1 code "關係人性別" "關係人性別"
 * relatedPersonBasicInfo.relationIdentity 0..1 Identifier "關係人身分識別碼" "關係人身分識別碼。"
 * relatedPersonBasicInfo.relationMaritalStatus 0..1 CodeableConcept "關係人婚姻狀態" "關係人婚姻狀態"
+* relatedPersonBasicInfo.relationReligion 0..1 CodeableConcept "關係人宗教信仰" "關係人宗教信仰"
+* relatedPersonBasicInfo.relationOccupation 0..1 string "關係人職業" "關係人職業"
 * relatedPersonBasicInfo.relationName 0..1 HumanName "關係人姓名" "關係人姓名"
 * relatedPersonBasicInfo.isRelationIdentityUnknown 0..1 boolean "關係人身分識別碼不明註記" "關係人身分識別碼不明註記"
 * relatedPersonBasicInfo.relationship 0..* CodeableConcept "與個案關係" "關係人與個案之間的關係。"
-* relatedPersonBasicInfo.relationTelCom 0..1 ContactPoint "關係人聯絡方式" "關係人聯絡方式。"
+* relatedPersonBasicInfo.relationTelCom 0..* ContactPoint "關係人聯絡方式" "關係人聯絡方式。"
 * relatedPersonBasicInfo.relationNumber 1..1 string "關係人編號" "關係人編號"
 * relatedPersonBasicInfo.isPrimaryCaregiver 0..1 boolean "是否為主要照顧者" "關係人是否為個案的主要照顧者。"
 * relatedPersonBasicInfo.isGuardian 0..1 boolean "是否為監護人" "關係人是否為個案的監護人。"
 * relatedPersonBasicInfo.isPrimaryContact 0..1 boolean "是否為主要聯絡者" "關係人是否為個案的主要聯絡者。"
 * relatedPersonBasicInfo.isAgent 0..1 boolean "是否為法定代理人" "關係人是否為個案的法定代理人。"
+* relatedPersonBasicInfo.isCohabiting 0..1 boolean "是否同住" "關係人是否與個案同住。"
+* relatedPersonBasicInfo.isForeignSpouse 0..1 boolean "是否為外籍配偶" "關係人是否為外籍配偶。"
+* relatedPersonBasicInfo.relationEducationLevel 0..1 CodeableConcept "關係人教育程度" "關係人教育程度"
 
 * serviceProviderBasicInfo 0..* BackboneElement "個案服務人基本資訊" "個案服務人基本資訊"
 * serviceProviderBasicInfo.practitionAddress 0..* Address "服務人地址" "服務人地址。"
@@ -64,18 +84,26 @@ Description: """
 * serviceProviderBasicInfo.practitionBirthDate 0..1 date "服務人出生日期" "服務人出生日期。"
 * serviceProviderBasicInfo.practitionName 0..1 HumanName "服務人姓名" "服務人姓名。"
 * serviceProviderBasicInfo.practitionGender 0..1 code "服務人性別" "服務人性別。"
-* serviceProviderBasicInfo.practitionIdentity 0..* Identifier "服務人身分識別碼" "服務人身分識別碼。"
+* serviceProviderBasicInfo.practitionIdentity 1..1 Identifier "服務人身分識別碼" "服務人身分識別碼。"
 * serviceProviderBasicInfo.practitionNumber 0..* Identifier "服務人編號" "服務人編號。"
 * serviceProviderBasicInfo.practitionTelecom 0..* ContactPoint "服務人聯絡方式" "服務人聯絡方式。"
 * serviceProviderBasicInfo.practitionNationality 0..1 CodeableConcept "服務人國籍" "服務人國籍。"
 * serviceProviderBasicInfo.practitionEthnicGroup 0..1 CodeableConcept "服務人族群身分" "服務人族群身分。"
 * serviceProviderBasicInfo.practitionAborigineTribe 0..1 CodeableConcept "服務人原住民族別" "服務人原住民族別。"
+* serviceProviderBasicInfo.healthCheckDate 0..1 date "健康檢查日期" "個案服務人的健康檢查日期。"
+* serviceProviderBasicInfo.dutyVerifyDate 0..1 date "服務人到職日期" "服務人到職日期。"
+* serviceProviderBasicInfo.quitDate 0..1 date "服務人離職日期" "服務人離職日期。"
+* serviceProviderBasicInfo.isRelativeNanny 0..1 boolean "是否為親屬保母" "是否為親屬保母。"
+* serviceProviderBasicInfo.practitionSalary 0..1 decimal "服務人薪資" "服務人薪資。"
 
 * serviceProviderProfessionalInfo 0..* BackboneElement "個案服務人專業資訊" "個案服務人專業資訊"
 * serviceProviderProfessionalInfo.practitionEnrollmentYear 0..1 integer "服務人入學年度" "服務人入學年度。"
-* serviceProviderProfessionalInfo.practitionGraduationSchoolName 0..1 string "服務人畢業學校名稱" "服務人畢業學校名稱。"
-* serviceProviderProfessionalInfo.highestEducation 0..1 CodeableConcept "服務人最高學歷" "服務人最高學歷"
+* serviceProviderProfessionalInfo.practitionGraduationSchoolName 0..* string "服務人就讀學校名稱" "服務人就讀學校名稱。"
+* serviceProviderProfessionalInfo.practitionEducationLevel 0..1 CodeableConcept "服務人教育程度" "服務人教育程度。"
 * serviceProviderProfessionalInfo.practitionMajor 0..1 string "服務人畢業科系" "服務人畢業科系。"
+* serviceProviderProfessionalInfo.isRelatedMajorGraduate 0..1 boolean "是否為相關科系畢業" "是否為相關科系畢業。"
+* serviceProviderProfessionalInfo.isPractitionGraduated 0..1 boolean "服務人是否畢業" "服務人是否畢業。"
+* serviceProviderProfessionalInfo.practitionGraduationYear 0..1 decimal "服務人畢業年度" "服務人畢業年度。"
 * serviceProviderProfessionalInfo.certificateNumber 0..* Identifier "證書字號" "證書字號"
 * serviceProviderProfessionalInfo.practiceRegistrationNumber 0..* Identifier "執業登記證號" "執業登記證號"
 * serviceProviderProfessionalInfo.licenseName 0..* CodeableConcept "服務人證照名稱" "服務人證照名稱"
@@ -86,9 +114,11 @@ Description: """
 * serviceProviderProfessionalInfo.trainingCourseHours 0..* Quantity "受訓課程時數" "受訓課程時數"
 * serviceProviderProfessionalInfo.trainingCourseType 0..* CodeableConcept "受訓課程類型" "受訓課程類型"
 * serviceProviderProfessionalInfo.courseProviderUnit 0..1 string "開課單位" "服務人受訓課程的開課單位。"
+* serviceProviderProfessionalInfo.trainingStartDate 0..1 date "受訓起始日期" "受訓起始日期。"
+* serviceProviderProfessionalInfo.trainingEndDate 0..1 date "受訓結束日期" "受訓結束日期。"
 
 * organizationBasicInfo 0..* BackboneElement "機構基本資訊" "機構基本資訊"
-* organizationBasicInfo.organizationAddress 0..1 Address "機構地址" "機構地址。"
+* organizationBasicInfo.organizationAddress 0..* Address "機構地址" "機構地址。"
 * organizationBasicInfo.organizationDistrict 0..1 string "機構縣市" "機構地址所屬縣市。"
 * organizationBasicInfo.organizationCity 0..1 string "機構鄉鎮市區" "機構地址所屬鄉鎮市區。"
 * organizationBasicInfo.organizationVillage 0..1 string "機構村里" "機構地址所屬村里。"
@@ -96,7 +126,7 @@ Description: """
 * organizationBasicInfo.organizationPostalCode 0..1 string "機構郵遞區號" "機構地址郵遞區號。"
 * organizationBasicInfo.organizationTelecom 0..* ContactPoint "機構聯絡方式" "機構聯絡方式。"
 * organizationBasicInfo.organizationName 0..1 string "機構名稱" "機構名稱。"
-* organizationBasicInfo.organizationCategory 0..* CodeableConcept "機構類別" "機構類別。"
+* organizationBasicInfo.organizationCategory 0..1 CodeableConcept "機構類別" "機構類別。"
 * organizationBasicInfo.organizationCode 1..1 Identifier "機構代碼" "機構代碼"
 * organizationBasicInfo.organizationLicenseNumber 0..1 Identifier "機構許可證字號" "機構許可證字號"
 * organizationBasicInfo.organizationEstablishmentType 0..1 CodeableConcept "機構設立別" "機構設立別"
@@ -104,15 +134,18 @@ Description: """
 * organizationBasicInfo.organizationLongitude 0..1 decimal "機構地址經度" "機構地址經度"
 * organizationBasicInfo.organizationLatitude 0..1 decimal "機構地址緯度" "機構地址緯度"
 * organizationBasicInfo.registrationDate 0..1 date "立案日期" "機構立案日期。"
-* organizationBasicInfo.admissionCapacity 0..1 integer "可收容人數" "機構可收容的人數。"
-* organizationBasicInfo.serviceableBeds 0..1 integer "可服務床位" "機構可提供服務的床位數。"
-* organizationBasicInfo.isolationBeds 0..1 integer "隔離專用床位" "機構隔離專用床位數。"
-* organizationBasicInfo.totalArea 0..1 Quantity "總面積" "機構總面積。"
-* organizationBasicInfo.indoorArea 0..1 Quantity "室內面積" "機構室內面積。"
-* organizationBasicInfo.outdoorArea 0..1 Quantity "室外面積" "機構室外面積。"
-* organizationBasicInfo.statutoryStaffingCount 0..* integer "法定設置標準人數" "依角色所需的法定人力。"
-* organizationBasicInfo.competentAuthorityCode 0..1 Identifier "主管機關代碼" "機構主管機關的識別碼。"
-* organizationBasicInfo.responsibleUnitCode 0..1 Identifier "主責單位代碼" "案件主責機構的識別碼。"
+* organizationBasicInfo.organizationCapacity 0..* BackboneElement "機構收容量能" "機構收容量能的群組。"
+* organizationBasicInfo.organizationCapacity.admissionCapacity 0..1 integer "可收容人數" "機構可收容的人數。"
+* organizationBasicInfo.organizationCapacity.serviceableBeds 0..1 integer "可服務床位" "機構可提供服務的床位數。"
+* organizationBasicInfo.organizationCapacity.isolationBeds 0..1 integer "隔離專用床位" "機構隔離專用床位數。"
+* organizationBasicInfo.organizationUsableArea 0..* BackboneElement "機構可使用面積" "機構可使用面積的群組。"
+* organizationBasicInfo.organizationUsableArea.totalArea 0..1 Quantity "總面積" "機構總面積。"
+* organizationBasicInfo.organizationUsableArea.indoorArea 0..1 Quantity "室內面積" "機構室內面積。"
+* organizationBasicInfo.organizationUsableArea.outdoorArea 0..1 Quantity "室外面積" "機構室外面積。"
+* organizationBasicInfo.statutoryStaffingCount 0..1 integer "法定設置標準人數" "依角色所需的法定人力。"
+* organizationBasicInfo.competentAuthorityCode 0..1 string "主管機關代碼" "機構主管機關的識別碼。"
+* organizationBasicInfo.competentAuthority 0..1 string "主管機關" "機構主管機關名稱。"
+* organizationBasicInfo.responsibleUnitCode 1..1 Identifier "主責單位代碼" "案件主責機構的識別碼。"
 * organizationBasicInfo.responsibleUnit 0..1 string "主責單位" "案件主責機構名稱。"
 * organizationBasicInfo.responsibleUnitDistrict 0..1 string "主責單位縣市" "案件主責機構所在縣市。"
 * organizationBasicInfo.referralUnitName 0..1 string "轉介單位" "提出轉介的機構名稱。"
@@ -123,6 +156,7 @@ Description: """
 
 * organizationOtherInfo 0..* BackboneElement "機構其他資訊" "機構其他資訊"
 * organizationOtherInfo.organizationAuditResult 0..1 boolean "查核結果" "機構查核結果"
+* organizationOtherInfo.accreditationLevel 0..1 CodeableConcept "評鑑等級" "機構評鑑結果。"
 * organizationOtherInfo.penaltyLegalBasis 0..1 string "裁罰法規依據" "裁罰法規依據"
 * organizationOtherInfo.modifiedUnitCode 0..1 Identifier "修改單位代碼" "修改資料的單位代碼"
 * organizationOtherInfo.createdUnitCode 0..1 Identifier "建立單位代碼" "建立資料的單位代碼"
@@ -137,8 +171,7 @@ Description: """
 * organizationOtherInfo.adoptionManagerAddress 1..1 Address "收出養機構負責人地址" "收出養機構負責人地址"
 
 * subsidyApplication 0..* BackboneElement "申請補助" "申請補助"
-* subsidyApplication.appDate 0..1 date "申請日期" "申請日期"
-* subsidyApplication.aidYear 0..1 string "補助年度" "補助年度"
+* subsidyApplication.applicationDate 0..1 date "申請日期" "申請日期"
 * subsidyApplication.aidStartYearMonth 0..1 string "補助起始年月" "補助起始年月"
 * subsidyApplication.aidEndYearMonth 0..1 string "補助終止年月" "補助終止年月"
 * subsidyApplication.subsidyServiceType 0..1 code "申請補助別" "本次申請補助所屬的補助類別。"
@@ -146,7 +179,8 @@ Description: """
 * subsidyApplication.approvedSubsidyAmount 0..1 decimal "核定補助金額" "核定補助金額"
 * subsidyApplication.reviewOpinion 0..1 string "審核意見" "審核意見"
 * subsidyApplication.nonComplianceReason 0..1 string "不符原因" "不符原因"
-* subsidyApplication.reviewResult 0..1 CodeableConcept "審核結果" "審核結果"
+* subsidyApplication.reviewResult 0..1 boolean "審核結果" "審核結果"
+* subsidyApplication.applicationReviewStatus 0..1 CodeableConcept "申請審查狀態" "補助申請處理中的業務狀態。"
 * subsidyApplication.receivedSubsidyAmount 0..1 decimal "已取得補助金額" "已取得補助金額"
 * subsidyApplication.receivedSubsidyType 0..1 CodeableConcept "已取得補助類型" "已取得補助類型"
 * subsidyApplication.applicationNumber 0..1 Identifier "申請案號" "補助申請的業務識別碼。"
@@ -162,6 +196,12 @@ Description: """
 * subsidyProvision.applicantBankAccount 0..1 string "申請人銀行帳戶" "由被參照的補助申請取得。"
 * subsidyProvision.subsidyDisbursementStatus 0..1 CodeableConcept "補助撥款狀況" "補助款項的撥款處理狀況。"
 * subsidyProvision.subsidyMonth 0..1 integer "補助月分" "補助款項所屬月份。"
+* subsidyProvision.subsidyYear 0..1 decimal "補助年度" "補助年度。"
+* subsidyProvision.applicationReviewStatus 0..1 CodeableConcept "申請審查狀態" "補助申請處理中的業務狀態。"
+* subsidyProvision.approvedBenefitStartDate 0..1 date "核定起領日" "審核後開始具備補助資格的日期。"
+* subsidyProvision.approvedBenefitEndDate 0..1 date "核定結束日" "審核後不再具備補助資格的日期。"
+* subsidyProvision.subsidyStartDate 0..1 date "補助起始日" "實際開始領取補助的日期。"
+* subsidyProvision.subsidyEndDate 0..1 date "補助結束日" "實際停止領取補助的日期。"
 * subsidyProvision.cancellationReason 0..1 string "註銷原因" "補助資格或補助款項的註銷原因。"
 * subsidyProvision.paymentSuspensionReason 0..1 string "停發原因" "補助款項的停發原因。"
 
@@ -174,7 +214,11 @@ Description: """
 
 * caseReport.caseInfoType 0..1 CodeableConcept "通報類型" "通報類型"
 * caseReport.reportTime 0..1 dateTime "通報時間" "個案通報建立的時間。"
+* caseReport.reportingUnit 0..1 CodeableConcept "通報單位" "通報單位類別。"
+* caseReport.caseSource 0..1 CodeableConcept "個案來源" "個案來源。"
 * caseReport.isReferralCase 0..1 boolean "是否為轉介案件" "個案通報是否屬於轉介案件。"
+* caseReport.helpNameTitle 0..1 string "通報者職稱" "通報者職稱。"
+* caseReport.helperTelcom 0..* string "求助/轉介者聯絡手機" "求助或轉介者聯絡手機。"
 
 * caseAssessment 0..* BackboneElement "個案服務評估" "個案服務評估"
 * caseAssessment.caseServiceType 0..1 code "個案服務別" "個案服務所屬的服務領域。"
@@ -184,6 +228,7 @@ Description: """
 * caseAssessment.hasPrivateBedroom 0..1 CodeableConcept "是否有獨立臥房" "是否有獨立臥房"
 * caseAssessment.currentLivingStatus 0..1 CodeableConcept "目前生活情形" "目前生活情形"
 * caseAssessment.livingStatus 0..1 CodeableConcept "同住狀況" "同住狀況"
+* caseAssessment.assessmentDate 0..1 date "評估日期" "實際進行個案服務評估的日期。"
 * caseAssessment.identifyDate 1..1 date "鑑定日期" "鑑定日期"
 * caseAssessment.healthStatusLevel 0..1 CodeableConcept "健康狀況分級" "健康狀況分級"
 * caseAssessment.healthStatusOption 0..* CodeableConcept "健康狀況選項" "健康狀況選項"
@@ -203,17 +248,18 @@ Description: """
 * caseAssessment.certificateNotIssuedReason 0..1 CodeableConcept "未領證原因" "未領證原因"
 * caseAssessment.isDisabilityCertificatePermanent 0..1 boolean "身心障礙永久有效" "身心障礙永久有效"
 * caseAssessment.relationCriminalRecord 0..* CodeableConcept "關係人不良犯罪紀錄" "關係人不良犯罪紀錄"
-* caseAssessment.relationUsesDrugs 0..1 CodeableConcept "是否吸毒" "是否吸毒"
-* caseAssessment.relationAlcoholAddiction 0..1 CodeableConcept "是否有酒癮" "是否有酒癮"
-* caseAssessment.relationSmokes 0..1 CodeableConcept "是否抽菸" "是否抽菸"
-* caseAssessment.adlSelfCare 0..1 CodeableConcept "生活自理" "生活自理"
-* caseAssessment.adlMobility 0..1 CodeableConcept "肢體行動" "肢體行動"
-* caseAssessment.adlWalkingAbility 0..1 CodeableConcept "四處走動" "四處走動"
-* caseAssessment.adlHouseholdActivity 0..1 CodeableConcept "居家活動" "居家活動"
 * caseAssessment.activitiesOfDailyLiving 0..1 BackboneElement "日常生活功能(ADL)" "日常生活功能評估的群組。"
+* caseAssessment.activitiesOfDailyLiving.selfCare 0..1 CodeableConcept "生活自理" "生活自理"
+* caseAssessment.activitiesOfDailyLiving.mobility 0..1 CodeableConcept "肢體行動" "肢體行動"
+* caseAssessment.activitiesOfDailyLiving.walkingAbility 0..1 CodeableConcept "四處走動" "四處走動"
+* caseAssessment.activitiesOfDailyLiving.householdActivity 0..1 CodeableConcept "居家活動" "居家活動"
 * caseAssessment.relationSubstanceAbuse 0..1 BackboneElement "關係人物質濫用" "關係人物質濫用風險評估的群組。"
+* caseAssessment.relationSubstanceAbuse.usesDrugs 0..1 CodeableConcept "是否吸毒" "是否吸毒"
+* caseAssessment.relationSubstanceAbuse.hasAlcoholAddiction 0..1 CodeableConcept "是否有酒癮" "是否有酒癮"
+* caseAssessment.relationSubstanceAbuse.smokes 0..1 CodeableConcept "是否抽菸" "是否抽菸"
 * caseAssessment.insuranceStatus 0..* CodeableConcept "保險狀況" "個案服務評估中的保險狀況。"
 * caseAssessment.welfareIdentityType 0..* CodeableConcept "福利身分別" "個案服務評估中的福利身分別。"
+* caseAssessment.monthlyRent 0..1 decimal "每月租金" "每月租金。"
 * caseAssessment.visitTarget 0..1 CodeableConcept "訪視對象" "個案服務評估中的訪視對象。"
 * caseAssessment.visitServiceMethod 0..1 CodeableConcept "訪視服務方式" "個案服務評估中的訪視服務方式。"
 * caseAssessment.visitStartTime 0..1 dateTime "訪視開始時間" "個案服務評估中的訪視開始時間。"
@@ -222,9 +268,12 @@ Description: """
 * caseAssessment.isCaseOpened 0..1 CodeableConcept "是否開案" "評估審核後的開案處置。"
 * caseAssessment.reviewOpinion 0..1 string "審核意見" "個案服務評估的審核意見。"
 * caseAssessment.nonComplianceReason 0..1 string "不符原因" "個案服務評估不符條件時的原因。"
-* caseAssessment.reviewResult 0..1 CodeableConcept "審核結果" "個案服務評估的審核結果。"
+* caseAssessment.reviewResult 0..1 boolean "審核結果" "個案服務評估的審核結果。"
+* caseAssessment.reviewSubmissionDate 0..1 date "送審日期" "服務評估表單送交審核的日期。"
 * caseAssessment.reviewCheckDate 0..1 date "審核日期" "個案服務評估審核完成的日期。"
 * caseAssessment.medicationStatus 0..1 string "用藥情形" "個案服務評估中的用藥情形。"
+* caseAssessment.medicalRehabilitationService 0..* code "醫療復健服務" "個案目前已取得或正在接受的醫療復健服務。"
+* caseAssessment.medicalAssistance 0..* code "醫療協助" "個案目前已取得或正在接受的醫療協助。"
 * caseAssessment.disabledPersonCount 0..1 integer "身障者人數" "個案服務評估中的家庭身障者人數。"
 * caseAssessment.crisisEventLocation 0..1 string "危機事件事發地點" "個案服務評估中的危機事件事發地點。"
 * caseAssessment.familyAssessment 0..1 BackboneElement "家庭評估" "個案服務評估中的家庭評估群組。"
@@ -234,11 +283,53 @@ Description: """
 * caseAssessment.caseNumber 0..1 Identifier "個案編號" "本系統使用的個案編號。"
 * caseAssessment.historicalCaseNumber 0..1 Identifier "歷史案號" "舊系統或舊時期使用的個案編號。"
 * caseAssessment.serviceCaseStatus 0..1 CodeableConcept "服務案件狀態" "個案受理與評估流程的詳細案件狀態"
+* caseAssessment.hasAttendedVocationalTraining 0..1 boolean "曾參加職業訓練" "曾參加職業訓練。"
+* caseAssessment.vocationalTrainingType 0..* string "職訓別" "職訓別。"
+* caseAssessment.schoolAdaptationStatus 0..1 string "學校適應狀況" "學校適應狀況。"
+* caseAssessment.emotionalAndBehavioralStatus 0..1 BackboneElement "情緒與行為狀況" "情緒與行為狀況的群組。"
+* caseAssessment.emotionalAndBehavioralStatus.emotionalControlAbility 0..1 CodeableConcept "情緒控制能力" "情緒控制能力。"
+* caseAssessment.interpersonalInteractionLevel 0..1 BackboneElement "人際互動狀況分級" "人際互動狀況分級的群組。"
+* caseAssessment.interpersonalInteractionLevel.interpersonalSocialAdaptationAssessment 0..1 CodeableConcept "人際社會適應評估" "人際社會適應評估。"
+* caseAssessment.interpersonalInteractionLevel.interpersonalInteraction 0..1 CodeableConcept "人際互動" "人際互動。"
+* caseAssessment.interpersonalInteractionLevel.communicationAndLanguageExpressionAbility 0..1 CodeableConcept "溝通及語言表達能力" "溝通及語言表達能力。"
+* caseAssessment.interpersonalInteractionLevel.familyRelationship 0..1 CodeableConcept "家庭關係" "家庭關係。"
+* caseAssessment.interpersonalInteractionLevel.schoolLifeAdaptation 0..1 CodeableConcept "學校生活適應" "學校生活適應。"
+* caseAssessment.developmentalDelayType 0..1 BackboneElement "發展遲緩類別" "發展遲緩類別的群組。"
+* caseAssessment.developmentalDelayType.languageCommunicationAbility 0..1 CodeableConcept "語言溝通能力" "語言溝通能力。"
+* caseAssessment.developmentalDelayType.cognitiveAbility 0..1 CodeableConcept "認知能力" "認知能力。"
+* caseAssessment.developmentalDelayType.socialEmotionalDevelopment 0..1 CodeableConcept "社會情緒發展" "社會情緒發展。"
+* caseAssessment.developmentalDelayType.selfCare 0..1 CodeableConcept "生活自理" "生活自理。"
+* caseAssessment.developmentalDelayType.grossMotor 0..1 CodeableConcept "粗動作" "粗動作。"
+* caseAssessment.developmentalDelayType.fineMotor 0..1 CodeableConcept "精細動作" "精細動作。"
+* caseAssessment.isGraduated 0..1 boolean "是否畢業" "是否畢業。"
+* caseAssessment.schoolingStatus 0..* CodeableConcept "就學現況" "就學現況。"
+* caseAssessment.schoolName 0..* string "就讀學校名稱" "就讀學校名稱。"
+* caseAssessment.gradeLevel 0..1 string "年級別" "年級別。"
+* caseAssessment.major 0..1 string "就讀科系" "就讀科系。"
+* caseAssessment.educationLevel 0..1 CodeableConcept "教育程度" "教育程度。"
+* caseAssessment.employmentStatus 0..1 CodeableConcept "就業現況" "就業現況。"
+* caseAssessment.unemploymentReason 0..* CodeableConcept "未就業原因" "未就業原因。"
+* caseAssessment.previousJob 0..1 string "曾任職" "曾任職。"
+* caseAssessment.currentJob 0..1 string "現職" "現職。"
+* caseAssessment.assessmentResult 0..1 string "評估結果" "評估結果。"
+* caseAssessment.caseType 0..1 CodeableConcept "案件類型" "案件類型。"
+* caseAssessment.psychologicalCounselingAndAssessment 0..1 string "心理諮商與評估" "心理諮商與評估。"
+* caseAssessment.isPlaced 0..1 boolean "是否安置" "是否安置。"
+* caseAssessment.cmsLevel 0..1 string "CMS等級" "CMS等級。"
+* caseAssessment.placementStatus 0..1 string "安置狀況" "安置狀況。"
+* caseAssessment.isPlacementEnded 0..1 CodeableConcept "是否結束安置" "是否結束安置。"
 
 * caseService 0..* BackboneElement "個案服務" "個案服務"
 * caseService.caseServiceType 0..1 code "個案服務別" "個案服務所屬的服務領域。"
 * caseService.diseaseType 0..* CodeableConcept "疾病類型" "疾病類型"
 * caseService.assistiveDeviceName 0..1 string "輔具名稱" "輔具名稱"
+* caseService.caseType 0..1 CodeableConcept "案件類型" "案件類型。"
+* caseService.psychologicalCounselingAndAssessment 0..1 string "心理諮商與評估" "心理諮商與評估。"
+* caseService.medicalRehabilitationService 0..* code "醫療復健服務" "預計提供的醫療復健服務。"
+* caseService.medicalAssistance 0..* code "醫療協助" "預計提供的醫療協助。"
+* caseService.isPlaced 0..1 boolean "是否安置" "是否安置。"
+* caseService.cmsLevel 0..1 string "CMS等級" "CMS等級。"
+* caseService.placementStatus 0..1 string "安置狀況" "安置狀況。"
 * caseService.assistiveDeviceUsage 0..1 boolean "輔具使用情形" "輔具使用情形"
 * caseService.disabilityAssessmentDate 0..1 date "身心障礙鑑定日期" "個案服務中的身心障礙鑑定日期。"
 * caseService.cancellationReason 0..1 string "註銷原因" "個案服務中身心障礙資格或證明被註銷的原因。"
@@ -266,7 +357,7 @@ Description: """
 * caseReferral.referralReason 0..1 string "轉介原因" "提出個案轉介請求的理由。"
 * caseReferral.isReferred 0..1 boolean "是否轉介" "結案或處遇時是否決定向外轉介。"
 * caseReferral.referralProcessingStatus 0..1 CodeableConcept "轉介處理情形" "受轉介單位後續處理的狀態"
-* caseReferral.caseReferTime 0..1 dateTime "轉介時間" "轉介時間"
+* caseReferral.transitionDate 0..1 date "轉銜日期" "A系統開始啟動轉銜的日期。"
 * caseReferral.subsidyServiceType 0..1 code "申請補助別" "轉介申請所涉補助類別。"
 * caseReferral.caseServiceType 0..1 code "個案服務別" "轉介申請所涉服務領域。"
 
@@ -274,6 +365,8 @@ Description: """
 * caseClosure.caseClosingDate 0..1 date "結案日期" "案件結案的日期。"
 * caseClosure.caseClosingReason 0..1 CodeableConcept "結案原因" "案件結案的原因。"
 * caseClosure.caseServiceType 0..1 code "個案服務別" "結案案件所屬的服務領域。"
+* caseClosure.isPlacementEnded 0..1 CodeableConcept "是否結束安置" "是否結束安置。"
+* caseClosure.placementNoFollowUpReason 0..1 CodeableConcept "安置未轉後追原因" "安置未轉後追原因。"
 
 * officialDocument 0..* BackboneElement "共用公文" "共用公文"
 * officialDocument.officialDocumentNumber 0..1 Identifier "公文文號" "公文文號"
@@ -288,10 +381,12 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-case-report-twss-base"
 
 * caseReport.reportTime -> "ServiceRequest.authoredOn"
-* caseReport.caseInfoType -> "ServiceRequest.orderDetail"
+* caseReport.caseInfoType -> "ServiceRequest.extension[reportType].valueCodeableConcept"
 * caseReport.caseServiceType -> "ServiceRequest.orderDetail"
 * caseAssessment.caseServiceType -> "ServiceRequest.orderDetail"
-* caseReport.isReferralCase -> "ServiceRequest.extension"
+* caseReport.reportingUnit -> "ServiceRequest.extension[reportingUnit].valueCodeableConcept"
+* caseReport.caseSource -> "ServiceRequest.extension[caseSource].valueCodeableConcept"
+* caseReport.isReferralCase -> "ServiceRequest.extension[isReferralCase].valueBoolean"
 
 Mapping: TWSSBaseToPatient
 Id: twss-base-to-patient
@@ -321,7 +416,10 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Patient-twss-base"
 * caseBasicInfo.postalCode -> "Patient.address.postalCode"
 * caseBasicInfo.nationality -> "Patient.extension[nationality]"
 * caseBasicInfo.ethnicGroup -> "Patient.extension[ethnicGroup]"
-* caseBasicInfo.aborigineLanguage -> "Patient.communication.language"
+* caseBasicInfo.aborigineLanguage -> "Patient.communication.language.text"
+* caseBasicInfo.aborigineTribe -> "Patient.extension[AborigineTribe].valueCodeableConcept"
+* caseBasicInfo.primaryLanguage -> "Patient.communication.where(preferred = true).language.coding.code"
+* caseBasicInfo.religion -> "Patient.extension[religion].valueCodeableConcept"
 * caseBasicInfo.maritalStatus -> "Patient.maritalStatus"
 * caseBasicInfo.telecom -> "Patient.telecom"
 
@@ -382,6 +480,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/RelatedPerson-twss-base"
 * relatedPersonBasicInfo.relationEthnicGroup -> "RelatedPerson.extension[ethnicGroup]"
 * relatedPersonBasicInfo.relationMaritalStatus -> "RelatedPerson.extension[maritalStatus]"
 * relatedPersonBasicInfo.relationship -> "RelatedPerson.relationship"
+* relatedPersonBasicInfo.relationReligion -> "RelatedPerson.extension[religion].valueCodeableConcept"
 * relatedPersonBasicInfo.isPrimaryCaregiver -> "RelatedPerson.extension[isPrimaryCaregiver]"
 * relatedPersonBasicInfo.isGuardian -> "RelatedPerson.extension[isGuardian]"
 * relatedPersonBasicInfo.isPrimaryContact -> "RelatedPerson.extension[isPrimaryContact]"
@@ -406,9 +505,9 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
 * caseAssessment.relationCriminalRecord -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.2').answer.valueCoding"
-* caseAssessment.relationUsesDrugs -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3').item.where(linkId = '3.3.1').answer.valueCoding"
-* caseAssessment.relationAlcoholAddiction -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3').item.where(linkId = '3.3.2').answer.valueCoding"
-* caseAssessment.relationSmokes -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3').item.where(linkId = '3.3.3').answer.valueCoding"
+* caseAssessment.relationSubstanceAbuse.usesDrugs -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3').item.where(linkId = '3.3.1').answer.valueCoding"
+* caseAssessment.relationSubstanceAbuse.hasAlcoholAddiction -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3').item.where(linkId = '3.3.2').answer.valueCoding"
+* caseAssessment.relationSubstanceAbuse.smokes -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3').item.where(linkId = '3.3.3').answer.valueCoding"
 
 Mapping: TWSSBaseToHealthDiseaseQuestionnaireResponse
 Id: twss-base-to-health-disease-questionnaire-response
@@ -473,10 +572,10 @@ Title: "Mapping to TWSSBase ADL QuestionnaireResponse"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
-* caseAssessment.adlSelfCare -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.1').answer.valueCoding"
-* caseAssessment.adlMobility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.2').answer.valueCoding"
-* caseAssessment.adlWalkingAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.3').answer.valueCoding"
-* caseAssessment.adlHouseholdActivity -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.4').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.selfCare -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.1').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.mobility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.2').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.walkingAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.3').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.householdActivity -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.4').answer.valueCoding"
 
 Mapping: TWSSBaseToPractitionerEducationObservation
 Id: twss-base-to-practitioner-education-observation
@@ -485,8 +584,8 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerEducationObservation-twss-base"
 
 * serviceProviderProfessionalInfo.practitionEnrollmentYear -> "Observation.component[enrollmentYear].valueInteger"
-* serviceProviderProfessionalInfo.practitionGraduationSchoolName -> "Observation.component[graduationSchool].valueString"
-* serviceProviderProfessionalInfo.highestEducation -> "Observation.component[educationLevel].valueCodeableConcept"
+* serviceProviderProfessionalInfo.practitionGraduationSchoolName -> "Observation.component[schoolName].valueString"
+* serviceProviderProfessionalInfo.practitionEducationLevel -> "Observation.component[educationLevel].valueCodeableConcept"
 * serviceProviderProfessionalInfo.practitionMajor -> "Observation.component[major].valueString"
 * serviceProviderProfessionalInfo.isSocialWelfareRelatedEducation -> "Observation.component[socialWelfareRelated].valueBoolean"
 
@@ -500,6 +599,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerTrainingObserv
 * serviceProviderProfessionalInfo.trainingCourseHours -> "Observation.component[courseHours].valueQuantity"
 * serviceProviderProfessionalInfo.trainingCourseType -> "Observation.component[courseType].valueCodeableConcept"
 * serviceProviderProfessionalInfo.courseProviderUnit -> "Observation.component[courseProvider].valueString"
+* serviceProviderProfessionalInfo.trainingStartDate -> "Observation.effectivePeriod.start"
+* serviceProviderProfessionalInfo.trainingEndDate -> "Observation.effectivePeriod.end"
 
 Mapping: TWSSBaseToCarePlan
 Id: twss-base-to-careplan
@@ -517,7 +618,7 @@ Title: "Mapping to TWSSBase Coverage"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/Coverage-twss-base"
 
-* subsidyApplication.aidYear -> "Coverage.extension[aidYear]"
+* subsidyProvision.subsidyYear -> "Coverage.extension[aidYear]"
 * subsidyApplication.aidStartYearMonth -> "Coverage.period"
 * subsidyApplication.aidEndYearMonth -> "Coverage.period"
 
@@ -528,7 +629,7 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/Claim-twss-base"
 
 * subsidyApplication.applicantDocumentCompletionDate -> "Claim.supportingInfo[documentsComplete].timingDate"
-* subsidyApplication.appDate -> "Claim.created"
+* subsidyApplication.applicationDate -> "Claim.created"
 * subsidyApplication.isOnlineApplication -> "Claim.supportingInfo:applicationChannel.code"
 * subsidyApplication.applicant -> "Claim.supportingInfo[applicant].valueReference"
 * subsidyApplication.applicantBankAccount -> "Claim.supportingInfo[bankAccount].valueString"
@@ -591,13 +692,14 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Organization-twss-base"
 * organizationBasicInfo.organizationCode -> "Organization.identifier"
 * organizationBasicInfo.organizationName -> "Organization.name"
 * organizationBasicInfo.organizationTelecom -> "Organization.telecom"
-* organizationBasicInfo.competentAuthorityCode -> "Organization.extension:competentAuthority"
-* organizationBasicInfo.admissionCapacity -> "Organization.extension:capacity"
-* organizationBasicInfo.serviceableBeds -> "Organization.extension:capacity"
-* organizationBasicInfo.isolationBeds -> "Organization.extension:capacity"
-* organizationBasicInfo.totalArea -> "Organization.extension:usableArea"
-* organizationBasicInfo.indoorArea -> "Organization.extension:usableArea"
-* organizationBasicInfo.outdoorArea -> "Organization.extension:usableArea"
+* organizationBasicInfo.competentAuthorityCode -> "Organization.extension[competentAuthority].valueReference.identifier"
+* organizationBasicInfo.competentAuthority -> "Organization.extension[competentAuthority].valueReference.display"
+* organizationBasicInfo.organizationCapacity.admissionCapacity -> "Organization.extension[capacity]"
+* organizationBasicInfo.organizationCapacity.serviceableBeds -> "Organization.extension[capacity]"
+* organizationBasicInfo.organizationCapacity.isolationBeds -> "Organization.extension[capacity]"
+* organizationBasicInfo.organizationUsableArea.totalArea -> "Organization.extension[usableArea]"
+* organizationBasicInfo.organizationUsableArea.indoorArea -> "Organization.extension[usableArea]"
+* organizationBasicInfo.organizationUsableArea.outdoorArea -> "Organization.extension[usableArea]"
 * organizationBasicInfo.statutoryStaffingCount -> "Organization.extension:statutoryStaffing"
 * organizationBasicInfo.registrationDate -> "Organization.extension:registrationDate"
 * organizationBasicInfo.organizationLicenseNumber -> "Organization.identifier"
@@ -697,7 +799,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
 * subsidyApplication.approvedSubsidyAmount -> "ClaimResponse.item.adjudication.where(category.coding.code = 'approved-amount').amount"
 * subsidyApplication.reviewOpinion -> "ClaimResponse.processNote.text"
 * subsidyApplication.nonComplianceReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'eligibility-denial').reason.text"
-* subsidyApplication.reviewResult -> "ClaimResponse.extension[reviewStatus]"
+* subsidyApplication.reviewResult -> "ClaimResponse.extension[reviewResult].valueBoolean"
+* subsidyApplication.applicationReviewStatus -> "Claim.extension[applicationReviewStatus].valueCodeableConcept"
 * subsidyProvision.subsidyDisbursementStatus -> "ClaimResponse.extension[paymentStatus]"
 * subsidyProvision.subsidyMonth -> "ClaimResponse.extension[subsidyMonth]"
 * subsidyProvision.cancellationReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit-termination').reason.text"
@@ -714,7 +817,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentReviewTask-twss-
 
 * caseAssessment.reviewOpinion -> "Task.note.text"
 * caseAssessment.nonComplianceReason -> "Task.note.text"
-* caseAssessment.reviewResult -> "Task.businessStatus"
+* caseAssessment.reviewResult -> "Task.output[reviewResult].valueBoolean"
+* caseAssessment.reviewSubmissionDate -> "Task.authoredOn"
 * caseAssessment.isCaseOpened -> "Task.output[caseDisposition].valueCodeableConcept"
 * caseAssessment.reviewCheckDate -> "Task.lastModified"
 
@@ -725,7 +829,6 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-referral-twss-base"
 
 * caseReferral.referralDate -> "ServiceRequest.authoredOn"
-* caseReferral.caseReferTime -> "ServiceRequest.occurrenceDateTime"
 * caseReferral.referralReason -> "ServiceRequest.reasonCode"
 * caseReferral.caseServiceType -> "ServiceRequest.orderDetail"
 * caseReferral.subsidyServiceType -> "ServiceRequest.orderDetail"
@@ -758,6 +861,40 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/CaseIntakeAssessmentTask-twss-base"
 
 * caseAssessment.serviceCaseStatus -> "Task.businessStatus"
+* caseAssessment.caseType -> "Task.input[caseType].valueCodeableConcept"
+
+Mapping: TWSSBaseToAssessmentServiceEncounter
+Id: twss-base-to-assessment-service-encounter
+Title: "Mapping to TWSSBase Assessment Service Encounter"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/Encounter-assessment-service-twss-base"
+
+* caseAssessment.assessmentDate -> "Encounter.period.start"
+
+Mapping: TWSSBaseToTransitionServiceRequest
+Id: twss-base-to-transition-service-request
+Title: "Mapping to TWSSBase Transition ServiceRequest"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/ServiceRequest-transition-twss-base"
+
+* caseReferral.transitionDate -> "ServiceRequest.authoredOn"
+
+Mapping: TWSSBaseToAssessmentResultObservation
+Id: twss-base-to-assessment-result-observation
+Title: "Mapping to TWSSBase Assessment Result Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentResultObservation-twss-base"
+
+* caseAssessment.assessmentResult -> "Observation.valueString"
+
+Mapping: TWSSBaseToCMSLevelObservation
+Id: twss-base-to-cms-level-observation
+Title: "Mapping to TWSSBase CMS Level Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/CMSLevelObservation-twss-base"
+
+* caseAssessment.cmsLevel -> "Observation.component[cmsLevel].valueString"
+* caseService.cmsLevel -> "Observation.component[cmsLevel].valueString"
 
 Mapping: TWSSBaseToActualServiceEncounter
 Id: twss-base-to-actual-service-encounter
@@ -826,6 +963,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Practitioner-twss-base"
 * serviceProviderBasicInfo.practitionNationality -> "Practitioner.extension[nationality]"
 * serviceProviderBasicInfo.practitionEthnicGroup -> "Practitioner.extension[ethnicGroup]"
 * serviceProviderBasicInfo.practitionAborigineTribe -> "Practitioner.extension[AborigineTribe]"
+* serviceProviderBasicInfo.dutyVerifyDate -> "PractitionerRole.period.start"
+* serviceProviderBasicInfo.quitDate -> "PractitionerRole.period.end"
 * serviceProviderProfessionalInfo.certificateNumber -> "Practitioner.qualification.identifier"
 * serviceProviderProfessionalInfo.practiceRegistrationNumber -> "Practitioner.qualification.identifier"
 * serviceProviderProfessionalInfo.licenseName -> "Practitioner.qualification.code"
@@ -856,6 +995,137 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss
 * caseAssessment.activitiesOfDailyLiving -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9')"
 * caseAssessment.relationSubstanceAbuse -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3')"
 
+Mapping: TWSSBaseToAdditionalQuestionnaires
+Id: twss-base-to-additional-questionnaires
+Title: "Mapping to TWSSBase Additional Questionnaires"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
+
+* caseBasicInfo.familyStructure -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.1').answer.valueCoding"
+* caseBasicInfo.childrenStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.2').answer.valueCoding"
+* caseBasicInfo.childrenCount -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.3').answer.valueDecimal"
+* caseBasicInfo.familyMonthlyIncome -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.4').answer.valueDecimal"
+* caseBasicInfo.specialEducationType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.5').answer.valueCoding"
+* serviceProviderBasicInfo.isRelativeNanny -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.1').answer.valueBoolean"
+* serviceProviderBasicInfo.practitionSalary -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.2').answer.valueDecimal"
+* relatedPersonBasicInfo.isCohabiting -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information').item.where(linkId = '14').item.where(linkId = '14.1').answer.valueBoolean"
+* relatedPersonBasicInfo.isForeignSpouse -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information').item.where(linkId = '14').item.where(linkId = '14.2').answer.valueBoolean"
+* caseAssessment.hasAttendedVocationalTraining -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/vocational-training-status').item.where(linkId = '15').item.where(linkId = '15.1').answer.valueBoolean"
+* caseAssessment.vocationalTrainingType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/vocational-training-status').item.where(linkId = '15').item.where(linkId = '15.2').answer.valueString"
+* caseAssessment.schoolAdaptationStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/school-adaptation-status').item.where(linkId = '16').answer.valueString"
+* caseAssessment.emotionalAndBehavioralStatus.emotionalControlAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/emotional-behavior-status').item.where(linkId = '17').answer.valueCoding"
+* caseAssessment.interpersonalInteractionLevel.interpersonalSocialAdaptationAssessment -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status').item.where(linkId = '18').item.where(linkId = '18.1').answer.valueCoding"
+* caseAssessment.interpersonalInteractionLevel.interpersonalInteraction -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status').item.where(linkId = '18').item.where(linkId = '18.2').answer.valueCoding"
+* caseAssessment.interpersonalInteractionLevel.communicationAndLanguageExpressionAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status').item.where(linkId = '18').item.where(linkId = '18.3').answer.valueCoding"
+* caseAssessment.interpersonalInteractionLevel.familyRelationship -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status').item.where(linkId = '18').item.where(linkId = '18.4').answer.valueCoding"
+* caseAssessment.interpersonalInteractionLevel.schoolLifeAdaptation -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status').item.where(linkId = '18').item.where(linkId = '18.5').answer.valueCoding"
+* caseAssessment.developmentalDelayType.languageCommunicationAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status').item.where(linkId = '19').item.where(linkId = '19.1').answer.valueCoding"
+* caseAssessment.developmentalDelayType.cognitiveAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status').item.where(linkId = '19').item.where(linkId = '19.2').answer.valueCoding"
+* caseAssessment.developmentalDelayType.socialEmotionalDevelopment -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status').item.where(linkId = '19').item.where(linkId = '19.3').answer.valueCoding"
+* caseAssessment.developmentalDelayType.selfCare -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status').item.where(linkId = '19').item.where(linkId = '19.4').answer.valueCoding"
+* caseAssessment.developmentalDelayType.grossMotor -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status').item.where(linkId = '19').item.where(linkId = '19.5').answer.valueCoding"
+* caseAssessment.developmentalDelayType.fineMotor -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status').item.where(linkId = '19').item.where(linkId = '19.6').answer.valueCoding"
+* caseAssessment.employmentStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/employment-information').item.where(linkId = '20').item.where(linkId = '20.1').answer.valueCoding"
+* caseAssessment.unemploymentReason -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/employment-information').item.where(linkId = '20').item.where(linkId = '20.2').answer.valueCoding"
+* caseAssessment.previousJob -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/employment-information').item.where(linkId = '20').item.where(linkId = '20.3').answer.valueString"
+* caseAssessment.currentJob -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/employment-information').item.where(linkId = '20').item.where(linkId = '20.4').answer.valueString"
+* caseAssessment.monthlyRent -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status').item.where(linkId = '10.4').answer.valueDecimal"
+* caseAssessment.isPlaced -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.1').answer.valueBoolean"
+* caseAssessment.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueString"
+* caseAssessment.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.4').answer.valueCoding"
+* caseService.isPlaced -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.1').answer.valueBoolean"
+* caseService.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueString"
+* caseClosure.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.4').answer.valueCoding"
+* caseClosure.placementNoFollowUpReason -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/closure-placement-information').item.where(linkId = '26').answer.valueCoding"
+* caseService.caseType -> "EpisodeOfCare.type"
+
+Mapping: TWSSBaseToBodyMeasurementObservation
+Id: twss-base-to-body-measurement-observation
+Title: "Mapping to TW Core Body Measurement Observation"
+Source: TWSSBaseModel
+Target: "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-body-weight-twcore"
+
+* caseBasicInfo.bodyMeasurement.weight -> "Observation.valueQuantity.value"
+
+Mapping: TWSSBaseToBodyHeightObservation
+Id: twss-base-to-body-height-observation
+Title: "Mapping to TW Core Body Height Observation"
+Source: TWSSBaseModel
+Target: "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-body-height-twcore"
+
+* caseBasicInfo.bodyMeasurement.height -> "Observation.valueQuantity.value"
+
+Mapping: TWSSBaseToCaseReporterPractitionerRole
+Id: twss-base-to-case-reporter-practitioner-role
+Title: "Mapping to TWSSBase Case Reporter PractitionerRole"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerRole-twss-base"
+
+* caseReport.helpNameTitle -> "PractitionerRole.code.text"
+* caseReport.helperTelcom -> "PractitionerRole.telecom.where(system = 'phone').value"
+
+Mapping: TWSSBaseToSubsidyApplicationStatusClaim
+Id: twss-base-to-subsidy-application-status-claim
+Title: "Mapping to TWSSBase Subsidy Application Status Claim"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/Claim-twss-base"
+
+* subsidyProvision.applicationReviewStatus -> "Claim.extension[applicationReviewStatus].valueCodeableConcept"
+
+Mapping: TWSSBaseToPsychologicalCounselingObservation
+Id: twss-base-to-psychological-counseling-observation
+Title: "Mapping to TWSSBase Psychological Counseling Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/PsychologicalCounselingObservation-twss-base"
+
+* caseAssessment.psychologicalCounselingAndAssessment -> "Observation.valueString"
+* caseService.psychologicalCounselingAndAssessment -> "Observation.valueString"
+
+Mapping: TWSSBaseToEducationObservation
+Id: twss-base-to-education-observation
+Title: "Mapping to TWSSBase Education Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/EducationObservation-twss-base"
+
+* serviceProviderProfessionalInfo.isRelatedMajorGraduate -> "Observation.component[relatedMajorGraduate].valueBoolean"
+* serviceProviderProfessionalInfo.isPractitionGraduated -> "Observation.component[graduated].valueBoolean"
+* serviceProviderProfessionalInfo.practitionGraduationYear -> "Observation.component[graduationYear].valueQuantity.value"
+* serviceProviderProfessionalInfo.practitionEducationLevel -> "Observation.component[educationLevel].valueCodeableConcept"
+* relatedPersonBasicInfo.relationEducationLevel -> "Observation.component[educationLevel].valueCodeableConcept"
+* caseAssessment.isGraduated -> "Observation.component[graduated].valueBoolean"
+* caseAssessment.schoolingStatus -> "Observation.component[schoolingStatus].valueCodeableConcept"
+* caseAssessment.schoolName -> "Observation.component[schoolName].valueString"
+* caseAssessment.gradeLevel -> "Observation.component[gradeLevel].valueString"
+* caseAssessment.major -> "Observation.component[major].valueString"
+* caseAssessment.educationLevel -> "Observation.component[educationLevel].valueCodeableConcept"
+
+Mapping: TWSSBaseToRelatedPersonOccupationObservation
+Id: twss-base-to-related-person-occupation-observation
+Title: "Mapping to TWSSBase Related Person Occupation Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/RelatedPersonOccupationObservation-twss-base"
+
+* relatedPersonBasicInfo.relationOccupation -> "Observation.valueCodeableConcept"
+
+Mapping: TWSSBaseToVisualAcuityObservation
+Id: twss-base-to-visual-acuity-observation
+Title: "Mapping to TWSSBase Visual Acuity Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/VisualAcuityObservation-twss-base"
+
+* caseBasicInfo.bodyMeasurement.correctedVisionLeft -> "Observation.component[correctedVisionLeft].valueQuantity"
+* caseBasicInfo.bodyMeasurement.visionLeft -> "Observation.component[visionLeft].valueQuantity.value"
+* caseBasicInfo.bodyMeasurement.correctedVisionRight -> "Observation.component[correctedVisionRight].valueQuantity"
+* caseBasicInfo.bodyMeasurement.visionRight -> "Observation.component[visionRight].valueQuantity.value"
+
+Mapping: TWSSBaseToOrganizationAccreditationObservation
+Id: twss-base-to-organization-accreditation-observation
+Title: "Mapping to TWSSBase Organization Accreditation Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/OrganizationAccreditationObservation-twss-base"
+
+* organizationOtherInfo.accreditationLevel -> "Observation.valueCodeableConcept"
+
 Mapping: TWSSBaseToFinalRelatedPersonField
 Id: twss-base-to-final-related-person-field
 Title: "Mapping to TWSS Base RelatedPerson"
@@ -872,4 +1142,48 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/EpisodeOfCare-twss-base"
 
 * caseClosure.caseClosingDate -> "EpisodeOfCare.where(status = 'finished').period.end"
 * caseClosure.caseClosingReason -> "EpisodeOfCare.extension[caseCloseReason]"
+
+Mapping: TWSSBaseToFinalClaimResponseField
+Id: twss-base-to-final-claim-response-field
+Title: "Mapping to TWSS Base ClaimResponse"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
+
+* subsidyProvision.approvedBenefitStartDate -> "ClaimResponse.preAuthPeriod.start"
+* subsidyProvision.approvedBenefitEndDate -> "ClaimResponse.preAuthPeriod.end"
+* subsidyProvision.subsidyStartDate -> "ClaimResponse.extension[subsidyPeriod].extension[start].valueDate"
+* subsidyProvision.subsidyEndDate -> "ClaimResponse.extension[subsidyPeriod].extension[end].valueDate"
+
+Mapping: TWSSBaseToMedicalRehabilitationServiceObservation
+Id: twss-base-to-medical-rehabilitation-service-observation
+Title: "Mapping to TWSS Base Medical Rehabilitation Service Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/MedicalRehabilitationServiceObservation-twss-base"
+
+* caseAssessment.medicalRehabilitationService -> "Observation.valueCodeableConcept.coding.code"
+
+Mapping: TWSSBaseToMedicalAssistanceObservation
+Id: twss-base-to-medical-assistance-observation
+Title: "Mapping to TWSS Base Medical Assistance Observation"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/MedicalAssistanceObservation-twss-base"
+
+* caseAssessment.medicalAssistance -> "Observation.valueCodeableConcept.coding.code"
+
+Mapping: TWSSBaseToPractitionerEmploymentQuestionnaireResponse
+Id: twss-base-to-practitioner-employment-questionnaire-response
+Title: "Mapping to TWSS Base Practitioner Employment QuestionnaireResponse"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
+
+* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = 'healthCheckDate').answer.valueDate"
+
+Mapping: TWSSBaseToMedicalSupportCarePlan
+Id: twss-base-to-medical-support-careplan
+Title: "Mapping to TWSS Base Medical Support CarePlan"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/CarePlan-twss-base"
+
+* caseService.medicalRehabilitationService -> "CarePlan.activity:medicalRehabilitationService.detail.code.coding.code"
+* caseService.medicalAssistance -> "CarePlan.activity:medicalAssistance.detail.code.coding.code"
 

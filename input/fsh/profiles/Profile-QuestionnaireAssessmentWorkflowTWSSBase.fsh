@@ -7,7 +7,7 @@ Description: "定義既有補助、保險與福利身分評估表單的題目結
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
-* item contains existingSubsidy 0..* MS and insuranceStatus 0..1 MS and welfareIdentityType 0..1 MS
+* item contains existingSubsidy 0..* MS and insuranceStatus 0..1 MS and welfareIdentityType 0..1 MS and monthlyRent 0..1 MS
 * item[existingSubsidy].linkId = "10.1"
 * item[existingSubsidy].type = #group
 * item[existingSubsidy].repeats = true
@@ -26,7 +26,9 @@ Description: "定義既有補助、保險與福利身分評估表單的題目結
 * item[welfareIdentityType].linkId = "10.3"
 * item[welfareIdentityType].type = #choice
 * item[welfareIdentityType].repeats = true
-* item[welfareIdentityType].answerValueSet = Canonical(twss-welfare-type-vs)
+* item[welfareIdentityType].answerValueSet = Canonical(twss-welfare-identity-type-vs)
+* item[monthlyRent].linkId = "10.4"
+* item[monthlyRent].type = #decimal
 
 Profile: QuestionnaireVisitRecordTWSSBase
 Parent: QuestionnaireTWSSBase

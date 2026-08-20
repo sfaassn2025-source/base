@@ -5,6 +5,9 @@ Title:          "補助申請或核付明細-Claim TWSS Base"
 Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達社家署業務中的補助申請或核付明細。因 TW Core 0.3.2 尚未提供 Claim Profile，故繼承原生 Claim，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
 * ^version = "0.0.1"
 
+* extension contains TWSSClaimApplicationReviewStatus named applicationReviewStatus 0..1 MS
+* extension[applicationReviewStatus] ^short = "申請審查狀態"
+
 * identifier MS
 * status MS
 * type MS
