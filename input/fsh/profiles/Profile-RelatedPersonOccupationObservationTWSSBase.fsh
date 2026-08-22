@@ -13,5 +13,5 @@ Description: "以職業觀察記錄關係人的職業資訊。"
 * focus 1..1 MS
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
-* valueCodeableConcept from https://twcore.mohw.gov.tw/ig/twcore/ValueSet/occupation-lia-roc-tw (required)
+* valueCodeableConcept from https://twcore.mohw.gov.tw/ig/twcore/ValueSet/occupation-lia-roc-tw (extensible)
 * valueCodeableConcept ^short = "關係人職業"
