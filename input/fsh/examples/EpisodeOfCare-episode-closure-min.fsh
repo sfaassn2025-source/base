@@ -6,7 +6,7 @@ Usage: #example
 
 * identifier[caseNumber].value = "EOC-CLOSE-001"
 * status = #finished
-* type[0].coding[0] = TWSSEpisodeOfCareType#early-intervention "兒童發展通報轉介及個案管理服務"
+* type[caseServiceType].coding[0] = TWSSCaseServiceType#CECM "發展遲緩兒童通報暨個案管理整合系統"
 * patient = Reference(pat-min)
 * managingOrganization = Reference(org-min)
 * period.start = "2026-01-01"

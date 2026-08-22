@@ -637,6 +637,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Claim-twss-base"
 * subsidyApplication.aidEndYearMonth -> "Claim.billablePeriod"
 * subsidyApplication.subsidyServiceType -> "Claim.item.productOrService"
 * subsidyApplication.subsidyRatio -> "Claim.item.factor"
+* subsidyApplication.applicationReviewStatus -> "Claim.extension[applicationReviewStatus].valueCodeableConcept"
 
 Mapping: TWSSBaseToCondition
 Id: twss-base-to-condition
@@ -650,6 +651,9 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Condition-twss-base"
 * caseAssessment.catastrophicIllnessName -> "Condition.code"
 * caseAssessment.icd -> "Condition.code"
 * caseService.diseaseType -> "Condition.code"
+* caseAssessment.newDisabilityType -> "Condition.code.coding[new-disability-type]"
+* caseAssessment.oldDisabilityType -> "Condition.code.coding[old-disability-type]"
+* caseAssessment.newDisabilityCategory -> "Condition.code.coding[new-disability-category]"
 
 Mapping: TWSSBaseToDisabilityCertificateObservation
 Id: twss-base-to-disability-certificate-observation
@@ -800,14 +804,13 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
 * subsidyApplication.reviewOpinion -> "ClaimResponse.processNote.text"
 * subsidyApplication.nonComplianceReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'eligibility-denial').reason.text"
 * subsidyApplication.reviewResult -> "ClaimResponse.extension[reviewResult].valueBoolean"
-* subsidyApplication.applicationReviewStatus -> "Claim.extension[applicationReviewStatus].valueCodeableConcept"
 * subsidyProvision.subsidyDisbursementStatus -> "ClaimResponse.extension[paymentStatus]"
 * subsidyProvision.subsidyMonth -> "ClaimResponse.extension[subsidyMonth]"
 * subsidyProvision.cancellationReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit-termination').reason.text"
 * subsidyProvision.paymentSuspensionReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit-suspension').reason.text"
-* subsidyProvision.subsidyServiceType -> "ClaimResponse.request"
-* subsidyProvision.applicant -> "ClaimResponse.request"
-* subsidyProvision.applicantBankAccount -> "ClaimResponse.request"
+* subsidyProvision.subsidyServiceType -> "ClaimResponse.request.resolve().item.productOrService"
+* subsidyProvision.applicant -> "ClaimResponse.request.resolve().supportingInfo[applicant].valueReference"
+* subsidyProvision.applicantBankAccount -> "ClaimResponse.request.resolve().supportingInfo[bankAccount].valueString"
 
 Mapping: TWSSBaseToAssessmentReviewTask
 Id: twss-base-to-assessment-review-task
@@ -1031,11 +1034,11 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss
 * caseAssessment.currentJob -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/employment-information').item.where(linkId = '20').item.where(linkId = '20.4').answer.valueString"
 * caseAssessment.monthlyRent -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status').item.where(linkId = '10.4').answer.valueDecimal"
 * caseAssessment.isPlaced -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.1').answer.valueBoolean"
-* caseAssessment.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueString"
-* caseAssessment.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.4').answer.valueCoding"
+* caseAssessment.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.2').answer.valueString"
+* caseAssessment.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueCoding"
 * caseService.isPlaced -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.1').answer.valueBoolean"
-* caseService.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueString"
-* caseClosure.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.4').answer.valueCoding"
+* caseService.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.2').answer.valueString"
+* caseClosure.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueCoding"
 * caseClosure.placementNoFollowUpReason -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/closure-placement-information').item.where(linkId = '26').answer.valueCoding"
 * caseService.caseType -> "EpisodeOfCare.type"
 
@@ -1064,13 +1067,13 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerRole-twss-base
 * caseReport.helpNameTitle -> "PractitionerRole.code.text"
 * caseReport.helperTelcom -> "PractitionerRole.telecom.where(system = 'phone').value"
 
-Mapping: TWSSBaseToSubsidyApplicationStatusClaim
-Id: twss-base-to-subsidy-application-status-claim
-Title: "Mapping to TWSSBase Subsidy Application Status Claim"
+Mapping: TWSSBaseToSubsidyProvisionApplicationReviewStatusClaimResponse
+Id: twss-base-to-subsidy-provision-review-status-claimresponse
+Title: "Mapping to TWSSBase Subsidy Provision Application Review Status ClaimResponse"
 Source: TWSSBaseModel
-Target: "https://sfaa.gov.tw/base/StructureDefinition/Claim-twss-base"
+Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
 
-* subsidyProvision.applicationReviewStatus -> "Claim.extension[applicationReviewStatus].valueCodeableConcept"
+* subsidyProvision.applicationReviewStatus -> "ClaimResponse.request.resolve().extension('https://sfaa.gov.tw/base/StructureDefinition/twss-claim-application-review-status').valueCodeableConcept"
 
 Mapping: TWSSBaseToPsychologicalCounselingObservation
 Id: twss-base-to-psychological-counseling-observation
@@ -1176,7 +1179,7 @@ Title: "Mapping to TWSS Base Practitioner Employment QuestionnaireResponse"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
-* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = 'healthCheckDate').answer.valueDate"
+* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.3').answer.valueDate"
 
 Mapping: TWSSBaseToMedicalSupportCarePlan
 Id: twss-base-to-medical-support-careplan

@@ -39,7 +39,7 @@ Title: "服務人基本與任職資訊回覆範例"
 * item[0].item[0].answer[0].valueBoolean = false
 * item[0].item[1].linkId = "13.2"
 * item[0].item[1].answer[0].valueDecimal = 38000
-* item[0].item[2].linkId = "healthCheckDate"
+* item[0].item[2].linkId = "13.3"
 * item[0].item[2].answer[0].valueDate = "2026-08-01"
 
 Instance: related-person-basic-response-min
@@ -193,9 +193,9 @@ Title: "安置資訊回覆範例"
 * item[0].linkId = "23"
 * item[0].item[0].linkId = "23.1"
 * item[0].item[0].answer[0].valueBoolean = true
-* item[0].item[1].linkId = "23.3"
+* item[0].item[1].linkId = "23.2"
 * item[0].item[1].answer[0].valueString = "安置中"
-* item[0].item[2].linkId = "23.4"
+* item[0].item[2].linkId = "23.3"
 * item[0].item[2].answer[0].valueCoding = TWSSPlacementEnded#N "否"
 
 Instance: closure-placement-response-min

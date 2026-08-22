@@ -48,7 +48,7 @@ Description: "定義服務人基本與任職資訊表單的題目結構。"
 * item[practitionerEmployment].item[isRelativeNanny].type = #boolean
 * item[practitionerEmployment].item[practitionSalary].linkId = "13.2"
 * item[practitionerEmployment].item[practitionSalary].type = #decimal
-* item[practitionerEmployment].item[healthCheckDate].linkId = "healthCheckDate"
+* item[practitionerEmployment].item[healthCheckDate].linkId = "13.3"
 * item[practitionerEmployment].item[healthCheckDate].type = #date
 
 Profile: QuestionnaireRelatedPersonBasicTWSSBase
@@ -234,9 +234,9 @@ Description: "定義安置評估、服務與結案共用表單的題目結構。
 * item[placementInformation].item contains isPlaced 0..1 MS and placementStatus 0..1 MS and isPlacementEnded 0..1 MS
 * item[placementInformation].item[isPlaced].linkId = "23.1"
 * item[placementInformation].item[isPlaced].type = #boolean
-* item[placementInformation].item[placementStatus].linkId = "23.3"
+* item[placementInformation].item[placementStatus].linkId = "23.2"
 * item[placementInformation].item[placementStatus].type = #string
-* item[placementInformation].item[isPlacementEnded].linkId = "23.4"
+* item[placementInformation].item[isPlacementEnded].linkId = "23.3"
 * item[placementInformation].item[isPlacementEnded].type = #choice
 * item[placementInformation].item[isPlacementEnded].answerValueSet = Canonical(twss-placement-ended-vs)
 

@@ -9,6 +9,7 @@ Usage: #example
 * intent = #order
 * category = http://snomed.info/sct#185087000 "Notifications"
 * code = http://snomed.info/sct#710824005 "Assessment of health and social care needs"
+* orderDetail[caseServiceType] = TWSSCaseServiceType#CECM "發展遲緩兒童通報暨個案管理整合系統"
 * subject = Reference(pat-min)
 * authoredOn = "2026-07-29T08:00:00+08:00"
 * requester = Reference(pracrole-min)
@@ -26,6 +27,7 @@ Usage: #example
   <p><b>通報時間</b>：2026-07-29T08:00:00+08:00</p>
   <p><b>個案通報類型</b>：Notifications <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://snomed.info/id/185087000">SNOMED CT</a>#185087000）</span></p>
   <p><b>個案通報請求項目</b>：Assessment of health and social care needs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://snomed.info/id/710824005">SNOMED CT</a>#710824005）</span></p>
+  <p><b>個案服務別</b>：發展遲緩兒童通報暨個案管理整合系統 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="CodeSystem-twss-case-service-type.html">TWSS 個案服務別</a>#CECM）</span></p>
   <p><b>通報者</b>：<a href="PractitionerRole-pracrole-min.html">PractitionerRole/pracrole-min</a>「社工」</p>
   <p><b>通報類型</b>：初報</p>
   <p><b>受理機構</b>：<a href="Organization-org-min.html">Organization/org-min</a></p>

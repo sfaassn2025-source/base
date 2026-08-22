@@ -72,6 +72,7 @@ Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達社�
 * insurance.coverage only Reference(CoverageTWSSBase)
 * item MS
 * item.productOrService MS
+* item.productOrService from TWSSSubsidyServiceTypeVS (required)
 * item.factor MS
 * item.productOrService ^short = "申請補助項目"
 * item.factor ^short = "補助比率"

@@ -33,7 +33,7 @@ Usage: #example
 * insurance[0].focal = true
 * insurance[0].coverage = Reference(coverage-min)
 * item[0].sequence = 1
-* item[0].productOrService.text = "生活補助"
+* item[0].productOrService = TWSSSubsidyServiceType#CRA "未滿2歲兒童育兒津貼資訊系統"
 * item[0].servicedDate = "2026-06-30"
 * item[0].net.value = 1000
 * item[0].net.currency = #TWD

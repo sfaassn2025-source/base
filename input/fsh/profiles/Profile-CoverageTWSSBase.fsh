@@ -11,9 +11,7 @@ Description:    "補助資格或補助案件-Coverage TWSS Base Profile 表達�
 * status MS
 * type MS
 * type only CodeableConceptTW
-* type from TWSSWelfareTypeVS (extensible)
-* type ^binding.description = "Coverage.type 優先採用 FHIR Coverage Type and Self-Pay Codes；若需表達社家署福利身分別，可使用 TWSS 福利身分別代碼。"
-* type ^short = "福利身分別、補助資格或給付資格類型。"
+* type ^short = "補助資格或給付資格類型。"
 * policyHolder only Reference(PatientTWSSBase or RelatedPersonTWSSBase or OrganizationTWSSBase)
 * policyHolder MS
 * subscriber only Reference(PatientTWSSBase or RelatedPersonTWSSBase)

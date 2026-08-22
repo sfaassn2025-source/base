@@ -23,6 +23,7 @@ Description: "定義既有補助、保險與福利身分評估表單的題目結
 * item[insuranceStatus].linkId = "10.2"
 * item[insuranceStatus].type = #choice
 * item[insuranceStatus].repeats = true
+* item[insuranceStatus].answerValueSet = Canonical(twss-insurance-status-vs)
 * item[welfareIdentityType].linkId = "10.3"
 * item[welfareIdentityType].type = #choice
 * item[welfareIdentityType].repeats = true
@@ -42,6 +43,7 @@ Description: "定義訪視紀錄表單的題目結構。"
 * item contains visitTarget 1..1 MS and visitServiceMethod 1..1 MS and visitStartTime 1..1 MS and visitEndTime 0..1 MS and visitSummary 0..1 MS
 * item[visitTarget].linkId = "11.1"
 * item[visitTarget].type = #choice
+* item[visitTarget].answerValueSet = Canonical(twss-visit-target-vs)
 * item[visitServiceMethod].linkId = "11.2"
 * item[visitServiceMethod].type = #choice
 * item[visitServiceMethod].answerValueSet = Canonical(twss-visit-service-method-vs)

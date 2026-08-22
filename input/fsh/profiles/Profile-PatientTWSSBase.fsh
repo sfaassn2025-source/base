@@ -647,7 +647,8 @@ pat-cnt-2or3-char：如果有國家名，則必須（SHALL）從[ISO Country Alp
 * address ^requirements = "可能需要記錄病人的地址，以便聯繫、結算或報告的要求，也有助於識別身份。"
 * address ^comment = "病人可能有多個地址，有不同的用途或適用期。"
 * maritalStatus ^short = "病人的婚姻狀態"
-* maritalStatus ^binding.description = "病人的婚姻狀態；應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。"
+* maritalStatus from TWSSMaritalStatusVS (extensible)
+* maritalStatus ^binding.description = "病人的婚姻狀態；優先使用 FHIR 原生婚姻狀態代碼，原生代碼無法完整表達時使用 TWSS 補充代碼。"
 * maritalStatus ^definition = "這個欄位包含病人的目前婚姻（民事）狀態"
 * maritalStatus ^requirements = "如果不是所有的系統都能取得此資訊"
 * photo ^short = "病人的影像（照片）"

@@ -32,8 +32,16 @@ Description:    "個案服務案件-EpisodeOfCare TWSS Base Profile 表達社家
 * status MS
 * statusHistory MS
 * type 1..* MS
-* type from TWSSEpisodeOfCareTypeVS (extensible)
-* type ^short = "服務或補助案件類型"
+* type ^slicing.discriminator.type = #pattern
+* type ^slicing.discriminator.path = "coding.system"
+* type ^slicing.rules = #open
+* type contains caseType 0..* MS and caseServiceType 0..* MS
+* type[caseType].coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-case-type"
+* type[caseType] from TWSSCaseTypeVS (required)
+* type[caseType] ^short = "案件類型"
+* type[caseServiceType].coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-case-service-type"
+* type[caseServiceType] from TWSSCaseServiceTypeVS (required)
+* type[caseServiceType] ^short = "個案服務別"
 * diagnosis MS
 * patient only Reference(PatientTWSSBase)
 * patient MS

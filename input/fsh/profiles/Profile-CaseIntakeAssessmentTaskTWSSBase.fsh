@@ -27,5 +27,5 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福個案受理與評估流程
 * input[caseType].type.coding.code = #case-type
 * input[caseType].type.coding.display = "評估案件類型"
 * input[caseType].value[x] only CodeableConceptTW
-* input[caseType].valueCodeableConcept from TWSSEpisodeOfCareTypeVS (extensible)
+* input[caseType].valueCodeableConcept from TWSSCaseTypeVS (required)
 * input[caseType] ^short = "評估的案件類型"

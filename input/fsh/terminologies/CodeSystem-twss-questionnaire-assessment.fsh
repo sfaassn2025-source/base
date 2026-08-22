@@ -15,6 +15,9 @@ Description: "個案家庭結構代碼。"
 * #F "繼親家庭"
 * #G "隔代家庭"
 * #H "手足家庭"
+* #I "同性伴侶家庭"
+* #J "同居家庭"
+* #K "單人家庭"
 * #Z "其它家庭"
 
 CodeSystem: TWSSChildrenStatus

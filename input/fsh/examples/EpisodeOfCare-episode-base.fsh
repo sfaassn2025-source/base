@@ -6,8 +6,8 @@ Usage: #example
 
 * identifier[caseNumber].value = "EOC-BASE-001"
 * status = #active
-* type[0].coding[0] = TWSSEpisodeOfCareType#early-intervention "兒童發展通報轉介及個案管理服務"
-* type[0].text = "兒童發展通報轉介及個案管理服務案件"
+* type[caseServiceType].coding[0] = TWSSCaseServiceType#CECM "發展遲緩兒童通報暨個案管理整合系統"
+* type[caseServiceType].text = "發展遲緩兒童通報暨個案管理整合系統案件"
 * patient = Reference(pat-min)
 * managingOrganization = Reference(org-min)
 * referralRequest = Reference(referral-request-min)
@@ -20,7 +20,7 @@ Usage: #example
     <p><b>案件編號</b>：EOC-BASE-001 （https://example.org/twss/episode-id）</p>
   </blockquote>
   <p><b>案件狀態</b>：Active</p>
-  <p><b>案件類型</b>：兒童發展通報轉介及個案管理服務 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-episode-of-care-type.html">TWSS 個案服務或補助案件類型</a>#early-intervention）</span></p>
+  <p><b>個案服務別</b>：發展遲緩兒童通報暨個案管理整合系統 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-case-service-type.html">TWSS 個案服務別</a>#CECM）</span></p>
   <p><b>個案</b>： <a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
   <p><b>轉介請求</b>：<a href="ServiceRequest-referral-request-min.html">ServiceRequest/referral-request-min</a></p>
   <p><b>服務期間</b>：自 2026-01-01 起</p>

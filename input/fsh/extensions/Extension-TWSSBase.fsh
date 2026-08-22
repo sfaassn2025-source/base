@@ -26,7 +26,7 @@ Context: RelatedPerson
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW
 * valueCodeableConcept MS
-* valueCodeableConcept from http://hl7.org/fhir/ValueSet/marital-status (extensible)
+* valueCodeableConcept from TWSSMaritalStatusVS (extensible)
 
 Extension: TWSSRelatedPersonAge
 Id: twss-related-person-age

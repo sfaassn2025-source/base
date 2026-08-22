@@ -36,6 +36,7 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].linkId = "7.1.3.2"
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].type = #choice
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].repeats = true
+* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].answerValueSet = Canonical(twss-new-disability-category-vs)
 * item[disabilityClassification].item[oldDisabilityType].linkId = "7.1.4"
 * item[disabilityClassification].item[oldDisabilityType].type = #choice
 * item[disabilityClassification].item[oldDisabilityType].repeats = true
@@ -46,7 +47,7 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityClassification].item[icf].answerValueSet = Canonical(icf-code-vs)
 * item[disabilityClassification].item[disabilitySeverityLevel].linkId = "7.1.6"
 * item[disabilityClassification].item[disabilitySeverityLevel].type = #choice
-* item[disabilityClassification].item[disabilitySeverityLevel].answerValueSet = Canonical(twss-disability-level-vs)
+* item[disabilityClassification].item[disabilitySeverityLevel].answerValueSet = Canonical(twss-disability-severity-level-vs)
 * item[disabilityClassification].item[disabilityOnsetDate].linkId = "7.1.7"
 * item[disabilityClassification].item[disabilityOnsetDate].type = #date
 * item[disabilityCertificate].linkId = "7.2"

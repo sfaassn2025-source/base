@@ -56,6 +56,9 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
     health-status 0..1 MS and
     health-status-option 0..* MS and
     disease-type 0..* MS and
+    new-disability-type 0..* MS and
+    old-disability-type 0..* MS and
+    new-disability-category 0..* MS and
     absentOrUnknownProblem 0..1 MS and
     sct 0..1 MS
 * code.coding[icd10-cm-2023] from TW2023ICD10CM (required)
@@ -65,6 +68,9 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * code.coding[health-status] from TWSSHealthStatusVS (required)
 * code.coding[health-status-option] from TWSSHealthStatusOptionVS (required)
 * code.coding[disease-type] from TWSSDiseaseTypeVS (required)
+* code.coding[new-disability-type] from TWSSDisabilityTypeNewCategoryVS (required)
+* code.coding[old-disability-type] from TWSSDisabilityTypeLegacyVS (required)
+* code.coding[new-disability-category] from TWSSNewDisabilityCategoryVS (required)
 * code.coding[absentOrUnknownProblem] from http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-problems-uv-ips (required)
 * code.coding[sct] from TWConditionCodeSCT (required)
 * code.coding[health-status] ^short = "身心健康狀況代碼。"
@@ -73,6 +79,9 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * code.coding[health-status-option] ^short = "健康狀況選項代碼。"
 * code.coding[health-status-option] ^definition = "以 TWSS Base 健康狀況選項代碼表示此 Condition 所描述的健康問題或狀況。"
 * code.coding[disease-type] ^short = "疾病類型代碼。"
+* code.coding[new-disability-type] ^short = "新制障礙類別代碼。"
+* code.coding[old-disability-type] ^short = "舊制障礙類別代碼。"
+* code.coding[new-disability-category] ^short = "新制障礙類別細項代碼。"
 * code.text 0..1 MS
 * code ^short = "病情、問題或診斷的識別"
 * code ^binding.description = "此資料項目為可擴充綁定預設國際標準值集，但實作者可視實務專案需求使用以下 slices 中的任一值集。障礙類別應使用 TWSS Base 障礙類別代碼；ICD 診斷應使用對應 ICD slice。"

@@ -33,6 +33,16 @@ Description:    "申請或服務請求-ServiceRequest TWSS Base Profile 表達�
 
 * orderDetail only CodeableConceptTW
 * orderDetail MS
+* orderDetail ^slicing.discriminator.type = #pattern
+* orderDetail ^slicing.discriminator.path = "coding.system"
+* orderDetail ^slicing.rules = #open
+* orderDetail contains caseServiceType 0..* MS and subsidyServiceType 0..* MS
+* orderDetail[caseServiceType].coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-case-service-type"
+* orderDetail[caseServiceType] from TWSSCaseServiceTypeVS (required)
+* orderDetail[caseServiceType] ^short = "個案服務別"
+* orderDetail[subsidyServiceType].coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-subsidy-service-type"
+* orderDetail[subsidyServiceType] from TWSSSubsidyServiceTypeVS (required)
+* orderDetail[subsidyServiceType] ^short = "申請補助別"
 
 * subject only Reference(PatientTWSSBase)
 * subject 1..1 MS
