@@ -5,7 +5,7 @@ Description: "符合裁定日期 Observation TWSS Base Profile 的範例。"
 Usage: #example
 
 * status = #final
-* code.text = "安置裁定日期"
+* code = TWSSObservationType#ruling-date
 * subject = Reference(pat-min)
 * valueDateTime = "2026-07-29T00:00:00+08:00"
 * text.status = #generated

@@ -6,7 +6,8 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福機構查核結果的 Profi
 * ^version = "0.0.1"
 
 * status 1..1 MS
-* code 1..1 MS
+* code = TWSSObservationType#organization-audit-result
+* code from TWSSObservationTypeVS (required)
 * code ^short = "查核結果"
 * focus only Reference(OrganizationTWSSBase)
 * focus 1..1 MS

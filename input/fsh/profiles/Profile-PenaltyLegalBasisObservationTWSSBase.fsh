@@ -6,7 +6,8 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福機構裁罰法規依據的
 * ^version = "0.0.1"
 
 * status 1..1 MS
-* code 1..1 MS
+* code = TWSSObservationType#penalty-legal-basis
+* code from TWSSObservationTypeVS (required)
 * code ^short = "裁罰法規依據"
 * focus only Reference(OrganizationTWSSBase)
 * focus 1..1 MS

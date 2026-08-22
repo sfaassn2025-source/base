@@ -6,7 +6,8 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福裁定日期的 Profile，�
 * ^version = "0.0.1"
 
 * status 1..1 MS
-* code 1..1 MS
+* code = TWSSObservationType#ruling-date
+* code from TWSSObservationTypeVS (required)
 * code ^short = "裁定日期的業務類型"
 * subject only Reference(PatientTWSSBase)
 * subject 1..1 MS
