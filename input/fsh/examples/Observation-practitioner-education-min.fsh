@@ -5,7 +5,6 @@ Title: "服務人教育經歷範例"
 Description: "符合服務人教育經歷 Observation Profile 的範例。"
 * status = #final
 * code = TWSSObservationType#education-information "教育資訊"
-* subject = Reference(pat-min)
 * focus = Reference(prac-min)
 * component[enrollmentYear].code = TWSSEducationComponent#enrollment-year "入學年度"
 * component[enrollmentYear].valueInteger = 2014

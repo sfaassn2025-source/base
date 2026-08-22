@@ -4,6 +4,7 @@ Id: PractitionerEducationObservation-twss-base
 Title: "服務人教育經歷-Observation TWSS Base"
 Description: "服務人教育資訊 Observation Profile。"
 * ^version = "0.0.1"
+* subject 0..0
 * focus only Reference(PractitionerTWSSBase)
 * focus 1..1 MS
 * component[schoolName] ^short = "服務人就讀學校名稱"

@@ -8,4 +8,4 @@ Description: "以職業觀察記錄關係人職業的範例。"
 * code = http://loinc.org#11341-5 "History of occupation"
 * subject = Reference(pat-min)
 * focus = Reference(related-min)
-* valueCodeableConcept.text = "餐飲服務人員"
+* valueCodeableConcept = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/occupation-lia-roc-tw#10010150 "醫院志工、社工(不須外出訪視)"

@@ -8,7 +8,7 @@ Description: "教育資訊 Observation Base Profile。"
 * code = TWSSObservationType#education-information "教育資訊"
 * code from TWSSObservationTypeVS (required)
 * subject only Reference(PatientTWSSBase)
-* subject 1..1 MS
+* subject 0..1 MS
 * focus 0..1 MS
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"

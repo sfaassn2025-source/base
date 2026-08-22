@@ -19,9 +19,8 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityClassification].item[disabilityCause].repeats = true
 * item[disabilityClassification].item[disabilityCause].answerValueSet = Canonical(twss-disability-cause-vs)
 * item[disabilityClassification].item[disabilityLocation].linkId = "7.1.2"
-* item[disabilityClassification].item[disabilityLocation].type = #open-choice
-* item[disabilityClassification].item[disabilityLocation].repeats = true
-* item[disabilityClassification].item[disabilityLocation].answerValueSet = Canonical(twss-physical-disability-type-vs)
+* item[disabilityClassification].item[disabilityLocation].type = #string
+* item[disabilityClassification].item[disabilityLocation].repeats = false
 * item[disabilityClassification].item[newDisabilityClassification].linkId = "7.1.3"
 * item[disabilityClassification].item[newDisabilityClassification].type = #group
 * item[disabilityClassification].item[newDisabilityClassification].repeats = true
