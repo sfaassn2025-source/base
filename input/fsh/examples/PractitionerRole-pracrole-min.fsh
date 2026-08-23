@@ -9,6 +9,8 @@ Usage: #example
 * active = true
 * practitioner = Reference(prac-min)
 * organization = Reference(org-min)
+* extension[isRelativeNanny].valueBoolean = false
+* extension[practitionSalary].valueDecimal = 38000
 * code[0].coding[0] = http://snomed.info/sct#106328005 "Social worker"
 * code[0].text = "社工"
 * period.start = "2026-01-01"

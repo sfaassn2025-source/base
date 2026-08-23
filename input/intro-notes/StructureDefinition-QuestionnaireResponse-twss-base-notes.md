@@ -1,5 +1,11 @@
 {% include quickstart-note.md %}
 
+#### 使用範圍
+
+本 Profile 為社福 QuestionnaireResponse 的共用 Profile。`subject` 可為個案 Patient 或服務人 Practitioner；`basedOn` 與 `encounter` 為選填，應依填答發生的流程階段參照相應的 ServiceRequest、CarePlan 或 Encounter。
+
+個案服務評估應使用「個案服務評估回覆」子 Profile；服務人健康檢查日期應使用「服務人健康檢查回覆」子 Profile。
+
 #### 建議應該支援以下查詢參數：
 
 此 Profile 使用 FHIR R4 QuestionnaireResponse Resource；伺服端建議（SHOULD）支援以下 FHIR 原生查詢參數：

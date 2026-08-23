@@ -14,6 +14,12 @@ Description:    "人員角色-PractitionerRole TWSS Base Profile 表達社家署
 
 * active MS
 
+* extension contains
+    TWSSPractitionerRoleRelativeNanny named isRelativeNanny 0..1 MS and
+    TWSSPractitionerRoleSalary named practitionSalary 0..1 MS
+* extension[isRelativeNanny] ^short = "是否為親屬保母"
+* extension[practitionSalary] ^short = "服務人薪資"
+
 * period MS
 * period.start MS
 * period.end MS

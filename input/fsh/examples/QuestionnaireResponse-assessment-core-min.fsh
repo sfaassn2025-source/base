@@ -1,5 +1,5 @@
 Instance: family-assessment-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "家庭評估問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/family-assessment"
@@ -16,7 +16,7 @@ Title: "家庭評估問卷回應範例"
 * item[0].item[1].answer[0].valueInteger = 4
 
 Instance: related-person-risk-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "關係人風險評估問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment"
@@ -40,7 +40,7 @@ Title: "關係人風險評估問卷回應範例"
 * item[0].item[2].item[2].answer[0].valueCoding = TWSSRelationSubstanceUse#1 "否"
 
 Instance: crisis-event-location-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "危機事件事發地點問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/crisis-event-location"
@@ -54,7 +54,7 @@ Title: "危機事件事發地點問卷回應範例"
 * item[0].answer[0].valueString = "案家住處"
 
 Instance: household-disability-count-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "家庭身障者人數問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/household-disability-count"
@@ -68,7 +68,7 @@ Title: "家庭身障者人數問卷回應範例"
 * item[0].answer[0].valueInteger = 1
 
 Instance: health-disease-status-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "健康與疾病狀況問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/health-disease-status"
@@ -92,7 +92,7 @@ Title: "健康與疾病狀況問卷回應範例"
 * item[5].answer[0].valueString = "依醫囑規律服藥"
 
 Instance: disability-status-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "身心障礙狀況問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/disability-status"
@@ -107,7 +107,6 @@ Title: "身心障礙狀況問卷回應範例"
 * item[0].item[0].answer[0].valueCoding = TWSSDisabilityCause#3 "意外"
 * item[0].item[1].linkId = "7.1.2"
 * item[0].item[1].answer[0].valueCoding = TWSSPhysicalDisabilityType#A "上肢"
-* item[0].item[1].answer[1].valueString = "左手肘以下"
 * item[0].item[2].linkId = "7.1.3"
 * item[0].item[2].item[0].linkId = "7.1.3.1"
 * item[0].item[2].item[0].answer[0].valueCoding = TWSSDisabilityTypeNewCategory#7 "第七類：神經、肌肉、骨骼之移動相關構造及其功能"
@@ -126,7 +125,7 @@ Title: "身心障礙狀況問卷回應範例"
 * item[1].item[2].answer[0].valueDate = "2025-06-01"
 
 Instance: assistive-device-status-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "輔具使用狀況問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/assistive-device-status"
@@ -143,7 +142,7 @@ Title: "輔具使用狀況問卷回應範例"
 * item[0].item[1].answer[0].valueBoolean = true
 
 Instance: welfare-economic-status-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "福利與經濟現況問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status"
@@ -166,7 +165,7 @@ Title: "福利與經濟現況問卷回應範例"
 * item[3].answer[0].valueDecimal = 12000
 
 Instance: visit-record-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "訪視紀錄問卷回應範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/visit-record"

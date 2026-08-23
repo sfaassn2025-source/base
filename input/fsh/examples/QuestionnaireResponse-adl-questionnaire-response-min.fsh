@@ -1,5 +1,5 @@
 Instance: adl-questionnaire-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "日常生活功能 ADL 評估回覆範例"
 Description: "依日常生活功能 ADL 評估 Questionnaire 填寫的 QuestionnaireResponse 範例。"

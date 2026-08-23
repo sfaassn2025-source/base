@@ -31,9 +31,10 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 Profile: QuestionnairePractitionerEmploymentTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-practitioner-employment-twss-base
-Title: "服務人基本與任職資訊-Questionnaire TWSS Base"
-Description: "定義服務人基本與任職資訊表單的題目結構。"
+Title: "服務人健康檢查資訊-Questionnaire TWSS Base"
+Description: "定義服務人健康檢查日期表單的題目結構。"
 * ^version = "0.0.1"
+* subjectType = #Practitioner
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
@@ -43,12 +44,8 @@ Description: "定義服務人基本與任職資訊表單的題目結構。"
 * item[practitionerEmployment].item ^slicing.discriminator.type = #value
 * item[practitionerEmployment].item ^slicing.discriminator.path = "linkId"
 * item[practitionerEmployment].item ^slicing.rules = #closed
-* item[practitionerEmployment].item contains isRelativeNanny 0..1 MS and practitionSalary 0..1 MS and healthCheckDate 0..1 MS
-* item[practitionerEmployment].item[isRelativeNanny].linkId = "13.1"
-* item[practitionerEmployment].item[isRelativeNanny].type = #boolean
-* item[practitionerEmployment].item[practitionSalary].linkId = "13.2"
-* item[practitionerEmployment].item[practitionSalary].type = #decimal
-* item[practitionerEmployment].item[healthCheckDate].linkId = "13.3"
+* item[practitionerEmployment].item contains healthCheckDate 0..1 MS
+* item[practitionerEmployment].item[healthCheckDate].linkId = "13.1"
 * item[practitionerEmployment].item[healthCheckDate].type = #date
 
 Profile: QuestionnaireRelatedPersonBasicTWSSBase

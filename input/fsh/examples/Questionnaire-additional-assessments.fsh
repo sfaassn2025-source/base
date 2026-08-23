@@ -16,14 +16,12 @@ Title: "個案基本與家庭資訊 Questionnaire"
 Instance: practitioner-employment-information
 InstanceOf: QuestionnairePractitionerEmploymentTWSSBase
 Usage: #definition
-Description: "服務人就業資訊評估表。"
-Title: "服務人基本與任職資訊 Questionnaire"
+Description: "服務人健康檢查日期表。"
+Title: "服務人健康檢查資訊 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #active
-* subjectType[0] = #Patient
-* item[practitionerEmployment].text = "服務人基本與任職資訊"
-* item[practitionerEmployment].item[isRelativeNanny].text = "是否為親屬保母"
-* item[practitionerEmployment].item[practitionSalary].text = "服務人薪資"
+* subjectType[0] = #Practitioner
+* item[practitionerEmployment].text = "服務人健康檢查資訊"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 
 Instance: related-person-basic-information

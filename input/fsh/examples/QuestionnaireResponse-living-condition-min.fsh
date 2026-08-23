@@ -1,5 +1,5 @@
 Instance: living-condition-questionnaire-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Title: "居住狀況評估回覆範例"
 Description: "符合社福評估 QuestionnaireResponse TWSS Base Profile 的居住狀況評估回覆範例。"

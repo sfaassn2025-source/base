@@ -1,5 +1,5 @@
 Instance: case-basic-family-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "個案基本家庭資料評估回應範例。"
 Title: "個案基本與家庭資訊回覆範例"
@@ -23,27 +23,21 @@ Title: "個案基本與家庭資訊回覆範例"
 * item[0].item[4].answer[0].valueCoding = TWSSSpecialEducationType#0 "無"
 
 Instance: practitioner-employment-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: PractitionerEmploymentQuestionnaireResponseTWSSBase
 Usage: #example
-Description: "服務人就業資訊評估回應範例。"
-Title: "服務人基本與任職資訊回覆範例"
+Description: "服務人健康檢查日期回覆範例。"
+Title: "服務人健康檢查資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #completed
-* subject = Reference(pat-min)
-* basedOn = Reference(case-report-min)
-* encounter = Reference(assessment-service-min)
+* subject = Reference(prac-min)
 * authored = "2026-08-18T09:00:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "13"
 * item[0].item[0].linkId = "13.1"
-* item[0].item[0].answer[0].valueBoolean = false
-* item[0].item[1].linkId = "13.2"
-* item[0].item[1].answer[0].valueDecimal = 38000
-* item[0].item[2].linkId = "13.3"
-* item[0].item[2].answer[0].valueDate = "2026-08-01"
+* item[0].item[0].answer[0].valueDate = "2026-08-01"
 
 Instance: related-person-basic-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "關係人基本資訊評估回應範例。"
 Title: "關係人基本資訊回覆範例"
@@ -61,7 +55,7 @@ Title: "關係人基本資訊回覆範例"
 * item[0].item[1].answer[0].valueBoolean = false
 
 Instance: vocational-training-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "職業訓練狀況評估回應範例。"
 Title: "職業訓練狀況回覆範例"
@@ -79,7 +73,7 @@ Title: "職業訓練狀況回覆範例"
 * item[0].item[1].answer[0].valueString = "職能培訓"
 
 Instance: school-adaptation-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "學校適應狀況評估回應範例。"
 Title: "學校適應狀況回覆範例"
@@ -94,7 +88,7 @@ Title: "學校適應狀況回覆範例"
 * item[0].answer[0].valueString = "適應良好"
 
 Instance: emotional-behavior-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "情緒與行為狀況評估回應範例。"
 Title: "情緒與行為狀況回覆範例"
@@ -109,7 +103,7 @@ Title: "情緒與行為狀況回覆範例"
 * item[0].answer[0].valueCoding = TWSSEmotionalControlAbility#2 "偶有困難"
 
 Instance: interpersonal-interaction-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "人際互動狀況評估回應範例。"
 Title: "人際互動狀況回覆範例"
@@ -133,7 +127,7 @@ Title: "人際互動狀況回覆範例"
 * item[0].item[4].answer[0].valueCoding = TWSSInteractionAssessment#2 "尚可"
 
 Instance: developmental-delay-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "兒童發展遲緩評估回應範例。"
 Title: "發展遲緩類別回覆範例"
@@ -159,7 +153,7 @@ Title: "發展遲緩類別回覆範例"
 * item[0].item[5].answer[0].valueCoding = TWSSDevelopmentalDelayCategory#1 "無遲緩"
 
 Instance: employment-information-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
 Usage: #example
 Description: "就業資訊評估回應範例。"
 Title: "就業資訊回覆範例"
@@ -186,8 +180,7 @@ Title: "安置資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/placement-information"
 * status = #completed
 * subject = Reference(pat-min)
-* basedOn = Reference(case-report-min)
-* encounter = Reference(assessment-service-min)
+* encounter = Reference(placement-min)
 * authored = "2026-08-18T09:00:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "23"
@@ -206,8 +199,6 @@ Title: "結案與安置資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/closure-placement-information"
 * status = #completed
 * subject = Reference(pat-min)
-* basedOn = Reference(case-report-min)
-* encounter = Reference(assessment-service-min)
 * authored = "2026-08-18T09:00:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "26"

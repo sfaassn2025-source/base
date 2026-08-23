@@ -977,6 +977,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerRole-twss-base
 
 * serviceProviderBasicInfo.childcareAddress -> "PractitionerRole.location"
 * serviceProviderBasicInfo.jobTitle -> "PractitionerRole.code"
+* serviceProviderBasicInfo.isRelativeNanny -> "PractitionerRole.extension[isRelativeNanny].valueBoolean"
+* serviceProviderBasicInfo.practitionSalary -> "PractitionerRole.extension[practitionSalary].valueDecimal"
 * serviceProviderProfessionalInfo.childcareAddress -> "PractitionerRole.location"
 * serviceProviderProfessionalInfo.jobTitle -> "PractitionerRole.code"
 
@@ -1008,8 +1010,6 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss
 * caseBasicInfo.childrenCount -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.3').answer.valueDecimal"
 * caseBasicInfo.familyMonthlyIncome -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.4').answer.valueDecimal"
 * caseBasicInfo.specialEducationType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information').item.where(linkId = '12').item.where(linkId = '12.5').answer.valueCoding"
-* serviceProviderBasicInfo.isRelativeNanny -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.1').answer.valueBoolean"
-* serviceProviderBasicInfo.practitionSalary -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.2').answer.valueDecimal"
 * relatedPersonBasicInfo.isCohabiting -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information').item.where(linkId = '14').item.where(linkId = '14.1').answer.valueBoolean"
 * relatedPersonBasicInfo.isForeignSpouse -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information').item.where(linkId = '14').item.where(linkId = '14.2').answer.valueBoolean"
 * caseAssessment.hasAttendedVocationalTraining -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/vocational-training-status').item.where(linkId = '15').item.where(linkId = '15.1').answer.valueBoolean"
@@ -1174,7 +1174,7 @@ Title: "Mapping to TWSS Base Practitioner Employment QuestionnaireResponse"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
-* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.3').answer.valueDate"
+* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.1').answer.valueDate"
 
 Mapping: TWSSBaseToMedicalSupportCarePlan
 Id: twss-base-to-medical-support-careplan

@@ -1,5 +1,9 @@
 {% include quickstart-note.md %}
 
+#### 使用說明
+
+服務人是否為親屬保母及服務人薪資，應記錄於 PractitionerRole 的 `isRelativeNanny` 與 `practitionSalary` Extension。兩者描述服務人於特定機構、角色及有效期間內的任職資訊，不應填寫於個案服務評估 QuestionnaireResponse。
+
 #### 建議應該支援以下查詢參數：
 
 此 Profile 使用 FHIR R4 PractitionerRole Resource；伺服端建議（SHOULD）支援以下 FHIR 原生查詢參數：

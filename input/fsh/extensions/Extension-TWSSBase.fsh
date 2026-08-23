@@ -324,3 +324,21 @@ Context: ServiceRequest
 * value[x] only CodeableConcept
 * valueCodeableConcept from TWSSCaseReportTypeVS (required)
 * valueCodeableConcept MS
+
+Extension: TWSSPractitionerRoleRelativeNanny
+Id: twss-practitioner-role-relative-nanny
+Title: "是否為親屬保母"
+Description: "表達服務人於該任職角色是否為親屬保母。"
+Context: PractitionerRole
+* ^version = "0.0.1"
+* value[x] only boolean
+* valueBoolean MS
+
+Extension: TWSSPractitionerRoleSalary
+Id: twss-practitioner-role-salary
+Title: "服務人薪資"
+Description: "表達服務人於該任職角色的薪資。"
+Context: PractitionerRole
+* ^version = "0.0.1"
+* value[x] only decimal
+* valueDecimal MS
