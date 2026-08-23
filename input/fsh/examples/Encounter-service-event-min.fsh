@@ -21,3 +21,27 @@ Usage: #example
   <p><b>服務期間</b>：2026-07-29T09:00:00+08:00 至 2026-07-29T10:00:00+08:00</p>
 </div>
 """
+
+Instance: follow-up-event-min
+InstanceOf: ActualServiceEncounterTWSSBase
+Title: "個案追蹤服務範例"
+Description: "說明個案服務期間實際發生的追蹤 Encounter TWSS Base Profile 範例。"
+Usage: #example
+
+* status = #finished
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
+* subject = Reference(pat-min)
+* episodeOfCare[0] = Reference(episode-base)
+* serviceProvider = Reference(org-min)
+* period.start = "2026-08-12T14:00:00+08:00"
+* period.end = "2026-08-12T14:30:00+08:00"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <h3><b>個案追蹤服務</b></h3>
+  <p><b>個案</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> 王小明</p>
+  <p><b>案件期間</b>：<a href="EpisodeOfCare-episode-base.html">EpisodeOfCare/episode-base</a></p>
+  <p><b>服務提供機構</b>：<a href="Organization-org-min.html">Organization/org-min</a></p>
+  <p><b>追蹤時間</b>：2026-08-12T14:00:00+08:00 至 2026-08-12T14:30:00+08:00</p>
+</div>
+"""

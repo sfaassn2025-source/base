@@ -63,6 +63,6 @@ Description:    "申請或服務請求-ServiceRequest TWSS Base Profile 表達�
 * reasonReference MS
 * reasonCode only CodeableConceptTW
 * reasonCode MS
-* supportingInfo only Reference(ConditionTWSSBase or CoverageTWSSBase or RelatedPersonTWSSBase or EpisodeOfCareTWSSBase or DocumentReferenceTWSSBase)
+* supportingInfo only Reference(ConditionTWSSBase or CoverageTWSSBase or RelatedPersonTWSSBase or EpisodeOfCareTWSSBase or DocumentReferenceTWSSBase or AssessmentServiceEncounterTWSSBase or ActualServiceEncounterTWSSBase or InterviewEncounterTWSSBase or MeetingEncounterTWSSBase or PlacementEncounterTWSSBase or QuestionnaireResponseTWSSBase)
 * supportingInfo MS
 * note MS
