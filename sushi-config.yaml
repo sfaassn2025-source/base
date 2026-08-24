@@ -85,6 +85,26 @@ parameters:
   default-version: false
   apply-version: false
   pin-canonicals: pin-multiples
+
+resources:
+  QuestionnaireResponse/health-disease-status-response-min:
+    description: 個案健康與疾病狀況問卷回覆範例。
+  QuestionnaireResponse/crisis-event-location-response-min:
+    description: 危機事件事發地點問卷回覆範例。
+  QuestionnaireResponse/family-assessment-response-min:
+    description: 家庭評估問卷回覆範例。
+  QuestionnaireResponse/household-disability-count-response-min:
+    description: 家戶身心障礙者人數問卷回覆範例。
+  QuestionnaireResponse/welfare-economic-status-response-min:
+    description: 福利與經濟現況問卷回覆範例。
+  QuestionnaireResponse/visit-record-response-min:
+    description: 訪視紀錄問卷回覆範例。
+  QuestionnaireResponse/disability-status-response-min:
+    description: 身心障礙狀況問卷回覆範例。
+  QuestionnaireResponse/assistive-device-status-response-min:
+    description: 輔具使用情形問卷回覆範例。
+  QuestionnaireResponse/related-person-risk-response-min:
+    description: 關係人風險評估問卷回覆範例。
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
