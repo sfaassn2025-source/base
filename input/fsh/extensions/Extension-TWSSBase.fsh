@@ -286,6 +286,7 @@ Context: Organization
     type 1..1 MS and
     value 1..1 MS
 * extension[type].value[x] only code
+* extension[type].valueCode from TWSSOrganizationCapacityTypeVS (required)
 * extension[value].value[x] only integer
 * value[x] 0..0
 
@@ -299,6 +300,7 @@ Context: Organization
     type 1..1 MS and
     value 1..1 MS
 * extension[type].value[x] only code
+* extension[type].valueCode from TWSSOrganizationUsableAreaTypeVS (required)
 * extension[value].value[x] only Quantity
 * value[x] 0..0
 
