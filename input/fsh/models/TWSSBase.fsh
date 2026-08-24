@@ -689,6 +689,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/EpisodeOfCare-twss-base"
 * organizationBasicInfo.responsibleUnitCode -> "EpisodeOfCare.managingOrganization"
 * organizationBasicInfo.responsibleUnit -> "EpisodeOfCare.managingOrganization"
 * organizationBasicInfo.responsibleUnitDistrict -> "EpisodeOfCare.managingOrganization"
+* caseService.caseType -> "EpisodeOfCare.type[caseType]"
+
 
 Mapping: TWSSBaseToOrganization
 Id: twss-base-to-organization
@@ -960,8 +962,6 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Practitioner-twss-base"
 * serviceProviderBasicInfo.practitionNationality -> "Practitioner.extension[nationality]"
 * serviceProviderBasicInfo.practitionEthnicGroup -> "Practitioner.extension[ethnicGroup]"
 * serviceProviderBasicInfo.practitionAborigineTribe -> "Practitioner.extension[AborigineTribe]"
-* serviceProviderBasicInfo.dutyVerifyDate -> "PractitionerRole.period.start"
-* serviceProviderBasicInfo.quitDate -> "PractitionerRole.period.end"
 * serviceProviderBasicInfo.certificateNumber -> "Practitioner.qualification.identifier"
 * serviceProviderBasicInfo.practiceRegistrationNumber -> "Practitioner.qualification.identifier"
 * serviceProviderBasicInfo.licenseName -> "Practitioner.qualification.code"
@@ -981,6 +981,8 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerRole-twss-base
 * serviceProviderBasicInfo.practitionSalary -> "PractitionerRole.extension[practitionSalary].valueDecimal"
 * serviceProviderProfessionalInfo.childcareAddress -> "PractitionerRole.location"
 * serviceProviderProfessionalInfo.jobTitle -> "PractitionerRole.code"
+* serviceProviderBasicInfo.dutyVerifyDate -> "PractitionerRole.period.start"
+* serviceProviderBasicInfo.quitDate -> "PractitionerRole.period.end"
 
 Mapping: TWSSBaseToFinalClaimField
 Id: twss-base-to-final-claim-field
@@ -1039,7 +1041,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss
 * caseService.placementStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.2').answer.valueString"
 * caseClosure.isPlacementEnded -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/placement-information').item.where(linkId = '23').item.where(linkId = '23.3').answer.valueCoding"
 * caseClosure.placementNoFollowUpReason -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/closure-placement-information').item.where(linkId = '26').answer.valueCoding"
-* caseService.caseType -> "EpisodeOfCare.type[caseType]"
+
 
 Mapping: TWSSBaseToBodyMeasurementObservation
 Id: twss-base-to-body-measurement-observation
