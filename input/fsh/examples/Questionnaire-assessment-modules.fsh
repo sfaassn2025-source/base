@@ -45,7 +45,7 @@ Description: "以重複關係人群組記錄犯罪紀錄與物質濫用風險的
 * status = #active
 * subjectType[0] = #Patient
 * item[relatedPersonRisk].text = "關係人風險狀況"
-* item[relatedPersonRisk].item[relatedPerson].text = "被評估關係人"
+* item[relatedPersonRisk].item[relatedPerson].text = "關係人編號"
 * item[relatedPersonRisk].item[relationCriminalRecord].text = "關係人不良犯罪紀錄"
 * item[relatedPersonRisk].item[substanceUse].text = "關係人物質濫用"
 * item[relatedPersonRisk].item[substanceUse].item[usesDrugs].text = "是否吸毒"

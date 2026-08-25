@@ -21,7 +21,7 @@ Title: "服務人健康檢查資訊 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #active
 * subjectType[0] = #Practitioner
-* item[practitionerEmployment].text = "服務人健康檢查資訊"
+* item[practitionerEmployment].text = "個案服務人基本資訊"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 
 Instance: related-person-basic-information
@@ -32,7 +32,7 @@ Title: "關係人基本資訊 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information"
 * status = #active
 * subjectType[0] = #Patient
-* item[relatedPersonBasic].text = "關係人基本資訊"
+* item[relatedPersonBasic].text = "個案關係人基本資訊"
 * item[relatedPersonBasic].item[isCohabiting].text = "是否同住"
 * item[relatedPersonBasic].item[isForeignSpouse].text = "是否為外籍配偶"
 
@@ -76,7 +76,7 @@ Title: "人際互動狀況 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status"
 * status = #active
 * subjectType[0] = #Patient
-* item[interpersonalAssessment].text = "人際互動狀況"
+* item[interpersonalAssessment].text = "人際互動狀況分級"
 * item[interpersonalAssessment].item[interpersonalSocialAdaptationAssessment].text = "人際社會適應評估"
 * item[interpersonalAssessment].item[interpersonalInteraction].text = "人際互動"
 * item[interpersonalAssessment].item[communicationAndLanguageExpressionAbility].text = "溝通及語言表達能力"

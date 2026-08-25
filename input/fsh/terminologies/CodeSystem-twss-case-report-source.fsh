@@ -24,10 +24,10 @@
 // * #15 "寄養家庭照顧者"
 // * #16 "教育機構（幼兒園、學前特教班）"
 
-CodeSystem: TWSSReferralHandlingStatus
-Id: twss-referral-handling-status
-Title: "TWSS 轉介處理狀態"
-Description: "轉介接收與處理流程使用的業務狀態代碼。"
+CodeSystem: TWSSReferralAcceptanceStatus
+Id: twss-referral-acceptance-status
+Title: "TWSS-轉介受理情形代碼系統"
+Description: "受轉介單位對個案轉介請求作出的受理決定代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
 * ^caseSensitive = true
@@ -36,6 +36,16 @@ Description: "轉介接收與處理流程使用的業務狀態代碼。"
 * #referred-again "再轉"
 * #not-accepted "不受案"
 * #returned "退回"
+* #other "其他"
+
+CodeSystem: TWSSReferralProcessingStatus
+Id: twss-referral-processing-status
+Title: "TWSS-轉介處理情形代碼系統"
+Description: "受轉介單位受理後的個案轉介處理進度代碼。"
+* ^version = "0.0.1"
+* ^experimental = false
+* ^caseSensitive = true
+* ^content = #complete
 * #pending "轉介等待中"
 * #completed "轉介完成"
 * #failed "轉介失敗"

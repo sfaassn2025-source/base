@@ -13,11 +13,11 @@ Title: "TWSS-轉介受理情形值集"
 Description: "轉介受理 Task 輸出使用的業務結果代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
-* TWSSReferralHandlingStatus#accepted "受案"
-* TWSSReferralHandlingStatus#referred-again "再轉"
-* TWSSReferralHandlingStatus#not-accepted "不受案"
-* TWSSReferralHandlingStatus#returned "退回"
-* TWSSReferralHandlingStatus#other "其他"
+* TWSSReferralAcceptanceStatus#accepted "受案"
+* TWSSReferralAcceptanceStatus#referred-again "再轉"
+* TWSSReferralAcceptanceStatus#not-accepted "不受案"
+* TWSSReferralAcceptanceStatus#returned "退回"
+* TWSSReferralAcceptanceStatus#other "其他"
 
 ValueSet: TWSSReferralProcessingStatusVS
 Id: twss-referral-processing-status-vs
@@ -25,10 +25,10 @@ Title: "TWSS-轉介處理情形值集"
 Description: "轉介處理 Task 的進度狀態代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
-* TWSSReferralHandlingStatus#pending "轉介等待中"
-* TWSSReferralHandlingStatus#completed "轉介完成"
-* TWSSReferralHandlingStatus#failed "轉介失敗"
-* TWSSReferralHandlingStatus#other "其他"
+* TWSSReferralProcessingStatus#pending "轉介等待中"
+* TWSSReferralProcessingStatus#completed "轉介完成"
+* TWSSReferralProcessingStatus#failed "轉介失敗"
+* TWSSReferralProcessingStatus#other "其他"
 
 ValueSet: TWSSVisitServiceMethodVS
 Id: twss-visit-service-method-vs

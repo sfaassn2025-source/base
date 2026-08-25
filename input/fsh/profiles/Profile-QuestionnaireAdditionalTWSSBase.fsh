@@ -9,22 +9,28 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 * item ^slicing.rules = #closed
 * item contains caseBasicFamily 1..1 MS
 * item[caseBasicFamily].linkId = "12"
+* item[caseBasicFamily].text = "個案基本與家庭資訊"
 * item[caseBasicFamily].type = #group
 * item[caseBasicFamily].item ^slicing.discriminator.type = #value
 * item[caseBasicFamily].item ^slicing.discriminator.path = "linkId"
 * item[caseBasicFamily].item ^slicing.rules = #closed
 * item[caseBasicFamily].item contains familyStructure 0..1 MS and childrenStatus 0..1 MS and childrenCount 0..1 MS and familyMonthlyIncome 0..1 MS and specialEducationType 0..1 MS
 * item[caseBasicFamily].item[familyStructure].linkId = "12.1"
+* item[caseBasicFamily].item[familyStructure].text = "家庭結構"
 * item[caseBasicFamily].item[familyStructure].type = #choice
 * item[caseBasicFamily].item[familyStructure].answerValueSet = Canonical(twss-family-structure-vs)
 * item[caseBasicFamily].item[childrenStatus].linkId = "12.2"
+* item[caseBasicFamily].item[childrenStatus].text = "子女狀態"
 * item[caseBasicFamily].item[childrenStatus].type = #choice
 * item[caseBasicFamily].item[childrenStatus].answerValueSet = Canonical(twss-children-status-vs)
 * item[caseBasicFamily].item[childrenCount].linkId = "12.3"
+* item[caseBasicFamily].item[childrenCount].text = "子女數量"
 * item[caseBasicFamily].item[childrenCount].type = #decimal
 * item[caseBasicFamily].item[familyMonthlyIncome].linkId = "12.4"
+* item[caseBasicFamily].item[familyMonthlyIncome].text = "家庭月收入"
 * item[caseBasicFamily].item[familyMonthlyIncome].type = #decimal
 * item[caseBasicFamily].item[specialEducationType].linkId = "12.5"
+* item[caseBasicFamily].item[specialEducationType].text = "特殊教育類型"
 * item[caseBasicFamily].item[specialEducationType].type = #choice
 * item[caseBasicFamily].item[specialEducationType].answerValueSet = Canonical(twss-special-education-type-vs)
 
@@ -40,12 +46,14 @@ Description: "定義服務人健康檢查日期表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains practitionerEmployment 1..1 MS
 * item[practitionerEmployment].linkId = "13"
+* item[practitionerEmployment].text = "個案服務人基本資訊"
 * item[practitionerEmployment].type = #group
 * item[practitionerEmployment].item ^slicing.discriminator.type = #value
 * item[practitionerEmployment].item ^slicing.discriminator.path = "linkId"
 * item[practitionerEmployment].item ^slicing.rules = #closed
 * item[practitionerEmployment].item contains healthCheckDate 0..1 MS
 * item[practitionerEmployment].item[healthCheckDate].linkId = "13.1"
+* item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 * item[practitionerEmployment].item[healthCheckDate].type = #date
 
 Profile: QuestionnaireRelatedPersonBasicTWSSBase
@@ -59,14 +67,17 @@ Description: "定義關係人基本資訊表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains relatedPersonBasic 1..1 MS
 * item[relatedPersonBasic].linkId = "14"
+* item[relatedPersonBasic].text = "個案關係人基本資訊"
 * item[relatedPersonBasic].type = #group
 * item[relatedPersonBasic].item ^slicing.discriminator.type = #value
 * item[relatedPersonBasic].item ^slicing.discriminator.path = "linkId"
 * item[relatedPersonBasic].item ^slicing.rules = #closed
 * item[relatedPersonBasic].item contains isCohabiting 0..1 MS and isForeignSpouse 0..1 MS
 * item[relatedPersonBasic].item[isCohabiting].linkId = "14.1"
+* item[relatedPersonBasic].item[isCohabiting].text = "是否同住"
 * item[relatedPersonBasic].item[isCohabiting].type = #boolean
 * item[relatedPersonBasic].item[isForeignSpouse].linkId = "14.2"
+* item[relatedPersonBasic].item[isForeignSpouse].text = "是否為外籍配偶"
 * item[relatedPersonBasic].item[isForeignSpouse].type = #boolean
 
 Profile: QuestionnaireVocationalTrainingTWSSBase
@@ -80,14 +91,17 @@ Description: "定義個案職業訓練狀況表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains vocationalTraining 1..1 MS
 * item[vocationalTraining].linkId = "15"
+* item[vocationalTraining].text = "職業訓練狀況"
 * item[vocationalTraining].type = #group
 * item[vocationalTraining].item ^slicing.discriminator.type = #value
 * item[vocationalTraining].item ^slicing.discriminator.path = "linkId"
 * item[vocationalTraining].item ^slicing.rules = #closed
 * item[vocationalTraining].item contains hasAttendedVocationalTraining 0..1 MS and vocationalTrainingType 0..* MS
 * item[vocationalTraining].item[hasAttendedVocationalTraining].linkId = "15.1"
+* item[vocationalTraining].item[hasAttendedVocationalTraining].text = "曾參加職業訓練"
 * item[vocationalTraining].item[hasAttendedVocationalTraining].type = #boolean
 * item[vocationalTraining].item[vocationalTrainingType].linkId = "15.2"
+* item[vocationalTraining].item[vocationalTrainingType].text = "職訓別"
 * item[vocationalTraining].item[vocationalTrainingType].type = #string
 * item[vocationalTraining].item[vocationalTrainingType].repeats = true
 
@@ -102,6 +116,7 @@ Description: "定義學校適應狀況表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains schoolAdaptationStatus 1..1 MS
 * item[schoolAdaptationStatus].linkId = "16"
+* item[schoolAdaptationStatus].text = "學校適應狀況"
 * item[schoolAdaptationStatus].type = #string
 
 Profile: QuestionnaireEmotionalBehaviorTWSSBase
@@ -115,6 +130,7 @@ Description: "定義情緒控制能力評估表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains emotionalControlAbility 1..1 MS
 * item[emotionalControlAbility].linkId = "17"
+* item[emotionalControlAbility].text = "情緒控制能力"
 * item[emotionalControlAbility].type = #choice
 * item[emotionalControlAbility].answerValueSet = Canonical(twss-emotional-control-ability-vs)
 
@@ -129,24 +145,30 @@ Description: "定義人際與社會適應評估表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains interpersonalAssessment 1..1 MS
 * item[interpersonalAssessment].linkId = "18"
+* item[interpersonalAssessment].text = "人際互動狀況分級"
 * item[interpersonalAssessment].type = #group
 * item[interpersonalAssessment].item ^slicing.discriminator.type = #value
 * item[interpersonalAssessment].item ^slicing.discriminator.path = "linkId"
 * item[interpersonalAssessment].item ^slicing.rules = #closed
 * item[interpersonalAssessment].item contains interpersonalSocialAdaptationAssessment 0..1 MS and interpersonalInteraction 0..1 MS and communicationAndLanguageExpressionAbility 0..1 MS and familyRelationship 0..1 MS and schoolLifeAdaptation 0..1 MS
 * item[interpersonalAssessment].item[interpersonalSocialAdaptationAssessment].linkId = "18.1"
+* item[interpersonalAssessment].item[interpersonalSocialAdaptationAssessment].text = "人際社會適應評估"
 * item[interpersonalAssessment].item[interpersonalSocialAdaptationAssessment].type = #choice
 * item[interpersonalAssessment].item[interpersonalSocialAdaptationAssessment].answerValueSet = Canonical(twss-interaction-assessment-vs)
 * item[interpersonalAssessment].item[interpersonalInteraction].linkId = "18.2"
+* item[interpersonalAssessment].item[interpersonalInteraction].text = "人際互動"
 * item[interpersonalAssessment].item[interpersonalInteraction].type = #choice
 * item[interpersonalAssessment].item[interpersonalInteraction].answerValueSet = Canonical(twss-interaction-assessment-vs)
 * item[interpersonalAssessment].item[communicationAndLanguageExpressionAbility].linkId = "18.3"
+* item[interpersonalAssessment].item[communicationAndLanguageExpressionAbility].text = "溝通及語言表達能力"
 * item[interpersonalAssessment].item[communicationAndLanguageExpressionAbility].type = #choice
 * item[interpersonalAssessment].item[communicationAndLanguageExpressionAbility].answerValueSet = Canonical(twss-interaction-assessment-vs)
 * item[interpersonalAssessment].item[familyRelationship].linkId = "18.4"
+* item[interpersonalAssessment].item[familyRelationship].text = "家庭關係"
 * item[interpersonalAssessment].item[familyRelationship].type = #choice
 * item[interpersonalAssessment].item[familyRelationship].answerValueSet = Canonical(twss-interaction-assessment-vs)
 * item[interpersonalAssessment].item[schoolLifeAdaptation].linkId = "18.5"
+* item[interpersonalAssessment].item[schoolLifeAdaptation].text = "學校生活適應"
 * item[interpersonalAssessment].item[schoolLifeAdaptation].type = #choice
 * item[interpersonalAssessment].item[schoolLifeAdaptation].answerValueSet = Canonical(twss-interaction-assessment-vs)
 
@@ -161,27 +183,34 @@ Description: "定義發展遲緩類別評估表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains developmentalDelay 1..1 MS
 * item[developmentalDelay].linkId = "19"
+* item[developmentalDelay].text = "發展遲緩類別"
 * item[developmentalDelay].type = #group
 * item[developmentalDelay].item ^slicing.discriminator.type = #value
 * item[developmentalDelay].item ^slicing.discriminator.path = "linkId"
 * item[developmentalDelay].item ^slicing.rules = #closed
 * item[developmentalDelay].item contains languageCommunicationAbility 0..1 MS and cognitiveAbility 0..1 MS and socialEmotionalDevelopment 0..1 MS and selfCare 0..1 MS and grossMotor 0..1 MS and fineMotor 0..1 MS
 * item[developmentalDelay].item[languageCommunicationAbility].linkId = "19.1"
+* item[developmentalDelay].item[languageCommunicationAbility].text = "語言溝通能力"
 * item[developmentalDelay].item[languageCommunicationAbility].type = #choice
 * item[developmentalDelay].item[languageCommunicationAbility].answerValueSet = Canonical(twss-developmental-delay-category-vs)
 * item[developmentalDelay].item[cognitiveAbility].linkId = "19.2"
+* item[developmentalDelay].item[cognitiveAbility].text = "認知能力"
 * item[developmentalDelay].item[cognitiveAbility].type = #choice
 * item[developmentalDelay].item[cognitiveAbility].answerValueSet = Canonical(twss-developmental-delay-category-vs)
 * item[developmentalDelay].item[socialEmotionalDevelopment].linkId = "19.3"
+* item[developmentalDelay].item[socialEmotionalDevelopment].text = "社會情緒發展"
 * item[developmentalDelay].item[socialEmotionalDevelopment].type = #choice
 * item[developmentalDelay].item[socialEmotionalDevelopment].answerValueSet = Canonical(twss-developmental-delay-category-vs)
 * item[developmentalDelay].item[selfCare].linkId = "19.4"
+* item[developmentalDelay].item[selfCare].text = "生活自理"
 * item[developmentalDelay].item[selfCare].type = #choice
 * item[developmentalDelay].item[selfCare].answerValueSet = Canonical(twss-developmental-delay-category-vs)
 * item[developmentalDelay].item[grossMotor].linkId = "19.5"
+* item[developmentalDelay].item[grossMotor].text = "粗動作"
 * item[developmentalDelay].item[grossMotor].type = #choice
 * item[developmentalDelay].item[grossMotor].answerValueSet = Canonical(twss-developmental-delay-category-vs)
 * item[developmentalDelay].item[fineMotor].linkId = "19.6"
+* item[developmentalDelay].item[fineMotor].text = "精細動作"
 * item[developmentalDelay].item[fineMotor].type = #choice
 * item[developmentalDelay].item[fineMotor].answerValueSet = Canonical(twss-developmental-delay-category-vs)
 
@@ -196,21 +225,26 @@ Description: "定義個案就業資訊表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains employmentInformation 1..1 MS
 * item[employmentInformation].linkId = "20"
+* item[employmentInformation].text = "就業資訊"
 * item[employmentInformation].type = #group
 * item[employmentInformation].item ^slicing.discriminator.type = #value
 * item[employmentInformation].item ^slicing.discriminator.path = "linkId"
 * item[employmentInformation].item ^slicing.rules = #closed
 * item[employmentInformation].item contains employmentStatus 0..1 MS and unemploymentReason 0..* MS and previousJob 0..1 MS and currentJob 0..1 MS
 * item[employmentInformation].item[employmentStatus].linkId = "20.1"
+* item[employmentInformation].item[employmentStatus].text = "就業現況"
 * item[employmentInformation].item[employmentStatus].type = #choice
 * item[employmentInformation].item[employmentStatus].answerValueSet = Canonical(twss-employment-status-vs)
 * item[employmentInformation].item[unemploymentReason].linkId = "20.2"
+* item[employmentInformation].item[unemploymentReason].text = "未就業原因"
 * item[employmentInformation].item[unemploymentReason].type = #choice
 * item[employmentInformation].item[unemploymentReason].repeats = true
 * item[employmentInformation].item[unemploymentReason].answerValueSet = Canonical(twss-unemployment-reason-vs)
 * item[employmentInformation].item[previousJob].linkId = "20.3"
+* item[employmentInformation].item[previousJob].text = "曾任職"
 * item[employmentInformation].item[previousJob].type = #string
 * item[employmentInformation].item[currentJob].linkId = "20.4"
+* item[employmentInformation].item[currentJob].text = "現職"
 * item[employmentInformation].item[currentJob].type = #string
 
 Profile: QuestionnairePlacementInformationTWSSBase
@@ -224,16 +258,20 @@ Description: "定義安置評估、服務與結案共用表單的題目結構。
 * item ^slicing.rules = #closed
 * item contains placementInformation 1..1 MS
 * item[placementInformation].linkId = "23"
+* item[placementInformation].text = "安置資訊"
 * item[placementInformation].type = #group
 * item[placementInformation].item ^slicing.discriminator.type = #value
 * item[placementInformation].item ^slicing.discriminator.path = "linkId"
 * item[placementInformation].item ^slicing.rules = #closed
 * item[placementInformation].item contains isPlaced 0..1 MS and placementStatus 0..1 MS and isPlacementEnded 0..1 MS
 * item[placementInformation].item[isPlaced].linkId = "23.1"
+* item[placementInformation].item[isPlaced].text = "是否安置"
 * item[placementInformation].item[isPlaced].type = #boolean
 * item[placementInformation].item[placementStatus].linkId = "23.2"
+* item[placementInformation].item[placementStatus].text = "安置狀況"
 * item[placementInformation].item[placementStatus].type = #string
 * item[placementInformation].item[isPlacementEnded].linkId = "23.3"
+* item[placementInformation].item[isPlacementEnded].text = "是否結束安置"
 * item[placementInformation].item[isPlacementEnded].type = #choice
 * item[placementInformation].item[isPlacementEnded].answerValueSet = Canonical(twss-placement-ended-vs)
 
@@ -248,5 +286,6 @@ Description: "定義結案時安置未轉後追原因表單的題目結構。"
 * item ^slicing.rules = #closed
 * item contains placementNoFollowUpReason 0..1 MS
 * item[placementNoFollowUpReason].linkId = "26"
+* item[placementNoFollowUpReason].text = "安置未轉後追原因"
 * item[placementNoFollowUpReason].type = #choice
 * item[placementNoFollowUpReason].answerValueSet = Canonical(twss-placement-no-follow-up-reason-vs)

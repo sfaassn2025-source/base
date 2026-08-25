@@ -11,7 +11,7 @@ Description: "依日常生活功能 ADL 評估 Questionnaire 填寫的 Questionn
 * authored = "2026-08-08T09:00:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "9"
-* item[0].text = "日常生活功能（ADL）"
+* item[0].text = "日常生活功能(ADL)"
 * item[0].item[0].linkId = "9.1"
 * item[0].item[0].text = "生活自理"
 * item[0].item[0].answer[0].valueCoding = TWSSADLLevel#C "2級（中度問題）"

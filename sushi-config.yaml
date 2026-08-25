@@ -47,7 +47,7 @@ dependencies:
 #
 pages:
   index.md:
-    title: 首頁
+    title: 應用說明
   capabilitystatements.md:
     title: 能力聲明
   searchparameters.md:
