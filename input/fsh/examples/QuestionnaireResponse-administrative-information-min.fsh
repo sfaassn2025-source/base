@@ -16,8 +16,10 @@ Title: "個案教育資訊回覆範例"
 * item[0].item[1].answer[0].valueString = "南港國中"
 * item[0].item[2].linkId = "21.4"
 * item[0].item[2].answer[0].valueString = "二年級"
-* item[0].item[3].linkId = "21.8"
-* item[0].item[3].answer[0].valueCoding = TWSSEducationLevel#3 "國中"
+* item[0].item[3].linkId = "21.6"
+* item[0].item[3].answer[0].valueBoolean = false
+* item[0].item[4].linkId = "21.8"
+* item[0].item[4].answer[0].valueCoding = TWSSEducationLevel#3 "國中"
 
 Instance: related-person-education-information-response-min
 InstanceOf: QuestionnaireResponseTWSSBase

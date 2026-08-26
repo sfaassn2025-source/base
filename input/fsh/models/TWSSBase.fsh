@@ -308,6 +308,7 @@ Description: """
 * caseAssessment.schoolName 0..* string "就讀學校名稱" "就讀學校名稱。"
 * caseAssessment.gradeLevel 0..1 string "年級別" "年級別。"
 * caseAssessment.major 0..1 string "就讀科系" "就讀科系。"
+* caseAssessment.isGraduated 0..1 boolean "是否畢業" "個案服務評估中的是否畢業。"
 * caseAssessment.educationLevel 0..1 CodeableConcept "教育程度" "教育程度。"
 * caseAssessment.employmentStatus 0..1 CodeableConcept "就業現況" "就業現況。"
 * caseAssessment.unemploymentReason 0..* CodeableConcept "未就業原因" "未就業原因。"
@@ -828,8 +829,8 @@ Title: "Mapping to TWSSBase CMS Level Observation"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/CMSLevelObservation-twss-base"
 
-* caseAssessment.cmsLevel -> "Observation.component[cmsLevel].valueString"
-* caseService.cmsLevel -> "Observation.component[cmsLevel].valueString"
+* caseAssessment.cmsLevel -> "Observation.valueString"
+* caseService.cmsLevel -> "Observation.valueString"
 
 Mapping: TWSSBaseToActualServiceEncounter
 Id: twss-base-to-actual-service-encounter
@@ -1109,6 +1110,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentQuestionnaireRes
 * caseAssessment.schoolName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.3').answer.valueString"
 * caseAssessment.gradeLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.4').answer.valueString"
 * caseAssessment.major -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.5').answer.valueString"
+* caseAssessment.isGraduated -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.6').answer.valueBoolean"
 * caseAssessment.educationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.8').answer.valueCoding"
 
 Mapping: TWSSBaseToRelatedPersonEducationQuestionnaireResponse
