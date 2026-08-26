@@ -11,13 +11,6 @@ Usage: #example
 * extension[establishmentType].valueCodeableConcept = TWSSOrganizationEstablishmentType#21 "公立"
 * extension[registrationDate].valueDate = "2019-06-01"
 * extension[competentAuthority].valueReference = Reference(org-min)
-* extension[capacity][0].extension[type].valueCode = #admission-capacity
-* extension[capacity][0].extension[value].valueInteger = 60
-* extension[usableArea][0].extension[type].valueCode = #total-area
-* extension[usableArea][0].extension[value].valueQuantity.value = 250
-* extension[usableArea][0].extension[value].valueQuantity.unit = "平方公尺"
-* extension[statutoryStaffing][0].extension[role].valueCodeableConcept.text = "社會工作人員"
-* extension[statutoryStaffing][0].extension[requiredCount].valueInteger = 3
 * name = "社家署示範機構"
 * telecom[0].system = #phone
 * telecom[0].value = "02-12345678"

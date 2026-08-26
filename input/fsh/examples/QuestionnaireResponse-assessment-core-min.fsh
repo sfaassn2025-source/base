@@ -123,6 +123,8 @@ Title: "身心障礙狀況問卷回應範例"
 * item[1].item[1].answer[0].valueBoolean = true
 * item[1].item[2].linkId = "7.2.4"
 * item[1].item[2].answer[0].valueDate = "2025-06-01"
+* item[1].item[3].linkId = "7.2.5"
+* item[1].item[3].answer[0].valueString = "重新鑑定結果不符資格"
 
 Instance: assistive-device-status-response-min
 InstanceOf: AssessmentQuestionnaireResponseTWSSBase

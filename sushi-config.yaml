@@ -105,6 +105,18 @@ resources:
     description: 輔具使用情形問卷回覆範例。
   QuestionnaireResponse/related-person-risk-response-min:
     description: 關係人風險評估問卷回覆範例。
+  QuestionnaireResponse/patient-education-information-response-min:
+    description: 個案教育資訊問卷回覆範例。
+  QuestionnaireResponse/related-person-education-information-response-min:
+    description: 關係人教育資訊問卷回覆範例。
+  QuestionnaireResponse/practitioner-education-information-response-min:
+    description: 服務人教育資訊問卷回覆範例。
+  QuestionnaireResponse/medical-support-assessment-response-min:
+    description: 醫療服務現況問卷回覆範例。
+  QuestionnaireResponse/organization-administrative-information-response-min:
+    description: 機構行政與營運資訊問卷回覆範例。
+  QuestionnaireResponse/case-service-administrative-information-response-min:
+    description: 個案服務行政資訊問卷回覆範例。
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]

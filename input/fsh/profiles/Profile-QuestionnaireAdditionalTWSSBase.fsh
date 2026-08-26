@@ -4,6 +4,11 @@ Id: Questionnaire-case-basic-family-twss-base
 Title: "個案基本與家庭資訊-Questionnaire TWSS Base"
 Description: "定義個案基本、家庭與特殊教育資訊表單的題目結構。"
 * ^version = "0.0.1"
+* subjectType ^slicing.discriminator.type = #value
+* subjectType ^slicing.discriminator.path = "$this"
+* subjectType ^slicing.rules = #closed
+* subjectType contains patient 1..1 MS
+* subjectType[patient] = #Patient
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
@@ -14,7 +19,7 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 * item[caseBasicFamily].item ^slicing.discriminator.type = #value
 * item[caseBasicFamily].item ^slicing.discriminator.path = "linkId"
 * item[caseBasicFamily].item ^slicing.rules = #closed
-* item[caseBasicFamily].item contains familyStructure 0..1 MS and childrenStatus 0..1 MS and childrenCount 0..1 MS and familyMonthlyIncome 0..1 MS and specialEducationType 0..1 MS
+* item[caseBasicFamily].item contains familyStructure 0..1 MS and childrenStatus 0..1 MS and childrenCount 0..1 MS and familyMonthlyIncome 0..1 MS and specialEducationType 0..1 MS and isBornBeforeROC 0..1 MS and isBirthDateUnknown 0..1 MS
 * item[caseBasicFamily].item[familyStructure].linkId = "12.1"
 * item[caseBasicFamily].item[familyStructure].text = "家庭結構"
 * item[caseBasicFamily].item[familyStructure].type = #choice
@@ -33,14 +38,24 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 * item[caseBasicFamily].item[specialEducationType].text = "特殊教育類型"
 * item[caseBasicFamily].item[specialEducationType].type = #choice
 * item[caseBasicFamily].item[specialEducationType].answerValueSet = Canonical(twss-special-education-type-vs)
+* item[caseBasicFamily].item[isBornBeforeROC].linkId = "12.6"
+* item[caseBasicFamily].item[isBornBeforeROC].text = "是否出生於民國年前"
+* item[caseBasicFamily].item[isBornBeforeROC].type = #boolean
+* item[caseBasicFamily].item[isBirthDateUnknown].linkId = "12.7"
+* item[caseBasicFamily].item[isBirthDateUnknown].text = "出生日期不明註記"
+* item[caseBasicFamily].item[isBirthDateUnknown].type = #boolean
 
 Profile: QuestionnairePractitionerEmploymentTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-practitioner-employment-twss-base
-Title: "服務人健康檢查資訊-Questionnaire TWSS Base"
-Description: "定義服務人健康檢查日期表單的題目結構。"
+Title: "服務人基本與任職資訊-Questionnaire TWSS Base"
+Description: "定義服務人親屬保母、薪資與健康檢查日期的任職資訊表單。"
 * ^version = "0.0.1"
-* subjectType = #Practitioner
+* subjectType ^slicing.discriminator.type = #value
+* subjectType ^slicing.discriminator.path = "$this"
+* subjectType ^slicing.rules = #closed
+* subjectType contains practitionerRole 1..1 MS
+* subjectType[practitionerRole] = #PractitionerRole
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
@@ -51,8 +66,14 @@ Description: "定義服務人健康檢查日期表單的題目結構。"
 * item[practitionerEmployment].item ^slicing.discriminator.type = #value
 * item[practitionerEmployment].item ^slicing.discriminator.path = "linkId"
 * item[practitionerEmployment].item ^slicing.rules = #closed
-* item[practitionerEmployment].item contains healthCheckDate 0..1 MS
-* item[practitionerEmployment].item[healthCheckDate].linkId = "13.1"
+* item[practitionerEmployment].item contains isRelativeNanny 0..1 MS and practitionSalary 0..1 MS and healthCheckDate 0..1 MS
+* item[practitionerEmployment].item[isRelativeNanny].linkId = "13.1"
+* item[practitionerEmployment].item[isRelativeNanny].text = "是否為親屬保母"
+* item[practitionerEmployment].item[isRelativeNanny].type = #boolean
+* item[practitionerEmployment].item[practitionSalary].linkId = "13.2"
+* item[practitionerEmployment].item[practitionSalary].text = "服務人薪資"
+* item[practitionerEmployment].item[practitionSalary].type = #decimal
+* item[practitionerEmployment].item[healthCheckDate].linkId = "13.3"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 * item[practitionerEmployment].item[healthCheckDate].type = #date
 
@@ -62,6 +83,11 @@ Id: Questionnaire-related-person-basic-twss-base
 Title: "關係人基本資訊-Questionnaire TWSS Base"
 Description: "定義關係人基本資訊表單的題目結構。"
 * ^version = "0.0.1"
+* subjectType ^slicing.discriminator.type = #value
+* subjectType ^slicing.discriminator.path = "$this"
+* subjectType ^slicing.rules = #closed
+* subjectType contains relatedPerson 1..1 MS
+* subjectType[relatedPerson] = #RelatedPerson
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
@@ -72,13 +98,98 @@ Description: "定義關係人基本資訊表單的題目結構。"
 * item[relatedPersonBasic].item ^slicing.discriminator.type = #value
 * item[relatedPersonBasic].item ^slicing.discriminator.path = "linkId"
 * item[relatedPersonBasic].item ^slicing.rules = #closed
-* item[relatedPersonBasic].item contains isCohabiting 0..1 MS and isForeignSpouse 0..1 MS
+* item[relatedPersonBasic].item contains isCohabiting 0..1 MS and isForeignSpouse 0..1 MS and isRelationIdentityUnknown 0..1 MS
 * item[relatedPersonBasic].item[isCohabiting].linkId = "14.1"
 * item[relatedPersonBasic].item[isCohabiting].text = "是否同住"
 * item[relatedPersonBasic].item[isCohabiting].type = #boolean
 * item[relatedPersonBasic].item[isForeignSpouse].linkId = "14.2"
 * item[relatedPersonBasic].item[isForeignSpouse].text = "是否為外籍配偶"
 * item[relatedPersonBasic].item[isForeignSpouse].type = #boolean
+* item[relatedPersonBasic].item[isRelationIdentityUnknown].linkId = "14.3"
+* item[relatedPersonBasic].item[isRelationIdentityUnknown].text = "關係人身分識別碼不明註記"
+* item[relatedPersonBasic].item[isRelationIdentityUnknown].type = #boolean
+
+Profile: QuestionnaireRelatedPersonRoleAssessmentTWSSBase
+Parent: QuestionnaireTWSSBase
+Id: Questionnaire-related-person-role-assessment-twss-base
+Title: "關係人角色評估-Questionnaire TWSS Base"
+Description: "定義個案服務評估中關係人角色判斷的表單。"
+* ^version = "0.0.1"
+* subjectType ^slicing.discriminator.type = #value
+* subjectType ^slicing.discriminator.path = "$this"
+* subjectType ^slicing.rules = #closed
+* subjectType contains patient 1..1 MS
+* subjectType[patient] = #Patient
+* item ^slicing.discriminator.type = #value
+* item ^slicing.discriminator.path = "linkId"
+* item ^slicing.rules = #closed
+* item contains relatedPersonRoleAssessment 0..* MS
+* item[relatedPersonRoleAssessment].linkId = "27"
+* item[relatedPersonRoleAssessment].text = "關係人角色評估"
+* item[relatedPersonRoleAssessment].type = #group
+* item[relatedPersonRoleAssessment].repeats = true
+* item[relatedPersonRoleAssessment].item ^slicing.discriminator.type = #value
+* item[relatedPersonRoleAssessment].item ^slicing.discriminator.path = "linkId"
+* item[relatedPersonRoleAssessment].item ^slicing.rules = #closed
+* item[relatedPersonRoleAssessment].item contains relatedPerson 1..1 MS and isPrimaryCaregiver 0..1 MS and isGuardian 0..1 MS and isPrimaryContact 0..1 MS and isAgent 0..1 MS
+* item[relatedPersonRoleAssessment].item[relatedPerson].linkId = "27.1"
+* item[relatedPersonRoleAssessment].item[relatedPerson].text = "關係人"
+* item[relatedPersonRoleAssessment].item[relatedPerson].type = #reference
+* item[relatedPersonRoleAssessment].item[isPrimaryCaregiver].linkId = "27.2"
+* item[relatedPersonRoleAssessment].item[isPrimaryCaregiver].text = "是否為主要照顧者"
+* item[relatedPersonRoleAssessment].item[isPrimaryCaregiver].type = #boolean
+* item[relatedPersonRoleAssessment].item[isGuardian].linkId = "27.3"
+* item[relatedPersonRoleAssessment].item[isGuardian].text = "是否為監護人"
+* item[relatedPersonRoleAssessment].item[isGuardian].type = #boolean
+* item[relatedPersonRoleAssessment].item[isPrimaryContact].linkId = "27.4"
+* item[relatedPersonRoleAssessment].item[isPrimaryContact].text = "是否為主要聯絡者"
+* item[relatedPersonRoleAssessment].item[isPrimaryContact].type = #boolean
+* item[relatedPersonRoleAssessment].item[isAgent].linkId = "27.5"
+* item[relatedPersonRoleAssessment].item[isAgent].text = "是否為法定代理人"
+* item[relatedPersonRoleAssessment].item[isAgent].type = #boolean
+
+Profile: QuestionnairePractitionerTrainingTWSSBase
+Parent: QuestionnaireTWSSBase
+Id: Questionnaire-practitioner-training-twss-base
+Title: "服務人受訓課程-Questionnaire TWSS Base"
+Description: "定義服務人個人受訓課程的行政填報題目結構。"
+* ^version = "0.0.1"
+* subjectType ^slicing.discriminator.type = #value
+* subjectType ^slicing.discriminator.path = "$this"
+* subjectType ^slicing.rules = #closed
+* subjectType contains practitioner 1..1 MS
+* subjectType[practitioner] = #Practitioner
+* item ^slicing.discriminator.type = #value
+* item ^slicing.discriminator.path = "linkId"
+* item ^slicing.rules = #closed
+* item contains practitionerTraining 0..* MS
+* item[practitionerTraining].linkId = "29"
+* item[practitionerTraining].text = "服務人受訓課程"
+* item[practitionerTraining].type = #group
+* item[practitionerTraining].repeats = true
+* item[practitionerTraining].item ^slicing.discriminator.type = #value
+* item[practitionerTraining].item ^slicing.discriminator.path = "linkId"
+* item[practitionerTraining].item ^slicing.rules = #closed
+* item[practitionerTraining].item contains trainingCourseName 1..1 MS and trainingCourseHours 0..1 MS and trainingCourseType 0..1 MS and courseProviderUnit 0..1 MS and trainingStartDate 0..1 MS and trainingEndDate 0..1 MS
+* item[practitionerTraining].item[trainingCourseName].linkId = "29.1"
+* item[practitionerTraining].item[trainingCourseName].text = "受訓課程名稱"
+* item[practitionerTraining].item[trainingCourseName].type = #string
+* item[practitionerTraining].item[trainingCourseHours].linkId = "29.2"
+* item[practitionerTraining].item[trainingCourseHours].text = "受訓課程時數"
+* item[practitionerTraining].item[trainingCourseHours].type = #quantity
+* item[practitionerTraining].item[trainingCourseType].linkId = "29.3"
+* item[practitionerTraining].item[trainingCourseType].text = "受訓課程類型"
+* item[practitionerTraining].item[trainingCourseType].type = #choice
+* item[practitionerTraining].item[trainingCourseType].answerValueSet = Canonical(twss-training-course-type-vs)
+* item[practitionerTraining].item[courseProviderUnit].linkId = "29.4"
+* item[practitionerTraining].item[courseProviderUnit].text = "開課單位"
+* item[practitionerTraining].item[courseProviderUnit].type = #string
+* item[practitionerTraining].item[trainingStartDate].linkId = "29.5"
+* item[practitionerTraining].item[trainingStartDate].text = "受訓起日"
+* item[practitionerTraining].item[trainingStartDate].type = #date
+* item[practitionerTraining].item[trainingEndDate].linkId = "29.6"
+* item[practitionerTraining].item[trainingEndDate].text = "受訓迄日"
+* item[practitionerTraining].item[trainingEndDate].type = #date
 
 Profile: QuestionnaireVocationalTrainingTWSSBase
 Parent: QuestionnaireTWSSBase

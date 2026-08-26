@@ -130,9 +130,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
     TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
     TWSSPatientAborigineTribe named AborigineTribe 0..1 MS and
     http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..1 MS and
-    PersonAge named age 0..1 MS and
-    TWSSBirthDateBeforeROC named birthDateBeforeROC 0..1 MS and
-    TWSSBirthDateUnknown named birthDateUnknown 0..1 MS
+    PersonAge named age 0..1 MS
 * extension[nationality] ^short = "國籍；病人所屬國籍"
 * extension[nationality].extension[code].valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-2 (extensible)
 * extension[ethnicGroup] ^short = "族群身分"
@@ -140,8 +138,6 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * extension[religion] ^short = "宗教信仰。"
 * extension[religion].valueCodeableConcept from TWSSReligionVS (required)
 * extension[age] ^short = "個案年齡。"
-* extension[birthDateBeforeROC] ^short = "是否出生於民國年前。"
-* extension[birthDateUnknown] ^short = "出生日期不明註記。"
 
 * communication MS
 * communication.language MS

@@ -77,74 +77,11 @@ Context: RelatedPerson
 * valueCodeableConcept MS
 * valueCodeableConcept from TWSSReligionVS (required)
 
-Extension: TWSSBirthDateBeforeROC
-Id: twss-birth-date-before-roc
-Title: "是否出生於民國年前"
-Description: "記錄個案出生日期是否位於民國紀元前。"
-Context: Patient
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSBirthDateUnknown
-Id: twss-birth-date-unknown
-Title: "出生日期不明註記"
-Description: "記錄個案出生日期是否不明。"
-Context: Patient
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSRelatedPersonIdentifierUnknown
-Id: twss-related-person-identifier-unknown
-Title: "關係人身分識別碼不明註記"
-Description: "記錄關係人身分識別碼是否不明。"
-Context: RelatedPerson
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
 Extension: TWSSIsReferralCaseExtension
 Id: twss-is-referral-case
 Title: "是否為轉介案件"
 Description: "記錄個案通報是否屬於轉介案件。"
 Context: ServiceRequest
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSIsPrimaryCaregiverExtension
-Id: twss-is-primary-caregiver
-Title: "是否為主要照顧者"
-Description: "記錄關係人是否為個案的主要照顧者。"
-Context: RelatedPerson
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSIsGuardianExtension
-Id: twss-is-guardian
-Title: "是否為監護人"
-Description: "記錄關係人是否為個案的監護人。"
-Context: RelatedPerson
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSIsPrimaryContactExtension
-Id: twss-is-primary-contact
-Title: "是否為主要聯絡者"
-Description: "記錄關係人是否為個案的主要聯絡者。"
-Context: RelatedPerson
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSIsLegalRepresentativeExtension
-Id: twss-is-legal-representative
-Title: "是否為代理人"
-Description: "記錄關係人是否為個案的代理人。"
-Context: RelatedPerson
 * ^version = "0.0.1"
 * value[x] only boolean
 * valueBoolean MS
@@ -276,47 +213,6 @@ Context: Organization
 * value[x] only Reference(OrganizationTWSSBase)
 * valueReference MS
 
-Extension: TWSSOrganizationCapacity
-Id: twss-organization-capacity
-Title: "機構收容量能"
-Description: "記錄機構可收容或服務的容量。"
-Context: Organization
-* ^version = "0.0.1"
-* extension contains
-    type 1..1 MS and
-    value 1..1 MS
-* extension[type].value[x] only code
-* extension[type].valueCode from TWSSOrganizationCapacityTypeVS (required)
-* extension[value].value[x] only integer
-* value[x] 0..0
-
-Extension: TWSSOrganizationUsableArea
-Id: twss-organization-usable-area
-Title: "機構可使用面積"
-Description: "記錄機構可使用面積。"
-Context: Organization
-* ^version = "0.0.1"
-* extension contains
-    type 1..1 MS and
-    value 1..1 MS
-* extension[type].value[x] only code
-* extension[type].valueCode from TWSSOrganizationUsableAreaTypeVS (required)
-* extension[value].value[x] only Quantity
-* value[x] 0..0
-
-Extension: TWSSOrganizationStatutoryStaffing
-Id: twss-organization-statutory-staffing
-Title: "法定設置標準人數"
-Description: "記錄機構依角色所需的法定人力。"
-Context: Organization
-* ^version = "0.0.1"
-* extension contains
-    role 1..1 MS and
-    requiredCount 1..1 MS
-* extension[role].value[x] only CodeableConcept
-* extension[requiredCount].value[x] only integer
-* value[x] 0..0
-
 Extension: TWSSCaseReportTypeExtension
 Id: twss-case-report-type
 Title: "通報類型"
@@ -326,21 +222,3 @@ Context: ServiceRequest
 * value[x] only CodeableConcept
 * valueCodeableConcept from TWSSCaseReportTypeVS (required)
 * valueCodeableConcept MS
-
-Extension: TWSSPractitionerRoleRelativeNanny
-Id: twss-practitioner-role-relative-nanny
-Title: "是否為親屬保母"
-Description: "表達服務人於該任職角色是否為親屬保母。"
-Context: PractitionerRole
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSPractitionerRoleSalary
-Id: twss-practitioner-role-salary
-Title: "服務人薪資"
-Description: "表達服務人於該任職角色的薪資。"
-Context: PractitionerRole
-* ^version = "0.0.1"
-* value[x] only decimal
-* valueDecimal MS

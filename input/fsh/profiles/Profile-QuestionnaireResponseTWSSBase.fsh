@@ -9,7 +9,7 @@ Description: "因 TW Core 0.3.2 的 QuestionnaireResponse Profile 限制與本 I
 * questionnaire ^type.targetProfile[0] = "https://sfaa.gov.tw/base/StructureDefinition/Questionnaire-twss-base"
 * questionnaire ^short = "本 IG 社福 Questionnaire 的 canonical URL"
 * status 1..1 MS
-* subject only Reference(PatientTWSSBase or PractitionerTWSSBase)
+* subject only Reference(PatientTWSSBase or RelatedPersonTWSSBase or PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase)
 * subject 1..1 MS
 * basedOn only Reference(ServiceRequestCaseReportTWSSBase or ServiceRequestReferralTWSSBase or ServiceRequestTransitionTWSSBase or CarePlanTWSSBase)
 * basedOn MS
@@ -32,14 +32,3 @@ Description: "用於個案通報後，在個案服務評估 Encounter 中完成�
 * basedOn 1..1 MS
 * encounter only Reference(AssessmentServiceEncounterTWSSBase)
 * encounter 1..1 MS
-
-Profile: PractitionerEmploymentQuestionnaireResponseTWSSBase
-Parent: QuestionnaireResponseTWSSBase
-Id: PractitionerEmploymentQuestionnaireResponse-twss-base
-Title: "服務人健康檢查回覆-QuestionnaireResponse TWSS Base"
-Description: "用於記錄服務人健康檢查日期的 QuestionnaireResponse。"
-* ^version = "0.0.1"
-* questionnaire = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
-* subject only Reference(PractitionerTWSSBase)
-* basedOn 0..0
-* encounter 0..0

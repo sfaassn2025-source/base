@@ -8,5 +8,5 @@ Description: "因 TW Core IG 0.3.2 尚無 Questionnaire Profile，故繼承原�
 * url 1..1 MS
 * title 1..1 MS
 * status 1..1 MS
-* subjectType 1..1 MS
+* subjectType 1..* MS
 * item.linkId 1..1 MS

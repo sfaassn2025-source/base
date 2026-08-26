@@ -20,8 +20,6 @@ Usage: #example
 * name[0].text = "王小明"
 * gender = #male
 * birthDate = "2001-01-01"
-* extension[birthDateBeforeROC].valueBoolean = false
-* extension[birthDateUnknown].valueBoolean = false
 * telecom[0].system = #phone
 * telecom[0].value = "0912345678"
 * telecom[0].use = #mobile
@@ -43,7 +41,8 @@ Usage: #example
 * extension[ethnicGroup].valueCodeableConcept.coding[0].display = "原住民"
 * extension[AborigineTribe].valueCodeableConcept.coding[0] = TWSSAborigineTribe#1 "阿美族"
 * extension[religion].valueCodeableConcept = TWSSReligion#H "民間信仰"
-* communication[primaryLanguage].language = TWSSPrimaryLanguage#1 "國語"
+* communication[primaryLanguage].language.coding[0].system = "urn:ietf:bcp:47"
+* communication[primaryLanguage].language.coding[0].code = #zh-TW
 * communication[primaryLanguage].preferred = true
 * communication[aborigineLanguage].language.text = "阿美語"
 * communication[aborigineLanguage].preferred = false
@@ -73,8 +72,6 @@ Usage: #example
   <p><b>姓名（usual）</b>：王小明</p>
   <p><b>性別</b>：男性</p>
   <p><b>出生日期</b>：2001-01-01</p>
-  <p><b>是否出生於民國年前[extension: <a href="StructureDefinition-twss-birth-date-before-roc.html">twss-birth-date-before-roc</a>]</b>：否</p>
-  <p><b>出生日期不明註記[extension: <a href="StructureDefinition-twss-birth-date-unknown.html">twss-birth-date-unknown</a>]</b>：否</p>
   <p><b>國籍[extension: <a href="http://hl7.org/fhir/StructureDefinition/patient-nationality">patient-nationality</a>]</b>：<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> （ <a href="https://terminology.hl7.org/CodeSystem-ISO3166Part1.html">ISO3166Part1</a>#TW）</span></p>
   <p><b>族群身分[extension: <a href="StructureDefinition-twss-ethnic-group.html">twss-ethnic-group</a>]</b>：原住民 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-ethnic-group.html">TWSS 族群身分代碼</a>#B）</span></p>
   <p><b>聯絡方式</b>：Phone <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a>#phone）</span><br/><b>聯絡電話</b>：（Mobile）0912345678 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="https://hl7.org/fhir/R4/valueset-contact-point-use.html">ContactPointUse</a>#mobile）</span></p>

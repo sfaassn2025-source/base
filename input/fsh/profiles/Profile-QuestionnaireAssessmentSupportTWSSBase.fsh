@@ -66,7 +66,7 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityCertificate].item ^slicing.discriminator.type = #value
 * item[disabilityCertificate].item ^slicing.discriminator.path = "linkId"
 * item[disabilityCertificate].item ^slicing.rules = #closed
-* item[disabilityCertificate].item contains hasDisabilityCertificate 1..1 MS and certificateNotIssuedReason 0..1 MS and isDisabilityCertificatePermanent 0..1 MS and disabilityAssessmentDate 0..1 MS
+* item[disabilityCertificate].item contains hasDisabilityCertificate 1..1 MS and certificateNotIssuedReason 0..1 MS and isDisabilityCertificatePermanent 0..1 MS and disabilityAssessmentDate 0..1 MS and cancellationReason 0..1 MS
 * item[disabilityCertificate].item[hasDisabilityCertificate].linkId = "7.2.1"
 * item[disabilityCertificate].item[hasDisabilityCertificate].text = "有無身心障礙證明"
 * item[disabilityCertificate].item[hasDisabilityCertificate].type = #boolean
@@ -89,6 +89,9 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.question = "7.2.1"
 * item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.operator = #=
 * item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.answerBoolean = true
+* item[disabilityCertificate].item[cancellationReason].linkId = "7.2.5"
+* item[disabilityCertificate].item[cancellationReason].text = "註銷原因"
+* item[disabilityCertificate].item[cancellationReason].type = #string
 
 Profile: QuestionnaireAssistiveDeviceStatusTWSSBase
 Parent: QuestionnaireTWSSBase

@@ -18,11 +18,17 @@ Description: "TWSS 個案主要語言代碼。"
 ValueSet: TWSSPrimaryLanguageVS
 Id: twss-primary-language-vs
 Title: "TWSS-主要語言值集"
-Description: "TWSS 個案主要語言值集。"
+Description: "TWSS 個案主要語言值集，包含 FHIR 語言代碼與社政領域補充代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
-* include codes from system TWSSPrimaryLanguage
+* urn:ietf:bcp:47#zh-TW
+* urn:ietf:bcp:47#en
+* TWSSPrimaryLanguage#2
+* TWSSPrimaryLanguage#3
+* TWSSPrimaryLanguage#4
+* TWSSPrimaryLanguage#5
+* TWSSPrimaryLanguage#6
 
 CodeSystem: TWSSReligion
 Id: twss-religion

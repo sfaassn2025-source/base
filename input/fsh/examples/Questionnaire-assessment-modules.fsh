@@ -127,6 +127,7 @@ Description: "記錄障礙分類、致障原因、障礙證明與相關日期的
 * item[disabilityCertificate].item[certificateNotIssuedReason].text = "未領證原因"
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].text = "身心障礙永久有效"
 * item[disabilityCertificate].item[disabilityAssessmentDate].text = "身心障礙鑑定日期"
+* item[disabilityCertificate].item[cancellationReason].text = "註銷原因"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml"><h3><b>身心障礙狀況問卷</b></h3><p>本問卷定義障礙分類、致障原因、障礙證明與相關日期之評估題目。</p></div>

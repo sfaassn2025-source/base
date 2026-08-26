@@ -15,7 +15,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 * identifier ^slicing.discriminator[+].type = #value
 * identifier ^slicing.discriminator[=].path = "type.coding.code"
 * identifier ^slicing.rules = #open
-* identifier contains idCardNumber 0..1 MS and relationNumber 0..1 MS
+* identifier contains idCardNumber 0..1 MS and relationNumber 1..1 MS
 * identifier[idCardNumber].use = #official
 * identifier[idCardNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[idCardNumber].type.coding.code = #NNxxx
@@ -24,7 +24,6 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 * identifier[relationNumber].use = #usual
 * identifier[relationNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[relationNumber].type.coding.code = #RI
-* identifier[relationNumber].type.text = "關係人編號"
 * identifier[relationNumber].value 1..1 MS
 * identifier[relationNumber] ^short = "關係人編號；識別碼型別使用 HL7 v2-0203 的 RI（Resource identifier）。"
 
@@ -33,22 +32,12 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
     TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
     TWSSRelatedPersonMaritalStatus named maritalStatus 0..1 MS and
     TWSSRelatedPersonReligion named religion 0..1 MS and
-    TWSSIsPrimaryCaregiverExtension named isPrimaryCaregiver 0..1 MS and
-    TWSSIsGuardianExtension named isGuardian 0..1 MS and
-    TWSSIsPrimaryContactExtension named isPrimaryContact 0..1 MS and
-    TWSSIsLegalRepresentativeExtension named isLegalRepresentative 0..1 MS and
-    TWSSRelatedPersonAge named age 0..1 MS and
-    TWSSRelatedPersonIdentifierUnknown named identifierUnknown 0..1 MS
+    TWSSRelatedPersonAge named age 0..1 MS
 * extension[nationality] ^short = "關係人國籍。"
 * extension[ethnicGroup] ^short = "關係人族群身分。"
 * extension[maritalStatus] ^short = "關係人婚姻狀態。"
 * extension[religion] ^short = "關係人宗教信仰。"
-* extension[isPrimaryCaregiver] ^short = "是否為主要照顧者。"
-* extension[isGuardian] ^short = "是否為監護人。"
-* extension[isPrimaryContact] ^short = "是否為主要聯絡者。"
-* extension[isLegalRepresentative] ^short = "是否為代理人。"
 * extension[age] ^short = "關係人年齡。"
-* extension[identifierUnknown] ^short = "關係人身分識別碼不明註記。"
 
 * active MS
 * patient only Reference(PatientTWSSBase)

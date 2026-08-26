@@ -5,23 +5,27 @@ Description: "個案基本家庭資料評估表。"
 Title: "個案基本與家庭資訊 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information"
 * status = #active
-* subjectType[0] = #Patient
+* subjectType[patient] = #Patient
 * item[caseBasicFamily].text = "個案基本與家庭資訊"
 * item[caseBasicFamily].item[familyStructure].text = "家庭結構"
 * item[caseBasicFamily].item[childrenStatus].text = "子女狀態"
 * item[caseBasicFamily].item[childrenCount].text = "子女數量"
 * item[caseBasicFamily].item[familyMonthlyIncome].text = "家庭月收入"
 * item[caseBasicFamily].item[specialEducationType].text = "特殊教育類型"
+* item[caseBasicFamily].item[isBornBeforeROC].text = "是否出生於民國年前"
+* item[caseBasicFamily].item[isBirthDateUnknown].text = "出生日期不明註記"
 
 Instance: practitioner-employment-information
 InstanceOf: QuestionnairePractitionerEmploymentTWSSBase
 Usage: #definition
-Description: "服務人健康檢查日期表。"
-Title: "服務人健康檢查資訊 Questionnaire"
+Description: "服務人基本與任職資訊表。"
+Title: "服務人基本與任職資訊 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #active
-* subjectType[0] = #Practitioner
+* subjectType[practitionerRole] = #PractitionerRole
 * item[practitionerEmployment].text = "個案服務人基本資訊"
+* item[practitionerEmployment].item[isRelativeNanny].text = "是否為親屬保母"
+* item[practitionerEmployment].item[practitionSalary].text = "服務人薪資"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 
 Instance: related-person-basic-information
@@ -31,10 +35,43 @@ Description: "關係人基本資訊評估表。"
 Title: "關係人基本資訊 Questionnaire"
 * url = "https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information"
 * status = #active
-* subjectType[0] = #Patient
+* subjectType[relatedPerson] = #RelatedPerson
 * item[relatedPersonBasic].text = "個案關係人基本資訊"
 * item[relatedPersonBasic].item[isCohabiting].text = "是否同住"
 * item[relatedPersonBasic].item[isForeignSpouse].text = "是否為外籍配偶"
+* item[relatedPersonBasic].item[isRelationIdentityUnknown].text = "關係人身分識別碼不明註記"
+
+Instance: related-person-role-assessment
+InstanceOf: QuestionnaireRelatedPersonRoleAssessmentTWSSBase
+Usage: #definition
+Description: "個案服務評估中的關係人角色判斷表。"
+Title: "關係人角色評估 Questionnaire"
+* url = "https://sfaa.gov.tw/base/Questionnaire/related-person-role-assessment"
+* status = #active
+* subjectType[patient] = #Patient
+* item[relatedPersonRoleAssessment].text = "關係人角色評估"
+* item[relatedPersonRoleAssessment].item[relatedPerson].text = "關係人"
+* item[relatedPersonRoleAssessment].item[isPrimaryCaregiver].text = "是否為主要照顧者"
+* item[relatedPersonRoleAssessment].item[isGuardian].text = "是否為監護人"
+* item[relatedPersonRoleAssessment].item[isPrimaryContact].text = "是否為主要聯絡者"
+* item[relatedPersonRoleAssessment].item[isAgent].text = "是否為法定代理人"
+
+Instance: practitioner-training-information
+InstanceOf: QuestionnairePractitionerTrainingTWSSBase
+Usage: #definition
+Description: "服務人個人受訓課程填報表。"
+Title: "服務人受訓課程 Questionnaire"
+* url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information"
+* status = #active
+* subjectType[practitioner] = #Practitioner
+* item[practitionerTraining].text = "服務人受訓課程"
+* item[practitionerTraining].repeats = true
+* item[practitionerTraining].item[trainingCourseName].text = "受訓課程名稱"
+* item[practitionerTraining].item[trainingCourseHours].text = "受訓課程時數"
+* item[practitionerTraining].item[trainingCourseType].text = "受訓課程類型"
+* item[practitionerTraining].item[courseProviderUnit].text = "開課單位"
+* item[practitionerTraining].item[trainingStartDate].text = "受訓起日"
+* item[practitionerTraining].item[trainingEndDate].text = "受訓迄日"
 
 Instance: vocational-training-status
 InstanceOf: QuestionnaireVocationalTrainingTWSSBase

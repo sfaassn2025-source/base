@@ -27,16 +27,10 @@ Description:    "機構資料-Organization TWSS Base Profile 表達社家署業�
 * extension contains
     TWSSOrganizationEstablishmentTypeExtension named establishmentType 0..1 MS and
     TWSSOrganizationRegistrationDateExtension named registrationDate 0..1 MS and
-    TWSSOrganizationCompetentAuthority named competentAuthority 0..1 MS and
-    TWSSOrganizationCapacity named capacity 0..* MS and
-    TWSSOrganizationUsableArea named usableArea 0..* MS and
-    TWSSOrganizationStatutoryStaffing named statutoryStaffing 0..1 MS
+    TWSSOrganizationCompetentAuthority named competentAuthority 0..1 MS
 * extension[establishmentType] ^short = "機構設立別。"
 * extension[registrationDate] ^short = "機構立案日期。"
 * extension[competentAuthority] ^short = "機構主管機關。"
-* extension[capacity] ^short = "機構收容量能。"
-* extension[usableArea] ^short = "機構可使用面積。"
-* extension[statutoryStaffing] ^short = "法定設置標準人數。"
 
 * active MS
 

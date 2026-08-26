@@ -21,31 +21,64 @@ Title: "個案基本與家庭資訊回覆範例"
 * item[0].item[3].answer[0].valueDecimal = 65000
 * item[0].item[4].linkId = "12.5"
 * item[0].item[4].answer[0].valueCoding = TWSSSpecialEducationType#0 "無"
+* item[0].item[5].linkId = "12.6"
+* item[0].item[5].answer[0].valueBoolean = false
+* item[0].item[6].linkId = "12.7"
+* item[0].item[6].answer[0].valueBoolean = false
 
 Instance: practitioner-employment-response-min
-InstanceOf: PractitionerEmploymentQuestionnaireResponseTWSSBase
+InstanceOf: QuestionnaireResponseTWSSBase
 Usage: #example
-Description: "服務人健康檢查日期回覆範例。"
-Title: "服務人健康檢查資訊回覆範例"
+Description: "服務人基本與任職資訊回覆範例。"
+Title: "服務人基本與任職資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #completed
-* subject = Reference(prac-min)
+* subject = Reference(pracrole-min)
 * authored = "2026-08-18T09:00:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "13"
 * item[0].item[0].linkId = "13.1"
-* item[0].item[0].answer[0].valueDate = "2026-08-01"
+* item[0].item[0].answer[0].valueBoolean = false
+* item[0].item[1].linkId = "13.2"
+* item[0].item[1].answer[0].valueDecimal = 38000
+* item[0].item[2].linkId = "13.3"
+* item[0].item[2].answer[0].valueDate = "2026-08-01"
+
+Instance: practitioner-training-response-min
+InstanceOf: QuestionnaireResponseTWSSBase
+Usage: #example
+Description: "服務人受訓課程回覆範例。"
+Title: "服務人受訓課程回覆範例"
+* questionnaire = "https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information"
+* status = #completed
+* subject = Reference(prac-min)
+* authored = "2026-08-25T10:00:00+08:00"
+* author = Reference(prac-min)
+* item[0].linkId = "29"
+* item[0].item[0].linkId = "29.1"
+* item[0].item[0].answer[0].valueString = "兒少保護基礎訓練"
+* item[0].item[1].linkId = "29.2"
+* item[0].item[1].answer[0].valueQuantity.value = 12
+* item[0].item[1].answer[0].valueQuantity.system = "http://unitsofmeasure.org"
+* item[0].item[1].answer[0].valueQuantity.code = #h
+* item[0].item[1].answer[0].valueQuantity.unit = "h"
+* item[0].item[2].linkId = "29.3"
+* item[0].item[2].answer[0].valueCoding = TWSSTrainingCourseType#D "每年必備在職教育訓練"
+* item[0].item[3].linkId = "29.4"
+* item[0].item[3].answer[0].valueString = "示範社會福利機構"
+* item[0].item[4].linkId = "29.5"
+* item[0].item[4].answer[0].valueDate = "2026-06-01"
+* item[0].item[5].linkId = "29.6"
+* item[0].item[5].answer[0].valueDate = "2026-06-02"
 
 Instance: related-person-basic-response-min
-InstanceOf: AssessmentQuestionnaireResponseTWSSBase
+InstanceOf: QuestionnaireResponseTWSSBase
 Usage: #example
 Description: "關係人基本資訊評估回應範例。"
 Title: "關係人基本資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information"
 * status = #completed
-* subject = Reference(pat-min)
-* basedOn = Reference(case-report-min)
-* encounter = Reference(assessment-service-min)
+* subject = Reference(related-min)
 * authored = "2026-08-18T09:00:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "14"
@@ -53,6 +86,32 @@ Title: "關係人基本資訊回覆範例"
 * item[0].item[0].answer[0].valueBoolean = true
 * item[0].item[1].linkId = "14.2"
 * item[0].item[1].answer[0].valueBoolean = false
+* item[0].item[2].linkId = "14.3"
+* item[0].item[2].answer[0].valueBoolean = false
+
+Instance: related-person-role-assessment-response-min
+InstanceOf: AssessmentQuestionnaireResponseTWSSBase
+Usage: #example
+Description: "個案服務評估中的關係人角色判斷回覆範例。"
+Title: "關係人角色評估回覆範例"
+* questionnaire = "https://sfaa.gov.tw/base/Questionnaire/related-person-role-assessment"
+* status = #completed
+* subject = Reference(pat-min)
+* basedOn = Reference(case-report-min)
+* encounter = Reference(assessment-service-min)
+* authored = "2026-08-25T10:00:00+08:00"
+* author = Reference(prac-min)
+* item[0].linkId = "27"
+* item[0].item[0].linkId = "27.1"
+* item[0].item[0].answer[0].valueReference = Reference(related-min)
+* item[0].item[1].linkId = "27.2"
+* item[0].item[1].answer[0].valueBoolean = true
+* item[0].item[2].linkId = "27.3"
+* item[0].item[2].answer[0].valueBoolean = false
+* item[0].item[3].linkId = "27.4"
+* item[0].item[3].answer[0].valueBoolean = true
+* item[0].item[4].linkId = "27.5"
+* item[0].item[4].answer[0].valueBoolean = false
 
 Instance: vocational-training-response-min
 InstanceOf: AssessmentQuestionnaireResponseTWSSBase
