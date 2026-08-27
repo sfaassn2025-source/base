@@ -5,6 +5,7 @@ Description: "符合 Organization TWSS Base Profile 的托育機構情境範例�
 Usage: #example
 
 * identifier[organizationCode].value = "C5678"
+* identifier[organizationCode].system = "https://example.org/identifier/organization-code"
 * type[0].coding[0] = TWSSOrganizationType#C "托嬰中心"
 * type[0].text = "托嬰中心"
 * name = "安心托嬰中心"

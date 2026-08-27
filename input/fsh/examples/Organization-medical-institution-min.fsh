@@ -5,6 +5,8 @@ Description: "符合醫療院所 Organization TWSS Base Profile 的範例。"
 Usage: #example
 
 * identifier[organizationCode].value = "HOSP-001"
+* identifier[organizationCode].system = "https://example.org/identifier/healthcare-provider"
+* type.coding[0] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * active = true
 * name = "長庚醫院"
 * telecom[0].system = #phone

@@ -44,6 +44,7 @@ Description: "記錄機構查核、評鑑、裁罰與營運填報資訊的表單
 * item[organizationAdministrativeInformation].item[organizationAuditResult].text = "查核結果"
 * item[organizationAdministrativeInformation].item[accreditationLevel].text = "評鑑等級"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].text = "裁罰法規依據"
+* item[organizationAdministrativeInformation].item[penaltyLegalBasis].repeats = true
 * item[organizationOperationsInformation].text = "機構行政與營運資訊"
 * item[organizationOperationsInformation].item[organizationCapacity].text = "機構收容量能"
 * item[organizationOperationsInformation].item[organizationCapacity].item[admissionCapacity].text = "可收容人數"
@@ -53,7 +54,10 @@ Description: "記錄機構查核、評鑑、裁罰與營運填報資訊的表單
 * item[organizationOperationsInformation].item[organizationUsableArea].item[totalArea].text = "總面積"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[indoorArea].text = "室內面積"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].text = "室外面積"
-* item[organizationOperationsInformation].item[statutoryStaffingCount].text = "法定設置標準人數"
+* item[organizationOperationsInformation].item[statutoryStaffing].text = "法定設置標準"
+* item[organizationOperationsInformation].item[statutoryStaffing].repeats = true
+* item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].text = "人員類別"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].text = "法定設置標準人數"
 
 Instance: case-service-administrative-information
 InstanceOf: QuestionnaireCaseServiceAdministrativeTWSSBase

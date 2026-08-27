@@ -12,17 +12,25 @@ Description:    "機構資料-Organization TWSS Base Profile 表達社家署業�
 * identifier.value MS
 * identifier ^short = "機構統一編號、機構代碼或來源系統內部機構識別碼。"
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.path = "type.coding.system"
+* identifier ^slicing.discriminator[+].type = #value
+* identifier ^slicing.discriminator[=].path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains organizationCode 1..1 MS and licenseNumber 0..1 MS
+* identifier[organizationCode].type 1..1 MS
+* identifier[organizationCode].type.coding 1..* MS
+* identifier[organizationCode].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[organizationCode].type.coding.code = #PRN
 * identifier[organizationCode].system 1..1 MS
-* identifier[organizationCode].system = "https://sfaa.gov.tw/base/identifier/organization-code"
 * identifier[organizationCode].value 1..1 MS
-* identifier[organizationCode] ^short = "機構代碼。"
+* identifier[organizationCode] ^short = "機構代碼；識別碼型別使用 HL7 v2-0203 的 PRN（Provider number）。"
+* identifier[licenseNumber].type 1..1 MS
+* identifier[licenseNumber].type.coding 1..* MS
+* identifier[licenseNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[licenseNumber].type.coding.code = #AC
 * identifier[licenseNumber].system 1..1 MS
-* identifier[licenseNumber].system = "https://sfaa.gov.tw/base/identifier/organization-license-number"
 * identifier[licenseNumber].value 1..1 MS
-* identifier[licenseNumber] ^short = "機構許可證字號。"
+* identifier[licenseNumber] ^short = "機構許可證字號；識別碼型別使用 HL7 v2-0203 的 AC（Accreditation/Certification Identifier）。"
 
 * extension contains
     TWSSOrganizationEstablishmentTypeExtension named establishmentType 0..1 MS and

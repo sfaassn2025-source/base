@@ -94,6 +94,7 @@ Title: "機構行政與營運資訊回覆範例"
 * item[0].item[1].answer[0].valueCoding = TWSSOrganizationAccreditationLevel#A "優等"
 * item[0].item[2].linkId = "24.3"
 * item[0].item[2].answer[0].valueString = "兒童及少年福利與權益保障法第 84 條"
+* item[0].item[2].answer[1].valueString = "兒童及少年福利與權益保障法第 92 條"
 * item[1].linkId = "28"
 * item[1].item[0].linkId = "28.1"
 * item[1].item[0].item[0].linkId = "28.1.1"
@@ -113,7 +114,15 @@ Title: "機構行政與營運資訊回覆範例"
 * item[1].item[1].item[2].answer[0].valueQuantity.value = 70
 * item[1].item[1].item[2].answer[0].valueQuantity.unit = "平方公尺"
 * item[1].item[2].linkId = "28.3"
-* item[1].item[2].answer[0].valueInteger = 3
+* item[1].item[2].item[0].linkId = "28.3.1"
+* item[1].item[2].item[0].answer[0].valueString = "社工"
+* item[1].item[2].item[1].linkId = "28.3.2"
+* item[1].item[2].item[1].answer[0].valueInteger = 3
+* item[1].item[3].linkId = "28.3"
+* item[1].item[3].item[0].linkId = "28.3.1"
+* item[1].item[3].item[0].answer[0].valueString = "生活照顧員"
+* item[1].item[3].item[1].linkId = "28.3.2"
+* item[1].item[3].item[1].answer[0].valueInteger = 6
 
 Instance: case-service-administrative-information-response-min
 InstanceOf: QuestionnaireResponseTWSSBase

@@ -5,7 +5,9 @@ Description: "符合 Organization TWSS Base Profile 的最小機構資料範例�
 Usage: #example
 
 * identifier[organizationCode].value = "A1233"
+* identifier[organizationCode].system = "https://example.org/identifier/organization-code"
 * identifier[licenseNumber].value = "衛授家字第1130012345號"
+* identifier[licenseNumber].system = "https://example.org/identifier/organization-license-number"
 * type[0].coding[0] = TWSSOrganizationType#13 "通報中心"
 * type[0].text = "通報中心"
 * extension[establishmentType].valueCodeableConcept = TWSSOrganizationEstablishmentType#21 "公立"

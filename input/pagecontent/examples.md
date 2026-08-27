@@ -52,6 +52,8 @@
 - [機構資料範例](Organization-org-min.html)
 - [托育機構範例](Organization-org-childcare.html)
 - [收出養機構範例](Organization-org-adoption.html)
+- [轉介單位範例](Organization-referral-unit-min.html)
+- [受轉介單位範例](Organization-referred-unit-min.html)
 
 #### Patient
 - [個案資料範例](Patient-pat-min.html)

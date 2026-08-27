@@ -53,10 +53,10 @@ Description:    "申請或服務請求-ServiceRequest TWSS Base Profile 表達�
 * authoredOn MS
 * authoredOn ^short = "通報時間、申請日期、轉介申請日期或請求建立時間。"
 
-* requester only Reference(PatientTWSSBase or RelatedPersonTWSSBase or PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase)
+* requester only Reference(PatientTWSSBase or RelatedPersonTWSSBase or PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase or ReferralOrganizationTWSSBase)
 * requester MS
 
-* performer only Reference(PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase)
+* performer only Reference(PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase or ReferralOrganizationTWSSBase)
 * performer MS
 
 * reasonReference only Reference(ConditionTWSSBase or DocumentReferenceTWSSBase)

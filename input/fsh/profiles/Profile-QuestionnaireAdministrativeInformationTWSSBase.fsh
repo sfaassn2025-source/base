@@ -110,13 +110,14 @@ Description: "定義機構查核、評鑑、裁罰與營運填報資訊表單。
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].linkId = "24.3"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].text = "裁罰法規依據"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].type = #string
+* item[organizationAdministrativeInformation].item[penaltyLegalBasis].repeats = true
 * item[organizationOperationsInformation].linkId = "28"
 * item[organizationOperationsInformation].text = "機構行政與營運資訊"
 * item[organizationOperationsInformation].type = #group
 * item[organizationOperationsInformation].item ^slicing.discriminator.type = #value
 * item[organizationOperationsInformation].item ^slicing.discriminator.path = "linkId"
 * item[organizationOperationsInformation].item ^slicing.rules = #closed
-* item[organizationOperationsInformation].item contains organizationCapacity 1..1 MS and organizationUsableArea 1..1 MS and statutoryStaffingCount 0..1 MS
+* item[organizationOperationsInformation].item contains organizationCapacity 1..1 MS and organizationUsableArea 1..1 MS and statutoryStaffing 0..1 MS
 * item[organizationOperationsInformation].item[organizationCapacity].linkId = "28.1"
 * item[organizationOperationsInformation].item[organizationCapacity].text = "機構收容量能"
 * item[organizationOperationsInformation].item[organizationCapacity].type = #group
@@ -149,9 +150,22 @@ Description: "定義機構查核、評鑑、裁罰與營運填報資訊表單。
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].linkId = "28.2.3"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].text = "室外面積"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].type = #quantity
-* item[organizationOperationsInformation].item[statutoryStaffingCount].linkId = "28.3"
-* item[organizationOperationsInformation].item[statutoryStaffingCount].text = "法定設置標準人數"
-* item[organizationOperationsInformation].item[statutoryStaffingCount].type = #integer
+* item[organizationOperationsInformation].item[statutoryStaffing].linkId = "28.3"
+* item[organizationOperationsInformation].item[statutoryStaffing].text = "法定設置標準"
+* item[organizationOperationsInformation].item[statutoryStaffing].type = #group
+* item[organizationOperationsInformation].item[statutoryStaffing].repeats = true
+* item[organizationOperationsInformation].item[statutoryStaffing].item ^slicing.discriminator.type = #value
+* item[organizationOperationsInformation].item[statutoryStaffing].item ^slicing.discriminator.path = "linkId"
+* item[organizationOperationsInformation].item[statutoryStaffing].item ^slicing.rules = #closed
+* item[organizationOperationsInformation].item[statutoryStaffing].item contains staffCategory 1..1 MS and statutoryStaffingCount 1..1 MS
+* item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].linkId = "28.3.1"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].text = "人員類別"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].type = #string
+* item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].required = true
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].linkId = "28.3.2"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].text = "法定設置標準人數"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].type = #integer
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].required = true
 
 Profile: QuestionnaireCaseServiceAdministrativeTWSSBase
 Parent: QuestionnaireTWSSBase

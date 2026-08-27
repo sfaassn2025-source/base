@@ -5,6 +5,7 @@ Description: "符合 Organization TWSS Base Profile 的收出養服務機構情�
 Usage: #example
 
 * identifier[organizationCode].value = "A6789"
+* identifier[organizationCode].system = "https://example.org/identifier/organization-code"
 * type[0].coding[0] = TWSSOrganizationType#adoption-service-organization "收出養服務機構"
 * type[0].text = "收出養服務機構"
 * name = "希望收出養服務中心"
