@@ -26,7 +26,7 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error ，支持或拒絕病情、問題或診斷的臨床狀態的驗證狀態。"
 * verificationStatus ^binding.description = "應填入所綁定值集中的其中一個代碼。"
 * verificationStatus ^definition = "支持此病情、問題或診斷的臨床狀態之驗證狀態"
-* verificationStatus ^comment = "verificationStatus 不是必須的。例如當病人在急診室出現腹痛時，不一定會有驗證狀態。"
+* verificationStatus ^comment = "verificationStatus 非必填；資料來源尚未確認病情、問題或診斷時可省略。"
 
 * category only CodeableConceptTW
 * category MS
@@ -100,7 +100,7 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * subject only Reference(PatientTWSSBase)
 * subject MS
 * subject ^short = "誰有此病情、問題或診斷？"
-* subject ^definition = "表示與此病情、問題或診斷紀錄相關的病人或實體集合。TWSS Base 使用 PatientTWSSBase。"
+* subject ^definition = "表示與此病情、問題或診斷紀錄相關的個案或實體集合。TWSS Base 使用 PatientTWSSBase。"
 
 * encounter MS
 * encounter ^short = "作為病情、問題或診斷紀錄的一部分的就醫（Encounter）紀錄。"
@@ -172,7 +172,7 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * identifier ^short = "此病情、問題或診斷的外部識別碼"
 * identifier ^definition = "由執行者或其他系統指定給此病情、問題或診斷的業務用識別碼，即使此resource作更新及在伺服器之間的傳遞，此識別碼仍保持不變。"
 * identifier ^requirements = "允許識別各參與系統所知的此病情、問題或診斷資訊，並在各伺服器之間保持一致的方式。"
-* identifier ^comment = "這是一個業務識別碼，不是一個resource識別碼（詳見討論）。最好的做法是該識別碼只出現在單個resource實例上，但是業務實務有可能會規定可以在多個resource實例中具有相同識別碼—甚至可能具有不同的resource型例。例如：多個 「Patient（病人）」和 「Person（個人）」resource實例可能共用同一個社會保險號碼。"
+* identifier ^comment = "這是一個業務識別碼，不是一個resource識別碼（詳見討論）。最好的做法是該識別碼只出現在單個resource實例上，但是業務實務有可能會規定可以在多個resource實例中具有相同識別碼—甚至可能具有不同的resource型例。例如：多個 「Patient（個案）」和 「Person（個人）」resource實例可能共用同一個社會保險號碼。"
 * clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved ，病情、問題或診斷的臨床狀態。"
 * clinicalStatus ^binding.description = "應填入所綁定值集中的其中一個代碼。"
 * clinicalStatus ^definition = "此病情、問題或診斷的臨床狀態"
@@ -180,7 +180,7 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error ，支持或拒絕病情、問題或診斷的臨床狀態的驗證狀態。"
 * verificationStatus ^binding.description = "應填入所綁定值集中的其中一個代碼。"
 * verificationStatus ^definition = "支持此病情、問題或診斷的臨床狀態之驗證狀態"
-* verificationStatus ^comment = "verificationStatus不是必須的。例如：當病人在急診室出現腹痛時，不可能出現驗證狀態。資料類型是CodeableConcept，因為verificationStatus涉及到一些臨床判斷，因此可能需要比所需的FHIR值集更多的特殊性。例如：SNOMED編碼可能允許更多的特殊性。"
+* verificationStatus ^comment = "verificationStatus 非必填；資料來源尚未確認病情、問題或診斷時可省略。資料類型為 CodeableConcept，可表達所需的臨床判斷細節。"
 * category ^short = "problem-list-item | encounter-diagnosis ，指定病情、問題或診斷的類別。"
 * category ^binding.description = "應填入所綁定值集中適合的代碼，確定無適合的代碼才可以使用其他值集的代碼來表示。"
 * category ^definition = "指定此病情、問題或診斷的類別"
@@ -226,17 +226,17 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * bodySite ^definition = "此病情、問題或診斷表現出來的解剖位置"
 * bodySite ^comment = "只有在Condition.code中找到的代碼未隱含此資料項目概念時才使用。如果使用案例（use-case）要求將BodySite作為一個單獨的resource來處理（例如：識別和追踪），那麼就使用標準的資料項目擴充方式來擴充bodySite。可以是一個摘要代碼，也可以是對一個非常精確位置定義的參照，或者兩者都是。"
 * subject ^short = "誰有此病情、問題或診斷？"
-* subject ^definition = "表示與此病情、問題或診斷紀錄相關的病人或實體集合（Group resource）"
+* subject ^definition = "表示與此病情、問題或診斷紀錄相關的個案或實體集合（Group resource）"
 * subject ^requirements = "實體集合（Group resource）通常用於獸醫或公共衛生的案例"
 * encounter ^short = "作為病情、問題或診斷紀錄的一部分的就醫（Encounter）紀錄"
 * encounter ^definition = "此病情、問題或診斷記載在哪次的「就醫（Encounter）」紀錄或者與此病情、問題或診斷紀錄密切相關的「就醫（Encounter）」紀錄"
 * encounter ^comment = "通常是此病情、問題或診斷發生的就醫事件，雖然有些活動可能在就醫結束之前或之後開始，但仍與就醫事件的情境有關。這筆紀錄表明與此病情、問題或診斷紀錄相關的就醫事件（Encounter）。「新的」診斷的情況下，反映病情、問題或診斷的持續/修訂資訊可能與首次就醫所知道的病情、問題或診斷不同。"
 * onset[x] ^short = "估計的或實際的日期、日期—時間或年齡。"
 * onset[x] ^definition = "醫師認為此病情、問題或診斷之推估或實際發生時間或日期時間等"
-* onset[x] ^comment = "onsetAge通常是指病人說明病情何時開始發生的年齡"
+* onset[x] ^comment = "onsetAge通常是指個案說明病情何時開始發生的年齡"
 * abatement[x] ^short = "何時解決/緩解"
 * abatement[x] ^definition = "病情、問題或診斷緩解或開始緩解的日期或估計日期。因為與「緩解（remissio）」或 「解決（resolution）」相關的許多過多含義—病情、問題或診斷不會真正解決，但它們可以緩解，所以稱為「緩解 （abatement）」，"
-* abatement[x] ^comment = "解決（resolution）和緩解（remission）之間沒有明確的區別，因為在許多情況下，兩者的區別並不明顯。當病人說明病情、問題或診斷緩解的年齡時，一般使用onsetAge。如果沒有abatement這個資料項目，就不知道狀況是否已經解決或緩解；應用程式和使用者一般應假定病情、問題或診斷仍存在。當abatementString存在時，它意味著病情、問題或診斷已緩解。"
+* abatement[x] ^comment = "解決（resolution）和緩解（remission）之間沒有明確的區別，因為在許多情況下，兩者的區別並不明顯。當個案說明病情、問題或診斷緩解的年齡時，一般使用onsetAge。如果沒有abatement這個資料項目，就不知道狀況是否已經解決或緩解；應用程式和使用者一般應假定病情、問題或診斷仍存在。當abatementString存在時，它意味著病情、問題或診斷已緩解。"
 * recordedDate ^short = "記錄的日期"
 * recordedDate ^definition = "recordedDate表述此Condition記錄何時於系統中建立，這通常是系統產生的日期。"
 * recorder ^short = "誰記錄此病情、問題或診斷"

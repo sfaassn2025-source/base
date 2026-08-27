@@ -43,7 +43,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 * patient only Reference(PatientTWSSBase)
 * patient MS
 * relationship MS
-* relationship ^binding.description = "病人與相關人士之間關係的類型。"
+* relationship ^binding.description = "個案與相關人士之間關係的類型。"
 * name MS
 * name.text MS
 * telecom MS
@@ -57,6 +57,6 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 
 // ----- TW Core 0.3.2 retained element definitions -----
 // TWSS Base 以 FHIR R4 RelatedPerson 為基底；未與 TWSS 欄位需求衝突之元素說明與交換規則，沿用 TW Core RelatedPerson 0.3.2。
-* relationship ^binding.description = "病人與相關人士之間關係的類型。"
+* relationship ^binding.description = "個案與相關人士之間關係的類型。"
 // ----- End TW Core 0.3.2 retained element definitions -----
 

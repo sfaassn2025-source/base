@@ -11,8 +11,8 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * identifier.type only CodeableConceptTW
 * identifier.system MS
 * identifier.value MS
-* identifier ^short = "個案身分識別碼；病人的身份識別碼（identifier），通常為業務目的所使用的識別碼，例如病歷號。"
-* identifier ^definition = "病人的唯一識別碼（identifier）"
+* identifier ^short = "個案身分識別碼；個案的身分識別碼（identifier），通常為業務目的所使用的識別碼，例如來源系統識別碼。"
+* identifier ^definition = "個案的唯一識別碼（identifier）"
 * identifier.system ^short = "識別碼系統，例如內政部身分證字號系統或來源系統識別碼 URI。"
 * identifier.value ^short = "識別碼值。"
 * identifier ^slicing.discriminator[0].type = #value
@@ -131,7 +131,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
     TWSSPatientAborigineTribe named AborigineTribe 0..1 MS and
     http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..1 MS and
     PersonAge named age 0..1 MS
-* extension[nationality] ^short = "國籍；病人所屬國籍"
+* extension[nationality] ^short = "國籍；個案所屬國籍"
 * extension[nationality].extension[code].valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-2 (extensible)
 * extension[ethnicGroup] ^short = "族群身分"
 * extension[AborigineTribe] ^short = "原住民族別。"
@@ -156,9 +156,9 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * communication[aborigineLanguage].language ^short = "原住民語言。"
 
 * active MS
-* active ^short = "病人的紀錄是否「使用中（true）」"
-* active ^definition = "這位病人的紀錄是否在使用中（active）。許多系統使用這個屬性來標記為非現有（non-current）病人，例如那些根據機構的業務規則在一段時間內沒有被看到的病人。"
-* active ^comment = "如果一筆病人紀錄沒有在使用，但與另一筆使用中的病人紀錄相連結，那麼未來的病人／紀錄更新應該發生在另一筆病人紀錄。"
+* active ^short = "個案的紀錄是否「使用中（true）」"
+* active ^definition = "這位個案的紀錄是否在使用中（active）。許多系統使用這個屬性來標記為非現有（non-current）個案，例如那些根據機構的業務規則在一段時間內沒有被看到的個案。"
+* active ^comment = "如果一筆個案紀錄沒有在使用，但與另一筆使用中的個案紀錄相連結，那麼未來的個案／紀錄更新應該發生在另一筆個案紀錄。"
 
 * name 0..* MS
 * name obeys pat-name
@@ -166,9 +166,9 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * name.text MS
 * name.family MS
 * name.given MS
-* name ^short = "姓名；病人的姓名。"
+* name ^short = "姓名；個案的姓名。"
 * name ^definition = "個人名字。"
-* name ^comment = "一位病人可能有多個姓名，有不同的用途或適用期。"
+* name ^comment = "一位個案可能有多個姓名，有不同的用途或適用期。"
 * name.text ^short = "完整姓名文字。"
 * name ^slicing.discriminator.type = #pattern
 * name ^slicing.discriminator.path = "use"
@@ -207,7 +207,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * name[usual].given ^example.label = "General"
 * name[usual].given ^example.valueString = "加玲"
 * name[usual].given ^condition = "tw-core-1"
-* name[temp] ^short = "新生兒姓名，緊急救護未知病人姓名時亦可用。"
+* name[temp] ^short = "暫用姓名；個案正式姓名未知時可使用。"
 * name[temp].use = #temp
 * name[temp].use MS
 * name[temp].text 1..1 MS
@@ -228,19 +228,19 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * telecom.system MS
 * telecom.value MS
 * telecom.use MS
-* telecom ^short = "聯絡方式；病人的聯絡資訊（例如：電話、電子郵件等）。"
+* telecom ^short = "聯絡方式；個案的聯絡資訊（例如：電話、電子郵件等）。"
 * telecom ^definition = "可與此人聯絡的詳細聯絡方式（如電話或電子郵件地址等）。"
-* telecom ^comment = "一位病人可能有多種聯絡方式，有不同的用途或適用期。可能需要有緊急聯絡此人的選項，也需要幫忙識別身份。"
+* telecom ^comment = "一位個案可能有多種聯絡方式，有不同的用途或適用期。可能需要有緊急聯絡此人的選項，也需要幫忙識別身份。"
 
 * gender MS
 * gender ^short = "性別；male ｜ female ｜ other ｜ unknown"
-* gender ^definition = "Administrative Gender 為行政管理及保存紀錄目的之病人性別"
-* gender ^comment = "行政管理用之性別可能不符合由遺傳學或個人偏好的識別所決定的生物性別。請注意，對於人類，特別是動物，除了男性和女性，還有其他合法歸類的可能性，儘管絕大多數系統和情境只支持男性和女性。提供決策支援或執行業務規則的系統最好以檢驗檢查（Observation）呈現特定性別或感興趣的性別（解剖學、染色體、社會等）。然而，由於這些檢驗檢驗不常被記錄，預設為行政管理用之性別是常見的做法。在這種預設的情況下，規則的執行應該允許行政管理用和生物、染色體和其他性別方面的差異。例如：關於男性子宮切除的警訊應該作為警告或可推翻的錯誤來處理，而不是「硬（hard）」錯誤。關於溝通病人性別的更多資訊，請參閱 Patient Gender 及 Sex 的部分。"
+* gender ^definition = "Administrative Gender 為行政管理及保存紀錄目的之個案性別"
+* gender ^comment = "行政性別用於個案行政管理及身分比對，可能與生理、法律或社會性別概念不同。"
 
 * birthDate MS
-* birthDate ^short = "出生日期；病人出生日期"
+* birthDate ^short = "出生日期；個案出生日期"
 * birthDate ^definition = "個人的出生日期"
-* birthDate ^comment = "如果真實的出生日期未知，至少應該提供一個估計的出生年份作為猜測。有一個標準的擴充「patient-birthTime」，應該於需要出生時間（Time）資訊時使用（例如：在產科／新生兒照護系統中）。"
+* birthDate ^comment = "若出生日期未知，可依來源資料提供可確認的日期或年份；若需記錄出生時間，使用標準 patient-birthTime extension。"
 
 * address 0..* MS
 * address only AddressTWSSBase
@@ -252,9 +252,9 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * address.district MS
 * address.postalCode MS
 * address.country MS
-* address ^short = "地址；病人聯絡地址。"
+* address ^short = "地址；個案聯絡地址。"
 * address ^definition = "此人的地址"
-* address ^comment = "病人可能有多個地址，有不同的用途或適用期。"
+* address ^comment = "個案可能有多個地址，有不同的用途或適用期。"
 
 * contact MS
 * contact.relationship MS
@@ -265,32 +265,32 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * contact.gender MS
 * contact.organization MS
 * contact.period MS
-* contact ^short = "病人的聯絡人，例如：監護人、伴侶、朋友等。"
-* contact ^definition = "病人的聯絡人（如監護人、伴侶、朋友）。"
+* contact ^short = "個案的聯絡人，例如：監護人、伴侶、朋友等。"
+* contact ^definition = "個案的聯絡人（如監護人、伴侶、朋友）。"
 * contact ^comment = "聯絡涵蓋所有種類的聯絡人：家人、業務聯絡、監護人、照顧者。不適用於登記血統和家庭關係，因這超出聯絡的目的。"
 
 * communication MS
 * communication.language MS
-* communication ^short = "向病人說明健康狀態時所使用的語言。"
-* communication ^definition = "可用於與病人溝通其健康狀況的語言。"
-* communication.language ^short = "向病人說明健康狀況時所使用的語言。"
+* communication ^short = "與個案溝通時所使用的語言。"
+* communication ^definition = "可用於與個案溝通的語言。"
+* communication.language ^short = "向個案說明健康狀況時所使用的語言。"
 * communication.language ^definition = "小寫的 ISO-639-1 字母兩個代碼表示的語言，後面可以有連字符號與大寫的 ISO-3166-1 字母兩個代碼表示使用此語言的地區；例如 en-US。"
 
 * generalPractitioner only Reference(PractitionerTWSSBase or PractitionerRoleTWSSBase or OrganizationTWSSBase)
 * managingOrganization only Reference(OrganizationTWSSBase)
-* generalPractitioner ^short = "照護此病人的機構、照護服務提供者、或健康照護服務提供者的角色"
-* generalPractitioner ^definition = "病人指定的照護服務提供者"
+* generalPractitioner ^short = "照護此個案的機構、照護服務提供者、或健康照護服務提供者的角色"
+* generalPractitioner ^definition = "個案指定的照護服務提供者"
 * managingOrganization ^short = "此紀錄的保管機構"
-* managingOrganization ^definition = "病人紀錄的保管機構"
+* managingOrganization ^definition = "個案紀錄的保管機構"
 
 
 // ----- TW Core 0.3.2 retained element definitions -----
 // TWSS Base 以 FHIR R4 Patient 為基底；未與 TWSS 欄位需求衝突之元素說明與交換規則，沿用 TW Core Patient 0.3.2。
-* extension[nationality] ^short = "國籍；病人所屬國籍"
-* name[temp] ^short = "新生兒姓名，緊急救護未知病人姓名時亦可用。"
+* extension[nationality] ^short = "國籍；個案所屬國籍"
+* name[temp] ^short = "暫用姓名；個案正式姓名未知時可使用。"
 * name[anonymous] ^short = "匿名供研究使用"
-* . ^short = "接受健康照護服務的個人或動物之資訊"
-* . ^definition = "關於接受照護或其他健康相關服務的個人或動物的人口統計學和其他行政資訊。"
+* . ^short = "社政服務個案的基本與識別資訊"
+* . ^definition = "關於社政服務個案的基本、識別及聯絡資訊。"
 * id ^short = "不重複的ID用以識別儲存在特定FHIR Server中的Patient紀錄，通常又稱為邏輯性ID。"
 * id ^definition = "resource的邏輯ID，在resource的URL中使用。一旦指定，這個值永遠不會改變。"
 * id ^comment = "一個resource使用新增操作（create operation）提交給伺服器時，此resource沒有id，它的id在resource被創建後由伺器分配/指定。"
@@ -304,14 +304,14 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * language ^binding.description = "人類語言；鼓勵使用CommonLanguages代碼表中的代碼，但不強制一定要使用此代碼表，你也可使用其他代碼表的代碼或單純以文字表示。"
 * language ^comment = "提供語言是為了支援索引和可存取性（通常，文字表述轉語音等服務使用此語言標籤）。html lanuage tag適用於此敘述。resource上的語言標籤可用於指定從resource中的資料所產成的其他表述之語言。不是所有的內容都必須使用此語言。不應該假定Resource.language自動適用於敘述。如果指定語言，它也應該被指定在html中的div資料項目（關於xml:lang和html lang屬性之間的關係，見HTML5中的規則）。"
 * text ^short = "Patient Resource之內容摘要以供人閱讀"
-* text ^definition = "人可讀的敘述，包含resource的摘要，可用於向人表述resource的內容。敘述不需要對所有的結構化資料進行編碼，但需要包含足夠的細節使人在閱讀敘述時理解「臨床安全性」。resource定義有哪些內容應該在敘述中表示，以確保臨床安全。"
+* text ^definition = "人可讀的敘述，包含resource的摘要，可用於向人表述resource的內容。敘述不需要對所有的結構化資料進行編碼，但應包含足夠細節，使閱讀者能正確理解交換資料。"
 * text ^comment = "內嵌（contained）的resource沒有敘述，非內嵌（contained）的resource則 **建議應該（SHOULD）** 有敘述。有時resource可能只有文字表述，很少或沒有額外的結構化資料（只要滿足所有minOccurs=1的資料項目）。這可能出現在舊系統的資料，當資訊以 「文字表述區塊（text blob） 」的形式被取得，或者文字表述是原始輸入或說明，而編碼資訊稍後再添加。"
-* identifier ^short = "個案身分識別碼；病人的身份識別碼（identifier），通常為業務目的所使用的識別碼，例如病歷號。"
-* identifier ^definition = "病人的唯一識別碼（identifier）"
-* identifier ^requirements = "病人幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
+* identifier ^short = "個案身分識別碼；個案的身分識別碼（identifier），通常為業務目的所使用的識別碼，例如來源系統識別碼。"
+* identifier ^definition = "個案的唯一識別碼（identifier）"
+* identifier ^requirements = "個案幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
 * identifier[idCardNumber] ^short = "適用身分證字號"
 * identifier[idCardNumber] ^definition = "適用於身分證字號"
-* identifier[idCardNumber] ^requirements = "病人幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
+* identifier[idCardNumber] ^requirements = "個案幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
 * identifier[idCardNumber].use ^short = "usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）"
 * identifier[idCardNumber].use ^binding.description = "如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。"
 * identifier[idCardNumber].use ^definition = "這個唯一識別碼（identifier）的用途"
@@ -363,7 +363,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * identifier[idCardNumber].assigner ^comment = "Identifier.assigner可以省略.reference資料項目，只包含一個.display資料項目，反映指定機構的名稱或其他文字表述資訊。"
 * identifier[passportNumber] ^short = "適用護照號碼"
 * identifier[passportNumber] ^definition = "適用於護照號碼"
-* identifier[passportNumber] ^requirements = "病人幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
+* identifier[passportNumber] ^requirements = "個案幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
 * identifier[passportNumber].use ^short = "usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）"
 * identifier[passportNumber].use ^binding.description = "如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。"
 * identifier[passportNumber].use ^definition = "這個唯一識別碼（identifier）的用途"
@@ -414,7 +414,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * identifier[passportNumber].assigner ^comment = "Identifier.assigner可以省略.reference資料項目，只包含一個.display資料項目，反映指定機構的名稱或其他文字表述資訊。"
 * identifier[residentNumber] ^short = "適用居留證號碼"
 * identifier[residentNumber] ^definition = "適用於居留證號碼"
-* identifier[residentNumber] ^requirements = "病人幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
+* identifier[residentNumber] ^requirements = "個案幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
 * identifier[residentNumber].use ^short = "usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）"
 * identifier[residentNumber].use ^binding.description = "如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。"
 * identifier[residentNumber].use ^definition = "這個唯一識別碼（identifier）的用途"
@@ -465,7 +465,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * identifier[residentNumber].assigner ^comment = "Identifier.assigner可以省略.reference資料項目，只包含一個.display資料項目，反映指定機構的名稱或其他文字表述資訊。"
 * identifier[medicalRecord] ^short = "適用病歷號"
 * identifier[medicalRecord] ^definition = "適用於病歷號"
-* identifier[medicalRecord] ^requirements = "病人幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
+* identifier[medicalRecord] ^requirements = "個案幾乎總是被指定一個特定的數值型的唯一識別碼（identifier）"
 * identifier[medicalRecord].use ^short = "usual ｜ official ｜ temp ｜ secondary ｜ old （如果知道）"
 * identifier[medicalRecord].use ^binding.description = "如果知道，請說明此識別碼的目的；應填入所綁定值集中的其中一個代碼。"
 * identifier[medicalRecord].use ^definition = "這個唯一識別碼（identifier）的用途"
@@ -514,22 +514,22 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * identifier[medicalRecord].assigner ^short = "簽發identifier的機構（可以只是文字表述）"
 * identifier[medicalRecord].assigner ^definition = "簽發／管理識別碼的機構"
 * identifier[medicalRecord].assigner ^comment = "Identifier.assigner可以省略.reference資料項目，只包含一個.display資料項目，反映指定機構的名稱或其他文字表述資訊。"
-* active ^short = "病人的紀錄是否「使用中（true）」"
-* active ^definition = "這位病人的紀錄是否在使用中（active）。許多系統使用這個屬性來標記為非現有（non-current）病人，例如那些根據機構的業務規則在一段時間內沒有被看到的病人。
+* active ^short = "個案的紀錄是否「使用中（true）」"
+* active ^definition = "這位個案的紀錄是否在使用中（active）。許多系統使用這個屬性來標記為非現有（non-current）個案，例如那些根據機構的業務規則在一段時間內沒有被看到的個案。
 
-它經常被用來過濾病人清單以排除inactive的病人
+它經常被用來過濾個案清單以排除inactive的個案
 
-已過世的病人也可能因為同樣的原因被標記為inactive，但在過世後的一段時間內可能是active。"
-* active ^requirements = "若紀錄因為錯誤而創建，需要能夠將這位病人紀錄標記為不使用"
-* active ^comment = "如果一筆病人紀錄沒有在使用，但與另一筆使用中的病人紀錄相連結，那麼未來的病人／紀錄更新應該發生在另一筆病人紀錄。"
-* name ^short = "姓名；病人的姓名"
+已過世的個案也可能因為同樣的原因被標記為inactive，但在過世後的一段時間內可能是active。"
+* active ^requirements = "若紀錄因為錯誤而創建，需要能夠將這位個案紀錄標記為不使用"
+* active ^comment = "如果一筆個案紀錄沒有在使用，但與另一筆使用中的個案紀錄相連結，那麼未來的個案／紀錄更新應該發生在另一筆個案紀錄。"
+* name ^short = "姓名；個案的姓名"
 * name ^definition = "個人名字"
-* name ^requirements = "需要能夠追踪病人的多個姓名。例如：正式姓名及配偶姓名。 **必須（SHALL）** 總是提供姓名的完整拼法。"
-* name ^comment = "一位病人可能有多個姓名，有不同的用途或適用期。對於動物來說，這個姓名是一個「HumanName」，它是人類指定和使用的，具有相同的模式。"
-* name[official] ^short = "病人的護照姓名"
+* name ^requirements = "需要能夠追踪個案的多個姓名。例如：正式姓名及配偶姓名。 **必須（SHALL）** 總是提供姓名的完整拼法。"
+* name ^comment = "個案可有多個姓名，各自具有不同用途或適用期間。"
+* name[official] ^short = "個案的護照姓名"
 * name[official] ^definition = "個人名字"
-* name[official] ^requirements = "需要能夠追踪病人的多個姓名。例如：正式姓名及配偶姓名。 **必須（SHALL）** 總是提供姓名的完整拼法。"
-* name[official] ^comment = "一位病人可能有多個姓名，有不同的用途或適用期。對於動物來說，這個姓名是一個「HumanName」，它是人類指定和使用的，具有相同的模式。"
+* name[official] ^requirements = "需要能夠追踪個案的多個姓名。例如：正式姓名及配偶姓名。 **必須（SHALL）** 總是提供姓名的完整拼法。"
+* name[official] ^comment = "個案可有多個姓名，各自具有不同用途或適用期間。"
 * name[official].use ^binding.description = "人名的使用情況；應填入所綁定值集中的其中一個代碼。"
 * name[official].use ^definition = "此姓名的用途"
 * name[official].use ^requirements = "允許從一組姓名中為特定的使用情境選擇適當的姓名"
@@ -551,12 +551,12 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 由於學術，法律，職業或貴族身份等原因而獲得頭銜，出現在姓名之後。"
 * name[official].suffix ^definition = "由於學術、法規、就業或貴族身份等原因而獲得的名，並出現在姓名的開頭。"
 * name[official].period ^short = "此姓名的使用效期"
-* name[official].period ^definition = "表明這個姓名對此病人有效的時間區間或期間"
+* name[official].period ^definition = "表明這個姓名對此個案有效的時間區間或期間"
 * name[official].period ^requirements = "允許多個姓名按其歷史情境（效期）儲存"
-* name[usual] ^short = "病人所屬國籍的真實姓名"
+* name[usual] ^short = "個案所屬國籍的真實姓名"
 * name[usual] ^definition = "個人名字"
-* name[usual] ^requirements = "需要能夠追踪病人的多個姓名。例如：正式姓名及配偶姓名。 **必須（SHALL）** 總是提供姓名的完整拼法。"
-* name[usual] ^comment = "一位病人可能有多個姓名，有不同的用途或適用期。對於動物來說，這個姓名是一個「HumanName」，它是人類指定和使用的，具有相同的模式。"
+* name[usual] ^requirements = "需要能夠追踪個案的多個姓名。例如：正式姓名及配偶姓名。 **必須（SHALL）** 總是提供姓名的完整拼法。"
+* name[usual] ^comment = "個案可有多個姓名，各自具有不同用途或適用期間。"
 * name[usual].use ^binding.description = "人名的使用情況；應填入所綁定值集中的其中一個代碼。"
 * name[usual].use ^definition = "此姓名的用途"
 * name[usual].use ^requirements = "允許從一組姓名中為特定的使用情境選擇適當的姓名"
@@ -578,11 +578,11 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 由於學術，法律，職業或貴族身份等原因而獲得頭銜，出現在姓名之後。"
 * name[usual].suffix ^definition = "由於學術、法規、就業或貴族身份等原因而獲得的名，並出現在姓名的開頭。"
 * name[usual].period ^short = "此姓名的使用效期"
-* name[usual].period ^definition = "表明這個姓名對此病人有效的時間區間或期間"
+* name[usual].period ^definition = "表明這個姓名對此個案有效的時間區間或期間"
 * name[usual].period ^requirements = "允許多個姓名按其歷史情境（效期）儲存"
 * name[temp] ^definition = "個人名字"
-* name[temp] ^requirements = "需要能夠追踪病人的多個姓名。"
-* name[temp] ^comment = "一位病人可能有多個姓名，有不同的用途或適用期。對於動物來說，這個姓名是一個「HumanName」，它是人類指定和使用的，具有相同的模式。"
+* name[temp] ^requirements = "需要能夠追踪個案的多個姓名。"
+* name[temp] ^comment = "個案可有多個姓名，各自具有不同用途或適用期間。"
 * name[temp].use ^binding.description = "人名的使用情況；應填入所綁定值集中的其中一個代碼。"
 * name[temp].use ^definition = "此姓名的用途"
 * name[temp].use ^requirements = "允許從一組姓名中為特定的使用情境選擇適當的姓名"
@@ -592,11 +592,11 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * name[temp].text ^requirements = "一個可呈現的、未編碼的形式。"
 * name[temp].text ^comment = "可以同時提供文字表述（text）和部分（part）。更新姓名的應用程式 **必須（SHALL）** 確保當test和lpart都存在時，text中不包含part中沒有的內容。"
 * name[temp].period ^short = "此姓名的使用效期"
-* name[temp].period ^definition = "表明這個姓名對此病人有效的時間區間或期間"
+* name[temp].period ^definition = "表明這個姓名對此個案有效的時間區間或期間"
 * name[temp].period ^requirements = "允許多個姓名按其歷史情境（效期）儲存"
 * name[anonymous] ^definition = "個人名字"
-* name[anonymous] ^requirements = "需要能夠追踪病人的多個姓名。"
-* name[anonymous] ^comment = "一位病人可能有多個姓名，有不同的用途或適用期。對於動物來說，這個姓名是一個「HumanName」，它是人類指定和使用的，具有相同的模式。"
+* name[anonymous] ^requirements = "需要能夠追踪個案的多個姓名。"
+* name[anonymous] ^comment = "個案可有多個姓名，各自具有不同用途或適用期間。"
 * name[anonymous].use ^binding.description = "人名的使用情況；應填入所綁定值集中的其中一個代碼。"
 * name[anonymous].use ^definition = "此姓名的用途"
 * name[anonymous].use ^requirements = "允許從一組姓名中為特定的使用情境選擇適當的姓名"
@@ -606,12 +606,12 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * name[anonymous].text ^requirements = "一個可呈現的、未編碼的形式。"
 * name[anonymous].text ^comment = "可以同時提供文字表述（text）和部分（part）。更新姓名的應用程式 **必須（SHALL）** 確保當test和lpart都存在時，text中不包含part中沒有的內容。"
 * name[anonymous].period ^short = "此姓名的使用效期"
-* name[anonymous].period ^definition = "表明這個姓名對此病人有效的時間區間或期間"
+* name[anonymous].period ^definition = "表明這個姓名對此個案有效的時間區間或期間"
 * name[anonymous].period ^requirements = "允許多個姓名按其歷史情境（效期）儲存"
-* telecom ^short = "聯絡方式；病人的聯絡資訊（例如：電話、電子郵件等）"
+* telecom ^short = "聯絡方式；個案的聯絡資訊（例如：電話、電子郵件等）"
 * telecom ^definition = "可與此人聯絡的詳細聯絡方式（如電話或電子郵件地址等）"
 * telecom ^requirements = "人們有（主要）方式與他們聯絡，如電話、電子郵件。"
-* telecom ^comment = "一位病人可能有多種聯絡方式，有不同的用途或適用期。可能需要有緊急聯絡此人的選項，也需要幫忙識別身份。地址可能不會直接聯絡到此人，但可能到透過他人代為聯絡（意即家中的電話）。"
+* telecom ^comment = "一位個案可能有多種聯絡方式，有不同的用途或適用期。可能需要有緊急聯絡此人的選項，也需要幫忙識別身份。地址可能不會直接聯絡到此人，但可能到透過他人代為聯絡（意即家中的電話）。"
 * telecom.system ^binding.description = "應填入所綁定值集中的其中一個代碼。"
 * telecom.system ^definition = "聯絡方式的通訊形式－需要什麼通訊系統進行聯絡"
 * telecom.value ^short = "實際的聯絡方式之細節"
@@ -629,34 +629,34 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * telecom.period ^short = "此聯絡方式的使用效期"
 * telecom.period ^definition = "此聯絡方式的使用效期"
 * gender ^short = "性別；male ｜ female ｜ other ｜ unknown"
-* gender ^binding.description = "病人性別；應填入所綁定值集中的其中一個代碼。"
-* gender ^definition = "Administrative Gender 為行政管理及保存紀錄目的之病人性別"
+* gender ^binding.description = "個案性別；應填入所綁定值集中的其中一個代碼。"
+* gender ^definition = "Administrative Gender 為行政管理及保存紀錄目的之個案性別"
 * gender ^requirements = "性別用於結合（至少）姓名和出生日期以識別個人身份"
-* gender ^comment = "行政管理用之性別可能不符合由遺傳學或個人偏好的識別所決定的生物性別。請注意，對於人類，特別是動物，除了男性和女性，還有其他合法歸類的可能性，儘管絕大多數系統和情境只支持男性和女性。提供決策支援或執行業務規則的系統最好以檢驗檢查（Observation）呈現特定性別或感興趣的性別（解剖學、染色體、社會等）。然而，由於這些檢驗檢驗不常被記錄，預設為行政管理用之性別是常見的做法。在這種預設的情況下，規則的執行應該允許行政管理用和生物、染色體和其他性別方面的差異。例如：關於男性子宮切除的警訊應該作為警告或可推翻的錯誤來處理，而不是 「硬（hard） 」錯誤。關於溝通病人性別的更多資訊，請參閱Patient Gender及Sex的部分。"
-* birthDate ^short = "出生日期；病人出生日期"
+* gender ^comment = "行政性別用於個案行政管理及身分比對，可能與生理、法律或社會性別概念不同。"
+* birthDate ^short = "出生日期；個案出生日期"
 * birthDate ^definition = "個人的出生日期"
-* birthDate ^requirements = "個人的年齡驅動著許多臨床過程／進程"
-* birthDate ^comment = "如果真實的出生日期未知，至少應該提供一個估計的出生年份作為猜測。有一個標準的擴充 「patient-birthTime」，應該於需要出生時間（Time）資訊時使用（例如：在產科／新生兒照護系統中）。"
-* address ^short = "地址；病人聯絡地址
+* birthDate ^requirements = "出生日期可用於個案身分比對及年齡相關服務規則。"
+* birthDate ^comment = "若出生日期未知，可依來源資料提供可確認的日期或年份；若需記錄出生時間，使用標準 patient-birthTime extension。"
+* address ^short = "地址；個案聯絡地址
 pat-cnt-2or3-char：如果有國家名，則必須（SHALL）從[ISO Country Alpha-2](http://hl7.org/fhir/valueset/iso3166-1-2)找出相對代碼作呈現。 如果未在ISO Country Alpha-2 中找到此一國家的代碼，則可能可以（MAY）從[ISO Country Alpha-3](http://hl7.org/fhir/valueset/iso3166-1-3)找出相對代碼作呈現。"
 * address ^definition = "此人的地址"
-* address ^requirements = "可能需要記錄病人的地址，以便聯繫、結算或報告的要求，也有助於識別身份。"
-* address ^comment = "病人可能有多個地址，有不同的用途或適用期。"
-* maritalStatus ^short = "病人的婚姻狀態"
+* address ^requirements = "可能需要記錄個案的地址，以便聯繫、結算或報告的要求，也有助於識別身份。"
+* address ^comment = "個案可能有多個地址，有不同的用途或適用期。"
+* maritalStatus ^short = "個案的婚姻狀態"
 * maritalStatus from TWSSMaritalStatusVS (extensible)
-* maritalStatus ^binding.description = "病人的婚姻狀態；優先使用 FHIR 原生婚姻狀態代碼，原生代碼無法完整表達時使用 TWSS 補充代碼。"
-* maritalStatus ^definition = "這個欄位包含病人的目前婚姻（民事）狀態"
+* maritalStatus ^binding.description = "個案的婚姻狀態；優先使用 FHIR 原生婚姻狀態代碼，原生代碼無法完整表達時使用 TWSS 補充代碼。"
+* maritalStatus ^definition = "這個欄位包含個案的目前婚姻（民事）狀態"
 * maritalStatus ^requirements = "如果不是所有的系統都能取得此資訊"
-* photo ^short = "病人的影像（照片）"
-* photo ^definition = "病人的影像（照片）"
-* photo ^requirements = "許多EHR系統有能力取得病人的影像，這也符合較新的社群媒體的使用。"
+* photo ^short = "個案的影像（照片）"
+* photo ^definition = "個案的影像（照片）"
+* photo ^requirements = "個案影像如有交換需求，應依資料治理、授權與隱私規範使用。"
 * photo ^comment = "指引：
 使用個人影像，而不是臨床影像。
 限制尺寸為縮圖。
 保持低位元組小檔案以便更新resource。"
-* contact ^short = "病人的聯絡人，例如：監護人、伴侶、朋友等。"
-* contact ^definition = "病人的聯絡人（如監護人、伴侶、朋友）。"
-* contact ^requirements = "需能聯絡到的病人的人。"
+* contact ^short = "個案的聯絡人，例如：監護人、伴侶、朋友等。"
+* contact ^definition = "個案的聯絡人（如監護人、伴侶、朋友）。"
+* contact ^requirements = "需能聯絡到的個案的人。"
 * contact ^comment = "聯絡涵蓋所有種類的聯絡人：家人、業務聯絡、監護人、照顧者。不適用於登記血統和家庭關係，因這超出聯絡的目的。"
 * contact.relationship ^short = "概念（Concept）－參照一個專門術語或只是文字表述"
 * contact.relationship ^binding.description = "應填入所綁定值集中的其中一個代碼。"
@@ -686,7 +686,7 @@ pat-cnt-2or3-char：如果有國家名，則必須（SHALL）從[ISO Country Alp
 由於學術，法律，職業或貴族身份等原因而獲得頭銜，出現在姓名之後。"
 * contact.name.suffix ^definition = "由於學術、法規、就業或貴族身份等原因而獲得的名，並出現在姓名的開頭。"
 * contact.name.period ^short = "此姓名的使用效期"
-* contact.name.period ^definition = "表明這個姓名對此病人有效的時間區間或期間"
+* contact.name.period ^definition = "表明這個姓名對此個案有效的時間區間或期間"
 * contact.name.period ^requirements = "允許多個姓名按其歷史情境（效期）儲存"
 * contact.telecom ^short = "聯絡人的詳細聯絡資訊"
 * contact.telecom ^definition = "此人的詳細聯絡方式，例如：電話號碼或電子郵件地址。"
@@ -719,33 +719,33 @@ pat-cnt-2or3-char：如果有國家名，則必須（SHALL）從[ISO Country Alp
 * contact.organization ^definition = "聯絡人為機構或聯絡人為其工作的機構"
 * contact.organization ^requirements = "監護人或與業務相關聯絡與此機構有關"
 * contact.period ^short = "聯絡人或其可聯絡機構之可聯絡期（時間區間）"
-* contact.period ^definition = "與此病人有關的聯絡人或機構的有效聯絡期"
-* communication ^short = "向病人說明健康狀態時所使用的語言"
-* communication ^definition = "可用於與病人溝通其健康狀況的語言。"
-* communication ^requirements = "如果病人不會說當地語言，可能需要翻譯，因此，對於病人和其他相關人士來說，所講的語言和熟練程度都是需要記錄的重要內容。"
-* communication ^comment = "如果沒有指定語言，這意味著預設使用當地語言。如果你需要多種模式的熟練程度，那麼你需要多個Patient.Communication關聯。對於動物來說，語言不是相關的欄位，應該不存在於實例中。如果病人不講預設的當地語言，那麼可以使用 「（Interpreter Required Standard）需要口譯員」來明確聲明需要口譯員。"
-* communication.language ^short = "原住民語言；向病人說明健康狀況時所使用的語言"
+* contact.period ^definition = "與此個案有關的聯絡人或機構的有效聯絡期"
+* communication ^short = "與個案溝通時所使用的語言"
+* communication ^definition = "可用於與個案溝通的語言。"
+* communication ^requirements = "記錄個案可溝通的語言，有助於提供適切服務與轉介。"
+* communication ^comment = "個案可有多筆 communication；其中 preferred = true 表示主要語言。"
+* communication.language ^short = "與個案溝通時所使用的語言"
 * communication.language ^binding.description = "應填入所綁定值集中的其中一個代碼。"
 * communication.language ^definition = "小寫的ISO-639-1字母兩個代碼表示的語言，後面可以有連字符號，大寫的ISO-3166-1字母兩個代碼表示使用此語言的地區；例如「en 」代表英語，或者 「en-US 」代表美國英語，而 「en-EN 」代表英國英語。"
 * communication.language ^requirements = "在多語言國家的大多數系統都會想要溝通語言。並非所有的系統實際上都需要區域方言。"
 * communication.language ^comment = "帶有這種精確字母大小寫的aa-BB結構是最廣泛使用的地方性符號之一。但並不是所有的系統都對其進行編碼，而是將其作為純文字表述。因此，data type為CodeableConcept而不是code。"
-* communication.preferred ^short = "病人是否偏好使用此語言"
-* communication.preferred ^definition = "表示病人是否偏好此語言（相對於其他它已掌握到一定水平的語言）"
+* communication.preferred ^short = "個案是否偏好使用此語言"
+* communication.preferred ^definition = "表示個案是否偏好此語言（相對於其他它已掌握到一定水平的語言）"
 * communication.preferred ^requirements = "掌握多種語言達到一定水平的人可能更偏好一種或多種語言，也就是說，在用某一種語言溝通時感到更有信心，使其他語言成為一種備用語言。"
 * communication.preferred ^comment = "此語言專門用以溝通健康照護資訊"
-* generalPractitioner ^short = "照護此病人的機構、照護服務提供者、或健康照護服務提供者的角色"
-* generalPractitioner ^definition = "病人指定的照護服務提供者"
-* generalPractitioner ^comment = "這可能是基層健康照護提供者（在一般科醫生的情境下），也可能是在社區／失能環境中由病人提名的照護管理者，甚至是提供人力來履行照護提供者角色的機構。它不能用來記錄Care Teams，這些團隊應該在CareTeams resource中，可以連接到CarePlan或EpisodeOfCare。由於各種原因，病人可能會被記錄有多個一般科醫生，例如：一位學生在學校學期期間將他的家庭醫生與大學的醫生一起列出，或者一位至偏遠地區「飛進／飛出 」的工作者會有當地的醫師及其家庭醫生，以保持對醫療問題的瞭解。  
+* generalPractitioner ^short = "照護此個案的機構、照護服務提供者、或健康照護服務提供者的角色"
+* generalPractitioner ^definition = "個案指定的照護或服務提供者。"
+* generalPractitioner ^comment = "這可能是基層健康照護提供者（在一般科醫生的情境下），也可能是在社區／失能環境中由個案提名的照護管理者，甚至是提供人力來履行照護提供者角色的機構。它不能用來記錄Care Teams，這些團隊應該在CareTeams resource中，可以連接到CarePlan或EpisodeOfCare。由於各種原因，個案可能會被記錄有多個一般科醫生，例如：一位學生在學校學期期間將他的家庭醫生與大學的醫生一起列出，或者一位至偏遠地區「飛進／飛出 」的工作者會有當地的醫師及其家庭醫生，以保持對醫療問題的瞭解。  
 如果需要，各行政管轄區可決定將其規範為只有1位，或每種型別1位。"
 * managingOrganization ^short = "此紀錄的保管機構"
-* managingOrganization ^definition = "病人紀錄的保管機構"
-* managingOrganization ^requirements = "需要知道誰識別、管理和更新這位病人的紀錄"
-* managingOrganization ^comment = "僅有一個管理特定病人紀錄的機構。其他機構將擁有自己的「病人」紀錄，並可透過使用「Link」屬性將紀錄結合在一起（或可以包含關聯可信的「Person」resource）。"
-* link ^short = "連結至此病人的其他Patient Resource"
-* link ^definition = "連結到另一個涉及同一實際病人的Patient resource。"
+* managingOrganization ^definition = "個案紀錄的保管機構"
+* managingOrganization ^requirements = "需要知道誰識別、管理和更新這位個案的紀錄"
+* managingOrganization ^comment = "僅有一個管理特定個案紀錄的機構。其他機構將擁有自己的「個案」紀錄，並可透過使用「Link」屬性將紀錄結合在一起（或可以包含關聯可信的「Person」resource）。"
+* link ^short = "連結至此個案的其他Patient Resource"
+* link ^definition = "連結到另一個涉及同一實際個案的Patient resource。"
 * link ^requirements = "有多種使用案例：  
-由於難以一致地指明與人相關的文件而錯誤地重複製作病人紀錄，並在多個伺服器上發佈病人的資訊。"
-* link ^comment = "不存在連結的病人紀錄有相互連結的假設"
+由於難以一致地指明與人相關的文件而錯誤地重複製作個案紀錄，並在多個伺服器上發佈個案的資訊。"
+* link ^comment = "不存在連結的個案紀錄有相互連結的假設"
 * link.other ^short = "連結至其他Patient或RelatedPerson Resource"
 * link.other ^definition = "此連超所參照的另一個Patient resource"
 * link.other ^comment = "在這裡參照一個RelatedPerson，就不需要另外使用Person來將Patient及RelatedPerson作為同一個人關聯起來。"
