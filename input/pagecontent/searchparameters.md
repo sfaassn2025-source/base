@@ -366,6 +366,26 @@
 - `phonetic` (string)
 - `type` (token)
 
+##### OrganizationAffiliation
+
+詳細定義請參考 [FHIR R4 OrganizationAffiliation 原生查詢參數](https://hl7.org/fhir/R4/organizationaffiliation.html#search)。
+- `_content` (string)
+- `_filter` (special)
+- `_id` (token)
+- `_lastUpdated` (date)
+- `_profile` (uri)
+- `_query` (token)
+- `_security` (token)
+- `_source` (uri)
+- `_tag` (token)
+- `_text` (string)
+- `active` (token)
+- `identifier` (token)
+- `network` (reference)
+- `participating-organization` (reference)
+- `primary-organization` (reference)
+- `role` (token)
+
 ##### Patient
 
 詳細定義請參考 [FHIR R4 Patient 原生查詢參數](https://hl7.org/fhir/R4/patient.html#search)。

@@ -127,17 +127,24 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 
 * extension contains
     http://hl7.org/fhir/StructureDefinition/patient-nationality named nationality 0..1 MS and
-    TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
+    TWSSEthnicGroupExtension named ethnicGroup 0..* MS and
     TWSSPatientAborigineTribe named AborigineTribe 0..1 MS and
     http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..1 MS and
-    PersonAge named age 0..1 MS
+    TWSSPatientAge named age 0..1 MS
 * extension[nationality] ^short = "國籍；個案所屬國籍"
-* extension[nationality].extension[code].valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-2 (extensible)
+* extension[nationality].extension[code].valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* extension[nationality].extension[code].valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* extension[nationality].extension[code].valueCodeableConcept.coding ^slicing.rules = #open
+* extension[nationality].extension[code].valueCodeableConcept.coding contains iso3166Alpha2 0..1 MS and iso3166Alpha3 0..1 MS
+* extension[nationality].extension[code].valueCodeableConcept.coding[iso3166Alpha2].system = "urn:iso:std:iso:3166"
+* extension[nationality].extension[code].valueCodeableConcept.coding[iso3166Alpha2].code from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* extension[nationality].extension[code].valueCodeableConcept.coding[iso3166Alpha3].system = "urn:iso:std:iso:3166"
+* extension[nationality].extension[code].valueCodeableConcept.coding[iso3166Alpha3].code from http://hl7.org/fhir/ValueSet/iso3166-1-3 (required)
 * extension[ethnicGroup] ^short = "族群身分"
 * extension[AborigineTribe] ^short = "原住民族別。"
 * extension[religion] ^short = "宗教信仰。"
 * extension[religion].valueCodeableConcept from TWSSReligionVS (required)
-* extension[age] ^short = "個案年齡。"
+* extension[age] ^short = "個案年齡及年齡記錄日期；填寫年齡時必須同時填寫記錄日期。"
 
 * communication MS
 * communication.language MS
@@ -153,6 +160,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * communication[primaryLanguage].language ^short = "主要語言。"
 * communication[aborigineLanguage].preferred = false
 * communication[aborigineLanguage].language 1..1 MS
+* communication[aborigineLanguage].language from TWSSAborigineLanguageVS (required)
 * communication[aborigineLanguage].language ^short = "原住民語言。"
 
 * active MS

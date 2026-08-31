@@ -30,14 +30,15 @@ Usage: #example
 * address[0].extension[number].valueString = "488號"
 * address[0].postalCode = "11558"
 * extension[nationality].valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
-* extension[nationality].valueCodeableConcept.coding[0].code = #TW
+* extension[nationality].valueCodeableConcept.coding[0].code = #TWN
 * extension[ethnicGroup].valueCodeableConcept.coding[0].system = "https://sfaa.gov.tw/base/CodeSystem/twss-ethnic-group"
 * extension[ethnicGroup].valueCodeableConcept.coding[0].code = #A
 * extension[ethnicGroup].valueCodeableConcept.coding[0].display = "一般"
-* extension[age].valueAge.value = 51
-* extension[age].valueAge.unit = "歲"
-* extension[age].valueAge.system = "http://unitsofmeasure.org"
-* extension[age].valueAge.code = #a
+* extension[age].extension[age].valueAge.value = 51
+* extension[age].extension[age].valueAge.unit = "歲"
+* extension[age].extension[age].valueAge.system = "http://unitsofmeasure.org"
+* extension[age].extension[age].valueAge.code = #a
+* extension[age].extension[recordedDate].valueDate = "2026-08-31"
 * extension[maritalStatus].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M "Married"
 * extension[religion].valueCodeableConcept = TWSSReligion#H "民間信仰"
 * text.status = #generated
@@ -54,7 +55,8 @@ Usage: #example
   <p><b>姓名</b>：王媽媽</p>
   <p><b>性別</b>：女性</p>
   <p><b>出生日期</b>：1975-05-01</p>
-  <p><b>國籍[extension: <a href="StructureDefinition-twss-related-person-nationality.html">twss-related-person-nationality</a>]</b>：<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> （ <a href="https://terminology.hl7.org/CodeSystem-ISO3166Part1.html">ISO3166Part1</a>#TW）</span></p>
+  <p><b>年齡</b>：51 歲<br/><b>年齡記錄日期</b>：2026-08-31</p>
+  <p><b>國籍[extension: <a href="StructureDefinition-twss-related-person-nationality.html">twss-related-person-nationality</a>]</b>：<span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> （ <a href="https://terminology.hl7.org/CodeSystem-ISO3166Part1.html">ISO3166Part1</a>#TWN）</span></p>
   <p><b>宗教信仰[extension: <a href="StructureDefinition-twss-related-person-religion.html">twss-related-person-religion</a>]</b>：民間信仰 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="CodeSystem-twss-religion.html">TWSS 宗教信仰</a>#H）</span></p>
   <p><b>聯絡方式</b>：Phone <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a>#phone）</span><br/><b>聯絡電話</b>：0912345678</p>
   <p><b>聯絡地址</b>：11558臺北市南港區新光里忠孝東路六段488號</p>

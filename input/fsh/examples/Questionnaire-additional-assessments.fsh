@@ -12,7 +12,6 @@ Title: "個案基本與家庭資訊 Questionnaire"
 * item[caseBasicFamily].item[childrenCount].text = "子女數量"
 * item[caseBasicFamily].item[familyMonthlyIncome].text = "家庭月收入"
 * item[caseBasicFamily].item[specialEducationType].text = "特殊教育類型"
-* item[caseBasicFamily].item[isBornBeforeROC].text = "是否出生於民國年前"
 * item[caseBasicFamily].item[isBirthDateUnknown].text = "出生日期不明註記"
 
 Instance: practitioner-employment-information

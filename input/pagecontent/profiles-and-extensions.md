@@ -44,6 +44,9 @@
 - [機構資料-Organization TWSS Base](StructureDefinition-Organization-twss-base.html)
 - [轉介機構-Organization TWSS Base](StructureDefinition-ReferralOrganization-twss-base.html)
 
+#### OrganizationAffiliation
+- [機構關係-OrganizationAffiliation TWSS Base](StructureDefinition-OrganizationAffiliation-twss-base.html)
+
 #### Patient
 - [個案資料-Patient TWSS Base](StructureDefinition-Patient-twss-base.html)
 
@@ -124,6 +127,7 @@
 - [補助撥款狀況](StructureDefinition-twss-claim-payment-status.html)
 - [補助月分](StructureDefinition-twss-claim-subsidy-month.html)
 - [補助年度](StructureDefinition-twss-coverage-aid-year.html)
+- [個案年齡](StructureDefinition-twss-patient-age.html)
 - [關係人年齡](StructureDefinition-twss-related-person-age.html)
 - [關係人國籍](StructureDefinition-twss-related-person-nationality.html)
 - [關係人婚姻狀態](StructureDefinition-twss-related-person-marital-status.html)

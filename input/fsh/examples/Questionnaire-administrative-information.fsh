@@ -54,10 +54,10 @@ Description: "記錄機構查核、評鑑、裁罰與營運填報資訊的表單
 * item[organizationOperationsInformation].item[organizationUsableArea].item[totalArea].text = "總面積"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[indoorArea].text = "室內面積"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].text = "室外面積"
-* item[organizationOperationsInformation].item[statutoryStaffing].text = "法定設置標準"
+* item[organizationOperationsInformation].item[statutoryStaffing].text = "法定工作人員配置"
 * item[organizationOperationsInformation].item[statutoryStaffing].repeats = true
 * item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].text = "人員類別"
-* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].text = "法定設置標準人數"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].text = "法定工作人員配置數"
 
 Instance: case-service-administrative-information
 InstanceOf: QuestionnaireCaseServiceAdministrativeTWSSBase

@@ -19,7 +19,7 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 * item[caseBasicFamily].item ^slicing.discriminator.type = #value
 * item[caseBasicFamily].item ^slicing.discriminator.path = "linkId"
 * item[caseBasicFamily].item ^slicing.rules = #closed
-* item[caseBasicFamily].item contains familyStructure 0..1 MS and childrenStatus 0..1 MS and childrenCount 0..1 MS and familyMonthlyIncome 0..1 MS and specialEducationType 0..1 MS and isBornBeforeROC 0..1 MS and isBirthDateUnknown 0..1 MS
+* item[caseBasicFamily].item contains familyStructure 0..1 MS and childrenStatus 0..1 MS and childrenCount 0..1 MS and familyMonthlyIncome 0..1 MS and specialEducationType 0..1 MS and isBirthDateUnknown 0..1 MS
 * item[caseBasicFamily].item[familyStructure].linkId = "12.1"
 * item[caseBasicFamily].item[familyStructure].text = "家庭結構"
 * item[caseBasicFamily].item[familyStructure].type = #choice
@@ -38,10 +38,7 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 * item[caseBasicFamily].item[specialEducationType].text = "特殊教育類型"
 * item[caseBasicFamily].item[specialEducationType].type = #choice
 * item[caseBasicFamily].item[specialEducationType].answerValueSet = Canonical(twss-special-education-type-vs)
-* item[caseBasicFamily].item[isBornBeforeROC].linkId = "12.6"
-* item[caseBasicFamily].item[isBornBeforeROC].text = "是否出生於民國年前"
-* item[caseBasicFamily].item[isBornBeforeROC].type = #boolean
-* item[caseBasicFamily].item[isBirthDateUnknown].linkId = "12.7"
+* item[caseBasicFamily].item[isBirthDateUnknown].linkId = "12.6"
 * item[caseBasicFamily].item[isBirthDateUnknown].text = "出生日期不明註記"
 * item[caseBasicFamily].item[isBirthDateUnknown].type = #boolean
 

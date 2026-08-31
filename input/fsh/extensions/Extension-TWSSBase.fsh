@@ -6,7 +6,14 @@ Context: RelatedPerson
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW
 * valueCodeableConcept MS
-* valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-2 (extensible)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding contains iso3166Alpha2 0..1 MS and iso3166Alpha3 0..1 MS
+* valueCodeableConcept.coding[iso3166Alpha2].system = "urn:iso:std:iso:3166"
+* valueCodeableConcept.coding[iso3166Alpha2].code from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* valueCodeableConcept.coding[iso3166Alpha3].system = "urn:iso:std:iso:3166"
+* valueCodeableConcept.coding[iso3166Alpha3].code from http://hl7.org/fhir/ValueSet/iso3166-1-3 (required)
 
 Extension: TWSSEthnicGroupExtension
 Id: twss-ethnic-group
@@ -28,14 +35,38 @@ Context: RelatedPerson
 * valueCodeableConcept MS
 * valueCodeableConcept from TWSSMaritalStatusVS (extensible)
 
+Invariant: twss-age-requires-recorded-date
+Description: "填寫年齡時，必須同時填寫年齡記錄日期。"
+Expression: "extension.where(url = 'age').exists() implies extension.where(url = 'recordedDate').exists()"
+Severity: #error
+
 Extension: TWSSRelatedPersonAge
 Id: twss-related-person-age
 Title: "關係人年齡"
-Description: "記錄關係人的年齡。"
+Description: "記錄關係人年齡及其判定日期。"
 Context: RelatedPerson
 * ^version = "0.0.1"
-* value[x] only Age
-* valueAge MS
+* obeys twss-age-requires-recorded-date
+* extension contains age 0..1 MS and recordedDate 0..1 MS
+* extension[age].value[x] only Age
+* extension[age].value[x] 1..1
+* extension[recordedDate].value[x] only date
+* extension[recordedDate].value[x] 1..1
+* value[x] 0..0
+
+Extension: TWSSPatientAge
+Id: twss-patient-age
+Title: "個案年齡"
+Description: "記錄個案年齡及其判定日期。"
+Context: Patient
+* ^version = "0.0.1"
+* obeys twss-age-requires-recorded-date
+* extension contains age 0..1 MS and recordedDate 0..1 MS
+* extension[age].value[x] only Age
+* extension[age].value[x] 1..1
+* extension[recordedDate].value[x] only date
+* extension[recordedDate].value[x] 1..1
+* value[x] 0..0
 
 Extension: TWSSPractitionerNationality
 Id: twss-practitioner-nationality
@@ -45,7 +76,14 @@ Context: Practitioner
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW
 * valueCodeableConcept MS
-* valueCodeableConcept from http://hl7.org/fhir/ValueSet/iso3166-1-2 (extensible)
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "code"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding contains iso3166Alpha2 0..1 MS and iso3166Alpha3 0..1 MS
+* valueCodeableConcept.coding[iso3166Alpha2].system = "urn:iso:std:iso:3166"
+* valueCodeableConcept.coding[iso3166Alpha2].code from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* valueCodeableConcept.coding[iso3166Alpha3].system = "urn:iso:std:iso:3166"
+* valueCodeableConcept.coding[iso3166Alpha3].code from http://hl7.org/fhir/ValueSet/iso3166-1-3 (required)
 
 Extension: TWSSPractitionerAborigineTribe
 Id: twss-practitioner-aborigine-tribe

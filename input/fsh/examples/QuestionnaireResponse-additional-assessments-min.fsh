@@ -23,8 +23,6 @@ Title: "個案基本與家庭資訊回覆範例"
 * item[0].item[4].answer[0].valueCoding = TWSSSpecialEducationType#0 "無"
 * item[0].item[5].linkId = "12.6"
 * item[0].item[5].answer[0].valueBoolean = false
-* item[0].item[6].linkId = "12.7"
-* item[0].item[6].answer[0].valueBoolean = false
 
 Instance: practitioner-employment-response-min
 InstanceOf: QuestionnaireResponseTWSSBase

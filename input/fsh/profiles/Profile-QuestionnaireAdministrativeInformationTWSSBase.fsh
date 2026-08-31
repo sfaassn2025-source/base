@@ -151,7 +151,7 @@ Description: "定義機構查核、評鑑、裁罰與營運填報資訊表單。
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].text = "室外面積"
 * item[organizationOperationsInformation].item[organizationUsableArea].item[outdoorArea].type = #quantity
 * item[organizationOperationsInformation].item[statutoryStaffing].linkId = "28.3"
-* item[organizationOperationsInformation].item[statutoryStaffing].text = "法定設置標準"
+* item[organizationOperationsInformation].item[statutoryStaffing].text = "法定工作人員配置"
 * item[organizationOperationsInformation].item[statutoryStaffing].type = #group
 * item[organizationOperationsInformation].item[statutoryStaffing].repeats = true
 * item[organizationOperationsInformation].item[statutoryStaffing].item ^slicing.discriminator.type = #value
@@ -163,7 +163,7 @@ Description: "定義機構查核、評鑑、裁罰與營運填報資訊表單。
 * item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].type = #string
 * item[organizationOperationsInformation].item[statutoryStaffing].item[staffCategory].required = true
 * item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].linkId = "28.3.2"
-* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].text = "法定設置標準人數"
+* item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].text = "法定工作人員配置數"
 * item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].type = #integer
 * item[organizationOperationsInformation].item[statutoryStaffing].item[statutoryStaffingCount].required = true
 

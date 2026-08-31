@@ -65,3 +65,7 @@ The slice definition for Patient.identifier has a maximum of 2 but the slices ad
 
 # 原生 Observation.code 為重複 Coding；本 Profile 固定職業觀察碼，Publisher 對 repeating pattern 的靜態提示不影響實例驗證。
 % StructureDefinition.snapshot.element[13].pattern.ofType(CodeableConcept): The repeating element has a pattern%
+
+# 個案原住民語言及宗教信仰依 TWSS 值集填寫；原生擴充套件的 extensible binding 僅提出建議，不影響 TWSS 資料交換。
+% Patient.communication[1].language: None of the codings provided are in the value set 'Common Languages'%
+% Patient.extension[4].value.ofType(CodeableConcept): None of the codings provided are in the value set 'ReligiousAffiliation'%

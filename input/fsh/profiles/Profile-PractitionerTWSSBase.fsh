@@ -25,7 +25,7 @@ Description:    "人員資料-Practitioner TWSS Base Profile 表達社家署業�
 
 * extension contains
     TWSSPractitionerNationality named nationality 0..1 MS and
-    TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
+    TWSSEthnicGroupExtension named ethnicGroup 0..* MS and
     TWSSPractitionerAborigineTribe named AborigineTribe 0..1 MS
 * extension[nationality] ^short = "服務人國籍。"
 * extension[ethnicGroup] ^short = "服務人族群身分。"

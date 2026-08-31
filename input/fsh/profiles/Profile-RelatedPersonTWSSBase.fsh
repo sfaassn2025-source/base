@@ -29,7 +29,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 
 * extension contains
     TWSSRelatedPersonNationality named nationality 0..1 MS and
-    TWSSEthnicGroupExtension named ethnicGroup 0..1 MS and
+    TWSSEthnicGroupExtension named ethnicGroup 0..* MS and
     TWSSRelatedPersonMaritalStatus named maritalStatus 0..1 MS and
     TWSSRelatedPersonReligion named religion 0..1 MS and
     TWSSRelatedPersonAge named age 0..1 MS
@@ -37,7 +37,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 * extension[ethnicGroup] ^short = "關係人族群身分。"
 * extension[maritalStatus] ^short = "關係人婚姻狀態。"
 * extension[religion] ^short = "關係人宗教信仰。"
-* extension[age] ^short = "關係人年齡。"
+* extension[age] ^short = "關係人年齡及年齡記錄日期；填寫年齡時必須同時填寫記錄日期。"
 
 * active MS
 * patient only Reference(PatientTWSSBase)

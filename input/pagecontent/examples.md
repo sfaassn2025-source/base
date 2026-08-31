@@ -55,6 +55,9 @@
 - [轉介單位範例](Organization-referral-unit-min.html)
 - [受轉介單位範例](Organization-referred-unit-min.html)
 
+#### OrganizationAffiliation
+- [機構關係範例](OrganizationAffiliation-organization-affiliation-min.html)
+
 #### Patient
 - [個案資料範例](Patient-pat-min.html)
 
