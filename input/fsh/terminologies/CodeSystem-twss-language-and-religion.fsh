@@ -52,36 +52,36 @@ Description: "TWSS 個案可使用的原住民語言；採用 ISO 639-3 對應�
 * urn:ietf:bcp:47#szy "Sakizaya"
 * urn:ietf:bcp:47#sxr "Saaroa"
 * urn:ietf:bcp:47#xnb "Kanakanabu"
-* ^compose.include[0].concept[0].designation[0].language = #zh-tw
-* ^compose.include[0].concept[0].designation[0].value = "阿美語"
-* ^compose.include[0].concept[1].designation[0].language = #zh-tw
-* ^compose.include[0].concept[1].designation[0].value = "泰雅語"
-* ^compose.include[0].concept[2].designation[0].language = #zh-tw
-* ^compose.include[0].concept[2].designation[0].value = "排灣語"
-* ^compose.include[0].concept[3].designation[0].language = #zh-tw
-* ^compose.include[0].concept[3].designation[0].value = "布農語"
-* ^compose.include[0].concept[4].designation[0].language = #zh-tw
-* ^compose.include[0].concept[4].designation[0].value = "卑南語"
-* ^compose.include[0].concept[5].designation[0].language = #zh-tw
-* ^compose.include[0].concept[5].designation[0].value = "魯凱語"
-* ^compose.include[0].concept[6].designation[0].language = #zh-tw
-* ^compose.include[0].concept[6].designation[0].value = "鄒語"
-* ^compose.include[0].concept[7].designation[0].language = #zh-tw
-* ^compose.include[0].concept[7].designation[0].value = "賽夏語"
-* ^compose.include[0].concept[8].designation[0].language = #zh-tw
-* ^compose.include[0].concept[8].designation[0].value = "雅美語／達悟語"
-* ^compose.include[0].concept[9].designation[0].language = #zh-tw
-* ^compose.include[0].concept[9].designation[0].value = "邵語"
-* ^compose.include[0].concept[10].designation[0].language = #zh-tw
-* ^compose.include[0].concept[10].designation[0].value = "噶瑪蘭語"
-* ^compose.include[0].concept[11].designation[0].language = #zh-tw
-* ^compose.include[0].concept[11].designation[0].value = "太魯閣語／賽德克語"
-* ^compose.include[0].concept[12].designation[0].language = #zh-tw
-* ^compose.include[0].concept[12].designation[0].value = "撒奇萊雅語"
-* ^compose.include[0].concept[13].designation[0].language = #zh-tw
-* ^compose.include[0].concept[13].designation[0].value = "拉阿魯哇語"
-* ^compose.include[0].concept[14].designation[0].language = #zh-tw
-* ^compose.include[0].concept[14].designation[0].value = "卡那卡那富語"
+* urn:ietf:bcp:47#ami ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#ami ^designation[0].value = "阿美語"
+* urn:ietf:bcp:47#tay ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#tay ^designation[0].value = "泰雅語"
+* urn:ietf:bcp:47#pwn ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#pwn ^designation[0].value = "排灣語"
+* urn:ietf:bcp:47#bnn ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#bnn ^designation[0].value = "布農語"
+* urn:ietf:bcp:47#pyu ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#pyu ^designation[0].value = "卑南語"
+* urn:ietf:bcp:47#dru ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#dru ^designation[0].value = "魯凱語"
+* urn:ietf:bcp:47#tsu ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#tsu ^designation[0].value = "鄒語"
+* urn:ietf:bcp:47#xsy ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#xsy ^designation[0].value = "賽夏語"
+* urn:ietf:bcp:47#tao ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#tao ^designation[0].value = "雅美語／達悟語"
+* urn:ietf:bcp:47#ssf ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#ssf ^designation[0].value = "邵語"
+* urn:ietf:bcp:47#ckv ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#ckv ^designation[0].value = "噶瑪蘭語"
+* urn:ietf:bcp:47#trv ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#trv ^designation[0].value = "太魯閣語／賽德克語"
+* urn:ietf:bcp:47#szy ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#szy ^designation[0].value = "撒奇萊雅語"
+* urn:ietf:bcp:47#sxr ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#sxr ^designation[0].value = "拉阿魯哇語"
+* urn:ietf:bcp:47#xnb ^designation[0].language = #"zh-TW"
+* urn:ietf:bcp:47#xnb ^designation[0].value = "卡那卡那富語"
 
 CodeSystem: TWSSReligion
 Id: twss-religion
