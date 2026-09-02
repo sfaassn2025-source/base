@@ -38,7 +38,7 @@ Description: "定義個案、關係人及服務人共用的教育資訊表單。
 * item[educationInformation].item[graduated].type = #boolean
 * item[educationInformation].item[graduationYear].linkId = "21.7"
 * item[educationInformation].item[graduationYear].text = "服務人畢業年度"
-* item[educationInformation].item[graduationYear].type = #decimal
+* item[educationInformation].item[graduationYear].type = #integer
 * item[educationInformation].item[educationLevel].linkId = "21.8"
 * item[educationInformation].item[educationLevel].text = "教育程度"
 * item[educationInformation].item[educationLevel].type = #choice

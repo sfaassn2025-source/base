@@ -7,22 +7,22 @@ Description: "定義既有補助、保險與福利身分評估表單的題目結
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
-* item contains existingSubsidy 0..* MS and insuranceStatus 0..1 MS and welfareIdentityType 0..1 MS and monthlyRent 0..1 MS
-* item[existingSubsidy].linkId = "10.1"
-* item[existingSubsidy].text = "已取得補助"
-* item[existingSubsidy].type = #group
-* item[existingSubsidy].repeats = true
-* item[existingSubsidy].item ^slicing.discriminator.type = #value
-* item[existingSubsidy].item ^slicing.discriminator.path = "linkId"
-* item[existingSubsidy].item ^slicing.rules = #closed
-* item[existingSubsidy].item contains receivedSubsidyType 1..1 MS and receivedSubsidyAmount 0..1 MS
-* item[existingSubsidy].item[receivedSubsidyType].linkId = "10.1.1"
-* item[existingSubsidy].item[receivedSubsidyType].text = "已取得補助類型"
-* item[existingSubsidy].item[receivedSubsidyType].type = #choice
-* item[existingSubsidy].item[receivedSubsidyType].answerValueSet = Canonical(twss-received-subsidy-type-vs)
-* item[existingSubsidy].item[receivedSubsidyAmount].linkId = "10.1.2"
-* item[existingSubsidy].item[receivedSubsidyAmount].text = "已取得補助金額"
-* item[existingSubsidy].item[receivedSubsidyAmount].type = #decimal
+* item contains subsidyPayment 0..* MS and insuranceStatus 0..1 MS and welfareIdentityType 0..1 MS and monthlyRent 0..1 MS
+* item[subsidyPayment].linkId = "10.1"
+* item[subsidyPayment].text = "補助款項"
+* item[subsidyPayment].type = #group
+* item[subsidyPayment].repeats = true
+* item[subsidyPayment].item ^slicing.discriminator.type = #value
+* item[subsidyPayment].item ^slicing.discriminator.path = "linkId"
+* item[subsidyPayment].item ^slicing.rules = #closed
+* item[subsidyPayment].item contains receivedSubsidyType 0..1 MS and receivedSubsidyAmount 0..1 MS
+* item[subsidyPayment].item[receivedSubsidyType].linkId = "10.1.1"
+* item[subsidyPayment].item[receivedSubsidyType].text = "已取得補助類型"
+* item[subsidyPayment].item[receivedSubsidyType].type = #choice
+* item[subsidyPayment].item[receivedSubsidyType].answerValueSet = Canonical(twss-received-subsidy-type-vs)
+* item[subsidyPayment].item[receivedSubsidyAmount].linkId = "10.1.2"
+* item[subsidyPayment].item[receivedSubsidyAmount].text = "已取得補助金額"
+* item[subsidyPayment].item[receivedSubsidyAmount].type = #decimal
 * item[insuranceStatus].linkId = "10.2"
 * item[insuranceStatus].text = "保險狀況"
 * item[insuranceStatus].type = #choice

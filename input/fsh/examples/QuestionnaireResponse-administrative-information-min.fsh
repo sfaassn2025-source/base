@@ -53,7 +53,7 @@ Title: "服務人教育資訊回覆範例"
 * item[0].item[3].linkId = "21.6"
 * item[0].item[3].answer[0].valueBoolean = true
 * item[0].item[4].linkId = "21.7"
-* item[0].item[4].answer[0].valueDecimal = 2018
+* item[0].item[4].answer[0].valueInteger = 2018
 * item[0].item[5].linkId = "21.8"
 * item[0].item[5].answer[0].valueCoding = TWSSEducationLevel#6 "大學"
 * item[0].item[6].linkId = "21.9"

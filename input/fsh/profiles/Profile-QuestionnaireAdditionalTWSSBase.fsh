@@ -30,7 +30,7 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 * item[caseBasicFamily].item[childrenStatus].answerValueSet = Canonical(twss-children-status-vs)
 * item[caseBasicFamily].item[childrenCount].linkId = "12.3"
 * item[caseBasicFamily].item[childrenCount].text = "子女數量"
-* item[caseBasicFamily].item[childrenCount].type = #decimal
+* item[caseBasicFamily].item[childrenCount].type = #integer
 * item[caseBasicFamily].item[familyMonthlyIncome].linkId = "12.4"
 * item[caseBasicFamily].item[familyMonthlyIncome].text = "家庭月收入"
 * item[caseBasicFamily].item[familyMonthlyIncome].type = #decimal

@@ -157,9 +157,9 @@ Description: "記錄既有補助、保險與福利身分的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status"
 * status = #active
 * subjectType[0] = #Patient
-* item[existingSubsidy].text = "已取得補助"
-* item[existingSubsidy].item[receivedSubsidyType].text = "已取得補助類型"
-* item[existingSubsidy].item[receivedSubsidyAmount].text = "已取得補助金額"
+* item[subsidyPayment].text = "補助款項"
+* item[subsidyPayment].item[receivedSubsidyType].text = "已取得補助類型"
+* item[subsidyPayment].item[receivedSubsidyAmount].text = "已取得補助金額"
 * item[insuranceStatus].text = "保險狀況"
 * item[welfareIdentityType].text = "福利身分別"
 * item[monthlyRent].text = "每月租金"

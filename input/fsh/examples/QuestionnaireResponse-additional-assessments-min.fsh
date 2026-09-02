@@ -16,7 +16,7 @@ Title: "個案基本與家庭資訊回覆範例"
 * item[0].item[1].linkId = "12.2"
 * item[0].item[1].answer[0].valueCoding = TWSSChildrenStatus#1 "有子女"
 * item[0].item[2].linkId = "12.3"
-* item[0].item[2].answer[0].valueDecimal = 2
+* item[0].item[2].answer[0].valueInteger = 2
 * item[0].item[3].linkId = "12.4"
 * item[0].item[3].answer[0].valueDecimal = 65000
 * item[0].item[4].linkId = "12.5"
