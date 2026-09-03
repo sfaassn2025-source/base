@@ -158,8 +158,8 @@ Title: "補助年度"
 Description: "記錄補助資格或補助案件所屬年度。"
 Context: Coverage
 * ^version = "0.0.1"
-* value[x] only decimal
-* valueDecimal MS
+* value[x] only integer
+* valueInteger MS
 
 Extension: TWSSClaimReviewResult
 Id: twss-claim-review-result

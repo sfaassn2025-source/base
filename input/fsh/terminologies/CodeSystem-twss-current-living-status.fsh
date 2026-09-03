@@ -1,7 +1,7 @@
 CodeSystem: TWSSCurrentLivingStatus
 Id: twss-current-living-status
-Title: "TWSS-目前生活情形"
-Description: "TWSS 目前生活情形代碼。"
+Title: "TWSS-生活自理與居住狀態"
+Description: "TWSS 個案生活自理與居住狀態代碼。"
 * ^version = "0.1.0"
 * ^status = #active
 * ^experimental = false

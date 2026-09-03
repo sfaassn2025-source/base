@@ -12,7 +12,7 @@ Usage: #example
 * payor[0] = Reference(org-min)
 * period.start = "2026-01-01"
 * period.end = "2026-12-31"
-* extension[aidYear].valueDecimal = 115
+* extension[aidYear].valueInteger = 115
 * costToBeneficiary[0].type.text = "核定補助金額"
 * costToBeneficiary[0].valueMoney.value = 1000
 * costToBeneficiary[0].valueMoney.currency = #TWD

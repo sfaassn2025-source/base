@@ -24,16 +24,16 @@ Description: "TWSS 居住環境代碼之值集。"
 
 ValueSet: TWSSPrivateBedroomVS
 Id: twss-private-bedroom-vs
-Title: "TWSS-睡眠空間安排值集"
-Description: "TWSS 睡眠空間安排代碼之值集。"
+Title: "TWSS-獨立臥房狀態值集"
+Description: "TWSS 獨立臥房狀態代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
 * include codes from system TWSSPrivateBedroom
 
 ValueSet: TWSSCurrentLivingStatusVS
 Id: twss-current-living-status-vs
-Title: "TWSS-目前生活情形值集"
-Description: "TWSS 目前生活情形代碼之值集。"
+Title: "TWSS-生活自理與居住狀態值集"
+Description: "TWSS 生活自理與居住狀態代碼之值集。"
 * ^version = "0.1.0"
 * ^experimental = false
 * include codes from system TWSSCurrentLivingStatus

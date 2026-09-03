@@ -1,7 +1,7 @@
 CodeSystem: TWSSPrivateBedroom
 Id: twss-private-bedroom
-Title: "TWSS-睡眠空間安排"
-Description: "TWSS 居住環境中睡眠空間安排代碼。"
+Title: "TWSS-獨立臥房狀態"
+Description: "TWSS 個案使用獨立或共用臥房的狀態代碼。"
 * ^version = "0.1.0"
 * ^status = #active
 * ^experimental = false

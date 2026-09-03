@@ -54,7 +54,7 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
     icd10-cm-2014 0..1 MS and
     icd9-cm-2001 0..1 MS and
     health-status 0..1 MS and
-    health-status-option 0..* MS and
+    health-and-disease-status 0..* MS and
     disease-type 0..* MS and
     new-disability-type 0..* MS and
     old-disability-type 0..* MS and
@@ -66,7 +66,7 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * code.coding[icd10-cm-2014] from TW2014ICD10CM (required)
 * code.coding[icd9-cm-2001] from TW2001ICD9CM (required)
 * code.coding[health-status] from TWSSHealthStatusVS (required)
-* code.coding[health-status-option] from TWSSHealthStatusOptionVS (required)
+* code.coding[health-and-disease-status] from TWSSHealthStatusOptionVS (required)
 * code.coding[disease-type] from TWSSDiseaseTypeVS (required)
 * code.coding[new-disability-type] from TWSSDisabilityTypeNewCategoryVS (required)
 * code.coding[old-disability-type] from TWSSDisabilityTypeLegacyVS (required)
@@ -76,8 +76,8 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * code.coding[health-status] ^short = "身心健康狀況代碼。"
 * code.coding[health-status] ^definition = "以 TWSS Base 身心健康狀況代碼表示此 Condition 所描述的身心健康或障礙相關狀況。"
 * code.coding[health-status] ^binding.description = "應填入身心健康狀況值集中的其中一個代碼。"
-* code.coding[health-status-option] ^short = "健康狀況選項代碼。"
-* code.coding[health-status-option] ^definition = "以 TWSS Base 健康狀況選項代碼表示此 Condition 所描述的健康問題或狀況。"
+* code.coding[health-and-disease-status] ^short = "健康與疾病狀況代碼。"
+* code.coding[health-and-disease-status] ^definition = "以 TWSS Base 健康與疾病狀況代碼表示此 Condition 所描述的健康問題或狀況。"
 * code.coding[disease-type] ^short = "疾病類型代碼。"
 * code.coding[new-disability-type] ^short = "新制障礙類別代碼。"
 * code.coding[old-disability-type] ^short = "舊制障礙類別代碼。"

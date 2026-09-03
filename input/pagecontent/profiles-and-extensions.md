@@ -117,7 +117,7 @@
 
 - [是否為轉介案件](StructureDefinition-twss-is-referral-case.html)
 - [通報類型](StructureDefinition-twss-case-report-type.html)
-- [通報單位](StructureDefinition-twss-reporting-unit.html)
+- [通報單位及管道](StructureDefinition-twss-reporting-unit.html)
 - [個案來源](StructureDefinition-twss-case-source.html)
 - [族群身分](StructureDefinition-twss-ethnic-group.html)
 - [案件狀態](StructureDefinition-twss-case-status-extension.html)

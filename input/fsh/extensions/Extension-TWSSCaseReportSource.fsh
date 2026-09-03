@@ -1,7 +1,7 @@
 Extension: TWSSReportingUnitExtension
 Id: twss-reporting-unit
-Title: "通報單位"
-Description: "記錄個案通報的通報單位類別。"
+Title: "通報單位及管道"
+Description: "記錄個案通報的提出單位或管道類別。"
 Context: ServiceRequest
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW

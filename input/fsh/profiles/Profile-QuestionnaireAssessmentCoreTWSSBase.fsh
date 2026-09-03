@@ -110,7 +110,7 @@ Description: "定義健康與疾病狀況評估表單的題目結構。"
     hasCatastrophicIllnessCard 1..1 MS and
     catastrophicIllnessName 0..1 MS and
     healthStatusLevel 0..1 MS and
-    healthStatusOption 0..1 MS and
+    healthAndDiseaseStatus 0..1 MS and
     diseaseType 0..1 MS and
     icd 0..1 MS and
     medicationStatus 0..1 MS
@@ -127,11 +127,11 @@ Description: "定義健康與疾病狀況評估表單的題目結構。"
 * item[healthStatusLevel].text = "健康狀況分級"
 * item[healthStatusLevel].type = #choice
 * item[healthStatusLevel].answerValueSet = Canonical(twss-health-status-level-vs)
-* item[healthStatusOption].linkId = "6.4"
-* item[healthStatusOption].text = "健康狀況選項"
-* item[healthStatusOption].type = #choice
-* item[healthStatusOption].repeats = true
-* item[healthStatusOption].answerValueSet = Canonical(twss-health-status-option-vs)
+* item[healthAndDiseaseStatus].linkId = "6.4"
+* item[healthAndDiseaseStatus].text = "健康與疾病狀況"
+* item[healthAndDiseaseStatus].type = #choice
+* item[healthAndDiseaseStatus].repeats = true
+* item[healthAndDiseaseStatus].answerValueSet = Canonical(twss-health-status-option-vs)
 * item[diseaseType].linkId = "6.5"
 * item[diseaseType].text = "疾病類型"
 * item[diseaseType].type = #choice

@@ -1,7 +1,7 @@
 CodeSystem: TWSSHealthStatusOption
 Id: twss-health-status-option
-Title: "TWSS-健康狀況選項"
-Description: "社家署個案健康狀況選項代碼。"
+Title: "TWSS-健康與疾病狀況"
+Description: "社家署個案健康與疾病狀況代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

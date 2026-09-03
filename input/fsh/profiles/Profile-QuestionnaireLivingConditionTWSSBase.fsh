@@ -20,7 +20,7 @@ Description: "定義居住狀況評估表單的題目結構。"
     livingType 1..1 MS and
     housingType 1..1 MS and
     livingEnvironment 1..1 MS and
-    hasPrivateBedroom 1..1 MS and
+    privateBedroomStatus 1..1 MS and
     currentLivingStatus 1..1 MS and
     livingStatus 1..1 MS
 
@@ -36,12 +36,12 @@ Description: "定義居住狀況評估表單的題目結構。"
 * item[livingCondition].item[livingEnvironment].text = "居住環境"
 * item[livingCondition].item[livingEnvironment].type = #choice
 * item[livingCondition].item[livingEnvironment].answerValueSet = "https://sfaa.gov.tw/base/ValueSet/twss-living-environment-vs"
-* item[livingCondition].item[hasPrivateBedroom].linkId = "1.4"
-* item[livingCondition].item[hasPrivateBedroom].text = "是否有獨立臥房"
-* item[livingCondition].item[hasPrivateBedroom].type = #choice
-* item[livingCondition].item[hasPrivateBedroom].answerValueSet = "https://sfaa.gov.tw/base/ValueSet/twss-private-bedroom-vs"
+* item[livingCondition].item[privateBedroomStatus].linkId = "1.4"
+* item[livingCondition].item[privateBedroomStatus].text = "獨立臥房狀態"
+* item[livingCondition].item[privateBedroomStatus].type = #choice
+* item[livingCondition].item[privateBedroomStatus].answerValueSet = "https://sfaa.gov.tw/base/ValueSet/twss-private-bedroom-vs"
 * item[livingCondition].item[currentLivingStatus].linkId = "1.5"
-* item[livingCondition].item[currentLivingStatus].text = "目前生活情形"
+* item[livingCondition].item[currentLivingStatus].text = "生活自理與居住狀態"
 * item[livingCondition].item[currentLivingStatus].type = #choice
 * item[livingCondition].item[currentLivingStatus].answerValueSet = "https://sfaa.gov.tw/base/ValueSet/twss-current-living-status-vs"
 * item[livingCondition].item[livingStatus].linkId = "1.6"

@@ -146,22 +146,11 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * extension[religion].valueCodeableConcept from TWSSReligionVS (required)
 * extension[age] ^short = "個案年齡及年齡記錄日期；填寫年齡時必須同時填寫記錄日期。"
 
-* communication MS
-* communication.language MS
-* communication.language ^short = "原住民語言；個案可使用的語言。"
-
-* communication ^slicing.discriminator.type = #value
-* communication ^slicing.discriminator.path = "preferred"
-* communication ^slicing.rules = #open
-* communication contains primaryLanguage 0..1 MS and aborigineLanguage 0..1 MS
-* communication[primaryLanguage].preferred = true
-* communication[primaryLanguage].language 1..1 MS
-* communication[primaryLanguage].language from TWSSPrimaryLanguageVS (required)
-* communication[primaryLanguage].language ^short = "主要語言。"
-* communication[aborigineLanguage].preferred = false
-* communication[aborigineLanguage].language 1..1 MS
-* communication[aborigineLanguage].language from TWSSAborigineLanguageVS (required)
-* communication[aborigineLanguage].language ^short = "原住民語言。"
+* communication 0..1 MS
+* communication.language 1..1 MS
+* communication.language ^short = "主要語言；個案主要使用的語言。"
+* communication.preferred = true
+* communication.language from TWSSPrimaryLanguageVS (required)
 
 * active MS
 * active ^short = "個案的紀錄是否「使用中（true）」"

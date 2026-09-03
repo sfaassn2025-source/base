@@ -31,7 +31,7 @@ Usage: #example
   <p><b>通報者</b>：<a href="PractitionerRole-pracrole-min.html">PractitionerRole/pracrole-min</a>「社工」</p>
   <p><b>通報類型</b>：初報</p>
   <p><b>受理機構</b>：<a href="Organization-org-min.html">Organization/org-min</a></p>
-  <p><b>通報單位</b>：社家署 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="ValueSet-twss-reporting-unit-vs.html">TWSS-通報單位值集</a>#1）</span></p>
+  <p><b>通報單位及管道</b>：社家署 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="ValueSet-twss-reporting-unit-vs.html">TWSS-通報單位及管道值集</a>#1）</span></p>
   <p><b>個案來源</b>：自行求助 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="ValueSet-twss-case-source-vs.html">TWSS-個案來源值集</a>#A）</span></p>
 </div>
 """

@@ -19,7 +19,7 @@ Description: "個案通報 ServiceRequest Profile 表達外部人員或單位提
     TWSSCaseSourceExtension named caseSource 0..1 MS
 * extension[isReferralCase] ^short = "是否為轉介案件"
 * extension[reportType] ^short = "通報類型"
-* extension[reportingUnit] ^short = "通報單位"
+* extension[reportingUnit] ^short = "通報單位及管道"
 * extension[caseSource] ^short = "個案來源"
 * identifier MS
 * identifier.use MS

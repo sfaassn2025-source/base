@@ -1,7 +1,7 @@
 CodeSystem: TWSSReportingUnit
 Id: twss-reporting-unit
-Title: "TWSS-通報單位"
-Description: "社福個案通報的通報單位類別代碼。"
+Title: "TWSS-通報單位及管道"
+Description: "社福個案通報的提出單位或管道類別代碼。"
 * ^version = "0.0.1"
 * ^experimental = false
 * ^caseSensitive = true

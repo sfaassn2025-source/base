@@ -1,87 +1,70 @@
-CodeSystem: TWSSPrimaryLanguage
-Id: twss-primary-language
-Title: "TWSS-主要語言代碼系統"
-Description: "TWSS 個案主要語言代碼。"
-* ^version = "0.0.1"
-* ^status = #active
-* ^experimental = false
-* ^caseSensitive = true
-* ^content = #complete
-* #1 "國語"
-* #2 "閩南語"
-* #3 "客家話"
-* #4 "原住民語"
-* #5 "其他"
-* #6 "手語"
-* #7 "英語"
-
 ValueSet: TWSSPrimaryLanguageVS
 Id: twss-primary-language-vs
 Title: "TWSS-主要語言值集"
-Description: "TWSS 個案主要語言值集，包含 FHIR 語言代碼與社政領域補充代碼。"
+Description: "TWSS 個案主要語言值集；使用 ISO 639-3 國際語言代碼，包含主要語言及原住民族語。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
-* urn:ietf:bcp:47#zh-TW
-* urn:ietf:bcp:47#en
-* TWSSPrimaryLanguage#2
-* TWSSPrimaryLanguage#3
-* TWSSPrimaryLanguage#4
-* TWSSPrimaryLanguage#5
-* TWSSPrimaryLanguage#6
-
-ValueSet: TWSSAborigineLanguageVS
-Id: twss-aborigine-language-vs
-Title: "TWSS-原住民語言值集"
-Description: "TWSS 個案可使用的原住民語言；採用 ISO 639-3 對應之 BCP 47 語言標籤。"
-* ^version = "0.0.1"
-* ^status = #active
-* ^experimental = false
-* urn:ietf:bcp:47#ami "Amis"
-* urn:ietf:bcp:47#tay "Atayal"
-* urn:ietf:bcp:47#pwn "Paiwan"
-* urn:ietf:bcp:47#bnn "Bunun"
-* urn:ietf:bcp:47#pyu "Puyuma"
-* urn:ietf:bcp:47#dru "Rukai"
-* urn:ietf:bcp:47#tsu "Tsou"
-* urn:ietf:bcp:47#xsy "Saisiyat"
-* urn:ietf:bcp:47#tao "Yami"
-* urn:ietf:bcp:47#ssf "Thao"
-* urn:ietf:bcp:47#ckv "Kavalan"
-* urn:ietf:bcp:47#trv "Taroko"
-* urn:ietf:bcp:47#szy "Sakizaya"
-* urn:ietf:bcp:47#sxr "Saaroa"
-* urn:ietf:bcp:47#xnb "Kanakanabu"
-* urn:ietf:bcp:47#ami ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#ami ^designation[0].value = "阿美語"
-* urn:ietf:bcp:47#tay ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#tay ^designation[0].value = "泰雅語"
-* urn:ietf:bcp:47#pwn ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#pwn ^designation[0].value = "排灣語"
-* urn:ietf:bcp:47#bnn ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#bnn ^designation[0].value = "布農語"
-* urn:ietf:bcp:47#pyu ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#pyu ^designation[0].value = "卑南語"
-* urn:ietf:bcp:47#dru ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#dru ^designation[0].value = "魯凱語"
-* urn:ietf:bcp:47#tsu ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#tsu ^designation[0].value = "鄒語"
-* urn:ietf:bcp:47#xsy ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#xsy ^designation[0].value = "賽夏語"
-* urn:ietf:bcp:47#tao ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#tao ^designation[0].value = "雅美語／達悟語"
-* urn:ietf:bcp:47#ssf ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#ssf ^designation[0].value = "邵語"
-* urn:ietf:bcp:47#ckv ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#ckv ^designation[0].value = "噶瑪蘭語"
-* urn:ietf:bcp:47#trv ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#trv ^designation[0].value = "太魯閣語／賽德克語"
-* urn:ietf:bcp:47#szy ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#szy ^designation[0].value = "撒奇萊雅語"
-* urn:ietf:bcp:47#sxr ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#sxr ^designation[0].value = "拉阿魯哇語"
-* urn:ietf:bcp:47#xnb ^designation[0].language = #"zh-TW"
-* urn:ietf:bcp:47#xnb ^designation[0].value = "卡那卡那富語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#zho "Chinese"
+* http://terminology.hl7.org/CodeSystem/iso639-3#nan "Min Nan Chinese"
+* http://terminology.hl7.org/CodeSystem/iso639-3#hak "Hakka Chinese"
+* http://terminology.hl7.org/CodeSystem/iso639-3#csl "Chinese Sign Language"
+* http://terminology.hl7.org/CodeSystem/iso639-3#eng "English"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ami "Amis"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tay "Atayal"
+* http://terminology.hl7.org/CodeSystem/iso639-3#pwn "Paiwan"
+* http://terminology.hl7.org/CodeSystem/iso639-3#bnn "Bunun"
+* http://terminology.hl7.org/CodeSystem/iso639-3#pyu "Puyuma"
+* http://terminology.hl7.org/CodeSystem/iso639-3#dru "Rukai"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tsu "Tsou"
+* http://terminology.hl7.org/CodeSystem/iso639-3#xsy "Saisiyat"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tao "Yami"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ssf "Thao"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ckv "Kavalan"
+* http://terminology.hl7.org/CodeSystem/iso639-3#trv "Taroko"
+* http://terminology.hl7.org/CodeSystem/iso639-3#szy "Sakizaya"
+* http://terminology.hl7.org/CodeSystem/iso639-3#sxr "Saaroa"
+* http://terminology.hl7.org/CodeSystem/iso639-3#xnb "Kanakanabu"
+* http://terminology.hl7.org/CodeSystem/iso639-3#zho ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#zho ^designation[0].value = "國語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#nan ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#nan ^designation[0].value = "閩南語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#hak ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#hak ^designation[0].value = "客家話"
+* http://terminology.hl7.org/CodeSystem/iso639-3#csl ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#csl ^designation[0].value = "手語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#eng ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#eng ^designation[0].value = "英語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ami ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ami ^designation[0].value = "阿美語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tay ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tay ^designation[0].value = "泰雅語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#pwn ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#pwn ^designation[0].value = "排灣語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#bnn ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#bnn ^designation[0].value = "布農語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#pyu ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#pyu ^designation[0].value = "卑南語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#dru ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#dru ^designation[0].value = "魯凱語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tsu ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tsu ^designation[0].value = "鄒語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#xsy ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#xsy ^designation[0].value = "賽夏語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tao ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#tao ^designation[0].value = "雅美語／達悟語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ssf ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ssf ^designation[0].value = "邵語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ckv ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#ckv ^designation[0].value = "噶瑪蘭語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#trv ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#trv ^designation[0].value = "太魯閣語／賽德克語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#szy ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#szy ^designation[0].value = "撒奇萊雅語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#sxr ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#sxr ^designation[0].value = "拉阿魯哇語"
+* http://terminology.hl7.org/CodeSystem/iso639-3#xnb ^designation[0].language = #"zh-TW"
+* http://terminology.hl7.org/CodeSystem/iso639-3#xnb ^designation[0].value = "卡那卡那富語"
 
 CodeSystem: TWSSReligion
 Id: twss-religion
@@ -107,8 +90,18 @@ Description: "TWSS 宗教信仰代碼。"
 ValueSet: TWSSReligionVS
 Id: twss-religion-vs
 Title: "TWSS-宗教信仰值集"
-Description: "TWSS 宗教信仰值集。"
+Description: "TWSS 宗教信仰值集；優先採用可明確對應的 HL7 v3 ReligiousAffiliation 代碼，並保留無國際對應的 TWSS 代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
-* include codes from system TWSSReligion
+* http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1029 "Mahayana"
+* http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1050 "Taoism"
+* http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1077 "Protestant"
+* http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1041 "Roman Catholic Church"
+* http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1023 "Islam"
+* http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1027 "Latter Day Saints"
+* TWSSReligion#E
+* TWSSReligion#H
+* TWSSReligion#I
+* TWSSReligion#X
+* TWSSReligion#Z
