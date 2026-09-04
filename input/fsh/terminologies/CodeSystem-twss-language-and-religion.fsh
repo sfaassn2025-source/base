@@ -75,17 +75,17 @@ Description: "TWSS 宗教信仰代碼。"
 * ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
-* #A "佛教"
-* #B "道教"
-* #C "基督教"
-* #D "天主教"
-* #E "一貫道"
-* #F "回教"
-* #G "摩門教"
-* #H "民間信仰"
-* #I "無"
-* #X "無法得知"
-* #Z "其他"
+* #buddhism "佛教"
+* #taoism "道教"
+* #protestant "基督教"
+* #catholic "天主教"
+* #i-kuan-tao "一貫道"
+* #islam "回教"
+* #mormonism "摩門教"
+* #folk-belief "民間信仰"
+* #irreligion "無"
+* #unknown "無法得知"
+* #other "其他"
 
 ValueSet: TWSSReligionVS
 Id: twss-religion-vs
@@ -100,8 +100,8 @@ Description: "TWSS 宗教信仰值集；優先採用可明確對應的 HL7 v3 Re
 * http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1041 "Roman Catholic Church"
 * http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1023 "Islam"
 * http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1027 "Latter Day Saints"
-* TWSSReligion#E
-* TWSSReligion#H
-* TWSSReligion#I
-* TWSSReligion#X
-* TWSSReligion#Z
+* TWSSReligion#i-kuan-tao
+* TWSSReligion#folk-belief
+* TWSSReligion#irreligion
+* TWSSReligion#unknown
+* TWSSReligion#other
