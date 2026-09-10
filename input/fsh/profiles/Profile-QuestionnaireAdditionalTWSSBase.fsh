@@ -63,14 +63,11 @@ Description: "定義服務人親屬保母、薪資與健康檢查日期的任職
 * item[practitionerEmployment].item ^slicing.discriminator.type = #value
 * item[practitionerEmployment].item ^slicing.discriminator.path = "linkId"
 * item[practitionerEmployment].item ^slicing.rules = #closed
-* item[practitionerEmployment].item contains isRelativeNanny 0..1 MS and practitionSalary 0..1 MS and healthCheckDate 0..1 MS
+* item[practitionerEmployment].item contains isRelativeNanny 0..1 MS and healthCheckDate 0..1 MS
 * item[practitionerEmployment].item[isRelativeNanny].linkId = "13.1"
 * item[practitionerEmployment].item[isRelativeNanny].text = "是否為親屬保母"
 * item[practitionerEmployment].item[isRelativeNanny].type = #boolean
-* item[practitionerEmployment].item[practitionSalary].linkId = "13.2"
-* item[practitionerEmployment].item[practitionSalary].text = "服務人薪資"
-* item[practitionerEmployment].item[practitionSalary].type = #decimal
-* item[practitionerEmployment].item[healthCheckDate].linkId = "13.3"
+* item[practitionerEmployment].item[healthCheckDate].linkId = "13.2"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 * item[practitionerEmployment].item[healthCheckDate].type = #date
 
@@ -144,49 +141,6 @@ Description: "定義個案服務評估中關係人角色判斷的表單。"
 * item[relatedPersonRoleAssessment].item[isAgent].linkId = "27.5"
 * item[relatedPersonRoleAssessment].item[isAgent].text = "是否為法定代理人"
 * item[relatedPersonRoleAssessment].item[isAgent].type = #boolean
-
-Profile: QuestionnairePractitionerTrainingTWSSBase
-Parent: QuestionnaireTWSSBase
-Id: Questionnaire-practitioner-training-twss-base
-Title: "服務人受訓課程-Questionnaire TWSS Base"
-Description: "定義服務人個人受訓課程的行政填報題目結構。"
-* ^version = "0.0.1"
-* subjectType ^slicing.discriminator.type = #value
-* subjectType ^slicing.discriminator.path = "$this"
-* subjectType ^slicing.rules = #closed
-* subjectType contains practitioner 1..1 MS
-* subjectType[practitioner] = #Practitioner
-* item ^slicing.discriminator.type = #value
-* item ^slicing.discriminator.path = "linkId"
-* item ^slicing.rules = #closed
-* item contains practitionerTraining 0..* MS
-* item[practitionerTraining].linkId = "29"
-* item[practitionerTraining].text = "服務人受訓課程"
-* item[practitionerTraining].type = #group
-* item[practitionerTraining].repeats = true
-* item[practitionerTraining].item ^slicing.discriminator.type = #value
-* item[practitionerTraining].item ^slicing.discriminator.path = "linkId"
-* item[practitionerTraining].item ^slicing.rules = #closed
-* item[practitionerTraining].item contains trainingCourseName 1..1 MS and trainingCourseHours 0..1 MS and trainingCourseType 0..1 MS and courseProviderUnit 0..1 MS and trainingStartDate 0..1 MS and trainingEndDate 0..1 MS
-* item[practitionerTraining].item[trainingCourseName].linkId = "29.1"
-* item[practitionerTraining].item[trainingCourseName].text = "受訓課程名稱"
-* item[practitionerTraining].item[trainingCourseName].type = #string
-* item[practitionerTraining].item[trainingCourseHours].linkId = "29.2"
-* item[practitionerTraining].item[trainingCourseHours].text = "受訓課程時數"
-* item[practitionerTraining].item[trainingCourseHours].type = #quantity
-* item[practitionerTraining].item[trainingCourseType].linkId = "29.3"
-* item[practitionerTraining].item[trainingCourseType].text = "受訓課程類型"
-* item[practitionerTraining].item[trainingCourseType].type = #choice
-* item[practitionerTraining].item[trainingCourseType].answerValueSet = Canonical(twss-training-course-type-vs)
-* item[practitionerTraining].item[courseProviderUnit].linkId = "29.4"
-* item[practitionerTraining].item[courseProviderUnit].text = "開課單位"
-* item[practitionerTraining].item[courseProviderUnit].type = #string
-* item[practitionerTraining].item[trainingStartDate].linkId = "29.5"
-* item[practitionerTraining].item[trainingStartDate].text = "受訓起日"
-* item[practitionerTraining].item[trainingStartDate].type = #date
-* item[practitionerTraining].item[trainingEndDate].linkId = "29.6"
-* item[practitionerTraining].item[trainingEndDate].text = "受訓迄日"
-* item[practitionerTraining].item[trainingEndDate].type = #date
 
 Profile: QuestionnaireVocationalTrainingTWSSBase
 Parent: QuestionnaireTWSSBase

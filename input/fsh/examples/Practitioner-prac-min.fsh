@@ -27,6 +27,21 @@ Usage: #example
 * address[0].extension[section].valueString = "六段"
 * address[0].extension[number].valueString = "488號"
 * address[0].postalCode = "11558"
+* qualification[education].code = TWSSEducationLevel#6 "大學"
+* qualification[education].code.text = "臺北市立大學；社會工作學系"
+* qualification[education].period.start = "2014"
+* qualification[education].period.end = "2018"
+* qualification[education].extension[qualificationStatus].valueCodeableConcept = TWSSPractitionerQualificationStatusCS#active "已畢業"
+* qualification[training].code = TWSSTrainingCourseType#D "每年必備在職教育訓練"
+* qualification[training].code.text = "兒少保護基礎訓練"
+* qualification[training].period.start = "2026-06-01"
+* qualification[training].period.end = "2026-06-02"
+* qualification[training].issuer.display = "示範社會福利機構"
+* qualification[training].extension[trainingHours].valueQuantity.value = 12
+* qualification[training].extension[trainingHours].valueQuantity.system = "http://unitsofmeasure.org"
+* qualification[training].extension[trainingHours].valueQuantity.code = #h
+* qualification[training].extension[trainingHours].valueQuantity.unit = "h"
+* extension[salary].valueDecimal = 38000
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -39,5 +54,7 @@ Usage: #example
   <p><b>原住民族別[extension: <a href="StructureDefinition-twss-practitioner-aborigine-tribe.html">twss-practitioner-aborigine-tribe</a>]</b>：阿美族 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-aborigine-tribe.html">原住民族別</a>#amis）</span></p>
   <p><b>聯絡方式</b>：Phone <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a>#phone）</span><br/><b>聯絡電話</b>：02-22334455</p>
   <p><b>聯絡地址</b>：11558臺北市南港區新光里忠孝東路六段488號</p>
+  <p><b>教育資格</b>：大學；臺北市立大學；社會工作學系；2014-2018；資格狀態 active（已畢業）。</p>
+  <p><b>受訓課程</b>：每年必備在職教育訓練；兒少保護基礎訓練；12 小時。</p>
 </div>
 """

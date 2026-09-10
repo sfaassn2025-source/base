@@ -13,6 +13,7 @@ Usage: #example
 * extension[establishmentType].valueCodeableConcept = TWSSOrganizationEstablishmentType#21 "公立"
 * extension[registrationDate].valueDate = "2019-06-01"
 * extension[competentAuthority].valueReference = Reference(org-min)
+* extension[qualification][0].extension[code].valueCodeableConcept = TWSSOrganizationAccreditationLevel#A "優等"
 * name = "社家署示範機構"
 * telecom[0].system = #phone
 * telecom[0].value = "02-12345678"
@@ -47,6 +48,7 @@ Usage: #example
   <p><b>機構類別</b>：通報中心 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-organization-type.html">機構類型</a>#13）</span></p>
   <p><b>機構設立別</b>：公立 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-organization-establishment-type.html">機構設立別</a>#21）</span></p>
   <p><b>機構立案日期[extension: <a href="StructureDefinition-twss-organization-registration-date.html">twss-organization-registration-date</a>]</b>：2019-06-01</p>
+  <p><b>機構評鑑等級[extension: <a href="StructureDefinition-twss-organization-qualification.html">twss-organization-qualification</a>]</b>：優等</p>
   <p><b>聯絡方式</b>：Phone <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="https://hl7.org/fhir/R4/valueset-contact-point-system.html">ContactPointSystem</a>#phone）</span><br/><b>聯絡電話</b>：02-12345678</p>
   <p><b>聯絡地址</b>：11558臺北市南港區新光里忠孝東路六段488號</p>
   <p><b>聯絡人</b>：林主任<br/><b>聯絡人電話</b>：02-12345679</p>

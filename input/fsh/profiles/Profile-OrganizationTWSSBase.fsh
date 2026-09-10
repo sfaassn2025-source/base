@@ -35,10 +35,12 @@ Description:    "機構資料-Organization TWSS Base Profile 表達社家署業�
 * extension contains
     TWSSOrganizationEstablishmentTypeExtension named establishmentType 0..1 MS and
     TWSSOrganizationRegistrationDateExtension named registrationDate 0..1 MS and
-    TWSSOrganizationCompetentAuthority named competentAuthority 0..1 MS
+    TWSSOrganizationCompetentAuthority named competentAuthority 0..1 MS and
+    TWSSOrganizationQualification named qualification 0..* MS
 * extension[establishmentType] ^short = "機構設立別。"
 * extension[registrationDate] ^short = "機構立案日期。"
 * extension[competentAuthority] ^short = "機構主管機關。"
+* extension[qualification] ^short = "機構評鑑資格；評鑑等級記錄於 extension[code].valueCodeableConcept。"
 
 * active MS
 

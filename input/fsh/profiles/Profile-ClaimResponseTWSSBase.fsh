@@ -59,7 +59,9 @@ Description:    "補助審核或核付結果-ClaimResponse TWSS Base Profile 表
 * item.adjudication[approvedAmount] ^short = "核定補助金額"
 * item.adjudication[eligibilityDenial].category.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-claim-adjudication-category"
 * item.adjudication[eligibilityDenial].category.coding.code = #eligibility-denial
-* item.adjudication[eligibilityDenial].reason.text 1..1 MS
+* item.adjudication[eligibilityDenial].reason from TWSSNonComplianceReasonVS (example)
+* item.adjudication[eligibilityDenial].reason.coding 0..*
+* item.adjudication[eligibilityDenial].reason.text 0..1 MS
 * item.adjudication[eligibilityDenial] ^short = "不符原因"
 * item.adjudication[benefitTermination].category.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-claim-adjudication-category"
 * item.adjudication[benefitTermination].category.coding.code = #benefit-termination

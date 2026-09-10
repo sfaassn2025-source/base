@@ -26,7 +26,9 @@ Description:    "人員資料-Practitioner TWSS Base Profile 表達社家署業�
 * extension contains
     TWSSPractitionerNationality named nationality 0..1 MS and
     TWSSEthnicGroupExtension named ethnicGroup 0..* MS and
-    TWSSPractitionerAborigineTribe named AborigineTribe 0..1 MS
+    TWSSPractitionerAborigineTribe named AborigineTribe 0..1 MS and
+    TWSSPractitionerSalary named salary 0..1 MS
+* extension[salary] ^short = "服務人薪資"
 * extension[nationality] ^short = "服務人國籍。"
 * extension[ethnicGroup] ^short = "服務人族群身分。"
 * extension[AborigineTribe] ^short = "服務人原住民族別。"
@@ -61,9 +63,45 @@ Description:    "人員資料-Practitioner TWSS Base Profile 表達社家署業�
 * birthDate MS
 
 * qualification MS
+* qualification ^slicing.discriminator.type = #value
+* qualification ^slicing.discriminator.path = "code.coding.system"
+* qualification ^slicing.rules = #open
+* qualification contains education 0..* MS and training 0..* MS
+* qualification[education].code 1..1 MS
+* qualification[education].code.coding 1..* MS
+* qualification[education].code.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-education-level"
+* qualification[education].code from TWSSEducationLevelVS (required)
+* qualification[education].code.coding ^short = "服務人教育程度"
+* qualification[education].code.text 0..1 MS
+* qualification[education].code.text ^short = "服務人就讀學校名稱、服務人畢業科系；格式為「就讀學校名稱；畢業科系」。"
+* qualification[education].period 0..1 MS
+* qualification[education].period.start 0..1 MS
+* qualification[education].period.start ^short = "服務人入學年度"
+* qualification[education].period.end 0..1 MS
+* qualification[education].period.end ^short = "服務人畢業年度"
+* qualification[education].extension contains TWSSPractitionerQualificationStatus named qualificationStatus 0..1 MS
+* qualification[education].extension[qualificationStatus] ^short = "服務人是否畢業"
+* qualification[education] ^short = "服務人教育資格；教育程度使用 code.coding，學校名稱與畢業科系合併記錄於 code.text。"
+* qualification[training].code 1..1 MS
+* qualification[training].code.coding 1..* MS
+* qualification[training].code.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-training-course-type"
+* qualification[training].code from TWSSTrainingCourseTypeVS (required)
+* qualification[training].code.coding ^short = "受訓課程類型"
+* qualification[training].code.text 0..1 MS
+* qualification[training].code.text ^short = "受訓課程名稱"
+* qualification[training].period 0..1 MS
+* qualification[training].period.start 0..1 MS
+* qualification[training].period.start ^short = "受訓起始日期"
+* qualification[training].period.end 0..1 MS
+* qualification[training].period.end ^short = "受訓結束日期"
+* qualification[training].issuer 0..1 MS
+* qualification[training].issuer.display ^short = "開課單位"
+* qualification[training].extension contains TWSSPractitionerTrainingHours named trainingHours 0..1 MS
+* qualification[training].extension[trainingHours] ^short = "受訓課程時數"
+* qualification[training] ^short = "服務人受訓課程；課程類型使用 code.coding，名稱使用 code.text，時數使用 trainingHours extension。"
 * qualification.identifier MS
 * qualification.code MS
 * qualification.period MS
 * qualification.issuer only Reference(OrganizationTWSSBase)
 * qualification.issuer MS
-* qualification ^short = "人員資格、證照或訓練紀錄。"
+* qualification ^short = "人員資格、證照、教育或受訓紀錄。"

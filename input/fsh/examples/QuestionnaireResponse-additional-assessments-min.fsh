@@ -38,36 +38,7 @@ Title: "服務人基本與任職資訊回覆範例"
 * item[0].item[0].linkId = "13.1"
 * item[0].item[0].answer[0].valueBoolean = false
 * item[0].item[1].linkId = "13.2"
-* item[0].item[1].answer[0].valueDecimal = 38000
-* item[0].item[2].linkId = "13.3"
-* item[0].item[2].answer[0].valueDate = "2026-08-01"
-
-Instance: practitioner-training-response-min
-InstanceOf: QuestionnaireResponseTWSSBase
-Usage: #example
-Description: "服務人受訓課程回覆範例。"
-Title: "服務人受訓課程回覆範例"
-* questionnaire = "https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information"
-* status = #completed
-* subject = Reference(prac-min)
-* authored = "2026-08-25T10:00:00+08:00"
-* author = Reference(prac-min)
-* item[0].linkId = "29"
-* item[0].item[0].linkId = "29.1"
-* item[0].item[0].answer[0].valueString = "兒少保護基礎訓練"
-* item[0].item[1].linkId = "29.2"
-* item[0].item[1].answer[0].valueQuantity.value = 12
-* item[0].item[1].answer[0].valueQuantity.system = "http://unitsofmeasure.org"
-* item[0].item[1].answer[0].valueQuantity.code = #h
-* item[0].item[1].answer[0].valueQuantity.unit = "h"
-* item[0].item[2].linkId = "29.3"
-* item[0].item[2].answer[0].valueCoding = TWSSTrainingCourseType#D "每年必備在職教育訓練"
-* item[0].item[3].linkId = "29.4"
-* item[0].item[3].answer[0].valueString = "示範社會福利機構"
-* item[0].item[4].linkId = "29.5"
-* item[0].item[4].answer[0].valueDate = "2026-06-01"
-* item[0].item[5].linkId = "29.6"
-* item[0].item[5].answer[0].valueDate = "2026-06-02"
+* item[0].item[1].answer[0].valueDate = "2026-08-01"
 
 Instance: related-person-basic-response-min
 InstanceOf: QuestionnaireResponseTWSSBase

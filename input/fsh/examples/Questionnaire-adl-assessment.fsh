@@ -1,14 +1,15 @@
-Instance: twss-adl-assessment
+Instance: twss-adl
 InstanceOf: QuestionnaireADLAssessmentTWSSBase
 Usage: #definition
-Title: "日常生活功能（ADL）評估問卷"
+Title: "日常生活功能 ADL 評估"
 Description: "TWSS Base 日常生活功能評估問卷。"
-* url = "https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment"
+* url = "https://sfaa.gov.tw/base/Questionnaire/twss-adl"
+* title = "日常生活功能 ADL 評估"
 * version = "0.0.1"
 * status = #active
 * subjectType[0] = #Patient
 * item[adl].text = "日常生活功能(ADL)"
-* item[adl].item[selfCare].text = "生活自理"
+* item[adl].item[dailyLivingSkill].text = "生活自理"
 * item[adl].item[mobility].text = "肢體行動"
 * item[adl].item[walkingAbility].text = "四處走動"
 * item[adl].item[householdActivity].text = "居家活動"

@@ -251,6 +251,48 @@ Context: Organization
 * value[x] only Reference(OrganizationTWSSBase)
 * valueReference MS
 
+Extension: TWSSPractitionerQualificationStatus
+Id: twss-practitioner-qualification-status
+Title: "服務人資格狀態"
+Description: "使用參考 HL7 FHIR R6 qualification-status 的 TWSS R4 代碼表達服務人教育資格狀態。本 IG 的業務定義為 active 代表已畢業；suspended 代表未畢業，包括在學、休學或肄業等未取得畢業資格的情況。"
+Context: Practitioner.qualification
+* ^version = "0.0.1"
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1 MS
+* valueCodeableConcept.coding 1..* MS
+* valueCodeableConcept.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-practitioner-qualification-status"
+* valueCodeableConcept from TWSSPractitionerQualificationStatusVS (required)
+
+Extension: TWSSPractitionerTrainingHours
+Id: twss-practitioner-training-hours
+Title: "服務人受訓課程時數"
+Description: "記錄服務人單一受訓課程的時數。"
+Context: Practitioner.qualification
+* ^version = "0.0.1"
+* value[x] only Quantity
+* valueQuantity 1..1 MS
+
+Extension: TWSSPractitionerSalary
+Id: twss-practitioner-salary
+Title: "服務人薪資"
+Description: "記錄服務人的薪資數值。"
+Context: Practitioner
+* ^version = "0.0.1"
+* value[x] only decimal
+* valueDecimal 1..1 MS
+
+Extension: TWSSOrganizationQualification
+Id: twss-organization-qualification
+Title: "機構評鑑資格"
+Description: "以 FHIR R5 Organization.qualification 的 code 結構，於 FHIR R4 表達機構評鑑資格或等級。"
+Context: Organization
+* ^version = "0.0.1"
+* extension contains code 1..1 MS
+* extension[code].value[x] only CodeableConcept
+* extension[code].valueCodeableConcept 1..1 MS
+* extension[code].valueCodeableConcept from TWSSOrganizationAccreditationLevelVS (required)
+* value[x] 0..0
+
 Extension: TWSSCaseReportTypeExtension
 Id: twss-case-report-type
 Title: "通報類型"

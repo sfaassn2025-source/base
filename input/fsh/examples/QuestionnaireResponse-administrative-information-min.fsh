@@ -12,13 +12,13 @@ Title: "個案教育資訊回覆範例"
 * item[0].linkId = "21"
 * item[0].item[0].linkId = "21.1"
 * item[0].item[0].answer[0].valueCoding = TWSSSchoolingStatus#2 "就學中"
-* item[0].item[1].linkId = "21.3"
+* item[0].item[1].linkId = "21.2"
 * item[0].item[1].answer[0].valueString = "南港國中"
-* item[0].item[2].linkId = "21.4"
+* item[0].item[2].linkId = "21.3"
 * item[0].item[2].answer[0].valueString = "二年級"
-* item[0].item[3].linkId = "21.6"
+* item[0].item[3].linkId = "21.5"
 * item[0].item[3].answer[0].valueBoolean = false
-* item[0].item[4].linkId = "21.8"
+* item[0].item[4].linkId = "21.6"
 * item[0].item[4].answer[0].valueCoding = TWSSEducationLevel#3 "國中"
 
 Instance: related-person-education-information-response-min
@@ -31,7 +31,7 @@ Title: "關係人教育資訊回覆範例"
 * authored = "2026-08-25T09:10:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "21"
-* item[0].item[0].linkId = "21.8"
+* item[0].item[0].linkId = "21.6"
 * item[0].item[0].answer[0].valueCoding = TWSSEducationLevel#4 "高中職"
 
 Instance: practitioner-education-information-response-min
@@ -41,25 +41,13 @@ Title: "服務人教育資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/education-information"
 * status = #completed
 * subject = Reference(prac-min)
-* authored = "2026-08-25T09:20:00+08:00"
+* authored = "2026-09-09T09:20:00+08:00"
 * author = Reference(prac-min)
 * item[0].linkId = "21"
-* item[0].item[0].linkId = "21.2"
-* item[0].item[0].answer[0].valueInteger = 2014
-* item[0].item[1].linkId = "21.3"
-* item[0].item[1].answer[0].valueString = "臺北市立大學"
-* item[0].item[2].linkId = "21.5"
-* item[0].item[2].answer[0].valueString = "社會工作學系"
-* item[0].item[3].linkId = "21.6"
-* item[0].item[3].answer[0].valueBoolean = true
-* item[0].item[4].linkId = "21.7"
-* item[0].item[4].answer[0].valueInteger = 2018
-* item[0].item[5].linkId = "21.8"
-* item[0].item[5].answer[0].valueCoding = TWSSEducationLevel#6 "大學"
-* item[0].item[6].linkId = "21.9"
-* item[0].item[6].answer[0].valueBoolean = true
-* item[0].item[7].linkId = "21.10"
-* item[0].item[7].answer[0].valueBoolean = true
+* item[0].item[0].linkId = "21.7"
+* item[0].item[0].answer[0].valueBoolean = true
+* item[0].item[1].linkId = "21.8"
+* item[0].item[1].answer[0].valueBoolean = true
 
 Instance: medical-support-assessment-response-min
 InstanceOf: AssessmentQuestionnaireResponseTWSSBase
@@ -91,9 +79,7 @@ Title: "機構行政與營運資訊回覆範例"
 * item[0].item[0].linkId = "24.1"
 * item[0].item[0].answer[0].valueBoolean = true
 * item[0].item[1].linkId = "24.2"
-* item[0].item[1].answer[0].valueCoding = TWSSOrganizationAccreditationLevel#A "優等"
-* item[0].item[2].linkId = "24.3"
-* item[0].item[2].answer[0].valueString = "兒童及少年福利與權益保障法第 97 條"
+* item[0].item[1].answer[0].valueString = "兒童及少年福利與權益保障法第 97 條"
 * item[1].linkId = "28"
 * item[1].item[0].linkId = "28.1"
 * item[1].item[0].item[0].linkId = "28.1.1"

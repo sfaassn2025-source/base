@@ -94,7 +94,7 @@ Description: """
 * serviceProviderBasicInfo.practitionMajor 0..1 string "服務人畢業科系" "服務人畢業科系。"
 * serviceProviderBasicInfo.isRelatedMajorGraduate 0..1 boolean "是否為相關科系畢業" "是否為相關科系畢業。"
 * serviceProviderBasicInfo.isPractitionGraduated 0..1 boolean "服務人是否畢業" "服務人是否畢業。"
-* serviceProviderBasicInfo.practitionGraduationYear 0..1 integer "服務人畢業年度" "服務人畢業年度。"
+* serviceProviderBasicInfo.practitionGraduationYear 0..1 dateTime "服務人畢業年度" "服務人畢業年度；可僅記錄年份。"
 * serviceProviderBasicInfo.trainingStartDate 0..1 date "受訓起始日期" "受訓起始日期。"
 * serviceProviderBasicInfo.trainingEndDate 0..1 date "受訓結束日期" "受訓結束日期。"
 * serviceProviderBasicInfo.certificateNumber 0..* Identifier "證書字號" "證書字號"
@@ -171,7 +171,7 @@ Description: """
 * subsidyApplication.subsidyRatio 0..1 decimal "補助比率" "補助比率"
 * subsidyApplication.approvedSubsidyAmount 0..1 decimal "核定補助金額" "核定補助金額"
 * subsidyApplication.reviewOpinion 0..1 string "審核意見" "審核意見"
-* subsidyApplication.nonComplianceReason 0..1 string "不符原因" "不符原因"
+* subsidyApplication.nonComplianceReason 0..1 CodeableConcept "不符原因" "補助申請不符條件時的原因；可使用已取得的不符原因代碼，或僅填寫文字。"
 * subsidyApplication.reviewResult 0..1 boolean "審核結果" "審核結果"
 * subsidyApplication.applicationReviewStatus 0..1 CodeableConcept "申請審核狀態" "補助申請處理中的業務狀態。"
 * subsidyApplication.subsidyPayment 0..* BackboneElement "補助款項" "已取得補助的款項資料；每一筆補助款項包含其類型及金額。"
@@ -254,7 +254,7 @@ Description: """
 * caseAssessment.isDisabilityCertificatePermanent 0..1 boolean "身心障礙永久有效" "身心障礙永久有效"
 * caseAssessment.relationCriminalRecord 0..* CodeableConcept "關係人不良犯罪紀錄" "關係人不良犯罪紀錄"
 * caseAssessment.activitiesOfDailyLiving 0..1 BackboneElement "日常生活功能(ADL)" "日常生活功能評估的群組。"
-* caseAssessment.activitiesOfDailyLiving.selfCare 0..1 CodeableConcept "生活自理" "生活自理"
+* caseAssessment.activitiesOfDailyLiving.dailyLivingSkill 0..1 CodeableConcept "生活自理" "生活自理"
 * caseAssessment.activitiesOfDailyLiving.mobility 0..1 CodeableConcept "肢體行動" "肢體行動"
 * caseAssessment.activitiesOfDailyLiving.walkingAbility 0..1 CodeableConcept "四處走動" "四處走動"
 * caseAssessment.activitiesOfDailyLiving.householdActivity 0..1 CodeableConcept "居家活動" "居家活動"
@@ -574,26 +574,26 @@ Title: "Mapping to TWSSBase ADL QuestionnaireResponse"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentQuestionnaireResponse-twss-base"
 
-* caseAssessment.activitiesOfDailyLiving.selfCare -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.1').answer.valueCoding"
-* caseAssessment.activitiesOfDailyLiving.mobility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.2').answer.valueCoding"
-* caseAssessment.activitiesOfDailyLiving.walkingAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.3').answer.valueCoding"
-* caseAssessment.activitiesOfDailyLiving.householdActivity -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9').item.where(linkId = '9.4').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.dailyLivingSkill -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl').item.where(linkId = '9').item.where(linkId = '9.1').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.mobility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl').item.where(linkId = '9').item.where(linkId = '9.2').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.walkingAbility -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl').item.where(linkId = '9').item.where(linkId = '9.3').answer.valueCoding"
+* caseAssessment.activitiesOfDailyLiving.householdActivity -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl').item.where(linkId = '9').item.where(linkId = '9.4').answer.valueCoding"
 
-Mapping: TWSSBaseToPractitionerTrainingQuestionnaireResponse
-Id: twss-base-to-practitioner-training-questionnaire-response
-Title: "Mapping to TWSSBase Practitioner Training QuestionnaireResponse"
+Mapping: TWSSBaseToPractitionerTraining
+Id: twss-base-to-practitioner-training
+Title: "Mapping to TWSSBase Practitioner qualification training"
 Source: TWSSBaseModel
-Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
+Target: "https://sfaa.gov.tw/base/StructureDefinition/Practitioner-twss-base"
 
-* serviceProviderBasicInfo.trainingCourseName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.1').answer.valueString"
-* serviceProviderBasicInfo.trainingCourseHours -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.2').answer.valueQuantity"
-* serviceProviderBasicInfo.trainingCourseType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.3').answer.valueCoding"
-* serviceProviderProfessionalInfo.trainingCourseName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.1').answer.valueString"
-* serviceProviderProfessionalInfo.trainingCourseHours -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.2').answer.valueQuantity"
-* serviceProviderProfessionalInfo.trainingCourseType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.3').answer.valueCoding"
-* organizationBasicInfo.courseProviderUnit -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.4').answer.valueString"
-* serviceProviderBasicInfo.trainingStartDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.5').answer.valueDate"
-* serviceProviderBasicInfo.trainingEndDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information').item.where(linkId = '29').item.where(linkId = '29.6').answer.valueDate"
+* serviceProviderBasicInfo.trainingCourseName -> "Practitioner.qualification[training].code.text"
+* serviceProviderBasicInfo.trainingCourseHours -> "Practitioner.qualification[training].extension[trainingHours].valueQuantity"
+* serviceProviderBasicInfo.trainingCourseType -> "Practitioner.qualification[training].code.coding"
+* serviceProviderProfessionalInfo.trainingCourseName -> "Practitioner.qualification[training].code.text"
+* serviceProviderProfessionalInfo.trainingCourseHours -> "Practitioner.qualification[training].extension[trainingHours].valueQuantity"
+* serviceProviderProfessionalInfo.trainingCourseType -> "Practitioner.qualification[training].code.coding"
+* organizationBasicInfo.courseProviderUnit -> "Practitioner.qualification[training].issuer.display"
+* serviceProviderBasicInfo.trainingStartDate -> "Practitioner.qualification[training].period.start"
+* serviceProviderBasicInfo.trainingEndDate -> "Practitioner.qualification[training].period.end"
 
 Mapping: TWSSBaseToCarePlan
 Id: twss-base-to-careplan
@@ -683,6 +683,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Organization-twss-base"
 * organizationBasicInfo.organizationLicenseNumber -> "Organization.identifier"
 * organizationBasicInfo.organizationEstablishmentType -> "Organization.extension:establishmentType"
 * organizationBasicInfo.organizationContactPerson -> "Organization.contact.name"
+* organizationOtherInfo.accreditationLevel -> "Organization.extension[qualification].extension[code].valueCodeableConcept"
 
 Mapping: TWSSBaseToMedicalInstitutionOrganization
 Id: twss-base-to-medical-institution-organization
@@ -736,6 +737,7 @@ Title: "Mapping to TWSSBase Practitioner"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/Practitioner-twss-base"
 
+* serviceProviderBasicInfo.practitionSalary -> "Practitioner.extension[salary].valueDecimal"
 
 Mapping: TWSSBaseToPractitionerRole
 Id: twss-base-to-practitionerrole
@@ -754,7 +756,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
 * subsidyApplication.reviewCheckDate -> "ClaimResponse.created"
 * subsidyApplication.approvedSubsidyAmount -> "ClaimResponse.item.adjudication.where(category.coding.code = 'approved-amount').amount"
 * subsidyApplication.reviewOpinion -> "ClaimResponse.processNote.text"
-* subsidyApplication.nonComplianceReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'eligibility-denial').reason.text"
+* subsidyApplication.nonComplianceReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'eligibility-denial').reason"
 * subsidyApplication.reviewResult -> "ClaimResponse.extension[reviewResult].valueBoolean"
 * subsidyProvision.subsidyDisbursementStatus -> "ClaimResponse.extension[paymentStatus]"
 * subsidyProvision.subsidyMonth -> "ClaimResponse.extension[subsidyMonth]"
@@ -952,7 +954,7 @@ Title: "Mapping to TWSS Base QuestionnaireResponse"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentQuestionnaireResponse-twss-base"
 
-* caseAssessment.activitiesOfDailyLiving -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl-assessment').item.where(linkId = '9')"
+* caseAssessment.activitiesOfDailyLiving -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/twss-adl').item.where(linkId = '9')"
 * caseAssessment.relationSubstanceAbuse -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment').item.where(linkId = '3').item.where(linkId = '3.3')"
 
 Mapping: TWSSBaseToAdditionalQuestionnaires
@@ -1115,8 +1117,7 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
 * serviceProviderBasicInfo.isRelativeNanny -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.1').answer.valueBoolean"
-* serviceProviderBasicInfo.practitionSalary -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.2').answer.valueDecimal"
-* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.3').answer.valueDate"
+* serviceProviderBasicInfo.healthCheckDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information').item.where(linkId = '13').item.where(linkId = '13.2').answer.valueDate"
 
 Mapping: TWSSBaseToPatientEducationQuestionnaireResponse
 Id: twss-base-to-patient-education-questionnaire-response
@@ -1125,11 +1126,11 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentQuestionnaireResponse-twss-base"
 
 * caseAssessment.schoolingStatus -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.1').answer.valueCoding"
-* caseAssessment.schoolName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.3').answer.valueString"
-* caseAssessment.gradeLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.4').answer.valueString"
-* caseAssessment.major -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.5').answer.valueString"
-* caseAssessment.isGraduated -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.6').answer.valueBoolean"
-* caseAssessment.educationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.8').answer.valueCoding"
+* caseAssessment.schoolName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.2').answer.valueString"
+* caseAssessment.gradeLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.3').answer.valueString"
+* caseAssessment.major -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.4').answer.valueString"
+* caseAssessment.isGraduated -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.5').answer.valueBoolean"
+* caseAssessment.educationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.6').answer.valueCoding"
 
 Mapping: TWSSBaseToRelatedPersonEducationQuestionnaireResponse
 Id: twss-base-to-related-person-education-questionnaire-response
@@ -1137,23 +1138,30 @@ Title: "Mapping to TWSSBase Related Person Education QuestionnaireResponse"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
-* relatedPersonBasicInfo.relationEducationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.8').answer.valueCoding"
+* relatedPersonBasicInfo.relationEducationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.6').answer.valueCoding"
+
+Mapping: TWSSBaseToPractitionerEducation
+Id: twss-base-to-practitioner-education
+Title: "Mapping to TWSSBase Practitioner qualification education"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/Practitioner-twss-base"
+
+* serviceProviderBasicInfo.practitionEnrollmentYear -> "Practitioner.qualification[education].period.start"
+* serviceProviderBasicInfo.practitionGraduationSchoolName -> "Practitioner.qualification[education].code.text (格式：{就讀學校名稱}；{畢業科系})"
+* serviceProviderBasicInfo.practitionEducationLevel -> "Practitioner.qualification[education].code.coding"
+* serviceProviderBasicInfo.practitionMajor -> "Practitioner.qualification[education].code.text (格式：{就讀學校名稱}；{畢業科系})"
+* serviceProviderBasicInfo.isPractitionGraduated -> "Practitioner.qualification[education].extension[qualificationStatus].valueCodeableConcept (active=已畢業；suspended=未畢業)"
+* serviceProviderBasicInfo.practitionGraduationYear -> "Practitioner.qualification[education].period.end"
 
 Mapping: TWSSBaseToPractitionerEducationQuestionnaireResponse
 Id: twss-base-to-practitioner-education-questionnaire-response
-Title: "Mapping to TWSSBase Practitioner Education QuestionnaireResponse"
+Title: "TWSS Base 邏輯模型至服務人教育資訊 QuestionnaireResponse 對應"
 Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
-* serviceProviderBasicInfo.practitionEnrollmentYear -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.2').answer.valueInteger"
-* serviceProviderBasicInfo.practitionGraduationSchoolName -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.3').answer.valueString"
-* serviceProviderBasicInfo.practitionEducationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.8').answer.valueCoding"
-* serviceProviderBasicInfo.practitionMajor -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.5').answer.valueString"
-* serviceProviderBasicInfo.isRelatedMajorGraduate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.9').answer.valueBoolean"
-* serviceProviderBasicInfo.isPractitionGraduated -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.6').answer.valueBoolean"
-* serviceProviderBasicInfo.practitionGraduationYear -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.7').answer.valueInteger"
-* serviceProviderBasicInfo.isSocialWelfareRelatedEducation -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.10').answer.valueBoolean"
-* serviceProviderProfessionalInfo.isSocialWelfareRelatedEducation -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.10').answer.valueBoolean"
+* serviceProviderBasicInfo.isRelatedMajorGraduate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.7').answer.valueBoolean"
+* serviceProviderBasicInfo.isSocialWelfareRelatedEducation -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.8').answer.valueBoolean"
+* serviceProviderProfessionalInfo.isSocialWelfareRelatedEducation -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/education-information').item.where(linkId = '21').item.where(linkId = '21.8').answer.valueBoolean"
 
 Mapping: TWSSBaseToMedicalSupportQuestionnaireResponse
 Id: twss-base-to-medical-support-questionnaire-response
@@ -1171,8 +1179,7 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/QuestionnaireResponse-twss-base"
 
 * organizationOtherInfo.organizationAuditResult -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '24').item.where(linkId = '24.1').answer.valueBoolean"
-* organizationOtherInfo.accreditationLevel -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '24').item.where(linkId = '24.2').answer.valueCoding"
-* organizationOtherInfo.penaltyLegalBasis -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '24').item.where(linkId = '24.3').answer.valueString"
+* organizationOtherInfo.penaltyLegalBasis -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '24').item.where(linkId = '24.2').answer.valueString"
 * organizationBasicInfo.organizationCapacity.admissionCapacity -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '28').item.where(linkId = '28.1').item.where(linkId = '28.1.1').answer.valueInteger"
 * organizationBasicInfo.organizationCapacity.serviceableBeds -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '28').item.where(linkId = '28.1').item.where(linkId = '28.1.2').answer.valueInteger"
 * organizationBasicInfo.organizationCapacity.isolationBeds -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information').item.where(linkId = '28').item.where(linkId = '28.1').item.where(linkId = '28.1.3').answer.valueInteger"

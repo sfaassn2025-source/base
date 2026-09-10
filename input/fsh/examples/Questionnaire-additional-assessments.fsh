@@ -24,7 +24,6 @@ Title: "服務人基本與任職資訊 Questionnaire"
 * subjectType[practitionerRole] = #PractitionerRole
 * item[practitionerEmployment].text = "個案服務人基本資訊"
 * item[practitionerEmployment].item[isRelativeNanny].text = "是否為親屬保母"
-* item[practitionerEmployment].item[practitionSalary].text = "服務人薪資"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 
 Instance: related-person-basic-information
@@ -54,23 +53,6 @@ Title: "關係人角色評估 Questionnaire"
 * item[relatedPersonRoleAssessment].item[isGuardian].text = "是否為監護人"
 * item[relatedPersonRoleAssessment].item[isPrimaryContact].text = "是否為主要聯絡者"
 * item[relatedPersonRoleAssessment].item[isAgent].text = "是否為法定代理人"
-
-Instance: practitioner-training-information
-InstanceOf: QuestionnairePractitionerTrainingTWSSBase
-Usage: #definition
-Description: "服務人個人受訓課程填報表。"
-Title: "服務人受訓課程 Questionnaire"
-* url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-training-information"
-* status = #active
-* subjectType[practitioner] = #Practitioner
-* item[practitionerTraining].text = "服務人受訓課程"
-* item[practitionerTraining].repeats = true
-* item[practitionerTraining].item[trainingCourseName].text = "受訓課程名稱"
-* item[practitionerTraining].item[trainingCourseHours].text = "受訓課程時數"
-* item[practitionerTraining].item[trainingCourseType].text = "受訓課程類型"
-* item[practitionerTraining].item[courseProviderUnit].text = "開課單位"
-* item[practitionerTraining].item[trainingStartDate].text = "受訓起日"
-* item[practitionerTraining].item[trainingEndDate].text = "受訓迄日"
 
 Instance: vocational-training-status
 InstanceOf: QuestionnaireVocationalTrainingTWSSBase

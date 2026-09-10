@@ -14,39 +14,33 @@ Description: "定義個案、關係人及服務人共用的教育資訊表單。
 * item[educationInformation].item ^slicing.discriminator.type = #value
 * item[educationInformation].item ^slicing.discriminator.path = "linkId"
 * item[educationInformation].item ^slicing.rules = #closed
-* item[educationInformation].item contains schoolingStatus 0..* MS and enrollmentYear 0..1 MS and schoolName 0..* MS and gradeLevel 0..1 MS and major 0..1 MS and graduated 0..1 MS and graduationYear 0..1 MS and educationLevel 0..1 MS and relatedMajorGraduate 0..1 MS and socialWelfareRelatedEducation 0..1 MS
+* item[educationInformation].item contains schoolingStatus 0..* MS and schoolName 0..* MS and gradeLevel 0..1 MS and major 0..1 MS and graduated 0..1 MS and educationLevel 0..1 MS and relatedMajorGraduate 0..1 MS and socialWelfareRelatedEducation 0..1 MS
 * item[educationInformation].item[schoolingStatus].linkId = "21.1"
 * item[educationInformation].item[schoolingStatus].text = "就學現況"
 * item[educationInformation].item[schoolingStatus].type = #choice
 * item[educationInformation].item[schoolingStatus].repeats = true
 * item[educationInformation].item[schoolingStatus].answerValueSet = Canonical(twss-schooling-status-vs)
-* item[educationInformation].item[enrollmentYear].linkId = "21.2"
-* item[educationInformation].item[enrollmentYear].text = "服務人入學年度"
-* item[educationInformation].item[enrollmentYear].type = #integer
-* item[educationInformation].item[schoolName].linkId = "21.3"
+* item[educationInformation].item[schoolName].linkId = "21.2"
 * item[educationInformation].item[schoolName].text = "就讀學校名稱"
 * item[educationInformation].item[schoolName].type = #string
 * item[educationInformation].item[schoolName].repeats = true
-* item[educationInformation].item[gradeLevel].linkId = "21.4"
+* item[educationInformation].item[gradeLevel].linkId = "21.3"
 * item[educationInformation].item[gradeLevel].text = "年級別"
 * item[educationInformation].item[gradeLevel].type = #string
-* item[educationInformation].item[major].linkId = "21.5"
+* item[educationInformation].item[major].linkId = "21.4"
 * item[educationInformation].item[major].text = "就讀或畢業科系"
 * item[educationInformation].item[major].type = #string
-* item[educationInformation].item[graduated].linkId = "21.6"
+* item[educationInformation].item[graduated].linkId = "21.5"
 * item[educationInformation].item[graduated].text = "是否畢業"
 * item[educationInformation].item[graduated].type = #boolean
-* item[educationInformation].item[graduationYear].linkId = "21.7"
-* item[educationInformation].item[graduationYear].text = "服務人畢業年度"
-* item[educationInformation].item[graduationYear].type = #integer
-* item[educationInformation].item[educationLevel].linkId = "21.8"
+* item[educationInformation].item[educationLevel].linkId = "21.6"
 * item[educationInformation].item[educationLevel].text = "教育程度"
 * item[educationInformation].item[educationLevel].type = #choice
 * item[educationInformation].item[educationLevel].answerValueSet = Canonical(twss-education-level-vs)
-* item[educationInformation].item[relatedMajorGraduate].linkId = "21.9"
+* item[educationInformation].item[relatedMajorGraduate].linkId = "21.7"
 * item[educationInformation].item[relatedMajorGraduate].text = "是否為相關科系畢業"
 * item[educationInformation].item[relatedMajorGraduate].type = #boolean
-* item[educationInformation].item[socialWelfareRelatedEducation].linkId = "21.10"
+* item[educationInformation].item[socialWelfareRelatedEducation].linkId = "21.8"
 * item[educationInformation].item[socialWelfareRelatedEducation].text = "是否為社福相關學歷"
 * item[educationInformation].item[socialWelfareRelatedEducation].type = #boolean
 
@@ -82,7 +76,7 @@ Profile: QuestionnaireOrganizationAdministrativeTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-organization-administrative-twss-base
 Title: "機構行政與營運資訊-Questionnaire TWSS Base"
-Description: "定義機構查核、評鑑、裁罰與營運填報資訊表單。"
+Description: "定義機構查核、裁罰與營運填報資訊表單。"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -99,15 +93,11 @@ Description: "定義機構查核、評鑑、裁罰與營運填報資訊表單。
 * item[organizationAdministrativeInformation].item ^slicing.discriminator.type = #value
 * item[organizationAdministrativeInformation].item ^slicing.discriminator.path = "linkId"
 * item[organizationAdministrativeInformation].item ^slicing.rules = #closed
-* item[organizationAdministrativeInformation].item contains organizationAuditResult 0..1 MS and accreditationLevel 0..1 MS and penaltyLegalBasis 0..1 MS
+* item[organizationAdministrativeInformation].item contains organizationAuditResult 0..1 MS and penaltyLegalBasis 0..1 MS
 * item[organizationAdministrativeInformation].item[organizationAuditResult].linkId = "24.1"
 * item[organizationAdministrativeInformation].item[organizationAuditResult].text = "查核結果"
 * item[organizationAdministrativeInformation].item[organizationAuditResult].type = #boolean
-* item[organizationAdministrativeInformation].item[accreditationLevel].linkId = "24.2"
-* item[organizationAdministrativeInformation].item[accreditationLevel].text = "評鑑等級"
-* item[organizationAdministrativeInformation].item[accreditationLevel].type = #choice
-* item[organizationAdministrativeInformation].item[accreditationLevel].answerValueSet = Canonical(twss-organization-accreditation-level-vs)
-* item[organizationAdministrativeInformation].item[penaltyLegalBasis].linkId = "24.3"
+* item[organizationAdministrativeInformation].item[penaltyLegalBasis].linkId = "24.2"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].text = "裁罰法規依據"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].type = #string
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].repeats = true

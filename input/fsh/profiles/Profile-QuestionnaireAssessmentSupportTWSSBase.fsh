@@ -123,6 +123,8 @@ Id: Questionnaire-adl-assessment-twss-base
 Title: "日常生活功能 ADL 評估-Questionnaire TWSS Base"
 Description: "定義日常生活功能評估表單的題目結構。"
 * ^version = "0.0.1"
+* url = "https://sfaa.gov.tw/base/Questionnaire/twss-adl"
+* title = "日常生活功能 ADL 評估"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed
@@ -133,11 +135,11 @@ Description: "定義日常生活功能評估表單的題目結構。"
 * item[adl].item ^slicing.discriminator.type = #value
 * item[adl].item ^slicing.discriminator.path = "linkId"
 * item[adl].item ^slicing.rules = #closed
-* item[adl].item contains selfCare 1..1 MS and mobility 1..1 MS and walkingAbility 1..1 MS and householdActivity 1..1 MS
-* item[adl].item[selfCare].linkId = "9.1"
-* item[adl].item[selfCare].text = "生活自理"
-* item[adl].item[selfCare].type = #choice
-* item[adl].item[selfCare].answerValueSet = Canonical(twss-adl-level-vs)
+* item[adl].item contains dailyLivingSkill 1..1 MS and mobility 1..1 MS and walkingAbility 1..1 MS and householdActivity 1..1 MS
+* item[adl].item[dailyLivingSkill].linkId = "9.1"
+* item[adl].item[dailyLivingSkill].text = "生活自理"
+* item[adl].item[dailyLivingSkill].type = #choice
+* item[adl].item[dailyLivingSkill].answerValueSet = Canonical(twss-adl-level-vs)
 * item[adl].item[mobility].linkId = "9.2"
 * item[adl].item[mobility].text = "肢體行動"
 * item[adl].item[mobility].type = #choice

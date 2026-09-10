@@ -10,12 +10,10 @@ Description: "記錄個案、關係人或服務人教育資訊的共用表單。
 * subjectType[+] = #Practitioner
 * item[educationInformation].text = "教育資訊"
 * item[educationInformation].item[schoolingStatus].text = "就學現況"
-* item[educationInformation].item[enrollmentYear].text = "服務人入學年度"
 * item[educationInformation].item[schoolName].text = "就讀學校名稱"
 * item[educationInformation].item[gradeLevel].text = "年級別"
 * item[educationInformation].item[major].text = "就讀或畢業科系"
 * item[educationInformation].item[graduated].text = "是否畢業"
-* item[educationInformation].item[graduationYear].text = "服務人畢業年度"
 * item[educationInformation].item[educationLevel].text = "教育程度"
 * item[educationInformation].item[relatedMajorGraduate].text = "是否為相關科系畢業"
 * item[educationInformation].item[socialWelfareRelatedEducation].text = "是否為社福相關學歷"
@@ -36,13 +34,12 @@ Instance: organization-administrative-information
 InstanceOf: QuestionnaireOrganizationAdministrativeTWSSBase
 Usage: #definition
 Title: "機構行政與營運資訊 Questionnaire"
-Description: "記錄機構查核、評鑑、裁罰與營運填報資訊的表單。"
+Description: "記錄機構查核、裁罰與營運填報資訊的表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information"
 * status = #active
 * subjectType[organization] = #Organization
 * item[organizationAdministrativeInformation].text = "機構行政資訊"
 * item[organizationAdministrativeInformation].item[organizationAuditResult].text = "查核結果"
-* item[organizationAdministrativeInformation].item[accreditationLevel].text = "評鑑等級"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].text = "裁罰法規依據"
 * item[organizationAdministrativeInformation].item[penaltyLegalBasis].repeats = true
 * item[organizationOperationsInformation].text = "機構行政與營運資訊"
