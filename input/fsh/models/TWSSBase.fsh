@@ -372,6 +372,24 @@ Description: """
 * caseClosure.isPlacementEnded 0..1 CodeableConcept "是否結束安置" "是否結束安置。"
 * caseClosure.placementNoFollowUpReason 0..1 CodeableConcept "安置未轉後追原因" "安置未轉後追原因。"
 
+* informationRecord 0..* BackboneElement "資訊記錄" "資訊記錄"
+* informationRecord.type 1..1 Coding "活動記錄類型" "資訊記錄的活動類型。"
+* informationRecord.period 0..1 Period "活動發生時間" "活動實際發生的時間範圍。"
+* informationRecord.recorded 1..1 instant "事件被記錄時間" "系統記錄此事件的時間。"
+* informationRecord.agent 1..* BackboneElement "參與此事件的行為人" "參與此事件的行為人。"
+* informationRecord.agent.agentAltId 0..1 string "行為人識別碼" "行為人在來源系統中的識別碼。"
+* informationRecord.agent.agentRequestor 1..1 boolean "是否為事件發起人" "是否為發起本事件的行為人。"
+* informationRecord.agent.agentLocation 0..1 Reference "行為人所在位置" "行為人所在的實體位置。"
+* informationRecord.agent.networkAddress 0..1 string "行為人裝置網路識別碼" "行為人裝置的 IP 位址或其他網路識別碼。"
+* informationRecord.source 1..1 BackboneElement "事件記錄者" "事件記錄者"
+* informationRecord.source.sourceObserver 1..1 Reference "事件記錄者來源" "記錄此事件的系統或 FHIR 伺服器。"
+
+* personalDataConsent 0..* BackboneElement "個資同意" "個資同意"
+* personalDataConsent.consentStatus 1..1 code "聲明狀態" "個人資料同意的狀態。"
+* personalDataConsent.consentScope 1..1 CodeableConcept "聲明類型" "個人資料同意的適用範圍。"
+* personalDataConsent.category 1..* CodeableConcept "聲明分類" "個人資料同意的分類。"
+* personalDataConsent.consentPatient 0..1 Reference "聲明適用對象" "同意所適用的個案、關係人或服務人員。"
+
 * officialDocument 0..* BackboneElement "共用公文" "共用公文"
 * officialDocument.officialDocumentNumber 0..1 Identifier "公文文號" "公文文號"
 * officialDocument.officialDocumentDate 0..1 date "公文日期" "公文日期"
@@ -719,6 +737,33 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Provenance-twss-base"
 
 * organizationBasicInfo.modifiedUnitCode -> "Provenance.agent.who.identifier"
 * organizationBasicInfo.createdUnitCode -> "Provenance.agent.who.identifier"
+
+Mapping: TWSSBaseToAuditEvent
+Id: twss-base-to-audit-event
+Title: "Mapping to TWSSBase AuditEvent"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/AuditEvent-twss-base"
+
+* informationRecord.type -> "AuditEvent.type"
+* informationRecord.period -> "AuditEvent.period"
+* informationRecord.recorded -> "AuditEvent.recorded"
+* informationRecord.agent.agentAltId -> "AuditEvent.agent[ipAddress].altId"
+* informationRecord.agent.agentRequestor -> "AuditEvent.agent[ipAddress].requestor"
+* informationRecord.agent.agentLocation -> "AuditEvent.agent[ipAddress].location"
+* informationRecord.agent.networkAddress -> "AuditEvent.agent[ipAddress].network.address"
+* informationRecord.source.sourceObserver -> "AuditEvent.source.observer"
+
+Mapping: TWSSBaseToPersonalDataConsent
+Id: twss-base-to-personal-data-consent
+Title: "Mapping to TWSSBase Personal Data Consent"
+Source: TWSSBaseModel
+Target: "https://sfaa.gov.tw/base/StructureDefinition/PersonalDataConsent-twss-base"
+
+* personalDataConsent.consentStatus -> "Consent.status"
+* personalDataConsent.consentScope -> "Consent.scope"
+* personalDataConsent.category -> "Consent.category"
+* personalDataConsent.consentPatient -> "Consent.patient"
+* personalDataConsent.consentPatient -> "Consent.extension[consentSubject].valueReference"
 
 Mapping: TWSSBaseToLocation
 Id: twss-base-to-location

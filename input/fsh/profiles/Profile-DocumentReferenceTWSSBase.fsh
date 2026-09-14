@@ -17,5 +17,5 @@ Description: "因 TW Core IG 0.3.2 尚無針對社福業務公文的 Profile，�
 * content.attachment 1..1 MS
 * content.attachment.creation 0..1 MS
 * content.attachment.creation ^short = "核准文號日期或公文日期"
-* context.related only Reference(ServiceRequestTWSSBase or ClaimTWSSBase or ClaimResponseTWSSBase or AssessmentReviewTaskTWSSBase or ReferralAcceptanceTaskTWSSBase or ReferralHandlingTaskTWSSBase or AssessmentServiceEncounterTWSSBase or EpisodeOfCareTWSSBase or CarePlanTWSSBase or QuestionnaireResponseTWSSBase)
+* context.related only Reference(ServiceRequestTWSSBase or ClaimTWSSBase or ClaimResponseTWSSBase or AssessmentReviewTaskTWSSBase or ReferralAcceptanceTaskTWSSBase or ReferralHandlingTaskTWSSBase or AssessmentServiceEncounterTWSSBase or EpisodeOfCareTWSSBase or CarePlanTWSSBase or QuestionnaireResponseTWSSBase or ConsentTWSSBase)
 * context.related MS

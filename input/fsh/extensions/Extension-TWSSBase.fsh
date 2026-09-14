@@ -302,3 +302,12 @@ Context: ServiceRequest
 * value[x] only CodeableConcept
 * valueCodeableConcept from TWSSCaseReportTypeVS (required)
 * valueCodeableConcept MS
+
+Extension: TWSSConsentSubject
+Id: twss-consent-subject
+Title: "同意適用資料主體"
+Description: "記錄個人資料同意所適用的資料主體。FHIR R4 Consent.patient 僅能參照 Patient；本 Extension 補充關係人或服務人員本人作為資料主體的情境。"
+Context: Consent
+* ^version = "0.0.1"
+* value[x] only Reference(PatientTWSSBase or RelatedPersonTWSSBase or PractitionerTWSSBase)
+* valueReference 1..1 MS

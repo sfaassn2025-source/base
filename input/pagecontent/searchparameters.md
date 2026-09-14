@@ -4,6 +4,38 @@
 
 #### 以 Resource 分類
 
+##### AuditEvent
+
+詳細定義請參考 [FHIR R4 AuditEvent 原生查詢參數](https://hl7.org/fhir/R4/auditevent.html#search)。
+- `_content` (string)
+- `_filter` (special)
+- `_id` (token)
+- `_lastUpdated` (date)
+- `_profile` (uri)
+- `_query` (token)
+- `_security` (token)
+- `_source` (uri)
+- `_tag` (token)
+- `_text` (string)
+- `action` (token)
+- `address` (string)
+- `agent` (reference)
+- `agent-name` (string)
+- `agent-role` (token)
+- `altid` (token)
+- `date` (date)
+- `entity` (reference)
+- `entity-name` (string)
+- `entity-role` (token)
+- `entity-type` (token)
+- `outcome` (token)
+- `patient` (reference)
+- `policy` (uri)
+- `site` (token)
+- `source` (reference)
+- `subtype` (token)
+- `type` (token)
+
 ##### CarePlan
 
 詳細定義請參考 [FHIR R4 CarePlan 原生查詢參數](https://hl7.org/fhir/R4/careplan.html#search)。
@@ -128,6 +160,35 @@
 - `stage` (token)
 - `subject` (reference)
 - `verification-status` (token)
+
+##### Consent
+
+詳細定義請參考 [FHIR R4 Consent 原生查詢參數](https://hl7.org/fhir/R4/consent.html#search)。
+- `_content` (string)
+- `_filter` (special)
+- `_id` (token)
+- `_lastUpdated` (date)
+- `_profile` (uri)
+- `_query` (token)
+- `_security` (token)
+- `_source` (uri)
+- `_tag` (token)
+- `_text` (string)
+- `action` (token)
+- `actor` (reference)
+- `category` (token)
+- `consentor` (reference)
+- `data` (reference)
+- `date` (date)
+- `identifier` (token)
+- `organization` (reference)
+- `patient` (reference)
+- `period` (date)
+- `purpose` (token)
+- `scope` (token)
+- `security-label` (token)
+- `source-reference` (reference)
+- `status` (token)
 
 ##### Coverage
 

@@ -1,6 +1,9 @@
 ### Resource之Profiles
 以下為本IG使用到的所有Profiles。
 
+#### AuditEvent
+- [資訊記錄-AuditEvent TWSS Base](StructureDefinition-AuditEvent-twss-base.html)
+
 #### CarePlan
 - [個案服務計畫-CarePlan TWSS Base](StructureDefinition-CarePlan-twss-base.html)
 
@@ -12,6 +15,10 @@
 
 #### Condition
 - [健康與障礙狀況-Condition TWSS Base](StructureDefinition-Condition-twss-base.html)
+
+#### Consent
+- [同意-Consent TWSS Base](StructureDefinition-Consent-twss-base.html)
+- [個資同意-Consent TWSS Base](StructureDefinition-PersonalDataConsent-twss-base.html)
 
 #### Coverage
 - [補助資格或補助案件-Coverage TWSS Base](StructureDefinition-Coverage-twss-base.html)
@@ -143,6 +150,8 @@
 - [關係人宗教信仰](StructureDefinition-twss-related-person-religion.html)
 - [申請補助處理狀態](StructureDefinition-twss-claim-application-review-status.html)
 - [補助期間](StructureDefinition-twss-claim-subsidy-period.html)
+
+- [同意適用資料主體](StructureDefinition-twss-consent-subject.html)
 
 ### TW Core IG Extension
 

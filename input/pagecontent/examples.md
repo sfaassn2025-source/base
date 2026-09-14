@@ -1,6 +1,9 @@
 ### Profiles範例
 以下為本IG使用到的所有Profiles的範例。
 
+#### AuditEvent
+- [資訊記錄範例](AuditEvent-audit-event-information-record-min.html)
+
 #### Claim
 - [補助申請範例](Claim-claim-min.html)
 
@@ -11,6 +14,10 @@
 - [健康與障礙狀況範例](Condition-condition-min.html)
 - [身心健康狀況範例](Condition-health-status-min.html)
 - [疾病類型範例](Condition-disease-type-min.html)
+
+#### Consent
+- [同意範例](Consent-consent-base-min.html)
+- [個案個資同意範例](Consent-personal-data-consent-patient-min.html)
 
 #### Coverage
 - [補助資格範例](Coverage-coverage-min.html)
