@@ -112,6 +112,7 @@
 #### Task
 - [個案受理與評估-Task TWSS Base](StructureDefinition-CaseIntakeAssessmentTask-twss-base.html)
 - [個案服務評估審核-Task TWSS Base](StructureDefinition-AssessmentReviewTask-twss-base.html)
+- [補助申請審查-Task TWSS Base](StructureDefinition-SubsidyApplicationReviewTask-twss-base.html)
 - [個案轉介受理-Task TWSS Base](StructureDefinition-ReferralAcceptanceTask-twss-base.html)
 - [個案轉介處理-Task TWSS Base](StructureDefinition-ReferralHandlingTask-twss-base.html)
 
@@ -129,7 +130,6 @@
 - [案件狀態](StructureDefinition-twss-case-status-extension.html)
 - [結案原因](StructureDefinition-twss-case-close-reason.html)
 - [結案時是否轉介](StructureDefinition-twss-is-referred-at-closure.html)
-- [補助審核結果](StructureDefinition-twss-claim-review-result.html)
 - [補助撥款狀況](StructureDefinition-twss-claim-payment-status.html)
 - [補助月分](StructureDefinition-twss-claim-subsidy-month.html)
 - [補助年度](StructureDefinition-twss-coverage-aid-year.html)
@@ -148,7 +148,6 @@
 - [服務人薪資](StructureDefinition-twss-practitioner-salary.html)
 - [個案原住民族別](StructureDefinition-twss-patient-aborigine-tribe.html)
 - [關係人宗教信仰](StructureDefinition-twss-related-person-religion.html)
-- [申請補助處理狀態](StructureDefinition-twss-claim-application-review-status.html)
 - [補助期間](StructureDefinition-twss-claim-subsidy-period.html)
 
 - [同意適用資料主體](StructureDefinition-twss-consent-subject.html)

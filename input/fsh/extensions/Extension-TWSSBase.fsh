@@ -161,25 +161,6 @@ Context: Coverage
 * value[x] only integer
 * valueInteger MS
 
-Extension: TWSSClaimReviewResult
-Id: twss-claim-review-result
-Title: "補助審核結果"
-Description: "記錄補助申請的業務審核結果。"
-Context: ClaimResponse
-* ^version = "0.0.1"
-* value[x] only boolean
-* valueBoolean MS
-
-Extension: TWSSClaimApplicationReviewStatus
-Id: twss-claim-application-review-status
-Title: "補助申請審查狀態"
-Description: "記錄補助申請處理中的業務狀態。"
-Context: Claim
-* ^version = "0.0.1"
-* value[x] only CodeableConceptTW
-* valueCodeableConcept MS
-* valueCodeableConcept from TWSSApplicationReviewStatusVS (required)
-
 Extension: TWSSClaimPaymentStatus
 Id: twss-claim-payment-status
 Title: "補助撥款狀況"

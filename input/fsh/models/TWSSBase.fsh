@@ -172,7 +172,7 @@ Description: """
 * subsidyApplication.approvedSubsidyAmount 0..1 decimal "核定補助金額" "核定補助金額"
 * subsidyApplication.reviewOpinion 0..1 string "審核意見" "審核意見"
 * subsidyApplication.nonComplianceReason 0..1 CodeableConcept "不符原因" "補助申請不符條件時的原因；可使用已取得的不符原因代碼，或僅填寫文字。"
-* subsidyApplication.reviewResult 0..1 boolean "審核結果" "審核結果"
+* subsidyApplication.reviewResult 0..1 boolean "審核結果" "補助申請的最終審核結果；true 時通過並記錄核定補助金額，false 時不通過並填寫不符原因。"
 * subsidyApplication.applicationReviewStatus 0..1 CodeableConcept "申請審核狀態" "補助申請處理中的業務狀態。"
 * subsidyApplication.subsidyPayment 0..* BackboneElement "補助款項" "已取得補助的款項資料；每一筆補助款項包含其類型及金額。"
 * subsidyApplication.subsidyPayment.receivedSubsidyAmount 0..1 decimal "已取得補助金額" "已取得補助金額"
@@ -191,7 +191,7 @@ Description: """
 * subsidyProvision.subsidyDisbursementStatus 0..1 CodeableConcept "補助撥款狀況" "補助款項的撥款處理狀況。"
 * subsidyProvision.subsidyMonth 0..1 integer "補助月分" "補助款項所屬月份。"
 * subsidyProvision.subsidyYear 0..1 integer "補助年度" "補助年度。"
-* subsidyProvision.applicationReviewStatus 0..1 CodeableConcept "申請審核狀態" "補助申請處理中的業務狀態。"
+* subsidyProvision.applicationReviewStatus 0..1 CodeableConcept "申請審核狀態" "由同一補助申請 Claim 為 focus 的補助申請審查 Task 取得的業務狀態。"
 * subsidyProvision.approvedBenefitStartDate 0..1 date "核定起領日" "審核後開始具備補助資格的日期。"
 * subsidyProvision.approvedBenefitEndDate 0..1 date "核定結束日" "審核後不再具備補助資格的日期。"
 * subsidyProvision.subsidyStartDate 0..1 date "補助起始日" "實際開始領取補助的日期。"
@@ -437,7 +437,7 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Patient-twss-base"
 * caseBasicInfo.nationality -> "Patient.extension[nationality]"
 * caseBasicInfo.ethnicGroup -> "Patient.extension[ethnicGroup]"
 * caseBasicInfo.aborigineTribe -> "Patient.extension[AborigineTribe].valueCodeableConcept"
-* caseBasicInfo.primaryLanguage -> "Patient.communication.language.coding.code"
+* caseBasicInfo.primaryLanguage -> "Patient.communication.where(preferred = true).language.coding.code"
 * caseBasicInfo.religion -> "Patient.extension[religion].valueCodeableConcept"
 * caseBasicInfo.maritalStatus -> "Patient.maritalStatus"
 * caseBasicInfo.telecom -> "Patient.telecom"
@@ -644,8 +644,6 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Claim-twss-base"
 * subsidyApplication.applicantBankAccount -> "Claim.supportingInfo[bankAccount].valueString"
 * subsidyApplication.subsidyServiceType -> "Claim.item.productOrService"
 * subsidyApplication.subsidyRatio -> "Claim.item.factor"
-* subsidyApplication.applicationReviewStatus -> "Claim.extension[applicationReviewStatus].valueCodeableConcept"
-
 Mapping: TWSSBaseToCondition
 Id: twss-base-to-condition
 Title: "Mapping to TWSSBase Condition"
@@ -799,10 +797,11 @@ Source: TWSSBaseModel
 Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
 
 * subsidyApplication.reviewCheckDate -> "ClaimResponse.created"
-* subsidyApplication.approvedSubsidyAmount -> "ClaimResponse.item.adjudication.where(category.coding.code = 'approved-amount').amount"
+* subsidyApplication.approvedSubsidyAmount -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit').amount"
 * subsidyApplication.reviewOpinion -> "ClaimResponse.processNote.text"
 * subsidyApplication.nonComplianceReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'eligibility-denial').reason"
-* subsidyApplication.reviewResult -> "ClaimResponse.extension[reviewResult].valueBoolean"
+* subsidyApplication.reviewResult -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit').reason"
+* subsidyApplication.reviewResult -> "ClaimResponse.item.adjudication.where(category.coding.code = 'eligibility-denial').category"
 * subsidyProvision.subsidyDisbursementStatus -> "ClaimResponse.extension[paymentStatus]"
 * subsidyProvision.subsidyMonth -> "ClaimResponse.extension[subsidyMonth]"
 * subsidyProvision.cancellationReason -> "ClaimResponse.item.adjudication.where(category.coding.code = 'benefit-termination').reason.text"
@@ -1093,13 +1092,14 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/PractitionerRole-twss-base
 * caseReport.helpNameTitle -> "PractitionerRole.code.text"
 * caseReport.helperTelcom -> "PractitionerRole.telecom.where(system = 'phone').value"
 
-Mapping: TWSSBaseToSubsidyProvisionApplicationReviewStatusClaimResponse
-Id: twss-base-to-subsidy-provision-review-status-claimresponse
-Title: "Mapping to TWSSBase Subsidy Provision Application Review Status ClaimResponse"
+Mapping: TWSSBaseToSubsidyApplicationReviewTask
+Id: twss-base-to-subsidy-application-review-task
+Title: "Mapping to TWSSBase Subsidy Application Review Task"
 Source: TWSSBaseModel
-Target: "https://sfaa.gov.tw/base/StructureDefinition/ClaimResponse-twss-base"
+Target: "https://sfaa.gov.tw/base/StructureDefinition/SubsidyApplicationReviewTask-twss-base"
 
-* subsidyProvision.applicationReviewStatus -> "ClaimResponse.request.resolve().extension('https://sfaa.gov.tw/base/StructureDefinition/twss-claim-application-review-status').valueCodeableConcept"
+* subsidyApplication.applicationReviewStatus -> "Task.businessStatus"
+* subsidyProvision.applicationReviewStatus -> "Task.businessStatus"
 
 Mapping: TWSSBaseToPsychologicalCounselingObservation
 Id: twss-base-to-psychological-counseling-observation

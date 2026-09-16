@@ -14,7 +14,6 @@ Usage: #example
 * request = Reference(claim-min)
 * outcome = #complete
 * disposition = "核定通過"
-* extension[reviewResult].valueBoolean = true
 * preAuthPeriod.start = "2026-07-01"
 * preAuthPeriod.end = "2026-12-31"
 * extension[subsidyPeriod].extension[start].valueDate = "2026-07-15"
@@ -22,9 +21,10 @@ Usage: #example
 * extension[paymentStatus].valueCodeableConcept = TWSSPaymentStatus#1 "已出帳"
 * extension[subsidyMonth].valueInteger = 6
 * item[0].itemSequence = 1
-* item[0].adjudication[approvedAmount].category = TWSSClaimAdjudicationCategory#approved-amount "核定補助金額"
-* item[0].adjudication[approvedAmount].amount.value = 1000
-* item[0].adjudication[approvedAmount].amount.currency = #TWD
+* item[0].adjudication[approvedBenefit].category = http://terminology.hl7.org/CodeSystem/adjudication#benefit "Benefit Amount"
+* item[0].adjudication[approvedBenefit].reason = TWSSSubsidyApprovalDecision#approved "通過"
+* item[0].adjudication[approvedBenefit].amount.value = 1000
+* item[0].adjudication[approvedBenefit].amount.currency = #TWD
 * processNote[0].number = 1
 * processNote[0].type = #display
 * processNote[0].text = "已完成補助核定作業。"
