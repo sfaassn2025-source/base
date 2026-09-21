@@ -2,7 +2,7 @@ Instance: case-basic-family-information
 InstanceOf: QuestionnaireCaseBasicFamilyTWSSBase
 Usage: #definition
 Description: "個案基本家庭資料評估表。"
-Title: "個案基本與家庭資訊 Questionnaire"
+Title: "個案基本與家庭資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/case-basic-family-information"
 * status = #active
 * subjectType[patient] = #Patient
@@ -18,7 +18,7 @@ Instance: practitioner-employment-information
 InstanceOf: QuestionnairePractitionerEmploymentTWSSBase
 Usage: #definition
 Description: "服務人基本與任職資訊表。"
-Title: "服務人基本與任職資訊 Questionnaire"
+Title: "服務人基本與任職資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #active
 * subjectType[practitionerRole] = #PractitionerRole
@@ -30,7 +30,7 @@ Instance: related-person-basic-information
 InstanceOf: QuestionnaireRelatedPersonBasicTWSSBase
 Usage: #definition
 Description: "關係人基本資訊評估表。"
-Title: "關係人基本資訊 Questionnaire"
+Title: "關係人基本資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/related-person-basic-information"
 * status = #active
 * subjectType[relatedPerson] = #RelatedPerson
@@ -43,7 +43,7 @@ Instance: related-person-role-assessment
 InstanceOf: QuestionnaireRelatedPersonRoleAssessmentTWSSBase
 Usage: #definition
 Description: "個案服務評估中的關係人角色判斷表。"
-Title: "關係人角色評估 Questionnaire"
+Title: "關係人角色評估"
 * url = "https://sfaa.gov.tw/base/Questionnaire/related-person-role-assessment"
 * status = #active
 * subjectType[patient] = #Patient
@@ -58,7 +58,7 @@ Instance: vocational-training-status
 InstanceOf: QuestionnaireVocationalTrainingTWSSBase
 Usage: #definition
 Description: "職業訓練狀況評估表。"
-Title: "職業訓練狀況 Questionnaire"
+Title: "職業訓練狀況"
 * url = "https://sfaa.gov.tw/base/Questionnaire/vocational-training-status"
 * status = #active
 * subjectType[0] = #Patient
@@ -70,7 +70,7 @@ Instance: school-adaptation-status
 InstanceOf: QuestionnaireSchoolAdaptationTWSSBase
 Usage: #definition
 Description: "學校適應狀況評估表。"
-Title: "學校適應狀況 Questionnaire"
+Title: "學校適應狀況"
 * url = "https://sfaa.gov.tw/base/Questionnaire/school-adaptation-status"
 * status = #active
 * subjectType[0] = #Patient
@@ -80,7 +80,7 @@ Instance: emotional-behavior-status
 InstanceOf: QuestionnaireEmotionalBehaviorTWSSBase
 Usage: #definition
 Description: "情緒與行為狀況評估表。"
-Title: "情緒與行為狀況 Questionnaire"
+Title: "情緒與行為狀況"
 * url = "https://sfaa.gov.tw/base/Questionnaire/emotional-behavior-status"
 * status = #active
 * subjectType[0] = #Patient
@@ -90,7 +90,7 @@ Instance: interpersonal-interaction-status
 InstanceOf: QuestionnaireInterpersonalInteractionTWSSBase
 Usage: #definition
 Description: "人際互動狀況評估表。"
-Title: "人際互動狀況 Questionnaire"
+Title: "人際互動狀況"
 * url = "https://sfaa.gov.tw/base/Questionnaire/interpersonal-interaction-status"
 * status = #active
 * subjectType[0] = #Patient
@@ -105,7 +105,7 @@ Instance: developmental-delay-status
 InstanceOf: QuestionnaireDevelopmentalDelayTWSSBase
 Usage: #definition
 Description: "兒童發展遲緩評估表。"
-Title: "發展遲緩類別 Questionnaire"
+Title: "兒童發展遲緩評估"
 * url = "https://sfaa.gov.tw/base/Questionnaire/developmental-delay-status"
 * status = #active
 * subjectType[0] = #Patient
@@ -121,7 +121,7 @@ Instance: employment-information
 InstanceOf: QuestionnaireEmploymentTWSSBase
 Usage: #definition
 Description: "就業資訊評估表。"
-Title: "就業資訊 Questionnaire"
+Title: "就業資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/employment-information"
 * status = #active
 * subjectType[0] = #Patient
@@ -135,7 +135,7 @@ Instance: placement-information
 InstanceOf: QuestionnairePlacementInformationTWSSBase
 Usage: #definition
 Description: "安置服務資訊評估表。"
-Title: "安置資訊 Questionnaire"
+Title: "安置服務資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/placement-information"
 * status = #active
 * subjectType[0] = #Patient
@@ -148,7 +148,7 @@ Instance: closure-placement-information
 InstanceOf: QuestionnaireClosurePlacementTWSSBase
 Usage: #definition
 Description: "結案後安置資訊評估表。"
-Title: "結案與安置資訊 Questionnaire"
+Title: "結案後安置資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/closure-placement-information"
 * status = #active
 * subjectType[0] = #Patient

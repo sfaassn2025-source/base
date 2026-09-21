@@ -3,6 +3,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-disability-status-twss-base
 Title: "身心障礙狀況-Questionnaire TWSS Base"
 Description: "定義身心障礙狀況評估表單的題目結構。"
+* title = "身心障礙狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -32,17 +33,12 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityClassification].item[newDisabilityClassification].item ^slicing.discriminator.type = #value
 * item[disabilityClassification].item[newDisabilityClassification].item ^slicing.discriminator.path = "linkId"
 * item[disabilityClassification].item[newDisabilityClassification].item ^slicing.rules = #closed
-* item[disabilityClassification].item[newDisabilityClassification].item contains newDisabilityType 1..1 MS and newDisabilityCategory 0..1 MS
+* item[disabilityClassification].item[newDisabilityClassification].item contains newDisabilityType 1..1 MS
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].linkId = "7.1.3.1"
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].text = "新制障礙類別"
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].type = #choice
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].required = true
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].answerValueSet = Canonical(twss-disability-type-new-category-vs)
-* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].linkId = "7.1.3.2"
-* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].text = "新制障礙類別內容"
-* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].type = #choice
-* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].repeats = true
-* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].answerValueSet = Canonical(twss-new-disability-category-vs)
 * item[disabilityClassification].item[oldDisabilityType].linkId = "7.1.4"
 * item[disabilityClassification].item[oldDisabilityType].text = "舊制障礙類別"
 * item[disabilityClassification].item[oldDisabilityType].type = #choice
@@ -98,6 +94,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-assistive-device-status-twss-base
 Title: "輔具使用狀況-Questionnaire TWSS Base"
 Description: "定義輔具使用狀況評估表單的題目結構。"
+* title = "輔具使用狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"

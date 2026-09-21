@@ -1,7 +1,7 @@
 Instance: education-information
 InstanceOf: QuestionnaireEducationInformationTWSSBase
 Usage: #definition
-Title: "教育資訊 Questionnaire"
+Title: "教育資訊"
 Description: "記錄個案、關係人或服務人教育資訊的共用表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/education-information"
 * status = #active
@@ -21,7 +21,7 @@ Description: "記錄個案、關係人或服務人教育資訊的共用表單。
 Instance: medical-support-assessment
 InstanceOf: QuestionnaireMedicalSupportTWSSBase
 Usage: #definition
-Title: "醫療服務現況 Questionnaire"
+Title: "醫療服務現況"
 Description: "記錄個案服務評估中的醫療復健服務及醫療協助。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/medical-support-assessment"
 * status = #active
@@ -33,7 +33,7 @@ Description: "記錄個案服務評估中的醫療復健服務及醫療協助。
 Instance: organization-administrative-information
 InstanceOf: QuestionnaireOrganizationAdministrativeTWSSBase
 Usage: #definition
-Title: "機構行政與營運資訊 Questionnaire"
+Title: "機構行政與營運資訊"
 Description: "記錄機構查核、裁罰與營運填報資訊的表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/organization-administrative-information"
 * status = #active
@@ -59,7 +59,7 @@ Description: "記錄機構查核、裁罰與營運填報資訊的表單。"
 Instance: case-service-administrative-information
 InstanceOf: QuestionnaireCaseServiceAdministrativeTWSSBase
 Usage: #definition
-Title: "個案服務行政資訊 Questionnaire"
+Title: "個案服務行政資訊"
 Description: "記錄個案服務裁定日期的表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/case-service-administrative-information"
 * status = #active

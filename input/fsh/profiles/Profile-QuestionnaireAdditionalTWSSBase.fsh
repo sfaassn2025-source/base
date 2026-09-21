@@ -3,6 +3,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-case-basic-family-twss-base
 Title: "個案基本與家庭資訊-Questionnaire TWSS Base"
 Description: "定義個案基本、家庭與特殊教育資訊表單的題目結構。"
+* title = "個案基本與家庭資訊"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -47,6 +48,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-practitioner-employment-twss-base
 Title: "服務人基本與任職資訊-Questionnaire TWSS Base"
 Description: "定義服務人親屬保母、薪資與健康檢查日期的任職資訊表單。"
+* title = "服務人基本與任職資訊"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -76,6 +78,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-related-person-basic-twss-base
 Title: "關係人基本資訊-Questionnaire TWSS Base"
 Description: "定義關係人基本資訊表單的題目結構。"
+* title = "關係人基本資訊"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -108,6 +111,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-related-person-role-assessment-twss-base
 Title: "關係人角色評估-Questionnaire TWSS Base"
 Description: "定義個案服務評估中關係人角色判斷的表單。"
+* title = "關係人角色評估"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -147,6 +151,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-vocational-training-twss-base
 Title: "職業訓練狀況-Questionnaire TWSS Base"
 Description: "定義個案職業訓練狀況表單的題目結構。"
+* title = "職業訓練狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -172,6 +177,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-school-adaptation-twss-base
 Title: "學校適應狀況-Questionnaire TWSS Base"
 Description: "定義學校適應狀況表單的題目結構。"
+* title = "學校適應狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -186,6 +192,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-emotional-behavior-twss-base
 Title: "情緒與行為狀況-Questionnaire TWSS Base"
 Description: "定義情緒控制能力評估表單的題目結構。"
+* title = "情緒與行為狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -201,6 +208,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-interpersonal-interaction-twss-base
 Title: "人際互動狀況-Questionnaire TWSS Base"
 Description: "定義人際與社會適應評估表單的題目結構。"
+* title = "人際互動狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -239,6 +247,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-developmental-delay-twss-base
 Title: "發展遲緩類別-Questionnaire TWSS Base"
 Description: "定義發展遲緩類別評估表單的題目結構。"
+* title = "兒童發展遲緩評估"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -281,6 +290,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-employment-twss-base
 Title: "就業資訊-Questionnaire TWSS Base"
 Description: "定義個案就業資訊表單的題目結構。"
+* title = "就業資訊"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -314,6 +324,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-placement-information-twss-base
 Title: "安置資訊-Questionnaire TWSS Base"
 Description: "定義安置評估、服務與結案共用表單的題目結構。"
+* title = "安置服務資訊"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -342,6 +353,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-closure-placement-twss-base
 Title: "結案與安置資訊-Questionnaire TWSS Base"
 Description: "定義結案時安置未轉後追原因表單的題目結構。"
+* title = "結案後安置資訊"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"

@@ -3,6 +3,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-welfare-economic-status-twss-base
 Title: "福利與經濟現況-Questionnaire TWSS Base"
 Description: "定義既有補助、保險與福利身分評估表單的題目結構。"
+* title = "福利與經濟現況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -42,6 +43,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-visit-record-twss-base
 Title: "訪視紀錄-Questionnaire TWSS Base"
 Description: "定義訪視紀錄表單的題目結構。"
+* title = "訪視紀錄"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"

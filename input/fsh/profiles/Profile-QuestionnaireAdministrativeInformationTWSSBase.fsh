@@ -3,6 +3,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-education-information-twss-base
 Title: "教育資訊-Questionnaire TWSS Base"
 Description: "定義個案、關係人及服務人共用的教育資訊表單。"
+* title = "教育資訊"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -49,6 +50,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-medical-support-twss-base
 Title: "醫療服務現況-Questionnaire TWSS Base"
 Description: "定義個案服務評估中的醫療復健服務及醫療協助表單。"
+* title = "醫療服務現況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"
@@ -77,6 +79,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-organization-administrative-twss-base
 Title: "機構行政與營運資訊-Questionnaire TWSS Base"
 Description: "定義機構查核、裁罰與營運填報資訊表單。"
+* title = "機構行政與營運資訊"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -162,6 +165,7 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-case-service-administrative-twss-base
 Title: "個案服務行政資訊-Questionnaire TWSS Base"
 Description: "定義個案服務裁定日期表單。"
+* title = "個案服務行政資訊"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
 * item ^slicing.discriminator.path = "linkId"

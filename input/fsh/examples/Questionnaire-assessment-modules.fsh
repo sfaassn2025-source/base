@@ -3,7 +3,7 @@
 Instance: living-condition-assessment
 InstanceOf: QuestionnaireLivingConditionTWSSBase
 Usage: #definition
-Title: "居住狀況評估 Questionnaire"
+Title: "居住狀況評估"
 Description: "記錄個案住所、房屋、居住環境、臥房與同住狀況的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/living-condition-assessment"
 * status = #active
@@ -23,7 +23,7 @@ Description: "記錄個案住所、房屋、居住環境、臥房與同住狀況
 Instance: family-assessment
 InstanceOf: QuestionnaireFamilyAssessmentTWSSBase
 Usage: #definition
-Title: "家庭評估 Questionnaire"
+Title: "家庭評估"
 Description: "記錄家庭環境與外部支持評估結果的表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/family-assessment"
 * status = #active
@@ -39,7 +39,7 @@ Description: "記錄家庭環境與外部支持評估結果的表單。"
 Instance: related-person-risk-assessment
 InstanceOf: QuestionnaireRelatedPersonRiskTWSSBase
 Usage: #definition
-Title: "關係人風險狀況 Questionnaire"
+Title: "關係人風險狀況"
 Description: "以重複關係人群組記錄犯罪紀錄與物質濫用風險的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/related-person-risk-assessment"
 * status = #active
@@ -59,7 +59,7 @@ Description: "以重複關係人群組記錄犯罪紀錄與物質濫用風險的
 Instance: crisis-event-location
 InstanceOf: QuestionnaireCrisisEventLocationTWSSBase
 Usage: #definition
-Title: "危機事件地點 Questionnaire"
+Title: "危機事件地點"
 Description: "記錄個案危機事件事發地點的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/crisis-event-location"
 * status = #active
@@ -73,7 +73,7 @@ Description: "記錄個案危機事件事發地點的評估表單。"
 Instance: household-disability-count
 InstanceOf: QuestionnaireHouseholdDisabilityCountTWSSBase
 Usage: #definition
-Title: "家庭身障人口狀況 Questionnaire"
+Title: "家庭身心障礙者人數"
 Description: "記錄個案家庭中身心障礙者人數的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/household-disability-count"
 * status = #active
@@ -87,7 +87,7 @@ Description: "記錄個案家庭中身心障礙者人數的評估表單。"
 Instance: health-disease-status
 InstanceOf: QuestionnaireHealthDiseaseStatusTWSSBase
 Usage: #definition
-Title: "健康與疾病狀況 Questionnaire"
+Title: "健康與疾病狀況"
 Description: "記錄重大傷病、健康狀況、疾病分類、ICD 與用藥情形的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/health-disease-status"
 * status = #active
@@ -107,7 +107,7 @@ Description: "記錄重大傷病、健康狀況、疾病分類、ICD 與用藥�
 Instance: disability-status
 InstanceOf: QuestionnaireDisabilityStatusTWSSBase
 Usage: #definition
-Title: "身心障礙狀況 Questionnaire"
+Title: "身心障礙狀況"
 Description: "記錄障礙分類、致障原因、障礙證明與相關日期的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/disability-status"
 * status = #active
@@ -117,7 +117,6 @@ Description: "記錄障礙分類、致障原因、障礙證明與相關日期的
 * item[disabilityClassification].item[disabilityLocation].text = "障礙部位"
 * item[disabilityClassification].item[newDisabilityClassification].text = "新制障礙分類"
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].text = "新制障礙類別"
-* item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityCategory].text = "新制障礙類別內容"
 * item[disabilityClassification].item[oldDisabilityType].text = "舊制障礙類別"
 * item[disabilityClassification].item[icf].text = "ICF編碼"
 * item[disabilityClassification].item[disabilitySeverityLevel].text = "障礙程度等級"
@@ -136,7 +135,7 @@ Description: "記錄障礙分類、致障原因、障礙證明與相關日期的
 Instance: assistive-device-status
 InstanceOf: QuestionnaireAssistiveDeviceStatusTWSSBase
 Usage: #definition
-Title: "輔具使用狀況 Questionnaire"
+Title: "輔具使用狀況"
 Description: "記錄個案輔具名稱與使用情形的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/assistive-device-status"
 * status = #active
@@ -152,7 +151,7 @@ Description: "記錄個案輔具名稱與使用情形的評估表單。"
 Instance: welfare-economic-status
 InstanceOf: QuestionnaireWelfareEconomicStatusTWSSBase
 Usage: #definition
-Title: "福利與經濟現況 Questionnaire"
+Title: "福利與經濟現況"
 Description: "記錄既有補助、保險與福利身分的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/welfare-economic-status"
 * status = #active
@@ -171,7 +170,7 @@ Description: "記錄既有補助、保險與福利身分的評估表單。"
 Instance: visit-record
 InstanceOf: QuestionnaireVisitRecordTWSSBase
 Usage: #definition
-Title: "訪視紀錄 Questionnaire"
+Title: "訪視紀錄"
 Description: "記錄訪視對象、方式、開始與結束時間及摘要的表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/visit-record"
 * status = #active

@@ -241,7 +241,6 @@ Description: """
 * caseAssessment.catastrophicIllnessName 0..1 string "重大傷病卡病名" "重大傷病卡病名"
 * caseAssessment.newDisabilityType 0..* CodeableConcept "新制障礙類別" "個案服務評估中的新制障礙類別。"
 * caseAssessment.oldDisabilityType 0..* CodeableConcept "舊制障礙類別" "個案服務評估中的舊制障礙類別。"
-* caseAssessment.newDisabilityCategory 0..* CodeableConcept "新制障礙類別內容" "個案服務評估中的新制障礙類別細項。"
 * caseAssessment.disabilityCause 0..* CodeableConcept "致障原因" "致障原因"
 * caseAssessment.physicalDisabilityType 0..* CodeableConcept "肢體障礙類別" "肢體障礙類別"
 * caseAssessment.disabilityLocation 0..1 string "障礙部位" "障礙部位"
@@ -546,7 +545,6 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/AssessmentQuestionnaireRes
 * caseAssessment.disabilityCause -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.1').answer.valueCoding"
 * caseAssessment.newDisabilityType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.3').item.where(linkId = '7.1.3.1').answer.valueCoding"
 * caseAssessment.oldDisabilityType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.4').answer.valueCoding"
-* caseAssessment.newDisabilityCategory -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.3').item.where(linkId = '7.1.3.2').answer.valueCoding"
 * caseAssessment.physicalDisabilityType -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.2').answer.valueCoding"
 * caseAssessment.disabilityOnsetDate -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.7').answer.valueDate"
 * caseAssessment.icf -> "QuestionnaireResponse.where(questionnaire = 'https://sfaa.gov.tw/base/Questionnaire/disability-status').item.where(linkId = '7.1').item.where(linkId = '7.1.5').answer.valueCoding"
@@ -658,7 +656,6 @@ Target: "https://sfaa.gov.tw/base/StructureDefinition/Condition-twss-base"
 * caseService.diseaseType -> "Condition.code"
 * caseAssessment.newDisabilityType -> "Condition.code.coding[new-disability-type]"
 * caseAssessment.oldDisabilityType -> "Condition.code.coding[old-disability-type]"
-* caseAssessment.newDisabilityCategory -> "Condition.code.coding[new-disability-category]"
 
 Mapping: TWSSBaseToEpisodeOfCare
 Id: twss-base-to-episodeofcare
