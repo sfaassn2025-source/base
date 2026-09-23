@@ -15,17 +15,17 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityClassification].item ^slicing.discriminator.type = #value
 * item[disabilityClassification].item ^slicing.discriminator.path = "linkId"
 * item[disabilityClassification].item ^slicing.rules = #closed
-* item[disabilityClassification].item contains disabilityCause 0..1 MS and disabilityLocation 0..1 MS and newDisabilityClassification 0..* MS and oldDisabilityType 0..1 MS and icf 0..1 MS and disabilitySeverityLevel 0..1 MS and disabilityOnsetDate 0..1 MS
+* item[disabilityClassification].item contains disabilityCause 0..1 MS and physicalDisabilityType 0..1 MS and newDisabilityClassification 0..* MS and oldDisabilityType 0..1 MS and icf 0..1 MS and disabilitySeverityLevel 0..1 MS and disabilityOnsetDate 0..1 MS
 * item[disabilityClassification].item[disabilityCause].linkId = "7.1.1"
 * item[disabilityClassification].item[disabilityCause].text = "致障原因"
 * item[disabilityClassification].item[disabilityCause].type = #choice
 * item[disabilityClassification].item[disabilityCause].repeats = true
 * item[disabilityClassification].item[disabilityCause].answerValueSet = Canonical(twss-disability-cause-vs)
-* item[disabilityClassification].item[disabilityLocation].linkId = "7.1.2"
-* item[disabilityClassification].item[disabilityLocation].text = "障礙部位"
-* item[disabilityClassification].item[disabilityLocation].type = #open-choice
-* item[disabilityClassification].item[disabilityLocation].repeats = true
-* item[disabilityClassification].item[disabilityLocation].answerValueSet = Canonical(twss-physical-disability-type-vs)
+* item[disabilityClassification].item[physicalDisabilityType].linkId = "7.1.2"
+* item[disabilityClassification].item[physicalDisabilityType].text = "肢體障礙類別"
+* item[disabilityClassification].item[physicalDisabilityType].type = #choice
+* item[disabilityClassification].item[physicalDisabilityType].repeats = true
+* item[disabilityClassification].item[physicalDisabilityType].answerValueSet = Canonical(twss-physical-disability-type-vs)
 * item[disabilityClassification].item[newDisabilityClassification].linkId = "7.1.3"
 * item[disabilityClassification].item[newDisabilityClassification].text = "新制障礙分類"
 * item[disabilityClassification].item[newDisabilityClassification].type = #group

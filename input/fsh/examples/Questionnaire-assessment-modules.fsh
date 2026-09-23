@@ -114,7 +114,7 @@ Description: "記錄障礙分類、致障原因、障礙證明與相關日期的
 * subjectType[0] = #Patient
 * item[disabilityClassification].text = "障礙分類與狀況"
 * item[disabilityClassification].item[disabilityCause].text = "致障原因"
-* item[disabilityClassification].item[disabilityLocation].text = "障礙部位"
+* item[disabilityClassification].item[physicalDisabilityType].text = "肢體障礙類別"
 * item[disabilityClassification].item[newDisabilityClassification].text = "新制障礙分類"
 * item[disabilityClassification].item[newDisabilityClassification].item[newDisabilityType].text = "新制障礙類別"
 * item[disabilityClassification].item[oldDisabilityType].text = "舊制障礙類別"
