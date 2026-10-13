@@ -1,4 +1,4 @@
-以下列出本 IG 各 Resource 建議應該（SHOULD）支援的 FHIR R4 原生查詢參數。已由本 IG 定義的查詢參數連至本 IG 頁面；其餘連至 FHIR R4 正式定義。
+以下列出本 IG 各 Resource 可能可以（MAY）支援的 FHIR R4 原生查詢參數。已由本 IG 定義的查詢參數連至本 IG 頁面；其餘連至 FHIR R4 正式定義。
 
 ### 對外服務之 API
 
