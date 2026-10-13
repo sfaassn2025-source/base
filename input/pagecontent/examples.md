@@ -67,12 +67,12 @@
 - [個案資料範例](Patient-pat-min.html)
 
 #### Practitioner
-- [服務人資料範例](Practitioner-prac-min.html)
+- [服務提供者資料範例](Practitioner-prac-min.html)
 - [托育人員範例](Practitioner-prac-sitter.html)
 - [收出養機構負責人範例](Practitioner-prac-adoption-manager.html)
 
 #### PractitionerRole
-- [服務人角色範例](PractitionerRole-pracrole-min.html)
+- [服務提供者角色範例](PractitionerRole-pracrole-min.html)
 - [托育人員角色範例](PractitionerRole-pracrole-sitter.html)
 - [收出養機構負責人角色範例](PractitionerRole-pracrole-adoption-manager.html)
 
@@ -94,7 +94,7 @@
 - [醫療服務現況 Questionnaire](Questionnaire-medical-support-assessment.html)
 - [機構行政與營運資訊 Questionnaire](Questionnaire-organization-administrative-information.html)
 - [個案服務行政資訊 Questionnaire](Questionnaire-case-service-administrative-information.html)
-- [服務人基本與任職資訊 Questionnaire](Questionnaire-practitioner-employment-information.html)
+- [服務提供者基本與任職資訊 Questionnaire](Questionnaire-practitioner-employment-information.html)
 - [關係人基本資訊 Questionnaire](Questionnaire-related-person-basic-information.html)
 - [關係人角色評估 Questionnaire](Questionnaire-related-person-role-assessment.html)
 - [職業訓練狀況 Questionnaire](Questionnaire-vocational-training-status.html)
@@ -112,11 +112,11 @@
 - [個案基本與家庭資訊回覆範例](QuestionnaireResponse-case-basic-family-response-min.html)
 - [個案教育資訊回覆範例](QuestionnaireResponse-patient-education-information-response-min.html)
 - [關係人教育資訊回覆範例](QuestionnaireResponse-related-person-education-information-response-min.html)
-- [服務人教育資訊回覆範例](QuestionnaireResponse-practitioner-education-information-response-min.html)
+- [服務提供者教育資訊回覆範例](QuestionnaireResponse-practitioner-education-information-response-min.html)
 - [醫療服務現況回覆範例](QuestionnaireResponse-medical-support-assessment-response-min.html)
 - [機構行政與營運資訊回覆範例](QuestionnaireResponse-organization-administrative-information-response-min.html)
 - [個案服務行政資訊回覆範例](QuestionnaireResponse-case-service-administrative-information-response-min.html)
-- [服務人基本與任職資訊回覆範例](QuestionnaireResponse-practitioner-employment-response-min.html)
+- [服務提供者基本與任職資訊回覆範例](QuestionnaireResponse-practitioner-employment-response-min.html)
 - [關係人基本資訊回覆範例](QuestionnaireResponse-related-person-basic-response-min.html)
 - [關係人角色評估回覆範例](QuestionnaireResponse-related-person-role-assessment-response-min.html)
 - [職業訓練狀況回覆範例](QuestionnaireResponse-vocational-training-response-min.html)

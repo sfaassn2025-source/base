@@ -17,12 +17,12 @@ Title: "個案基本與家庭資訊"
 Instance: practitioner-employment-information
 InstanceOf: QuestionnairePractitionerEmploymentTWSSBase
 Usage: #definition
-Description: "服務人基本與任職資訊表。"
-Title: "服務人基本與任職資訊"
+Description: "服務提供者基本與任職資訊表。"
+Title: "服務提供者基本與任職資訊"
 * url = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #active
 * subjectType[practitionerRole] = #PractitionerRole
-* item[practitionerEmployment].text = "個案服務人基本資訊"
+* item[practitionerEmployment].text = "個案服務提供者基本資訊"
 * item[practitionerEmployment].item[isRelativeNanny].text = "是否為親屬保母"
 * item[practitionerEmployment].item[healthCheckDate].text = "健康檢查日期"
 
@@ -127,9 +127,12 @@ Title: "就業資訊"
 * subjectType[0] = #Patient
 * item[employmentInformation].text = "就業資訊"
 * item[employmentInformation].item[employmentStatus].text = "就業現況"
+* item[employmentInformation].item[employmentStatus].code = http://loinc.org#67875-5 "Employment status - current"
 * item[employmentInformation].item[unemploymentReason].text = "未就業原因"
 * item[employmentInformation].item[previousJob].text = "曾任職"
+* item[employmentInformation].item[previousJob].code = http://loinc.org#11341-5 "History of occupation"
 * item[employmentInformation].item[currentJob].text = "現職"
+* item[employmentInformation].item[currentJob].code = http://loinc.org#85658-3 "Occupation [Type]"
 
 Instance: placement-information
 InstanceOf: QuestionnairePlacementInformationTWSSBase

@@ -18,7 +18,7 @@ Description: "個案家庭結構代碼。"
 * #I "同性伴侶家庭"
 * #J "同居家庭"
 * #K "單人家庭"
-* #Z "其它家庭"
+* #Z "其他家庭"
 
 CodeSystem: TWSSChildrenStatus
 Id: twss-children-status
@@ -31,7 +31,6 @@ Description: "個案子女狀態代碼。"
 * ^content = #complete
 * #0 "無"
 * #1 "有"
-* #2 "歿"
 
 CodeSystem: TWSSSpecialEducationType
 Id: twss-special-education-type

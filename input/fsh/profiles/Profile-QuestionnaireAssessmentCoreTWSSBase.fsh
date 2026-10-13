@@ -127,6 +127,7 @@ Description: "定義健康與疾病狀況評估表單的題目結構。"
 * item[catastrophicIllnessName].type = #string
 * item[catastrophicIllnessName].enableWhen.question = "6.1"
 * item[catastrophicIllnessName].enableWhen.operator = #=
+* item[catastrophicIllnessName].enableWhen.answer[x] only boolean
 * item[catastrophicIllnessName].enableWhen.answerBoolean = true
 * item[healthStatusLevel].linkId = "6.3"
 * item[healthStatusLevel].text = "健康狀況分級"

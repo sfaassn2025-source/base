@@ -47,5 +47,7 @@ Description: "定義居住狀況評估表單的題目結構。"
 * item[livingCondition].item[currentLivingStatus].answerValueSet = "https://sfaa.gov.tw/base/ValueSet/twss-current-living-status-vs"
 * item[livingCondition].item[livingStatus].linkId = "1.6"
 * item[livingCondition].item[livingStatus].text = "同住狀況"
+* item[livingCondition].item[livingStatus].code 1..1 MS
+* item[livingCondition].item[livingStatus].code = http://loinc.org#46468-5 "Current living arrangement"
 * item[livingCondition].item[livingStatus].type = #choice
 * item[livingCondition].item[livingStatus].answerValueSet = "https://sfaa.gov.tw/base/ValueSet/twss-cohabitation-status-vs"

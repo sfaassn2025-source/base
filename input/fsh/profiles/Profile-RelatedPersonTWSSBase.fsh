@@ -43,6 +43,7 @@ Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署
 * patient only Reference(PatientTWSSBase)
 * patient MS
 * relationship MS
+* relationship from TWSSRelatedPersonRelationshipVS (extensible)
 * relationship ^binding.description = "個案與相關人士之間關係的類型。"
 * name MS
 * name.text MS

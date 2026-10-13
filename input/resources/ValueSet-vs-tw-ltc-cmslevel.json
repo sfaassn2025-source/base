@@ -1,0 +1,37 @@
+﻿{
+    "resourceType":  "ValueSet",
+    "id":  "vs-tw-ltc-cmslevel",
+    "url":  "http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-cmslevel",
+    "identifier":  [
+                       {
+                           "system":  "urn:ietf:rfc:3986",
+                           "value":  "urn:oid:2.25.71447470500936854795444662387229763480"
+                       }
+                   ],
+    "version":  "1.1.0",
+    "name":  "VS_TW_LTC_CMSLevel",
+    "title":  "長照 SDK－CMS 等級",
+    "status":  "active",
+    "experimental":  false,
+    "date":  "2026-09-29T04:34:44+08:00",
+    "publisher":  "經濟部產業發展署",
+    "contact":  [
+                    {
+                        "name":  "經濟部產業發展署",
+                        "telecom":  [
+                                        {
+                                            "system":  "url",
+                                            "value":  "https://www.ida.gov.tw/"
+                                        }
+                                    ]
+                    }
+                ],
+    "description":  "此 ValueSet 用於表示長照 SDK 中的 CMS（照顧管理評估量表）等級。",
+    "compose":  {
+                    "include":  [
+                                    {
+                                        "system":  "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel"
+                                    }
+                                ]
+                }
+}

@@ -44,7 +44,7 @@ Title: "安置服務-Encounter TWSS Base"
 Description: "個案實際安置服務的 Encounter Profile。"
 * ^version = "0.0.1"
 * type 1..1 MS
-* type from TWSSPlacementTypeVS (required)
-* type ^short = "安置類型"
+* type from TWSSPlacementLocationTypeVS (required)
+* type ^short = "安置處所類型"
 * period.start ^short = "安置起始日期"
 * period.end ^short = "安置結束日期"

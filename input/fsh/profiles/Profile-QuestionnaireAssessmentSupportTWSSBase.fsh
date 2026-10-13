@@ -3,6 +3,8 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-disability-status-twss-base
 Title: "身心障礙狀況-Questionnaire TWSS Base"
 Description: "定義身心障礙狀況評估表單的題目結構。"
+* code 1..1 MS
+* code = http://loinc.org#101720-1 "Disability status"
 * title = "身心障礙狀況"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
@@ -72,18 +74,21 @@ Description: "定義身心障礙狀況評估表單的題目結構。"
 * item[disabilityCertificate].item[certificateNotIssuedReason].answerValueSet = Canonical(twss-certificate-not-issued-reason-vs)
 * item[disabilityCertificate].item[certificateNotIssuedReason].enableWhen.question = "7.2.1"
 * item[disabilityCertificate].item[certificateNotIssuedReason].enableWhen.operator = #=
+* item[disabilityCertificate].item[certificateNotIssuedReason].enableWhen.answer[x] only boolean
 * item[disabilityCertificate].item[certificateNotIssuedReason].enableWhen.answerBoolean = false
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].linkId = "7.2.3"
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].text = "身心障礙永久有效"
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].type = #boolean
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].enableWhen.question = "7.2.1"
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].enableWhen.operator = #=
+* item[disabilityCertificate].item[isDisabilityCertificatePermanent].enableWhen.answer[x] only boolean
 * item[disabilityCertificate].item[isDisabilityCertificatePermanent].enableWhen.answerBoolean = true
 * item[disabilityCertificate].item[disabilityAssessmentDate].linkId = "7.2.4"
 * item[disabilityCertificate].item[disabilityAssessmentDate].text = "身心障礙鑑定日期"
 * item[disabilityCertificate].item[disabilityAssessmentDate].type = #date
 * item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.question = "7.2.1"
 * item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.operator = #=
+* item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.answer[x] only boolean
 * item[disabilityCertificate].item[disabilityAssessmentDate].enableWhen.answerBoolean = true
 * item[disabilityCertificate].item[cancellationReason].linkId = "7.2.5"
 * item[disabilityCertificate].item[cancellationReason].text = "註銷原因"
@@ -119,6 +124,8 @@ Parent: QuestionnaireTWSSBase
 Id: Questionnaire-adl-assessment-twss-base
 Title: "日常生活功能 ADL 評估-Questionnaire TWSS Base"
 Description: "定義日常生活功能評估表單的題目結構。"
+* code 1..1 MS
+* code = http://loinc.org#58121-5 "Prior Functioning ADL/IADL during assessment period [CMS Assessment]"
 * ^version = "0.0.1"
 * url = "https://sfaa.gov.tw/base/Questionnaire/twss-adl"
 * title = "日常生活功能 ADL 評估"

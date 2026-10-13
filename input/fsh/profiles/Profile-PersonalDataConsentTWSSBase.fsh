@@ -2,7 +2,7 @@ Profile: PersonalDataConsentTWSSBase
 Parent: ConsentTWSSBase
 Id: PersonalDataConsent-twss-base
 Title: "個資同意-Consent TWSS Base"
-Description: "用於記錄個案、關係人或服務人員對其本人個人資料之同意。資料主體以 consentSubject Extension 表達；Consent.performer 表示實際表示同意或代理簽署的人員。"
+Description: "用於記錄個案、關係人或服務提供者對其本人個人資料之同意。資料主體以 consentSubject Extension 表達；Consent.performer 表示實際表示同意或代理簽署的人員。"
 * ^version = "0.0.1"
 
 * scope = TWSSConsentScopeCS#personal-data-privacy "個人資料隱私"

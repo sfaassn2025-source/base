@@ -18,7 +18,7 @@ Context: RelatedPerson
 Extension: TWSSEthnicGroupExtension
 Id: twss-ethnic-group
 Title: "族群身分"
-Description: "記錄個案、關係人或服務人的族群身分。"
+Description: "記錄個案、關係人或服務提供者的族群身分。"
 Context: Patient, RelatedPerson, Practitioner
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW
@@ -70,8 +70,8 @@ Context: Patient
 
 Extension: TWSSPractitionerNationality
 Id: twss-practitioner-nationality
-Title: "服務人國籍"
-Description: "記錄服務人的國籍。"
+Title: "服務提供者國籍"
+Description: "記錄服務提供者的國籍。"
 Context: Practitioner
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW
@@ -87,8 +87,8 @@ Context: Practitioner
 
 Extension: TWSSPractitionerAborigineTribe
 Id: twss-practitioner-aborigine-tribe
-Title: "服務人原住民族別"
-Description: "記錄服務人的原住民族別。"
+Title: "服務提供者原住民族別"
+Description: "記錄服務提供者的原住民族別。"
 Context: Practitioner
 * ^version = "0.0.1"
 * value[x] only CodeableConceptTW
@@ -234,8 +234,8 @@ Context: Organization
 
 Extension: TWSSPractitionerQualificationStatus
 Id: twss-practitioner-qualification-status
-Title: "服務人資格狀態"
-Description: "使用參考 HL7 FHIR R6 qualification-status 的 TWSS R4 代碼表達服務人教育資格狀態。本 IG 的業務定義為 active 代表已畢業；suspended 代表未畢業，包括在學、休學或肄業等未取得畢業資格的情況。"
+Title: "服務提供者資格狀態"
+Description: "使用參考 HL7 FHIR R6 qualification-status 的 TWSS R4 代碼表達服務提供者教育資格狀態。本 IG 的業務定義為 active 代表已畢業；suspended 代表未畢業，包括在學、休學或肄業等未取得畢業資格的情況。"
 Context: Practitioner.qualification
 * ^version = "0.0.1"
 * value[x] only CodeableConcept
@@ -246,21 +246,12 @@ Context: Practitioner.qualification
 
 Extension: TWSSPractitionerTrainingHours
 Id: twss-practitioner-training-hours
-Title: "服務人受訓課程時數"
-Description: "記錄服務人單一受訓課程的時數。"
+Title: "服務提供者受訓課程時數"
+Description: "記錄服務提供者單一受訓課程的時數。"
 Context: Practitioner.qualification
 * ^version = "0.0.1"
 * value[x] only Quantity
 * valueQuantity 1..1 MS
-
-Extension: TWSSPractitionerSalary
-Id: twss-practitioner-salary
-Title: "服務人薪資"
-Description: "記錄服務人的薪資數值。"
-Context: Practitioner
-* ^version = "0.0.1"
-* value[x] only decimal
-* valueDecimal 1..1 MS
 
 Extension: TWSSOrganizationQualification
 Id: twss-organization-qualification
@@ -287,7 +278,7 @@ Context: ServiceRequest
 Extension: TWSSConsentSubject
 Id: twss-consent-subject
 Title: "同意適用資料主體"
-Description: "記錄個人資料同意所適用的資料主體。FHIR R4 Consent.patient 僅能參照 Patient；本 Extension 補充關係人或服務人員本人作為資料主體的情境。"
+Description: "記錄個人資料同意所適用的資料主體。FHIR R4 Consent.patient 僅能參照 Patient；本 Extension 補充關係人或服務提供者本人作為資料主體的情境。"
 Context: Consent
 * ^version = "0.0.1"
 * value[x] only Reference(PatientTWSSBase or RelatedPersonTWSSBase or PractitionerTWSSBase)

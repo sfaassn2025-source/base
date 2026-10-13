@@ -41,7 +41,6 @@ Usage: #example
 * qualification[training].extension[trainingHours].valueQuantity.system = "http://unitsofmeasure.org"
 * qualification[training].extension[trainingHours].valueQuantity.code = #h
 * qualification[training].extension[trainingHours].valueQuantity.unit = "h"
-* extension[salary].valueDecimal = 38000
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">

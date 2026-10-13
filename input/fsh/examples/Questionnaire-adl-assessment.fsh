@@ -4,6 +4,7 @@ Usage: #definition
 Title: "日常生活功能 ADL 評估"
 Description: "TWSS Base 日常生活功能評估問卷。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/twss-adl"
+* code = http://loinc.org#58121-5 "Prior Functioning ADL/IADL during assessment period [CMS Assessment]"
 * title = "日常生活功能 ADL 評估"
 * version = "0.0.1"
 * status = #active

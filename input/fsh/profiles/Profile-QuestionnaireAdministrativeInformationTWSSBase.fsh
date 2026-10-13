@@ -2,7 +2,7 @@ Profile: QuestionnaireEducationInformationTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-education-information-twss-base
 Title: "教育資訊-Questionnaire TWSS Base"
-Description: "定義個案、關係人及服務人共用的教育資訊表單。"
+Description: "定義個案、關係人及服務提供者共用的教育資訊表單。"
 * title = "教育資訊"
 * ^version = "0.0.1"
 * item ^slicing.discriminator.type = #value
@@ -27,6 +27,8 @@ Description: "定義個案、關係人及服務人共用的教育資訊表單。
 * item[educationInformation].item[schoolName].repeats = true
 * item[educationInformation].item[gradeLevel].linkId = "21.3"
 * item[educationInformation].item[gradeLevel].text = "年級別"
+* item[educationInformation].item[gradeLevel].code 1..1 MS
+* item[educationInformation].item[gradeLevel].code = http://loinc.org#64990-5 "Grade in school, if applicable"
 * item[educationInformation].item[gradeLevel].type = #string
 * item[educationInformation].item[major].linkId = "21.4"
 * item[educationInformation].item[major].text = "就讀或畢業科系"
@@ -36,6 +38,8 @@ Description: "定義個案、關係人及服務人共用的教育資訊表單。
 * item[educationInformation].item[graduated].type = #boolean
 * item[educationInformation].item[educationLevel].linkId = "21.6"
 * item[educationInformation].item[educationLevel].text = "教育程度"
+* item[educationInformation].item[educationLevel].code 1..1 MS
+* item[educationInformation].item[educationLevel].code = http://loinc.org#82589-3 "Highest level of education"
 * item[educationInformation].item[educationLevel].type = #choice
 * item[educationInformation].item[educationLevel].answerValueSet = Canonical(twss-education-level-vs)
 * item[educationInformation].item[relatedMajorGraduate].linkId = "21.7"

@@ -42,10 +42,10 @@ The slice definition for Patient.identifier has a maximum of 2 but the slices ad
 # 建議Observation皆須要填寫performer，但此情境不需要。（WARNING後方的 藍色字樣(1uses) 是指WARNING在此Profile中有被使用到）
 % Best Practice Recommendation: In general, all observations should have a performer%
 
-# 建議Observation皆須要填寫subject，但服務人教育或受訓紀錄以focus reference服務人，無適用的subject。（WARNING後方的 藍色字樣(1uses) 是指WARNING在此Profile中有被使用到）
+# 建議Observation皆須要填寫subject，但服務提供者教育或受訓紀錄以focus reference服務提供者，無適用的subject。（WARNING後方的 藍色字樣(1uses) 是指WARNING在此Profile中有被使用到）
 % Best Practice Recommendation: In general, all observations should have a subject%
 
-# 建議Observation皆須要填寫effective[x]，但服務人教育或受訓紀錄未必有可記錄的發生時間。（WARNING後方的 藍色字樣(1uses) 是指WARNING在此Profile中有被使用到）
+# 建議Observation皆須要填寫effective[x]，但服務提供者教育或受訓紀錄未必有可記錄的發生時間。（WARNING後方的 藍色字樣(1uses) 是指WARNING在此Profile中有被使用到）
 % Best Practice Recommendation: In general, all observations should have an effective[x]%
 
 # Questionnaire 題目以 answerValueSet 綁定代碼；離線 Publisher 無法展開值集選項，故無法驗證回覆選項。

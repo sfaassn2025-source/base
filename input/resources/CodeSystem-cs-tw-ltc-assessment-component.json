@@ -1,0 +1,59 @@
+﻿{
+    "resourceType":  "CodeSystem",
+    "id":  "cs-tw-ltc-assessment-component",
+    "url":  "http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component",
+    "identifier":  [
+                       {
+                           "system":  "urn:ietf:rfc:3986",
+                           "value":  "urn:oid:2.25.99584627007454913989616001866454738820"
+                       }
+                   ],
+    "version":  "1.1.0",
+    "name":  "CS_TW_LTC_AssessmentComponent",
+    "title":  "長照 SDK－評估核定摘要－欄位碼",
+    "status":  "active",
+    "experimental":  false,
+    "date":  "2026-09-29T04:34:44+08:00",
+    "publisher":  "經濟部產業發展署",
+    "contact":  [
+                    {
+                        "name":  "經濟部產業發展署",
+                        "telecom":  [
+                                        {
+                                            "system":  "url",
+                                            "value":  "https://www.ida.gov.tw/"
+                                        }
+                                    ]
+                    }
+                ],
+    "description":  "此 CodeSystem 定義長照 SDK 評估核定摘要的欄位碼。",
+    "caseSensitive":  true,
+    "content":  "complete",
+    "count":  6,
+    "concept":  [
+                    {
+                        "code":  "cms-level",
+                        "display":  "CMS 等級"
+                    },
+                    {
+                        "code":  "welfare-identity",
+                        "display":  "長照福利身分"
+                    },
+                    {
+                        "code":  "assessment-type",
+                        "display":  "評估類型"
+                    },
+                    {
+                        "code":  "plan-start",
+                        "display":  "計畫起始日"
+                    },
+                    {
+                        "code":  "plan-end",
+                        "display":  "計畫結束日"
+                    },
+                    {
+                        "code":  "approval-status",
+                        "display":  "核定狀態"
+                    }
+                ]
+}

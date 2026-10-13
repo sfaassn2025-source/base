@@ -2,7 +2,7 @@
 
 #### 使用說明
 
-服務人是否為親屬保母及服務人薪資，應記錄於 PractitionerRole 的 `isRelativeNanny` 與 `practitionSalary` Extension。兩者描述服務人於特定機構、角色及有效期間內的任職資訊，不應填寫於個案服務評估 QuestionnaireResponse。
+服務提供者是否為親屬保母，應記錄於服務提供者任職資訊 QuestionnaireResponse。此資訊描述服務提供者於特定機構、角色及有效期間內的任職情形，不應填寫於個案服務評估 QuestionnaireResponse。
 
 #### 建議應該支援以下查詢參數：
 

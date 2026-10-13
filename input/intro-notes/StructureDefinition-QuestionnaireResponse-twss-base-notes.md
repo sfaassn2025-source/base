@@ -2,7 +2,7 @@
 
 #### 使用範圍
 
-本 Profile 為社福 QuestionnaireResponse 的共用 Profile。`subject` 可為個案、關係人、服務人、服務人任職角色或機構；`basedOn` 與 `encounter` 為選填，應依填答發生的流程階段參照相應的 ServiceRequest、CarePlan 或 Encounter。
+本 Profile 為社福 QuestionnaireResponse 的共用 Profile。`subject` 可為個案、關係人、服務提供者、服務提供者任職角色或機構；`basedOn` 與 `encounter` 為選填，應依填答發生的流程階段參照相應的 ServiceRequest、CarePlan 或 Encounter。
 
 個案服務評估應使用「個案服務評估回覆」子 Profile；其他表單使用本共用 Profile，並依各 Questionnaire 的 `subjectType` 指定填答對象。
 

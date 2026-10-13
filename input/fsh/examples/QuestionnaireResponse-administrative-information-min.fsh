@@ -37,7 +37,7 @@ Title: "關係人教育資訊回覆範例"
 Instance: practitioner-education-information-response-min
 InstanceOf: QuestionnaireResponseTWSSBase
 Usage: #example
-Title: "服務人教育資訊回覆範例"
+Title: "服務提供者教育資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/education-information"
 * status = #completed
 * subject = Reference(prac-min)

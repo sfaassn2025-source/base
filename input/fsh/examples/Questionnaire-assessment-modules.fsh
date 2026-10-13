@@ -15,6 +15,7 @@ Description: "記錄個案住所、房屋、居住環境、臥房與同住狀況
 * item[livingCondition].item[privateBedroomStatus].text = "獨立臥房狀態"
 * item[livingCondition].item[currentLivingStatus].text = "生活自理與居住狀態"
 * item[livingCondition].item[livingStatus].text = "同住狀況"
+* item[livingCondition].item[livingStatus].code = http://loinc.org#46468-5 "Current living arrangement"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml"><h3><b>居住狀況評估問卷</b></h3><p>本問卷定義住所、房屋、居住環境與同住狀況之評估題目。</p></div>
@@ -110,6 +111,7 @@ Usage: #definition
 Title: "身心障礙狀況"
 Description: "記錄障礙分類、致障原因、障礙證明與相關日期的評估表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/disability-status"
+* code = http://loinc.org#101720-1 "Disability status"
 * status = #active
 * subjectType[0] = #Patient
 * item[disabilityClassification].text = "障礙分類與狀況"

@@ -5,10 +5,10 @@ Description: "接收長照個管 CMS 評估結果的範例。"
 Usage: #example
 
 * status = #final
-* code = TWSSObservationType#cms-level "CMS等級"
+* code = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component#cms-level "CMS 等級"
 * subject = Reference(pat-min)
 * encounter = Reference(assessment-service-min)
-* valueString = "第三級"
+* valueCodeableConcept = http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel#3 "3"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">

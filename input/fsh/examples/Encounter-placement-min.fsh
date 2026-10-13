@@ -6,7 +6,7 @@ Usage: #example
 
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
-* type = TWSSPlacementType#A "兒少安置及教養機構"
+* type = TWSSPlacementLocationType#A "兒少安置及教養機構"
 * subject = Reference(pat-min)
 * episodeOfCare[0] = Reference(episode-base)
 * serviceProvider = Reference(org-min)
@@ -16,7 +16,7 @@ Usage: #example
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <h3><b>安置服務</b></h3>
-  <p><b>安置類型</b>：兒少安置及教養機構 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="CodeSystem-twss-placement-type.html">TWSS 安置類型</a>#A）</span></p>
+  <p><b>安置處所類型</b>：兒少安置及教養機構 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（<a href="CodeSystem-twss-placement-location-type.html">TWSS 安置處所類型</a>#A）</span></p>
   <p><b>個案</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
   <p><b>服務案件</b>：<a href="EpisodeOfCare-episode-base.html">EpisodeOfCare/episode-base</a></p>
   <p><b>服務提供機構</b>：<a href="Organization-org-min.html">Organization/org-min</a></p>

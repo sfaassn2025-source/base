@@ -85,8 +85,16 @@ parameters:
   default-version: false
   apply-version: false
   pin-canonicals: pin-multiples
+  # Imported LTC terminology is retained under its original external canonical.
+  special-url:
+    - http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-assessment-component
+    - http://ltc-ig.fhir.tw/CodeSystem/cs-tw-ltc-cmslevel
+    - http://ltc-ig.fhir.tw/ValueSet/vs-tw-ltc-cmslevel
 
 resources:
+  CodeSystem/cs-tw-ltc-assessment-component: omit
+  CodeSystem/cs-tw-ltc-cmslevel: omit
+  ValueSet/vs-tw-ltc-cmslevel: omit
   QuestionnaireResponse/health-disease-status-response-min:
     description: 個案健康與疾病狀況問卷回覆範例。
   QuestionnaireResponse/crisis-event-location-response-min:
@@ -110,7 +118,7 @@ resources:
   QuestionnaireResponse/related-person-education-information-response-min:
     description: 關係人教育資訊問卷回覆範例。
   QuestionnaireResponse/practitioner-education-information-response-min:
-    description: 服務人教育資訊問卷回覆範例。
+    description: 服務提供者教育資訊問卷回覆範例。
   QuestionnaireResponse/medical-support-assessment-response-min:
     description: 醫療服務現況問卷回覆範例。
   QuestionnaireResponse/organization-administrative-information-response-min:

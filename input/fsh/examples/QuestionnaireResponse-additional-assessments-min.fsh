@@ -27,8 +27,8 @@ Title: "個案基本與家庭資訊回覆範例"
 Instance: practitioner-employment-response-min
 InstanceOf: QuestionnaireResponseTWSSBase
 Usage: #example
-Description: "服務人基本與任職資訊回覆範例。"
-Title: "服務人基本與任職資訊回覆範例"
+Description: "服務提供者基本與任職資訊回覆範例。"
+Title: "服務提供者基本與任職資訊回覆範例"
 * questionnaire = "https://sfaa.gov.tw/base/Questionnaire/practitioner-employment-information"
 * status = #completed
 * subject = Reference(pracrole-min)

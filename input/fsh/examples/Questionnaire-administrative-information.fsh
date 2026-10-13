@@ -2,7 +2,7 @@ Instance: education-information
 InstanceOf: QuestionnaireEducationInformationTWSSBase
 Usage: #definition
 Title: "教育資訊"
-Description: "記錄個案、關係人或服務人教育資訊的共用表單。"
+Description: "記錄個案、關係人或服務提供者教育資訊的共用表單。"
 * url = "https://sfaa.gov.tw/base/Questionnaire/education-information"
 * status = #active
 * subjectType[0] = #Patient
@@ -12,9 +12,11 @@ Description: "記錄個案、關係人或服務人教育資訊的共用表單。
 * item[educationInformation].item[schoolingStatus].text = "就學現況"
 * item[educationInformation].item[schoolName].text = "就讀學校名稱"
 * item[educationInformation].item[gradeLevel].text = "年級別"
+* item[educationInformation].item[gradeLevel].code = http://loinc.org#64990-5 "Grade in school, if applicable"
 * item[educationInformation].item[major].text = "就讀或畢業科系"
 * item[educationInformation].item[graduated].text = "是否畢業"
 * item[educationInformation].item[educationLevel].text = "教育程度"
+* item[educationInformation].item[educationLevel].code = http://loinc.org#82589-3 "Highest level of education"
 * item[educationInformation].item[relatedMajorGraduate].text = "是否為相關科系畢業"
 * item[educationInformation].item[socialWelfareRelatedEducation].text = "是否為社福相關學歷"
 

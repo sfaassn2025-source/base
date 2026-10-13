@@ -1,7 +1,7 @@
-CodeSystem: TWSSPlacementType
-Id: twss-placement-type
-Title: "TWSS-安置類型"
-Description: "個案安置 Encounter 使用的安置類型代碼。"
+CodeSystem: TWSSPlacementLocationType
+Id: twss-placement-location-type
+Title: "TWSS-安置處所類型"
+Description: "個案安置 Encounter 使用的安置處所類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
@@ -20,14 +20,13 @@ Description: "個案安置 Encounter 使用的安置類型代碼。"
 * #K "中途學校"
 * #L "感化教育處所"
 * #M "緊急短期中心"
-* #X "後續追蹤案件"
 * #Z "其他"
 
-ValueSet: TWSSPlacementTypeVS
-Id: twss-placement-type-vs
-Title: "TWSS-安置類型值集"
-Description: "個案安置 Encounter 使用的安置類型代碼。"
+ValueSet: TWSSPlacementLocationTypeVS
+Id: twss-placement-location-type-vs
+Title: "TWSS-安置處所類型值集"
+Description: "個案安置 Encounter 使用的安置處所類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
-* include codes from system TWSSPlacementType
+* include codes from system TWSSPlacementLocationType

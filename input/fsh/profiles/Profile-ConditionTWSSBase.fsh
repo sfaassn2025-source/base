@@ -71,6 +71,16 @@ Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家�
 * code.coding[old-disability-type] from TWSSDisabilityTypeLegacyVS (required)
 * code.coding[absentOrUnknownProblem] from http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-problems-uv-ips (required)
 * code.coding[sct] from TWConditionCodeSCT (required)
+* code.coding[icd10-cm-2023].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2023-tw"
+* code.coding[icd10-cm-2021].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2021-tw"
+* code.coding[icd10-cm-2014].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-10-cm-2014-tw"
+* code.coding[icd9-cm-2001].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/icd-9-cm-2001-tw"
+* code.coding[health-status].system = "https://sfaa.gov.tw/base/CodeSystem/twss-health-status"
+* code.coding[health-and-disease-status].system = "https://sfaa.gov.tw/base/CodeSystem/twss-health-status-option"
+* code.coding[disease-type].system = "https://sfaa.gov.tw/base/CodeSystem/twss-disease-type"
+* code.coding[new-disability-type].system = "https://sfaa.gov.tw/base/CodeSystem/twss-disability-type-new-category"
+* code.coding[old-disability-type].system = "https://sfaa.gov.tw/base/CodeSystem/twss-disability-type-legacy"
+* code.coding[sct].system = "http://snomed.info/sct"
 * code.coding[health-status] ^short = "身心健康狀況代碼。"
 * code.coding[health-status] ^definition = "以 TWSS Base 身心健康狀況代碼表示此 Condition 所描述的身心健康或障礙相關狀況。"
 * code.coding[health-status] ^binding.description = "應填入身心健康狀況值集中的其中一個代碼。"

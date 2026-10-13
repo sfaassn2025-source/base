@@ -46,9 +46,9 @@ Description: "定義個案基本、家庭與特殊教育資訊表單的題目結
 Profile: QuestionnairePractitionerEmploymentTWSSBase
 Parent: QuestionnaireTWSSBase
 Id: Questionnaire-practitioner-employment-twss-base
-Title: "服務人基本與任職資訊-Questionnaire TWSS Base"
-Description: "定義服務人親屬保母、薪資與健康檢查日期的任職資訊表單。"
-* title = "服務人基本與任職資訊"
+Title: "服務提供者基本與任職資訊-Questionnaire TWSS Base"
+Description: "定義服務提供者親屬保母與健康檢查日期的任職資訊表單。"
+* title = "服務提供者基本與任職資訊"
 * ^version = "0.0.1"
 * subjectType ^slicing.discriminator.type = #value
 * subjectType ^slicing.discriminator.path = "$this"
@@ -60,7 +60,7 @@ Description: "定義服務人親屬保母、薪資與健康檢查日期的任職
 * item ^slicing.rules = #closed
 * item contains practitionerEmployment 1..1 MS
 * item[practitionerEmployment].linkId = "13"
-* item[practitionerEmployment].text = "個案服務人基本資訊"
+* item[practitionerEmployment].text = "個案服務提供者基本資訊"
 * item[practitionerEmployment].type = #group
 * item[practitionerEmployment].item ^slicing.discriminator.type = #value
 * item[practitionerEmployment].item ^slicing.discriminator.path = "linkId"
@@ -305,6 +305,8 @@ Description: "定義個案就業資訊表單的題目結構。"
 * item[employmentInformation].item contains employmentStatus 0..1 MS and unemploymentReason 0..* MS and previousJob 0..1 MS and currentJob 0..1 MS
 * item[employmentInformation].item[employmentStatus].linkId = "20.1"
 * item[employmentInformation].item[employmentStatus].text = "就業現況"
+* item[employmentInformation].item[employmentStatus].code 1..1 MS
+* item[employmentInformation].item[employmentStatus].code = http://loinc.org#67875-5 "Employment status - current"
 * item[employmentInformation].item[employmentStatus].type = #choice
 * item[employmentInformation].item[employmentStatus].answerValueSet = Canonical(twss-employment-status-vs)
 * item[employmentInformation].item[unemploymentReason].linkId = "20.2"
@@ -314,9 +316,13 @@ Description: "定義個案就業資訊表單的題目結構。"
 * item[employmentInformation].item[unemploymentReason].answerValueSet = Canonical(twss-unemployment-reason-vs)
 * item[employmentInformation].item[previousJob].linkId = "20.3"
 * item[employmentInformation].item[previousJob].text = "曾任職"
+* item[employmentInformation].item[previousJob].code 1..1 MS
+* item[employmentInformation].item[previousJob].code = http://loinc.org#11341-5 "History of occupation"
 * item[employmentInformation].item[previousJob].type = #string
 * item[employmentInformation].item[currentJob].linkId = "20.4"
 * item[employmentInformation].item[currentJob].text = "現職"
+* item[employmentInformation].item[currentJob].code 1..1 MS
+* item[employmentInformation].item[currentJob].code = http://loinc.org#85658-3 "Occupation [Type]"
 * item[employmentInformation].item[currentJob].type = #string
 
 Profile: QuestionnairePlacementInformationTWSSBase
