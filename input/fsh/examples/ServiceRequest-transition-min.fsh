@@ -18,7 +18,7 @@ Usage: #example
   <h3><b>個案轉銜資料</b></h3>
   <p><b>轉銜日期</b>：2026-08-19</p>
   <p><b>個案</b>：<a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
-  <p><b>發起轉銜單位</b>：<a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
-  <p><b>處理轉銜單位</b>：<a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
+  <p><b>發起轉銜單位</b>：<a href="Organization-org-min.html">Organization/org-min</a> "衛生福利部社會及家庭署示範機構"</p>
+  <p><b>處理轉銜單位</b>：<a href="Organization-org-min.html">Organization/org-min</a> "衛生福利部社會及家庭署示範機構"</p>
 </div>
 """

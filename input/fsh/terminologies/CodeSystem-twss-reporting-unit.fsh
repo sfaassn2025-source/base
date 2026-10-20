@@ -6,7 +6,7 @@ Description: "社福個案通報的提出單位或管道類別代碼。"
 * ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
-* #1 "社家署"
+* #1 "衛生福利部社會及家庭署"
 * #2 "社會福利機構-托嬰中心"
 * #3 "社會福利機構-早期療育中心"
 * #4 "社會福利機構-社福機構"

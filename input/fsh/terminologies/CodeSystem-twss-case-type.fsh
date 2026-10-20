@@ -1,7 +1,7 @@
 CodeSystem: TWSSCaseType
 Id: twss-case-type
 Title: "TWSS-案件類型"
-Description: "社家署個案服務案件類型代碼。"
+Description: "衛生福利部社會及家庭署個案服務案件類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
@@ -26,7 +26,7 @@ Description: "社家署個案服務案件類型代碼。"
 ValueSet: TWSSCaseTypeVS
 Id: twss-case-type-vs
 Title: "TWSS-案件類型值集"
-Description: "社家署個案服務案件類型代碼。"
+Description: "衛生福利部社會及家庭署個案服務案件類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

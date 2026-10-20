@@ -1,7 +1,7 @@
 CodeSystem: TWSSOrganizationAccreditationLevel
 Id: twss-organization-accreditation-level
 Title: "TWSS-機構評鑑等級"
-Description: "社家署機構評鑑等級代碼。"
+Description: "衛生福利部社會及家庭署機構評鑑等級代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

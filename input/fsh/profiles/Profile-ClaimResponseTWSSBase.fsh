@@ -2,7 +2,7 @@ Profile:        ClaimResponseTWSSBase
 Parent:         ClaimResponse
 Id:             ClaimResponse-twss-base
 Title:          "補助審核或核付結果-ClaimResponse TWSS Base"
-Description:    "補助審核或核付結果-ClaimResponse TWSS Base Profile 表達社家署業務中的補助審核或核付結果。因 TW Core 0.3.2 尚未提供 ClaimResponse Profile，故繼承原生 ClaimResponse，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
+Description:    "補助審核或核付結果-ClaimResponse TWSS Base Profile 表達衛生福利部社會及家庭署業務中的補助審核或核付結果。因 TW Core 0.3.2 尚未提供 ClaimResponse Profile，故繼承原生 ClaimResponse，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
 * ^version = "0.0.1"
 
 * identifier MS

@@ -1,7 +1,7 @@
 CodeSystem: TWSSSchoolingStatus
 Id: twss-schooling-status
 Title: "TWSS-就學現況"
-Description: "社家署就學現況代碼。"
+Description: "衛生福利部社會及家庭署就學現況代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

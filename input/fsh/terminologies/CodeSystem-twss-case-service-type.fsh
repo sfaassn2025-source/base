@@ -1,7 +1,7 @@
 CodeSystem: TWSSCaseServiceType
 Id: twss-case-service-type
 Title: "TWSS-個案服務別"
-Description: "社家署個案服務所屬系統或服務領域代碼。"
+Description: "衛生福利部社會及家庭署個案服務所屬系統或服務領域代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
@@ -21,7 +21,7 @@ Description: "社家署個案服務所屬系統或服務領域代碼。"
 ValueSet: TWSSCaseServiceTypeVS
 Id: twss-case-service-type-vs
 Title: "TWSS-個案服務別值集"
-Description: "社家署個案服務所屬系統或服務領域代碼。"
+Description: "衛生福利部社會及家庭署個案服務所屬系統或服務領域代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

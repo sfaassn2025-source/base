@@ -1,7 +1,7 @@
 CodeSystem: TWSSAborigineTribe
 Id: twss-aborigine-tribe
 Title: "TWSS-原住民族別"
-Description: "社家署原住民族別代碼。"
+Description: "衛生福利部社會及家庭署原住民族別代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

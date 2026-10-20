@@ -14,7 +14,7 @@ Usage: #example
 * extension[registrationDate].valueDate = "2019-06-01"
 * extension[competentAuthority].valueReference = Reference(org-min)
 * extension[qualification][0].extension[code].valueCodeableConcept = TWSSOrganizationAccreditationLevel#A "優等"
-* name = "社家署示範機構"
+* name = "衛生福利部社會及家庭署示範機構"
 * telecom[0].system = #phone
 * telecom[0].value = "02-12345678"
 * address[0].text = "11558臺北市南港區新光里忠孝東路六段488號"
@@ -43,7 +43,7 @@ Usage: #example
   <blockquote>
     <p><b>機構代碼</b>：A1233</p>
   </blockquote>
-  <p><b>機構名稱</b>：社家署示範機構</p>
+  <p><b>機構名稱</b>：衛生福利部社會及家庭署示範機構</p>
   <p><b>機構許可證字號</b>：衛授家字第1130012345號</p>
   <p><b>機構類別</b>：通報中心 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-organization-type.html">機構類型</a>#13）</span></p>
   <p><b>機構設立別</b>：公立 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="CodeSystem-twss-organization-establishment-type.html">機構設立別</a>#21）</span></p>

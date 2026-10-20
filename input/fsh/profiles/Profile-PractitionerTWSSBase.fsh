@@ -12,7 +12,7 @@ Profile:        PractitionerTWSSBase
 Parent:         TWCorePractitioner
 Id:             Practitioner-twss-base
 Title:          "人員資料-Practitioner TWSS Base"
-Description:    "人員資料-Practitioner TWSS Base Profile 表達社家署業務中的人員資料。"
+Description:    "人員資料-Practitioner TWSS Base Profile 表達衛生福利部社會及家庭署業務中的人員資料。"
 * ^version = "0.0.1"
 * obeys twss-practitioner-tribe-requires-indigenous and twss-practitioner-indigenous-requires-tribe
 

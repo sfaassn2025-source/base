@@ -2,7 +2,7 @@ Profile:        EpisodeOfCareTWSSBase
 Parent:         EpisodeOfCare
 Id:             EpisodeOfCare-twss-base
 Title:          "個案服務案件-EpisodeOfCare TWSS Base"
-Description:    "個案服務案件-EpisodeOfCare TWSS Base Profile 表達社家署業務中的個案服務案件。因 TW Core 0.3.2 尚未提供 EpisodeOfCare Profile，故繼承原生 EpisodeOfCare，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
+Description:    "個案服務案件-EpisodeOfCare TWSS Base Profile 表達衛生福利部社會及家庭署業務中的個案服務案件。因 TW Core 0.3.2 尚未提供 EpisodeOfCare Profile，故繼承原生 EpisodeOfCare，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
 * ^version = "0.0.1"
 
 * identifier MS

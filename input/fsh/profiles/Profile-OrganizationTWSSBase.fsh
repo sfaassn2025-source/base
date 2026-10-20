@@ -2,7 +2,7 @@ Profile:        OrganizationTWSSBase
 Parent:         TWCoreOrganization
 Id:             Organization-twss-base
 Title:          "機構資料-Organization TWSS Base"
-Description:    "機構資料-Organization TWSS Base Profile 表達社家署業務中的機構或組織單位資料。"
+Description:    "機構資料-Organization TWSS Base Profile 表達衛生福利部社會及家庭署業務中的機構或組織單位資料。"
 * ^version = "0.0.1"
 
 * identifier MS

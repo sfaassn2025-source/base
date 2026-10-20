@@ -2,7 +2,7 @@ Profile:        CoverageTWSSBase
 Parent:         Coverage
 Id:             Coverage-twss-base
 Title:          "補助資格或補助案件-Coverage TWSS Base"
-Description:    "補助資格或補助案件-Coverage TWSS Base Profile 表達社家署業務中的補助或給付資格。本 Profile 因社福補助語境與 TWSS Base 的 reference target 需求與 TW Core Coverage 0.3.2 限制不同，故繼承原生 Coverage，並沿用相容的 TW Core 0.3.2 規則。"
+Description:    "補助資格或補助案件-Coverage TWSS Base Profile 表達衛生福利部社會及家庭署業務中的補助或給付資格。本 Profile 因社福補助語境與 TWSS Base 的 reference target 需求與 TW Core Coverage 0.3.2 限制不同，故繼承原生 Coverage，並沿用相容的 TW Core 0.3.2 規則。"
 * ^version = "0.0.1"
 
 * extension contains TWSSCoverageAidYear named aidYear 0..1 MS

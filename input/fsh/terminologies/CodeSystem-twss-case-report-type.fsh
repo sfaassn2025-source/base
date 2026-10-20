@@ -1,7 +1,7 @@
 CodeSystem: TWSSCaseReportType
 Id: twss-case-report-type
 Title: "TWSS-通報類型"
-Description: "社家署個案通報的業務類型代碼。"
+Description: "衛生福利部社會及家庭署個案通報的業務類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

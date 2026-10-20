@@ -2,7 +2,7 @@ Profile:        PractitionerRoleTWSSBase
 Parent:         TWCorePractitionerRole
 Id:             PractitionerRole-twss-base
 Title:          "人員角色-PractitionerRole TWSS Base"
-Description:    "人員角色-PractitionerRole TWSS Base Profile 表達社家署業務中的人員角色資料。"
+Description:    "人員角色-PractitionerRole TWSS Base Profile 表達衛生福利部社會及家庭署業務中的人員角色資料。"
 * ^version = "0.0.1"
 
 * identifier MS
@@ -32,7 +32,7 @@ Description:    "人員角色-PractitionerRole TWSS Base Profile 表達社家署
 * code MS
 * code from TWSSPractitionerRoleVS (extensible)
 * code ^short = "職稱、角色或職務類型。"
-* code ^binding.description = "優先使用 TW Core 0.3.2 的 SNOMED CT + 臺灣醫事司醫事人員類別值集；若無法表達社家署社福業務角色，優先使用 SNOMED CT 既有標準碼。"
+* code ^binding.description = "優先使用 TW Core 0.3.2 的 SNOMED CT + 臺灣醫事司醫事人員類別值集；若無法表達衛生福利部社會及家庭署社福業務角色，優先使用 SNOMED CT 既有標準碼。"
 
 * specialty MS
 * specialty ^short = "專長、服務類別或業務領域。"

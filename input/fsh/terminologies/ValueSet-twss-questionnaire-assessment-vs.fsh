@@ -1,7 +1,7 @@
 ValueSet: TWSSFamilyStructureVS
 Id: twss-family-structure-vs
 Title: "TWSS-家庭結構值集"
-Description: "TWSS 家庭結構值集。"
+Description: "TWSS 家庭結構值集。家庭結構依家庭成員組成及共同居住關係選用；實際單獨居住使用「獨居」，戶籍或家戶統計上僅有一人使用「單人家庭」。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

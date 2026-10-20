@@ -2,7 +2,7 @@ Profile:        AddressTWSSBase
 Parent:         AddressTW
 Id:             Address-twss-base
 Title:          "地址-Address TWSS Base"
-Description:    "社家署 Base IG 使用之 Address datatype profile，表達社家署業務中的地址共通資料。"
+Description:    "衛生福利部社會及家庭署 Base IG 使用之 Address datatype profile，表達衛生福利部社會及家庭署業務中的地址共通資料。"
 * ^version = "0.0.1"
 
 * district MS

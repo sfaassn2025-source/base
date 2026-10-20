@@ -23,7 +23,7 @@ Usage: #example
   <p><b>補助資格狀態</b>：Active</p>
   <p><b>補助類型</b>：social service program <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki">（ <a href="http://terminology.hl7.org/CodeSystem/v3-ActCode">ActCode</a>#SOCIAL）</span></p>
   <p><b>受補助人</b>： <a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
-  <p><b>給付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
+  <p><b>給付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "衛生福利部社會及家庭署示範機構"</p>
   <p><b>補助期間</b>：2026-01-01至2026-12-31</p>
   <p><b>補助年度[extension: <a href="StructureDefinition-twss-coverage-aid-year.html">twss-coverage-aid-year</a>]</b>：115</p>
   <p><b>補助金額</b>：1000 TWD</p>

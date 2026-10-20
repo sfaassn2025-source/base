@@ -12,3 +12,4 @@ Description: "TWSS 補助申請 Claim.supportingInfo 使用的補充資訊類型
 * #application-channel "申請管道"
 * #applicant "申請人"
 * #bank-account "申請人銀行帳戶"
+* #parity "胎次"

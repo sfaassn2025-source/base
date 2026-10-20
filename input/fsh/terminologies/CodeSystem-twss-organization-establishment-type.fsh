@@ -1,7 +1,7 @@
 CodeSystem: TWSSOrganizationEstablishmentType
 Id: twss-organization-establishment-type
 Title: "TWSS-機構設立別"
-Description: "社家署業務中機構設立別代碼。"
+Description: "衛生福利部社會及家庭署業務中機構設立別代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

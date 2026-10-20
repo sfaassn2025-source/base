@@ -2,7 +2,7 @@ Profile:        ServiceRequestTWSSBase
 Parent:         ServiceRequest
 Id:             ServiceRequest-twss-base
 Title:          "申請或服務請求-ServiceRequest TWSS Base"
-Description:    "申請或服務請求-ServiceRequest TWSS Base Profile 表達社家署業務中的申請或服務請求。本 Profile 因 TWSS Base 的 reference target 與 TW Core ServiceRequest 0.3.2 限制不同，且 TWSS Base 需求尚未穩定要求 TW Core 的所有限制，故繼承原生 ServiceRequest，並沿用相容的 TW Core 0.3.2 規則。"
+Description:    "申請或服務請求-ServiceRequest TWSS Base Profile 表達衛生福利部社會及家庭署業務中的申請或服務請求。本 Profile 因 TWSS Base 的 reference target 與 TW Core ServiceRequest 0.3.2 限制不同，且 TWSS Base 需求尚未穩定要求 TW Core 的所有限制，故繼承原生 ServiceRequest，並沿用相容的 TW Core 0.3.2 規則。"
 * ^version = "0.0.1"
 
 * identifier MS

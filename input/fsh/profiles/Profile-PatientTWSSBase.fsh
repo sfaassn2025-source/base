@@ -2,7 +2,7 @@ Profile:        PatientTWSSBase
 Parent:         Patient
 Id:             Patient-twss-base
 Title:          "個案資料-Patient TWSS Base"
-Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中的個案資料。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core Patient 0.3.2 限制不同，故繼承原生 Patient，並沿用相容的 TW Core 0.3.2 規則。"
+Description:    "個案資料-Patient TWSS Base Profile 表達衛生福利部社會及家庭署業務中的個案資料。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core Patient 0.3.2 限制不同，故繼承原生 Patient，並沿用相容的 TW Core 0.3.2 規則。"
 * ^version = "0.0.1"
 
 * identifier 1..* MS
@@ -122,7 +122,7 @@ Description:    "個案資料-Patient TWSS Base Profile 表達社家署業務中
 * identifier[caseNumber] ^short = "個案編號、跨系統個案編號或歷史案號；以 identifier.system 區分來源，歷史案號使用 identifier.use = old。"
 * identifier[clientSeq].assigner only Reference(OrganizationTWSSBase)
 * identifier[clientSeq] ^short = "服務對象編號"
-* identifier[clientSeq] ^definition = "社家署或來源系統指定給服務對象的業務識別碼，用於串接社福服務流程中的個案資料；識別碼類型使用 HL7 v2-0203 的 PI（Patient internal identifier）。"
+* identifier[clientSeq] ^definition = "衛生福利部社會及家庭署或來源系統指定給服務對象的業務識別碼，用於串接社福服務流程中的個案資料；識別碼類型使用 HL7 v2-0203 的 PI（Patient internal identifier）。"
 * identifier.assigner only Reference(OrganizationTWSSBase)
 
 * extension contains

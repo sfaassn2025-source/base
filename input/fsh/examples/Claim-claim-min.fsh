@@ -48,8 +48,8 @@ Usage: #example
   <p><b>個案</b>： <a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
   <p><b>申請建立日</b>：2026-06-30</p>
   <p><b>登錄人員</b>： <a href="PractitionerRole-pracrole-min.html">PractitionerRole/pracrole-min</a> "主責社工"</p>
-  <p><b>核付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
-  <p><b>服務提供者</b>： <a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
+  <p><b>核付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "衛生福利部社會及家庭署示範機構"</p>
+  <p><b>服務提供者</b>： <a href="Organization-org-min.html">Organization/org-min</a> "衛生福利部社會及家庭署示範機構"</p>
   <p><b>優先順序</b>：一般</p>
   <p><b>支持資料</b>： <a href="EpisodeOfCare-episode-base.html">EpisodeOfCare/episode-base</a> "個案服務案件基礎範例"</p>
   <p><b>補助資格</b>： <a href="Coverage-coverage-min.html">Coverage/coverage-min</a> "中低收入戶"</p>

@@ -2,7 +2,7 @@ Profile:        ConditionTWSSBase
 Parent:         Condition
 Id:             Condition-twss-base
 Title:          "健康與障礙狀況-Condition TWSS Base"
-Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達社家署業務中的健康、障礙或診斷狀況。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core Condition 0.3.2 限制不同，故繼承原生 Condition，並沿用相容的 TW Core 0.3.2 規則。"
+Description:    "健康與障礙狀況-Condition TWSS Base Profile 表達衛生福利部社會及家庭署業務中的健康、障礙或診斷狀況。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core Condition 0.3.2 限制不同，故繼承原生 Condition，並沿用相容的 TW Core 0.3.2 規則。"
 * ^version = "0.0.1"
 
 * identifier MS

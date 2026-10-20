@@ -1,7 +1,7 @@
 CodeSystem: TWSSOrganizationType
 Id: twss-organization-type
 Title: "TWSS-機構類型"
-Description: "社家署業務中 Organization Resource 可使用之機構本身類型代碼。"
+Description: "衛生福利部社會及家庭署業務中 Organization Resource 可使用之機構本身類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

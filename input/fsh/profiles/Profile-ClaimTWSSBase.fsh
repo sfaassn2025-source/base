@@ -2,7 +2,7 @@ Profile:        ClaimTWSSBase
 Parent:         Claim
 Id:             Claim-twss-base
 Title:          "補助申請或核付明細-Claim TWSS Base"
-Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達社家署業務中的補助申請或核付明細。因 TW Core 0.3.2 尚未提供 Claim Profile，故繼承原生 Claim，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
+Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達衛生福利部社會及家庭署業務中的補助申請或核付明細。因 TW Core 0.3.2 尚未提供 Claim Profile，故繼承原生 Claim，並於設定社福欄位後補回適用的 TW Core 0.3.2 共通交換規則。"
 * ^version = "0.0.1"
 
 * identifier MS

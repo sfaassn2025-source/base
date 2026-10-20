@@ -1,7 +1,7 @@
 CodeSystem: TWSSSubsidyServiceType
 Id: twss-subsidy-service-type
 Title: "TWSS-申請補助別"
-Description: "社家署補助申請所屬系統或補助類別代碼。"
+Description: "衛生福利部社會及家庭署補助申請所屬系統或補助類別代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false
@@ -14,7 +14,7 @@ Description: "社家署補助申請所屬系統或補助類別代碼。"
 ValueSet: TWSSSubsidyServiceTypeVS
 Id: twss-subsidy-service-type-vs
 Title: "TWSS-申請補助別值集"
-Description: "社家署補助申請所屬系統或補助類別代碼。"
+Description: "衛生福利部社會及家庭署補助申請所屬系統或補助類別代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

@@ -1,8 +1,8 @@
 Logical: TWSSBaseModel
 Id: TWSSBaseModel
-Title: "社家署基礎資料模型"
+Title: "衛生福利部社會及家庭署基礎資料模型"
 Description: """
-社家署基礎資料模型，定義跨業務情境共通使用的基礎資料欄位，並以 mappings 對應至本 IG 的 FHIR profiles。
+衛生福利部社會及家庭署基礎資料模型，定義跨業務情境共通使用的基礎資料欄位，並以 mappings 對應至本 IG 的 FHIR profiles。
 """
 * ^version = "0.0.1"
 * . 1..1

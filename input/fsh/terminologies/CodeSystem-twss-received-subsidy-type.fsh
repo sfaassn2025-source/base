@@ -1,7 +1,7 @@
 CodeSystem: TWSSReceivedSubsidyType
 Id: twss-received-subsidy-type
 Title: "TWSS-已取得補助類型"
-Description: "社家署業務中個案服務評估使用的已取得補助類型代碼。"
+Description: "衛生福利部社會及家庭署業務中個案服務評估使用的已取得補助類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

@@ -2,7 +2,7 @@ Profile:        RelatedPersonTWSSBase
 Parent:         RelatedPerson
 Id:             RelatedPerson-twss-base
 Title:          "關係人資料-RelatedPerson TWSS Base"
-Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達社家署業務中的關係人資料。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core RelatedPerson 0.3.2 限制不同，故繼承原生 RelatedPerson，並沿用相容的 TW Core 0.3.2 規則。"
+Description:    "關係人資料-RelatedPerson TWSS Base Profile 表達衛生福利部社會及家庭署業務中的關係人資料。本 Profile 因 TWSS Base 的基數需求與 reference target 與 TW Core RelatedPerson 0.3.2 限制不同，故繼承原生 RelatedPerson，並沿用相容的 TW Core 0.3.2 規則。"
 * ^version = "0.0.1"
 
 * identifier 0..* MS

@@ -1,7 +1,7 @@
 CodeSystem: TWSSTrainingCourseType
 Id: twss-training-course-type
 Title: "TWSS-受訓課程類型"
-Description: "社家署受訓課程類型代碼。"
+Description: "衛生福利部社會及家庭署受訓課程類型代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

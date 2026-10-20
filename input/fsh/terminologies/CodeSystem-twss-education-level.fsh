@@ -1,7 +1,7 @@
 CodeSystem: TWSSEducationLevel
 Id: twss-education-level
 Title: "TWSS-教育程度"
-Description: "社家署教育程度代碼。"
+Description: "衛生福利部社會及家庭署教育程度代碼。"
 * ^version = "0.0.1"
 * ^status = #active
 * ^experimental = false

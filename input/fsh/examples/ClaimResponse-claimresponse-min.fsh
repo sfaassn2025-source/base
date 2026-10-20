@@ -43,7 +43,7 @@ Usage: #example
   <p><b>申請類型</b>：補助審核結果</p>
   <p><b>個案</b>： <a href="Patient-pat-min.html">Patient/pat-min</a> "王小明"</p>
   <p><b>建立日</b>：2026-06-30</p>
-  <p><b>核付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "社家署示範機構"</p>
+  <p><b>核付單位</b>： <a href="Organization-org-min.html">Organization/org-min</a> "衛生福利部社會及家庭署示範機構"</p>
   <p><b>申請人員</b>： <a href="PractitionerRole-pracrole-min.html">PractitionerRole/pracrole-min</a> "主責社工"</p>
   <p><b>對應申請</b>： <a href="Claim-claim-min.html">Claim/claim-min</a> "補助申請範例"</p>
   <p><b>結果</b>：Complete</p>
