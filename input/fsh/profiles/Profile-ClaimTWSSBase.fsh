@@ -8,6 +8,8 @@ Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達衛�
 * identifier MS
 * status MS
 * type MS
+* type from TWSSClaimTypeVS (extensible)
+* type ^short = "補助申請類型；具體補助項目另見 item.productOrService。"
 * subType MS
 * use MS
 * patient only Reference(PatientTWSSBase)
