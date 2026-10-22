@@ -37,7 +37,7 @@ Description:    "補助申請或核付明細-Claim TWSS Base Profile 表達衛�
 * supportingInfo contains serviceCase 0..* MS
     and documentsComplete 0..1 MS
     and applicationChannel 0..1 MS
-    and applicant 0..1 MS
+    and applicant 0..* MS
     and bankAccount 0..1 MS
 * supportingInfo[serviceCase].category.coding.system = "https://sfaa.gov.tw/base/CodeSystem/twss-claim-supporting-info-type"
 * supportingInfo[serviceCase].category.coding.code = #service-case
